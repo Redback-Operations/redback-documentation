@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # Github Org Guide
 
+Redback GitHub structure
+
 > **Last edited:** 9 March, 2024. **Author:** Leesa Ward.
 
 ## Rationale
