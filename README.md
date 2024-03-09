@@ -1,2 +1,2 @@
 # redback-documentation
-Docusaurus instance for Redback Operations documentation
+Docusaurus instance for the consolidation of company research and documentation
