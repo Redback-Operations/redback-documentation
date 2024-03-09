@@ -45,7 +45,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Redback-Operations/redback-documentation/',
+            'https://github.com/Redback-Operations/redback-documentation/blob/main/',
         },
         blog: false, 
         /*
@@ -66,6 +66,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5,
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -97,7 +101,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: '/docs/category/whole-company',
+                to: '/docs/category/onboarding',
               },
               {
                 label: 'GitHub',
