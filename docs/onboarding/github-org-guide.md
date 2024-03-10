@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Redback GitHub structure
 
-> **Last edited:** 9 March, 2024. **Author:** Leesa Ward.
+> **Document Creation:** 9 March, 2024. **Last edited:** 9 March, 2024. **Author:** Leesa Ward.
 
 ## Rationale
 
@@ -106,4 +106,120 @@ If you have an existing repository that you would like to check over or update, 
 
 1. Go to the [Repositories tab on the org page](https://github.com/orgs/Redback-Operations/repositories) and click the ‘New Repository’ button.
 
-*Still updating*
+![Getting Started](img\github-org-guide\getting-started.jpg)
+
+<br></br>
+2. **Name and description:** Choose a short but clear name that makes it obvious which project this repo is for and
+what code will be in it (for example, crowd-monitoring-web-app) and accompany it with a concise description.
+
+
+:::tip
+
+Avoid using: <br></br>
+- Things that may change in future trimesters such as the capstone project number (e.g., ‘crowd-monitoring-web-app’ not ‘project-4’)
+- The trimester or year, unless you have reason to believe your repository won’t be used beyond the current trimester.
+:::
+
+Put yourself in the shoes of a new student onboarding into Redback for their first capstone trimester. Would you be able quickly tell that this is the repo you will be working on?
+
+3. **Visibility:** For Cyber Security projects, choose Private. For all other projects, choose Public.
+
+4. Tick ‘Add a readme file’ and choose a gitignore template if you see fit.
+
+5. **Choose a licence:** All Redback projects except Cyber Security are open source, so our default licence is **MIT.**
+
+:::tip
+
+Some third-party libraries have licence terms that may affect which licence you can use. For example, licence terms dictate that plugins developed for WordPress must be GPL-compatible.
+
+:::
+
+6. Click ‘Create Repository’ in the bottom right. You will be taken to your new repo.
+
+
+### General Settings
+
+7. Click the 'Settings' tab.
+
+![General Settings](img\github-org-guide\general-settings.png)
+
+<br></br>
+
+8. Untick any features you don’t intend to use, such as Wikis. You can always turn them back on later if needed, but it can be good to keep things simple at first
+
+9. **Pull request settings:** Choose the settings your team prefers here. Don’t worry, you can always change these later if you find what you choose now doesn’t work for your team.
+
+:::tip
+
+- **Squash merging:** can be a good default choice because if someone has many commits to their pull request (which is very common), ‘squash and merge’ commits them all to the main branch in one clean commit. This can be much easier for people navigating the commit history as well as making it far easier to revert a change if necessary than if a merge creates multiple commits.
+- Turning on ‘**Always suggest updating pull request branches**’ can be helpful for ensuring students keep their PR branches up-to-date with the main branch and resolve any conflicts incrementally as they go, rather than ending up withn a lot of conflicts to resolve because the main branch as diverged far from theirs.
+- Turning on ‘**Allow auto-merge**’ can be helpful as it means you don’t have to wait for students to manually merge their PR once it’s approved, improving efficiency.
+
+:::
+
+Settings in this screen are autosaved.
+
+### Collaborators and teams
+
+10. Still in the Settings area, click ‘Collaborators and Teams’ in the sidebar.
+
+11. Next to ‘Manage access’, click ‘Add teams.’ Search for and select the Tutors team and the other relevant project team(s).
+
+12. In the list, update the Tutors group role to ‘Admin’ and the project team’s to Write.
+
+![Manage Access](img\github-org-guide\teams.png)
+
+<br></br>
+
+13. This is also where you individually add other students who will be working on the project, as Collaborators. They will need the **Write** permission so they can create branches.
+
+:::tip
+
+Ensure branch protection rules are in place (instructions below) before adding students with Write permission, to ensure they can’t write directly to the main branch.
+
+:::
+
+### Branch Protection Rules and Code Owners
+
+14. In the sidebar, click ‘Branches’ and then the ‘Add branch protection rule’ button.
+
+![Branch Protection](img\github-org-guide\branch-protection.png)
+
+<br></br>
+
+15. In the ‘branch name pattern’ field, enter ‘main’ (or the name of your primary branch if different).
+
+16. Tick ‘Require a pull request before merging’ and ‘require approvals’ followed by the settings appropriate for your project.
+
+:::tip
+
+- ‘Dismiss stale pull request approvals when new commits are pushed’ is highly recommended. This prevents anyone from adding new code after a PR is approved, and merging that new code without it being re-reviewed.
+
+- Enabling ‘Require review from code owners’ is kindly requested by the Redback mentor/tutor team. This is simply to ensure a pair of experienced eyes looks at each pull request to catch mistakes such as committing credentials, node_modules folders, Python precompile files, MacOS .DS_Store files, etc.
+
+:::
+
+17. If you turned on ‘require review from code owners’, you now need to specify who those owners are through a [CODEOWNERS file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners). Navigate to the main page of your repository and click ‘add file.’
+
+![Code Owners](img\github-org-guide\codeowners.png)
+
+<br></br>
+
+Name the file CODEOWNERS and add global owners using the * symbol and @team-name. For example:
+
+![Code Owners](img\github-org-guide\codeowners-2.png)
+
+<br></br>
+
+When done, click ‘commit changes’ in the top right and follow the prompts. If you have any errors such as a misspelled team name or incorrect permissions for that team, an alert will be displayed.
+
+### Readme File 
+
+18. Either through the GitHub web interface or after cloning the repo to your machine, enter more information in the
+README file:
+    - A clear description of what this repository is for. It should be concise, but this is the place to provide a bit more detail than the brief description entered when you created the repo.
+
+    - Instructions on how to set up the repo and start working with it. Include prerequisites (e.g., for a JavaScript project, having Node installed) and step-by-step instructions that ensure the majority of students will be able to independently set up and run the project locally.
+
+You may not have all this information ready yet for a new repository that doesn’t contain any code yet, so simply
+ensure you return to this step when you do.
