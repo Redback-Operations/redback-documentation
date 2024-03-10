@@ -2,6 +2,8 @@
 
 Docusaurus instance for the consolidation of company research and documentation
 
+[View site here](https://redback-operations.github.io/redback-documentation/)
+
 ## Page creation
 
 To create a new doc section, duplicate `docs/example`. This folder contains an example for the top level folder, as well as individual pages. The `lorem.md` file demonstrates appropriate heading style.
