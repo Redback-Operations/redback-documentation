@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Example page
+# Demonstration & documentation
 
 I'm an example!
 
