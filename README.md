@@ -39,4 +39,6 @@ Currently, pushes to the gh pages site must be made manually from an admin of th
 
 If that happens to be you, from your terminal of choice, within the main branch of the repo, input `GIT_USER=<YOUR USERNAME> yarn deploy` and pray it works,
 
+***DO NOT MANUALLY UPDATE THE `GH PAGES` REPO.***
+
 Auto deployment is a WIP.
