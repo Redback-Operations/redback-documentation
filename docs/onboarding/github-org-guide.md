@@ -221,5 +221,4 @@ README file:
 
     - Instructions on how to set up the repo and start working with it. Include prerequisites (e.g., for a JavaScript project, having Node installed) and step-by-step instructions that ensure the majority of students will be able to independently set up and run the project locally.
 
-You may not have all this information ready yet for a new repository that doesn’t contain any code yet, so simply
-ensure you return to this step when you do.
+You may not have all this information ready yet for a new repository that doesn’t contain any code yet, so simply ensure you return to this step when you do.
