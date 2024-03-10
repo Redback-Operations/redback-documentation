@@ -24,6 +24,8 @@ To create a new doc section, duplicate `docs/example`. This folder contains an e
 
 - Keep relevant images, videos, and other documents within appropriate files in each *section* (each respective folder within `docs`) to avoid bloat in the main site folder.
 
+- If you are adding a new version to a document, consider adding [appropriate versioning](https://docusaurus.io/docs/versioning)
+
 
 ## General things
 
