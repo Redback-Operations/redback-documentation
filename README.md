@@ -35,4 +35,8 @@ Please attribute inputed documentation to the appropriate author(s) along with t
 
 ## Pushing updates
 
-Updates go live once pushed to the main repo. Please test changes locally first using `npm run start` to ensure nothing is broken. ***Do not*** push or make changes manually to the gh-pages branch.
+Currently, pushes to the gh pages site must be made manually from an admin of the project.
+
+If that happens to be you, from your terminal of choice, within the main branch of the repo, input `GIT_USER=<YOUR USERNAME> yarn deploy` and pray it works,
+
+Auto deployment is a WIP.
