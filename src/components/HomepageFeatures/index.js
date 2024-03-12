@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Who we are',
+    title: 'Who We Are',
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
@@ -13,7 +13,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'For students',
+    title: 'For Students',
     Svg: require('@site/static/img/docs.svg').default,
     description: (
       <>
@@ -24,11 +24,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'What\'s included',
+    title: 'Our Statement',
     Svg: require('@site/static/img/question.svg').default,
     description: (
       <>
-        Find inside research pieces into athlete and elderly wearable tech, our smartbike product, and general cyber security and corporate wellbeing.
+        Redback Operations is on a mission to transform small steps in the virtual world into significant strides in reality. Our goal is to make you Smarter, Fitter, and Better by adding an element of enjoyment to physical activity. We specialize in developing cutting-edge connected fitness devices designed to enhance the quality of exercise and the effectiveness of training. as well as using different sensor technologies to prevent the risk of injury.
       </>
     ),
   },

@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Redback GitHub structure
 
-> **Document Creation:** 9 March, 2024. **Last edited:** 9 March, 2024. **Author:** Leesa Ward.
+> **Document Creation:** 9 March, 2024. **Last Edited:** 9 March, 2024. **Authors:** Leesa Ward.
 
 ## Rationale
 
