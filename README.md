@@ -29,7 +29,9 @@ To create a new doc section, duplicate `docs/example`. This folder contains an e
 
 ## General things
 
-Unless neccessary, please do not change the code to the overall site itself, once stable the only changes should be to sections and pages.
+- Unless neccessary, please do not change the code to the overall site itself, once stable the only changes should be to sections and pages.
+
+- The search uses a third party tool (Algolia) which uses web scraping to determine the way it searches, as such, it takes up to a day for changes to reflect in this search. A local search will be considered in the future should time permit. 
 
 ## Attributions
 
@@ -38,6 +40,8 @@ Please attribute inputed documentation to the appropriate author(s) along with t
 `> **Document Creation:** 1 March, 2024. **Last Edited:** 21 September, 2024. **Author:** John Doe.`
 
 ## Pushing updates
+
+Please test locally, as a file with broken links or markdown can stop the whole site from working, `npm run start` to do so.
 
 Currently, pushes to the gh pages site must be made manually from an admin of the project.
 
