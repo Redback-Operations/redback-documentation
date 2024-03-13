@@ -148,7 +148,7 @@ All infected systems should be isolated and scanned by an antivirus software to 
 
 If the infection cannot be removed, the system should be restored to a known good backup.
 
-### Securing Personal Information
+## Securing Personal Information
 
 Personal information refers to information or an opinion about an identified individual, or an
 individual who is reasonably identifiable.<sup>2</sup>
