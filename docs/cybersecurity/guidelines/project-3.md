@@ -2,12 +2,15 @@
 sidebar-position: 3
 ---
 
-# Project 3 - Wearable Technologies for Elderly People **WIP**
+# Project 3 - Wearable Technologies for Elderly People
 
-Cyber Security Guidelines **WIP**
+Cyber Security Guidelines
 
-> **Document Creation:** 1 April, 2023. **Last Edited:** 31 August, 2023. **Authors:** Indiah Smith.
-> CSG P3. Effective Date: 15 September 2023. Expiry Date: 5 September 2024.
+:::info
+
+**Document Creation:** 1 April, 2023. **Last Edited:** 31 August, 2023. **Authors:** Indiah Smith.
+<br></br> **Document Code:** CSG P3. **Effective Date:** 15 September 2023. **Expiry Date:** 5 September 2024.
+:::
 
 ## Purpose and Scope of the Policy
 
@@ -226,14 +229,40 @@ default and require the individual to change the settings.
 
 ### Consent Requirements
 
-Consent is required as authority for the company to handle consumer information in a particular way (APPs 7.3, 7.4 and 8.2(b)).
+Consent is required as authority for the company to handle consumer information in
+a particular way (APPs 7.3, 7.4 and 8.2(b)).
 
-Consent should be express or implied (s 6(1)) and fulfil the four elements of consent:
+- Consent should be express or implied (s 6(1)). Express consent must be given explicitly
+orally or in writing. Implied consent is inferred from the conduct of the individual and
+the circumstances in which it is given. The company should opt to source express
+consent from individuals when obtaining health and biometric data (APP 3.3). Users
+must have the ability to customise or disable their devices in accordance with their
+preferences and requirements.
 
-1. Adequately informed;
-2. Voluntary consent;
-3. Current and specific consent;
-4. And capacity to understand.
+- The elements of consent that must be fulfilled are as follows:
+  - The individual must be adequately informed prior to providing consent;
+  - The consent must be given voluntarily;
+  - The individual must be capable of understanding and communicating the consent;
+and
+  - The consent must be current and specific.
+
+- When transmitting the data through IoT, the company should make efforts to:
+
+  - Communicate who will be processing the data and their core responsibilities;
+
+  - Communicate how the data will be used from the point of sale and on set-up; and
+
+  - Communicate information in specific increments of time.
+
+- Prior to using the device, the user should provide consent to the Terms and Conditions
+and Privacy Policy indicating how their data will be used.
+
+- Informed consent should be obtained upon change to the health of the individual, or
+the technical system.
+
+- Where data is used for a secondary purpose unrelated to the primary purpose, an
+individual should provide additional consent and be informed as to how their data is
+being collected and communicated.
 
 ### De-Identification Requirements
 
@@ -252,3 +281,140 @@ identifying information.
 
 Personal identification data must be able to be transformed in a manner that prevents
 any person with unauthorised access from tracing it back to an individual.
+
+### Rights of Data Subjects
+
+Data subjects may exercise any of the following rights at any time in relation to the
+protection of data.<sup>3</sup>
+
+1. Right of access to their data and knowledge of whether it is being processed.
+
+2. Right to rectification where data is inaccurate and the individual may request for
+their data to be corrected.
+
+3. Right of erasure to restrict the data from being processed.
+
+4. Right to be informed in a clear and concise manner prior to the collection and use
+of data.
+
+5. Right to object meaning that data subjects can express if they do not want their
+personal data to be processed.
+
+6. Right not to be subject to a decision based on automated processing.
+
+## Health Information
+
+'Health information' refers to information or an opinion that is also classified as personal
+information and may include information about the health or a disability of the individual, an
+individual’s expressed wishes about the future provision of health services to him or her, or a
+health service provided, or to be provided, to an individual. Biometric authentication and end-
+to-end encryption should be applied and continuously updated to protect this type of data.
+
+The wearable devices should be non-invasive, wearable equipment designed for the purpose
+of collecting physiological health information through embedded sensors that transmit
+information to devices to facilitate interventions. Individuals should be informed about the
+status of the data security (personalised, pseudonymised, anonymised), the data format
+(pictures, communication data, test results) and processing of the data (access by natural
+persons, algorithms).
+
+The Therapeutic Goods Administration (TGA) administers and regulates medical devices. It
+encompasses devices used for medical purposes such as disease monitoring, treatment
+specifications or controlling medical devices. Software that enables individuals to track their
+health information are not classified as medical devices under the TGA. The individual
+circumstances of the patient will determine if specific cyber security guidance under the FDA
+will be relevant as the wearables may fall within the scope of medical devices.
+
+### Genetic Information
+
+Genetic information refers to information in a form that may be predictive of the
+health of the individual or a genetic relative of the individual (s 6(1)).
+
+### Personal Information
+
+An APP entity will hold personal information ‘if the entity has possession or control
+over a record that contains the personal information’ (s 6(1)). The term ‘record’ refers
+to a document or an electronic or other device (s 6(1)).
+
+### Responsible Person
+
+Where the individual lacks the physical and/or mental capacity, a ‘responsible person’
+may provide or disclosure information including a:
+
+1. Parent of the individual;
+
+2. Child or sibling of the individual who is over 18 years old;
+
+3. Spouse or de facto partner of the individual;
+
+4. Relative of the individual;
+
+5. Guardian of the individual;
+
+6. Individual exercising a power of attorney granted by the individual that can be
+undertaken in reference to decisions regarding the health of the individual;
+
+7. Person who has an intimate personal relationship with the individual; or a
+
+8. Person nominated by the individual to be contacted in the event of an emergency.
+
+### Provision of Informed Consent by Caregiver
+
+Where the individual lacks the mental capacity to provide consent, caregivers must
+clearly communicate the risks and benefits associated with the wearable technologies
+associated with privacy and security and the critical events that a monitoring system
+may detect. The individual should be capable of making a sufficient decision based on
+the information provided and what they should realistically expect from using the
+system, including what situations will trigger the system to send alerts. Where the
+caregiver cannot determine whether the individual has the capacity to make a
+decision, permission should be sought from an alternative who may be able to clarify
+their capacity such as a family member, or physician. If the status of the individual
+changes, efforts must be made to ensure the individual is aware of the nature, extent
+and impact of the system.
+
+## Physical Security
+
+This section outlines the physical security protections that should be implemented to
+safeguard people and assets to comply with the Work Health and Safety Act 2011 and meet
+cyber security standards. These protections should be proportionate with the assessed
+sensitivity or risk of damage or loss.
+
+### Physical Access to Systems
+
+A security zone should be established and systems should be secured in premises that
+have been assessed by the physical security certification authority and meet
+appropriate standards to secure the sensitive data appropriately.
+
+### Physical Access to Devices and Servers
+
+- The company should have a separate server room to secure network devices and
+servers with appropriate keys to control access to this room.
+
+- Physical security such as enclosures or security containers should be implemented to
+prohibit unauthorised access or damage to equipment.
+
+- Workstations and keyboards should not be visible to people outside of the premises
+and measures such as privacy films should be implemented to prevent observation
+from unauthorised people.
+
+- The company must securely dispose of physical assets.
+
+### Securing ICT Equipment
+
+ICT equipment should be secured when it is not in use and this may be achieved
+through security containers, sanitisation of memory upon shutdown or encryption of
+hard drives.
+
+## Notification Requirements
+
+Where a data breach incident occurs that is likely to compromise the rights of an individual,
+they must be notified immediately, and the relevant regulatory body must be informed within
+72 hours.
+
+### Notifiable Data Breaches scheme
+
+- Under the Notifiable Data Breaches (NDB) scheme, companies under the Privacy Act
+must undertake an assessment where there has been a data loss or unauthorised
+access to or disclosure of personal information.
+
+- The company must notify the OAIC where the incident is likely to result in harm to an
+individual.

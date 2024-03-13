@@ -6,8 +6,10 @@ sidebar-position: 1
 
 Cyber Security Guidelines
 
-> **Document Creation:** 1 April, 2023. **Last Edited:** 31 August, 2023. **Authors:** Indiah Smith.
-> CSG P1. Effective Date: 1 September 2023. Expiry Date: 1 September 2024.
+:::info
+**Document Creation:** 1 April, 2023. **Last Edited:** 31 August, 2023. **Authors:** Indiah Smith.
+<br></br>**Document Code:** CSG P1. **Effective Date:** 1 September 2023. E**xpiry Date:** 1 September 2024.
+:::
 
 ## Purpose and Scope of the Policy
 
