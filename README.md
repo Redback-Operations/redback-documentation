@@ -37,11 +37,12 @@ To create a new doc section, duplicate `docs/example`. This folder contains an e
 
 Please attribute inputed documentation to the appropriate author(s) along with the date, formatted as:
 
+```
 :::info
 
 **Document Creation:** 1 April, 2023. **Last Edited:** 31 August, 2023. **Authors:** Indiah Smith.
 <br></br> **Document Code:** CSG P3. **Effective Date:** 15 September 2023. **Expiry Date:** 5 September 2024.
-:::
+:::```
 
 This will create a banner displaying the appropriate information. The last line is neccessary to comply with the document standards introduced for the company. Versioning as per the document standards should be used with [appropriate versioning](https://docusaurus.io/docs/versioning).
 
