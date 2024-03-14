@@ -1,5 +1,5 @@
 ---
-sidebar-position: 8
+sidebar_position: 8
 ---
 
 # Additional Research Pieces

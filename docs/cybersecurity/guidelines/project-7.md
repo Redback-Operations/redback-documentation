@@ -1,5 +1,5 @@
 ---
-sidebar-position: 3
+sidebar_position: 3
 ---
 
 # Project 7 - Smart Bike Project

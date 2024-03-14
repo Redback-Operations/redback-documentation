@@ -14,7 +14,7 @@ To create a new doc section, duplicate `docs/example`. This folder contains an e
 
     ```
     ---
-    sidebar-position: x
+    sidebar_position: x
     ---
     ```
 

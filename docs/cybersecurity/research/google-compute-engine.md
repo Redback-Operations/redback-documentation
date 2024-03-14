@@ -1,5 +1,5 @@
 ---
-sidebar-position: 6
+sidebar_position: 6
 ---
 
 # Build a project on google compute engine VM by using Jenkins Google Compute Engine Plugin instruction manual

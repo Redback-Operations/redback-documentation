@@ -1,5 +1,5 @@
 ---
-sidebar-position: 5
+sidebar_position: 5
 ---
 
 # Jenkins and Snyk – a SAST plugin

@@ -1,5 +1,5 @@
 ---
-sidebar-position: 3
+sidebar_position: 3
 ---
 
 # Project 3 - Wearable Technologies for Elderly People
@@ -7,7 +7,6 @@ sidebar-position: 3
 Cyber Security Guidelines
 
 :::info
-
 **Document Creation:** 1 April, 2023. **Last Edited:** 31 August, 2023. **Authors:** Indiah Smith.
 <br></br> **Document Code:** CSG P3. **Effective Date:** 15 September 2023. **Expiry Date:** 5 September 2024.
 :::
