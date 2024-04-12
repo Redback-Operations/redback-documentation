@@ -6,7 +6,7 @@ This document describes the cycling data available with the focus on how the dat
 
 ## Top level directory
 
-The top level directory contains many .csv file - most of which are not relevant or only slightly relevant for our analyses. There is often around 40+ such files and only a small number contain information that we will use:
+The top level directory contains many .csv files - most of which are not relevant or only slightly relevant for our analyses. There is often around 40+ such files and only a small number contain information that we will use:
 
 1.  **activities.csv**: A summary tab;e of the workouts included in the doeanload. This contains many summary fields such as duration, distance, average and maximum speed, average and maximum power, and average and maximum cadence. It also includes a link to a .fit, .gpx to .tcx file for the workout that contains the specific data recorded for that individual workout.
     
@@ -90,4 +90,36 @@ There are numerous unusual features of the dataset. The notable aspects are:
 
 The measurements for individual rides are provided in .fit.gz files. These files are compressed .fit files which is a binary file format. A Python program was created to read these files and write them out as CSVs for easier processing.
 
-The python code and notebook related to this exploration is available at ...
+The python code and notebook related to this exploration is available at [Strava Data Exploration](https://github.com/Redback-Operations/redback-fit-sports-performance/blob/main/Cycling%20Analysis/Strava%20explorer.ipynb).
+
+# Importing a Strava workout database
+
+## 1. Export the data from Strava
+
+To import a Strava workout database, you will need to export the data from Strava. This can be done by following these steps:
+* Log in to your Strava account.
+* Click on your profile picture in the top right corner of the screen.
+* Select 'Settings' from the dropdown menu.
+* Click on 'My Account' in the left-hand menu.
+* Scroll down to the 'Download or Delete Your Account' section.
+* Click on 'Get Started' under 'Download Your Data'.
+* Select the data range you want to export and click 'Request Your Archive'.
+* Wait for Strava to prepare your data and send you an email with a link to download it.
+* Download the data and extract the files to a location on your computer.
+
+## 2. Clean the data
+
+The [Strava Data Exploration](https://github.com/Redback-Operations/redback-fit-sports-performance/blob/main/Cycling%20Analysis/Strava%20explorer.ipynb) notebook contains code to clean the data and export it to the csv format used by the prediction models.
+
+To clean the data:
+
+* Set the 'source_path' variable in the cell marked as 2.1 to the location of the Strava data export.
+* Set the 'athlete_id' variable to the value that you want to use to identify this athlete. The example uses 'TRI001' as the data is from a triathlete and it is the first triathlete included.
+* Run the three cells under the 2.1 heading to clean up the data and filter the Ride, Run and Swim data that contains enough information for the models to use.
+* Run the cell under the 2.2 heading to export the data to the csv format used by the prediction models.
+
+## 3. Load the data into the GitHub repository
+
+Once you have cleaned the data, you can load it into the GitHub repository for use by the prediction models. This will involve checking in the 'extended_activities_athlete_id.csv' file that was created in the 2.2 cell and all the .csv.gz files for the individual session data.
+
+Create the pull request that includes these files.
