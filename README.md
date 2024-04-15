@@ -21,6 +21,8 @@ To create a new doc section, duplicate `docs/example`. This folder contains an e
 
 ## Page creation
 
+[Tutorial video here](https://youtu.be/AbDBXuXaJ_s)
+
 This site uses markdown (.md) for the files. Please do not upload word documents or PDFs.
 
 - Each individual page must begin with:
