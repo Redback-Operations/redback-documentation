@@ -38,6 +38,7 @@ This site uses markdown (.md) for the files. Please do not upload word documents
 - Keep relevant images, videos, and other documents within appropriate files in each *section* (each respective folder within `docs`) to avoid bloat in the main site folder.
 
 
+
 ## General things
 
 - Unless neccessary, please do not change the code to the overall site itself, once stable the only changes should be to sections and pages.
