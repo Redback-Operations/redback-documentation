@@ -13,11 +13,15 @@ Docusaurus instance for the consolidation of company research and documentation
 - IDE, browser, and terminal of your choice
 - Git credentials configured on your machine
 
-## Page creation
+## Section creation
 
 To create a new doc section, duplicate `docs/example`. This folder contains an example for the top level folder, as well as individual pages. The `lorem.md` file demonstrates appropriate heading style.
 
 - Ensure all main folders under `docs` contains a `_category_.json` file as this is what stylises the section. 
+
+## Page creation
+
+This site uses markdown (.md) for the files. Please do not upload word documents or PDFs.
 
 - Each individual page must begin with:
 
@@ -29,11 +33,9 @@ To create a new doc section, duplicate `docs/example`. This folder contains an e
 
     with `x` being the position (in a positive integer) that you want this document to appear within its section. (This can be unreliable for some reason)
 
-- Each individual page is simply a markdown page, documentation is listed in the `example.md` page to learn more.
+- Each individual page is simply a markdown page, **documentation is listed in the `example.md` page to learn more.**
 
 - Keep relevant images, videos, and other documents within appropriate files in each *section* (each respective folder within `docs`) to avoid bloat in the main site folder.
-
-- If you are adding a new version to a document, consider adding [appropriate versioning](https://docusaurus.io/docs/versioning).
 
 
 ## General things
