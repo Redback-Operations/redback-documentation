@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Packaging Pull Requests.
 
-# What is a pull request?
+## What is a pull request?
 
 A pull request is a proposal to merge a set of changes from one branch
 into another. In a pull request, collaborators can review and discuss the
@@ -12,7 +12,7 @@ proposed set of changes before they integrate the changes into the main
 codebase. Pull requests display the differences between the content in
 the source branch and the content in the target branch.
 
-# Overview
+## Overview
 
 Pull requests can be created on GitHub through different ways - GitHub
 CLI, Codespaces, Desktop, Web Browser.
@@ -25,7 +25,7 @@ Other contributors can review the proposed changes, add review
 comments, contribute to the pull request discussion, and even add
 commits to the pull request.
 
-# Pull request using Github CLI
+## Pull request using Github CLI
 
 Step 1 - To create a pull request, use the ‘gh pr create’ command.
 
@@ -49,7 +49,7 @@ Step 8 - To assign an individual as a reviewer ‘gh pr create --reviewer @Name�
 Step 9 - To create the pull request in your default web browser ‘gh pr create --web’.
 
 
-# Pull requests using Codespaces
+## Pull requests using Codespaces
 
 Step 1 - After committing changes to our local copy of
 the repository, we click on the create pull request icon.
@@ -63,7 +63,7 @@ give the pull request a title and a description.
 
 ![Pull request details](https://docs.github.com/assets/cb-59674/mw-1440/images/help/codespaces/codespaces-commit-pr.webp)
 
-# Pull request using Web Browsers
+## Pull request using Web Browsers
 
 Step 1 - On the GitHub’s website, we navigate to the main repository page.
 
@@ -82,7 +82,7 @@ Step 6 - We then create the pull request that is ready for review, by clicking o
 Request.
 
 
-# Pull requests using Desktop
+## Pull requests using Desktop
 
 Step 1 - Navigate to the GitHub desktop and click on the preview pull request. The differences of
 the changes between the current and base branch will be shown.
@@ -99,7 +99,7 @@ Step 5 - We then create the pull request that is ready for review, by clicking o
 Request.
 
 
-# Pull request from a fork
+## Pull request from a fork
 (*For people with write access*)
 
 Step 1 - We first navigate to the original repository where the fork was created.
