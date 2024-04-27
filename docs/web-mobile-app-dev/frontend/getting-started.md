@@ -11,7 +11,6 @@ import ForkImage from '@site/static/img/webdev/fork-example.png'
 - IDE or editor of choice (e.g., WebStorm, VS Code)
 - Terminal of choice (e.g., Git Bash, Command Prompt, WSL, MacOS Terminal)
 - Web browser
-- Collaborator access to this repository (if you are a team member)
 - Git credentials configured on your machine
 
 ### Recommended
