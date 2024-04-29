@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 ---
-import ForkImage from '@site/static/img/webdev/fork-example.png'
 
 # Getting started with a project
 
@@ -21,7 +20,8 @@ import ForkImage from '@site/static/img/webdev/fork-example.png'
 
 ### Getting Started
 1. Fork the repository to your own account
-   <img src={ForkImage} alt="Screenshot showing where to fork a repo in Github" />;
+   ![Screenshot of how to fork a repo](./img/fork-example.png)
+
 2. Clone the repository to your local machine
     ```bash
     git clone https://github.com/your-username/your-repo-name.git
