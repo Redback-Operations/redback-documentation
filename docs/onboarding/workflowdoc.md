@@ -76,7 +76,7 @@ This document outlines the code review workflow designed to enhance the collabor
 
 # Workflow Diagram 
 
-![](Code_Review_Workflow.png)
+![](img/Code_Review_Workflow.png)
 
 
 
