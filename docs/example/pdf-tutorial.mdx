@@ -1,0 +1,45 @@
+---
+sidebar_position: 4
+---
+
+# Embedding PDFs into pages
+
+
+:::danger[Important!]
+
+Please view the source code of this file on
+[Github](https://github.com/Redback-Operations/redback-documentation/blob/main/docs/example/pdf-tutorial.mdx) to see how it's done!
+
+:::
+
+## How-to
+
+### Check your file types!
+
+For embedding PDFs to work, please ensure:
+
+1. It is actually a PDF file.
+
+2. Ensure that your documentation file is a `.mdx` file **rather than** a `.md` file. This
+is due to `.mdx` supporting small amounts of HTML, CSS, JS, and React (This means you can
+do other cool things too if you want!).
+
+
+### Hosting the file
+
+Unfortunately due to the way this platform works, it doesn't appear possible to embed PDFs
+directly from the file prior to the deployment to Github as the host platform, Docusaurus,
+moves files to a different folder and gives a unique file name that does not exist before
+deployment.
+
+So, to work around this, files need to be referrenced through a third-party site. Your PDFs
+can be hosted in this repo, or another Redback raw documentation repo. 
+
+If you are hosting in this repo, please place your file in an appropriate file. 
+
+<embed
+      src="https://nbviewer.org/github/Redback-Operations/redback-cyber/blob/main/Policy/ISMS/ISMS.pdf"
+      type="application/pdf"
+      width="100%"
+      height="1000px"
+/>
