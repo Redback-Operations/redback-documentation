@@ -4,6 +4,8 @@ Docusaurus instance for the consolidation of company research and documentation
 
 [View site here](https://redback-operations.github.io/redback-documentation/)
 
+[Approvers guide here](https://redback-operations.github.io/redback-documentation/docs/onboarding/github/approvers-guide)
+
 ## Prerequisites 
 
 - Git 
@@ -38,8 +40,6 @@ This site uses markdown (.md or .mdx) for the files. Please do not upload word d
 - Each individual page is simply a markdown page, **[examples here, view the source code of these pages for guidance](https://redback-operations.github.io/redback-documentation/docs/category/examples--tutorials)**
 
 - Keep relevant images, videos, and other documents within appropriate files in each *section* (each respective folder within `docs`) to avoid bloat in the main site folder.
-
-
 
 ## General things
 
