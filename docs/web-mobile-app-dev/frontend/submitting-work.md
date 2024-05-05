@@ -13,7 +13,7 @@ Before raising a pull request, please ensure the below checks pass.
     ```bash
     npm run lint
     ```
-2. Check that project structure, file naming, and file type conventions have been followed _(note: this also uses eslint, so will also pick up any other formatting and linting issues - I've just made it a separate step for clarity)
+2. Check that project structure, file naming, and file type conventions have been followed _(note: this also uses eslint, so will also pick up any other formatting and linting issues that step 1 would - I've just made it a separate step for clarity)_
     ```bash
     npm run lint:structure
     ```
@@ -22,7 +22,7 @@ Before raising a pull request, please ensure the below checks pass.
     ```bash
     npm run test:unit
     ```
-5. When all checks are passing and your work is ready for peer feedback, create a pull request in GitHub.
+5. When all checks are passing and your work is ready for peer feedback, create a pull request on GitHub.
 
 ## Useful links
 - [Packaging pull requests](../../onboarding/github/pull-requests)
