@@ -1,8 +1,11 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Troubleshooting
+
+> **Document Creation:** 23 March, 2024. **Last Edited:** 6 May, 2024. **Authors:** Leesa Ward.
+
 
 ## Can't push branch
 
@@ -19,5 +22,8 @@ Tip: If you are using Linux or WSL, using the CLI is a super easy way to do this
 2. `gh auth login`
 3. Follow the prompts to authenticate with your GitHub account
 4. Profit.
+
+## Useful links
+- [Vite docs](https://vitejs.dev/guide/)
 
 
