@@ -1,8 +1,11 @@
 ---
 sidebar_position: 1
+sidebar_label: Getting started
 ---
 
 # Getting started with a project
+
+> **Document Creation:** 23 March, 2024. **Last Edited:** 6 May, 2024. **Authors:** Leesa Ward.
 
 ## Prerequisites
 - [Git](https://git-scm.com/downloads) installed
@@ -18,7 +21,7 @@ sidebar_position: 1
 ### Optional
 - Git GUI such as GitKraken, SourceTree, GitHub Desktop (if you prefer this over working only with terminal commands)
 
-### Getting Started
+## Getting Started
 1. Fork the repository to your own account
    ![Screenshot of how to fork a repo](./img/fork-example.png)
 
@@ -50,12 +53,11 @@ sidebar_position: 1
 8. Open a web browser and navigate to `http://localhost:5173` to view the application (or different port if specified in the terminal output).
 9. Make your changes.
 10. Commit your changes regularly and push your branch up to GitHub.
-11. When ready for peer feedback, create a pull request in GitHub.
 
 
 ## Useful links
 - [Deakin Capstone Git contribution guide](https://verdant-raindrop-f3e404.netlify.app/processes/quality-assurance/git-contributions-guide/)
-- [Vite docs](https://vitejs.dev/guide/)
+- [Redback-specific tutorials](./tutorials.md)
 - [React docs](https://react.dev/)
 - [TypeScript docs](https://www.typescriptlang.org/docs/)
 - [React Router docs](https://reactrouter.com/)

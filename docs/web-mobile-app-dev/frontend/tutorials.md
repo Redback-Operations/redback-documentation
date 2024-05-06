@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # Tutorials
 
+> **Document Creation:** 29 April, 2024. **Last Edited:** 29 April, 2024. **Authors:** Leesa Ward.
+
 ## Contributing to Redback UI 
 Short video tutorials covering the basics of setting up and contributing to Redback UI.
 
