@@ -1,8 +1,9 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
+sidebar_label: Video tutorial links
 ---
 
-# Tutorials
+# Video Tutorials
 
 > **Document Creation:** 29 April, 2024. **Last Edited:** 29 April, 2024. **Authors:** Leesa Ward.
 
