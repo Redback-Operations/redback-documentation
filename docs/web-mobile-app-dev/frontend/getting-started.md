@@ -57,7 +57,7 @@ sidebar_label: Getting started
 
 ## Useful links
 - [Deakin Capstone Git contribution guide](https://verdant-raindrop-f3e404.netlify.app/processes/quality-assurance/git-contributions-guide/)
-- [Redback-specific tutorials](./tutorials.md)
+- [Redback-specific tutorials](help/tutorials.md)
 - [React docs](https://react.dev/)
 - [TypeScript docs](https://www.typescriptlang.org/docs/)
 - [React Router docs](https://reactrouter.com/)
