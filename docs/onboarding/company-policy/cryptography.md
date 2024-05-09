@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Cryptography Policy
@@ -7,7 +7,7 @@ sidebar_position: 2
 Redback Operations Cryptography Policy
 
 :::info
-**Document Creation:** 8 April, 2024. **Last Edited:** 8 April, 2023. **Authors:** Daniel McAulay.
+**Document Creation:** 8 April, 2024. **Last Edited:** 8 April, 2024. **Authors:** Daniel McAulay.
 <br></br>**Effective Date:** 8 April 2024. **Expiry Date:** 8 April 2025.
 :::
 

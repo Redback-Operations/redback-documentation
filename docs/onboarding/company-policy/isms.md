@@ -8,7 +8,7 @@ sidebar_label: ISMS
 Redback Operations ISMS Guide
 
 :::info
-**Document Creation:** 5 April, 2024. **Last Edited:** 5 April, 2023. **Authors:** Kaleb Bowen.
+**Document Creation:** 5 April, 2024. **Last Edited:** 5 April, 2024. **Authors:** Kaleb Bowen.
 <br></br>**Document Code:** ISMS. **Effective Date:** 1 May 2024. **Expiry Date:** 1 May 2025.
 :::
 
