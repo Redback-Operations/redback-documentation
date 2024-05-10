@@ -173,7 +173,8 @@ Beautiful Soup is a Python library designed for pulling data from HTML files. It
 
 * * *
 
-## Instructions - Step by Step
+
+## Instructions - Step by Step
 
 Web scraping involves extracting data from websites. Here's a step-by-step summary of using Python to scrape website data:
 

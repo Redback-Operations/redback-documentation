@@ -40,3 +40,11 @@ Do things like this
 
 - [Docusaurus Markdown](https://docusaurus.io/docs/markdown-features)
 - [Markdown Guide](https://www.markdownguide.org/extended-syntax/)
+
+
+## And tables!
+
+| blah | blah | blah |
+| ---- | ---- | ---- |
+| test | test | test |
+| test | test | test |

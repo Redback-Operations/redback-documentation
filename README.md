@@ -4,6 +4,8 @@ Docusaurus instance for the consolidation of company research and documentation
 
 [View site here](https://redback-operations.github.io/redback-documentation/)
 
+[Approvers guide here](https://redback-operations.github.io/redback-documentation/docs/onboarding/github/approvers-guide)
+
 ## Prerequisites 
 
 - Git 
@@ -13,11 +15,17 @@ Docusaurus instance for the consolidation of company research and documentation
 - IDE, browser, and terminal of your choice
 - Git credentials configured on your machine
 
-## Page creation
+## Section creation
 
-To create a new doc section, duplicate `docs/example`. This folder contains an example for the top level folder, as well as individual pages. The `lorem.md` file demonstrates appropriate heading style.
+To create a new doc section, duplicate [`example-nested`](https://redback-operations.github.io/redback-documentation/docs/category/example-nested). This folder contains an example for the top level folder, as well as individual pages. The `lorem.md` file demonstrates appropriate heading style.
 
 - Ensure all main folders under `docs` contains a `_category_.json` file as this is what stylises the section. 
+
+## Page creation
+
+[Tutorial video here](https://youtu.be/AbDBXuXaJ_s), [tutorial pages here (view the source code for a "template")](https://redback-operations.github.io/redback-documentation/docs/category/examples--tutorials)
+
+This site uses markdown (.md or .mdx) for the files. Please do not upload word documents or PDFs directly. [See here for embedded PDF uploads](https://redback-operations.github.io/redback-documentation/docs/example/pdf-tutorial)
 
 - Each individual page must begin with:
 
@@ -27,18 +35,17 @@ To create a new doc section, duplicate `docs/example`. This folder contains an e
     ---
     ```
 
-    with `x` being the position (in a positive integer) that you want this document to appear within its section. (This can be unreliable for some reason)
+    with `x` being the position (in a positive integer) that you want this document to appear within its section.
 
-- Each individual page is simply a markdown page, documentation is listed in the `example.md` page to learn more.
+- Each individual page is simply a markdown page, **[examples here, view the source code of these pages for guidance](https://redback-operations.github.io/redback-documentation/docs/category/examples--tutorials)**
 
 - Keep relevant images, videos, and other documents within appropriate files in each *section* (each respective folder within `docs`) to avoid bloat in the main site folder.
-
-- If you are adding a new version to a document, consider adding [appropriate versioning](https://docusaurus.io/docs/versioning).
-
 
 ## General things
 
 - Unless neccessary, please do not change the code to the overall site itself, once stable the only changes should be to sections and pages.
+
+-  More advanced documentation for creating markdown files can be found [here](https://docusaurus.io/docs/next)
 
 - The search uses a third party tool (Algolia) which uses web scraping to determine the way it searches, as such, it takes up to a day for changes to reflect in this search. A local search will be considered in the future should time permit. **Search is currently broken, priority after migration.**
 
@@ -49,8 +56,8 @@ Please attribute inputed documentation to the appropriate author(s) along with t
 ```
 :::info
 
-**Document Creation:** 1 April, 2023. **Last Edited:** 31 August, 2023. **Authors:** Indiah Smith.
-<br></br> **Document Code:** CSG P3. **Effective Date:** 15 September 2023. **Expiry Date:** 5 September 2024.
+**Document Creation:** 1 April, 2023. **Last Edited:** 31 August, 2023. **Authors:** John Doe.
+<br></br> **Document Code:** DOC1. **Effective Date:** 15 September 2023. **Expiry Date:** 5 September 2024.
 :::
 ```
 
