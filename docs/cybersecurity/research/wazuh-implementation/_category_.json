@@ -1,6 +1,6 @@
 {
     "label": "Wazuh Implementation",
-    "position": 16,
+    "position": 1,
     "link": {
       "type": "generated-index",
       "description": "Wazuh Implementation Guide and Setup"
