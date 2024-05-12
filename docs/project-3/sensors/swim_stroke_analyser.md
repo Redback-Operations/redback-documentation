@@ -1,4 +1,8 @@
-### Wearable Swim Stroke Analyser Specifications
+---
+sidebar_position: 1
+---
+
+# Wearable Swim Stroke Analyser Specifications
 
 **Description:**
 This device is a compact, wearable device designed for swimmers to wear on their hands. It provides detailed feedback on the force and direction of their swim strokes, as well as mapping the stroke shape through accelerometry. This device aims to help swimmers optimize their technique and performance in the water.
