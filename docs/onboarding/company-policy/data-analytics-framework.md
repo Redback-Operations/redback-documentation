@@ -1,3 +1,7 @@
+---
+sidebar_position: 7
+---
+
 # Data Analytics Framework
 
 ## Introduction
@@ -5,49 +9,6 @@
 The purpose of this framework is to provide a structured approach to harnessing the power of data in making informed decisions. It serves as a comprehensive guide for Redback Operations project teams to systematically navigate through the complex process of collecting, processing, analysing, and interpreting data. By setting out clear steps and methodologies, this framework ensures that data analytics initiatives are aligned with the overarching goals of Redback Operations, whether they are business-driven objectives or research-oriented inquiries.
 
 The framework acts as a blueprint for consistency and efficiency in handling data. It helps in establishing best practices, ensuring data quality and integrity, and fostering a data-driven culture within the organisation. It also aids in mitigating risks associated with data management, such as data breaches or compliance issues, by embedding necessary protocols and ethical guidelines. Ultimately, this framework aims to empower projects teams to unlock actionable insights from data, leading to more strategic decisions, and enhanced performance in their respective fields.
-
-## Contents
-
-- [Introduction](#introduction)
-- [1. Define Objectives and Questions](#1-define-objectives-and-questions)
-  - [Identify the Business or Research Objectives](#identify-the-business-or-research-objectives)
-  - [Formulate Specific Questions that Data Analytics Can Answer](#formulate-specific-questions-that-data-analytics-can-answer)
-  - [Collaborative Input](#collaborative-input)
-  - [Documentation and Communication](#documentation-and-communication)
-- [2. Data Collection](#2-data-collection)
-  - [Establish Methods for Data Collection](#establish-methods-for-data-collection)
-  - [Ensure Data Quality and Integrity](#ensure-data-quality-and-integrity)
-- [3. Data Processing and Storage](#3-data-processing-and-storage)
-  - [Clean and Preprocess Data](#clean-and-preprocess-data)
-  - [Choose Appropriate Storage Solutions](#choose-appropriate-storage-solutions)
-  - [Data Integration](#data-integration)
-  - [Data Security and Backup](#data-security-and-backup)
-  - [Compliance and Data Sovereignty](#compliance-and-data-sovereignty)
-- [4. Data Exploration and Analysis](#4-data-exploration-and-analysis)
-  - [Perform Exploratory Data Analysis to Understand Patterns and Anomalies](#perform-exploratory-data-analysis-to-understand-patterns-and-anomalies)
-  - [Select Suitable Analytical Techniques](#select-suitable-analytical-techniques)
-  - [Validation and Testing](#validation-and-testing)
-- [5. Data Visualisation and Reporting](#5-data-visualisation-and-reporting)
-  - [Use Tools for Data Visualisation to Interpret the Results](#use-tools-for-data-visualisation-to-interpret-the-results)
-  - [Create Reports and Dashboards for Communicating Findings](#create-reports-and-dashboards-for-communicating-findings)
-- [6. Implementation of Insights](#6-implementation-of-insights)
-  - [Translate Data-Driven Insights into Actionable Strategies or Decisions](#translate-data-driven-insights-into-actionable-strategies-or-decisions)
-  - [Collaborate with Relevant Stakeholders](#collaborate-with-relevant-stakeholders)
-- [7. Evaluation and Iteration](#7-evaluation-and-iteration)
-  - [Assess the Impact of Implemented Strategies](#assess-the-impact-of-implemented-strategies)
-  - [Continuously Iterate the Process Based on Feedback and Changing Needs](#continuously-iterate-the-process-based-on-feedback-and-changing-needs)
-- [8. Data Governance and Compliance](#8-data-governance-and-compliance)
-  - [Ensure Data Security and Privacy](#ensure-data-security-and-privacy)
-  - [Comply with Relevant Data Protection Regulations](#comply-with-relevant-data-protection-regulations)
-- [9. Technology and Tools](#9-technology-and-tools)
-  - [Identify and Utilise Appropriate Tools and Technologies for Each Stage](#identify-and-utilise-appropriate-tools-and-technologies-for-each-stage)
-  - [Keeping Up to Date with Advancements](#keeping-up-to-date-with-advancements)
-- [10. Documentation and Knowledge Management](#10-documentation-and-knowledge-management)
-  - [Document Processes, Methodologies, and Findings](#document-processes-methodologies-and-findings)
-  - [Develop a System for Knowledge Sharing and Collaboration](#develop-a-system-for-knowledge-sharing-and-collaboration)
-- [11. Scalability and Maintenance](#11-scalability-and-maintenance)
-  - [Plan for Scalability to Handle Increased Data Volume or Complexity](#plan-for-scalability-to-handle-increased-data-volume-or-complexity)
-  - [Establish Regular Maintenance and Updates of Data, Models, and Systems](#establish-regular-maintenance-and-updates-of-data-models-and-systems)
 
 ## 1. Define Objectives and Questions
 
