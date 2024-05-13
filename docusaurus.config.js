@@ -144,7 +144,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Redback Operations`,
       },
       prism: {
-        theme: prismThemes.github,
+        theme: prismThemes.nightOwlLight,
         darkTheme: prismThemes.dracula,
       },
     }),

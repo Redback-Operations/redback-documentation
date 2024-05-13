@@ -37,9 +37,42 @@ table tr th {
 	vertical-align: top;
 }
 
+/** For the "Dos and Don'ts" icons **/
 table tr td img[alt="Error"],
 table tr td img[alt="Explanation"],
-table tr td img[alt="Correct action"] {
+table tr td img[alt="Correct action"],
+table tr td img[alt="Action to avoid"] {
 	min-width: 1.4rem;
 	margin-bottom: -0.35rem;
+}
+
+/** General table styling tweaks **/
+table tr td p:last-child {
+	margin-bottom: 0;
+}
+
+/** Improve the UX of the tabs by making them more clearly associated with their content **/
+.tabs {
+	overflow: hidden;
+	padding-left: 0.25rem; /* space for the box-shadow */
+}
+.tabs .tabs__item {
+	padding-bottom: 0;
+	padding-top: 0;
+	line-height: 2.5;
+	border: 0;
+	box-sizing: border-box;
+	box-shadow: 0 0 0.25rem 0 transparent;
+}
+.tabs .tabs__item--active {
+	box-shadow: 0 0 0.25rem 0 var(--ifm-tabs-color-active-border);
+	border: 0;
+	position: relative;
+	top: 2px;
+	z-index: 10;
+	background: var(--ifm-background-surface-color);
+}
+.tabs + div {
+	margin-top: 0 !important;
+	box-shadow: 0 0 0.25rem 0 var(--ifm-tabs-color-active-border);
 }
