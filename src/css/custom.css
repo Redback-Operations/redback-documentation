@@ -32,3 +32,14 @@ pre code {
   --ifm-color-primary-lightest: #78aeff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+table tr th {
+	vertical-align: top;
+}
+
+table tr td img[alt="Error"],
+table tr td img[alt="Explanation"],
+table tr td img[alt="Correct action"] {
+	min-width: 1.4rem;
+	margin-bottom: -0.35rem;
+}
