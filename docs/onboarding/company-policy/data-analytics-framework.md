@@ -61,7 +61,7 @@ The framework acts as a blueprint for consistency and efficiency in handling dat
    Begin by identifying potential data sources relevant to your objectives and questions. These could include internal sources generated from other projects or external sources like public datasets.
 
 2. **Selection of Data Collection Methods**  
-   Choose appropriate data collection methods based on your objectives and the nature of your data. This could range from sourcing data from IoT devices to utilizing data mining techniques and APIs for extracting large volumes of quantitative data.
+   Choose appropriate data collection methods based on your objectives and the nature of your data. This could range from sourcing data from IoT devices to utilising data mining techniques and APIs for extracting large volumes of quantitative data.
 
 3. **Integrating Diverse Data Sources**  
    Plan for the integration of data from various sources, ensuring compatibility and coherence in the data collection process.
@@ -75,17 +75,17 @@ The framework acts as a blueprint for consistency and efficiency in handling dat
    Develop protocols for cleaning and preprocessing data to remove errors, duplicates, and irrelevant information.
 
 3. **Maintaining Data Integrity**  
-   Establish guidelines to ensure that data is not altered in an unauthorized or unintended manner during its lifecycle.
+   Establish guidelines to ensure that data is not altered in an unauthorised or unintended manner during its lifecycle.
 
 ## 3. Data Processing and Storage
 
 ### Clean and Preprocess Data
 
 1. **Data Cleaning**  
-   Engage in thorough data cleaning to address issues such as inconsistencies, missing values, and errors. This process includes techniques like imputation for missing data, correcting erroneous entries, and standardizing data formats.
+   Engage in thorough data cleaning to address issues such as inconsistencies, missing values, and errors. This process includes techniques like imputation for missing data, correcting erroneous entries, and standardising data formats.
 
 2. **Preprocessing Techniques**  
-   Apply appropriate preprocessing techniques to make the data suitable for analysis. This might involve normalization, transformation, feature extraction, and handling of categorical data.
+   Apply appropriate preprocessing techniques to make the data suitable for analysis. This might involve normalisation, transformation, feature extraction, and handling of categorical data.
 
 ### Choose Appropriate Storage Solutions
 
@@ -147,7 +147,7 @@ The framework acts as a blueprint for consistency and efficiency in handling dat
    Use combinations of techniques to validate hypotheses and conduct deeper analyses.
 
 3. **Advanced Techniques**  
-   Utilize advanced techniques like NLP or neural networks if necessary.
+   Utilise advanced techniques like Natural Language Processing (NLP), used to deal with speech patterns and AI speech recognition,  or neural networks if necessary.
 
 4. **Iterative Approach**  
    Refine techniques and methodologies as needed.
@@ -171,7 +171,7 @@ The framework acts as a blueprint for consistency and efficiency in handling dat
    Choose visualisation tools based on the insights needed.
 
 2. **Effective Visualisations**  
-   Create graphs, charts, and other visual representations to convey key findings.
+   Create graphs, charts, and other visual representations to convey key findings. Ensure each visualisation includes a descriptive title and labeled axes to clearly indicate what the data represents, enhancing understanding and readability.
 
 ### Create Reports and Dashboards for Communicating Findings
 
