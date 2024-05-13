@@ -4,10 +4,11 @@ sidebar_position: 2
 
 # Aerodynamic Bike Resistance Monitor Specifications
 
-**Description:**
+## Description
+
 This device is designed to attach to the front of a bicycle, aimed at estimating aerodynamic resistance. It integrates with speed, power, and incline measurements to help cyclists and coaches assess the aerodynamic efficiency of different riding positions and equipment setups.
 
-**Key Features:**
+## Key Features
 
 1. **Air Flow Sensors:**
    - High-sensitivity sensors measure the flow and velocity of air around the front of the bike to estimate aerodynamic drag.
@@ -38,6 +39,7 @@ This device is designed to attach to the front of a bicycle, aimed at estimating
    - Robust, waterproof construction ensures functionality in all weather conditions.
    - Impact-resistant materials protect the device during falls or rough rides would be ideal as long as they do not conflict with the other requirements by making the device too bulky or inconvenient.
 
-**Applications:**
+## Applications
+
 - Ideal for road cyclists, triathletes, and cycling teams focused on performance optimization.
 - Useful in both training and competitive environments, particularly in time trials and triathlons where aerodynamics play a crucial role.
