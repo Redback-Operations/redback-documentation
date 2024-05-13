@@ -7,7 +7,7 @@ sidebar_position: 1
 Phishing Incident Response Playbook for Blue Team
 
 :::info
-**Effective Date:** 10 April, 2024. **Last Edited:** 5 April, 2024. **Authors:** Devika Sivakumar, Pari, Priyanshu, Joel Daniel. **Document Reference:** PIRP-2. **Expiry Date:** 17 December 2024. **Version:** 2.0.
+**Effective Date:** 10 April 2024. **Last Edited:** 5 April 2024. **Authors:** Devika Sivakumar, Pari, Priyanshu, Joel Daniel. **Document Reference:** PIRP-2. **Expiry Date:** 17 December 2024. **Version:** 2.0.
 :::
 
 ## 1. Introduction
