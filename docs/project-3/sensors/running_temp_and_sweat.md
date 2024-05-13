@@ -4,10 +4,10 @@ sidebar_position: 3
 
 # Core Temperature and Sweat Level Running Tracker Specifications
 
-**Descriptio:n**
+## Description:
 The device is designed for runners, providing actionable insights into core body temperature and sweat levels during training sessions and competitions. This tracker helps athletes optimize their performance by monitoring physiological responses in real-time, aiding in hydration and heat management strategies.
 
-**Key Features:**
+## Key Features:
 
 1. **Core Temperature Sensor:**
    - Precision sensor embedded in a comfortable, adjustable strap to monitor core body temperature accurately.
