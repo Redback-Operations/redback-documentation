@@ -40,9 +40,15 @@ table tr th {
 /** For the "Dos and Don'ts" icons **/
 table tr td img[alt="Error"],
 table tr td img[alt="Explanation"],
-table tr td img[alt="Correct action"] {
+table tr td img[alt="Correct action"],
+table tr td img[alt="Action to avoid"] {
 	min-width: 1.4rem;
 	margin-bottom: -0.35rem;
+}
+
+/** General table styling tweaks **/
+table tr td p:last-child {
+	margin-bottom: 0;
 }
 
 /** Improve the UX of the tabs by making them more clearly associated with their content **/
