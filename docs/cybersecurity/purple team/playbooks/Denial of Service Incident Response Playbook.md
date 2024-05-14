@@ -7,7 +7,7 @@ sidebar_position: 2
 Denial of Service Incident Response Playbook for Blue Team
 
 :::info
-**Effective Date:** 29 April 2024. **Last Edited:** 20 April 2024. **Authors:** Pari **Document Reference:** DSIRP-2. **Expiry Date:** 29 April 2025. **Version:** 1.0.
+**Effective Date:** 29 April 2024. **Last Edited:** 20 April 2024. **Author:** Pari **Document Reference:** DSIRP-2. **Expiry Date:** 29 April 2025. **Version:** 1.0.
 :::
 
 ## 1 Introduction
