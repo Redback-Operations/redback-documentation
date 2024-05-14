@@ -1,0 +1,8 @@
+{
+  "label": "Template",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Template related to OpenCTI."
+  }
+}
