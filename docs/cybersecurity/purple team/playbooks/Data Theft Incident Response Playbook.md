@@ -129,6 +129,7 @@ The communication team oversees overseeing both internal and outside communicati
  - Organising public relations and media relations campaigns to safeguard the company's image and lessen the negative effects of data theft occurrences on its reputation.
  - Regularly updating upper leadership and the incident response team on the state of stakeholder engagement and communication initiatives.
 
+
 ### 3.4 Customers
 Customers are people or organisations that may be impacted by instances of data theft and have a stake in the goods or services offered by the company. Among their duties and functions are:
 
@@ -137,6 +138,7 @@ Customers are people or organisations that may be impacted by instances of data 
  - Participating in the investigation of data theft occurrences by offering pertinent data or proof to the organization's incident response team.
  - Adhering to the organization's recommendations and instructions about how to safeguard their personal data and lessen the effects of data theft occurrences.
 
+
 ### 3.5 Third-Party Vendors
 Third-party vendors are outside companies that supply the company with goods, services, or support; they may also have access to its networks, systems, or data. Among their duties and functions are:
 
@@ -144,6 +146,7 @@ Third-party vendors are outside companies that supply the company with goods, se
  - Working in tandem with the company's incident response team to locate and fix security flaws or breaches pertaining to their goods or services.
  - Offering the company help and support as it investigates and handles data theft issues that impact its networks or systems.
  - Honouring contractual commitments and legal mandates pertaining to privacy and data security, including disclosing security breaches, and assisting with incident response.
+
 
 
 ## 4. Flow Diagram
