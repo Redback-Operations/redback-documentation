@@ -7,7 +7,7 @@ sidebar_position: 3
 Data-Theft Incident Response Playbook for Blue Team
 
 :::info
-**Effective Date:** 29 April 2024. **Last Edited:** 13 April 2024. **Authors:** Devika Sivakumar **Document Reference:** DTIRP-1. **Expiry Date:** 29 April 2025. **Version:** 1.0.
+**Effective Date:** 29 April 2024. **Last Edited:** 13 April 2024. **Author:** Devika Sivakumar **Document Reference:** DTIRP-1. **Expiry Date:** 29 April 2025. **Version:** 1.0.
 :::
 
 ## 1. Introduction
@@ -120,7 +120,7 @@ The incident response team oversees overseeing the incident response procedure a
  - Recording best practices and lessons gained from data theft events to strengthen the company's incident response skills.
 
 
-## 3.3 Communication Team
+### 3.3 Communication Team
 The communication team oversees overseeing both internal and outside communications about cases of data theft and making sure that messages are clear and consistent. Among their duties and functions are:
 
 
@@ -129,7 +129,8 @@ The communication team oversees overseeing both internal and outside communicati
  - Organising public relations and media relations campaigns to safeguard the company's image and lessen the negative effects of data theft occurrences on its reputation.
  - Regularly updating upper leadership and the incident response team on the state of stakeholder engagement and communication initiatives.
 
-## 3.4 Customers
+
+### 3.4 Customers
 Customers are people or organisations that may be impacted by instances of data theft and have a stake in the goods or services offered by the company. Among their duties and functions are:
 
 
@@ -137,7 +138,8 @@ Customers are people or organisations that may be impacted by instances of data 
  - Participating in the investigation of data theft occurrences by offering pertinent data or proof to the organization's incident response team.
  - Adhering to the organization's recommendations and instructions about how to safeguard their personal data and lessen the effects of data theft occurrences.
 
-## 3.5 Third-Party Vendors
+
+### 3.5 Third-Party Vendors
 Third-party vendors are outside companies that supply the company with goods, services, or support; they may also have access to its networks, systems, or data. Among their duties and functions are:
 
 
@@ -146,7 +148,8 @@ Third-party vendors are outside companies that supply the company with goods, se
  - Honouring contractual commitments and legal mandates pertaining to privacy and data security, including disclosing security breaches, and assisting with incident response.
 
 
-### 4. Flow Diagram
+
+## 4. Flow Diagram
 
 ![Data Theft Incident Response Flowchart](img\dtirp1-flowchart.jpg)
 
