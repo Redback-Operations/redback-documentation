@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 sidebar_label: Server Security Policy
-description: This policy refers to the Server Security High-Level Guidelines for Redback Operations.
+title: Server Security Policy
 ---
 <div style={{ width: '100%' }}>
   <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -56,99 +56,7 @@ description: This policy refers to the Server Security High-Level Guidelines for
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Contents
-
-- [Scope](#scope)
-  - [Purpose](#purpose)
-    - [Objectives](#objectives)
-    - [Definitions](#definitions)
-    - [Guiding Principles](#guiding-principles)
-    - [General Obligations](#general-obligations)
-  - [Key Assets and Data Categories](#key-assets-and-data-categories)
-  - [Framework References](#framework-references)
-    - [ISO 27001:2022 Controls:](#iso-270012022-controls)
-    - [CIS Controls:](#cis-controls)
-  - [Conclusion:](#conclusion)
-- [Roles and Responsibilities](#roles-and-responsibilities)
-  - [Key Roles](#key-roles)
-    - [Security Team](#security-team)
-    - [IT Department](#it-department)
-    - [System Administrators](#system-administrators)
-    - [Management](#management)
-    - [End Users](#end-users)
-  - [RACI Chart](#raci-chart)
-    - [Legend:](#legend)
-- [Strategic Overview \& Controls](#strategic-overview--controls)
-  - [Operating System Hardening](#operating-system-hardening)
-    - [Operating System Selection](#operating-system-selection)
-    - [Operating System Releases and Versions](#operating-system-releases-and-versions)
-    - [Standard Operating Environments (SOEs)](#standard-operating-environments-soes)
-    - [Hardening Operating System Configurations](#hardening-operating-system-configurations)
-    - [OS Security Protections](#os-security-protections)
-    - [Control References](#control-references)
-  - [Application Management and Control](#application-management-and-control)
-    - [Application Management](#application-management)
-    - [Application Control](#application-control)
-    - [Command Shell](#command-shell)
-    - [PowerShell](#powershell)
-    - [Control References](#control-references-1)
-  - [Intrusion Prevention, Software Firewalls, Antivirus, and Device Access Control](#intrusion-prevention-software-firewalls-antivirus-and-device-access-control)
-    - [Host-Based Intrusion Prevention System (HIPS)](#host-based-intrusion-prevention-system-hips)
-    - [Software Firewall](#software-firewall)
-    - [Antivirus Software](#antivirus-software)
-    - [Device Access Control Software](#device-access-control-software)
-    - [Control References](#control-references-2)
-  - [Operating System Event Logging](#operating-system-event-logging)
-    - [Control Reference:](#control-reference)
-  - [User Application Hardening](#user-application-hardening)
-    - [User Applications](#user-applications)
-    - [User Application Selection](#user-application-selection)
-    - [User Application Releases](#user-application-releases)
-    - [Hardening User Application Configurations](#hardening-user-application-configurations)
-    - [Control References:](#control-references-3)
-  - [Microsoft Office Macros](#microsoft-office-macros)
-    - [Control References](#control-references-4)
-  - [Server Application Hardening](#server-application-hardening)
-    - [Server Applications](#server-applications)
-    - [Server Application Selection](#server-application-selection)
-    - [Server Application Releases](#server-application-releases)
-    - [Hardening Server Application Configurations](#hardening-server-application-configurations)
-    - [Restricting Privileges for Server Applications](#restricting-privileges-for-server-applications)
-    - [Control References](#control-references-5)
-  - [Microsoft Active Directory Domain Services (AD DS) Hardening](#microsoft-active-directory-domain-services-ad-ds-hardening)
-    - [Microsoft AD DS Account Hardening](#microsoft-ad-ds-account-hardening)
-  - [Microsoft AD DS Security Group Memberships](#microsoft-ad-ds-security-group-memberships)
-    - [Control References](#control-references-6)
-  - [Authentication Hardening](#authentication-hardening)
-    - [Account and Authentication Types](#account-and-authentication-types)
-    - [Authenticating to Systems](#authenticating-to-systems)
-    - [Insecure Authentication Methods](#insecure-authentication-methods)
-    - [Multi-Factor Authentication (MFA)](#multi-factor-authentication-mfa)
-    - [Single-Factor Authentication](#single-factor-authentication)
-    - [Setting Credentials for User Accounts](#setting-credentials-for-user-accounts)
-    - [Setting Credentials for Break Glass, Local Administrator, and Service Accounts](#setting-credentials-for-break-glass-local-administrator-and-service-accounts)
-    - [Changing Credentials](#changing-credentials)
-    - [Protecting Credentials](#protecting-credentials)
-    - [Account Lockouts](#account-lockouts)
-    - [Session Termination](#session-termination)
-    - [Session and Screen Locking](#session-and-screen-locking)
-    - [Logon Banner](#logon-banner)
-    - [Control Reference:](#control-reference-1)
-  - [Virtualization Hardening](#virtualization-hardening)
-    - [Hypervisors](#hypervisors)
-    - [Containerization](#containerization)
-    - [Functional Separation Between Computing Environments](#functional-separation-between-computing-environments)
-    - [Control References:](#control-references-7)
-- [Policy Review](#policy-review)
-  - [Responsibility for Reviews](#responsibility-for-reviews)
-  - [Frequency of Reviews](#frequency-of-reviews)
-  - [Proposing and Approving Changes](#proposing-and-approving-changes)
-  - [Communication Plan for Updates](#communication-plan-for-updates)
-- [Appendix](#appendix)
-
-<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
-
-# Scope
+## Scope
 
 The Server Security Policy applies to all server assets, including physical and virtual servers, as well as related server infrastructure managed or operated by Redback Operations. This policy encompasses all servers utilized across the organization, irrespective of their geographical location or deployment model (on-premises, cloud-hosted, or hybrid environments).
 
@@ -173,11 +81,11 @@ This scope ensures comprehensive coverage of all server-related security aspects
 
 **Note: This policy serves as a foundational element of our broader IT security strategy, which may include future deployments of additional security solutions such as intrusion detection systems (IDS), intrusion prevention systems (IPS), and advanced threat protection services.**
 
-## Purpose
+### Purpose
 
 The Server Security Policy is designed to ensure Redback Operations achieves and maintains strict security and compliance standards throughout its server infrastructure. This policy aims to safeguard the integrity, confidentiality, and availability of all server data and applications. By defining comprehensive controls and procedures, this policy serves as a foundational guide for securing and managing all server resources effectively.
 
-### Objectives
+#### Objectives
 
 The objectives that this Server Security Policy intends to achieve are:
 
@@ -200,7 +108,7 @@ The objectives that this Server Security Policy intends to achieve are:
 
 This policy supports both technical and strategic security goals while fostering a culture of security compliance across all server environments in Redback Operations. It lays a solid groundwork for the effective protection of sensitive data and server infrastructure.
 
-### Definitions  
+#### Definitions  
 The table below expands on definitions and components specific to server security:
 
 | **Term**                                             | **Definition**                                                                                                             |
@@ -215,7 +123,7 @@ The table below expands on definitions and components specific to server securit
 | **Security Information and Event Management (SIEM)** | A tool for aggregating and analysing server logs and network activity to identify and respond to security incidents.       |
 | **Forensic Analysis**                                | The process of investigating server logs to understand the cause of a security incident and gather evidence.               |
 
-### Guiding Principles
+#### Guiding Principles
 
 Here are the guiding principles that Redback Operations should follow for server security:
 
@@ -230,7 +138,7 @@ Here are the guiding principles that Redback Operations should follow for server
 | **Monitoring**      | Continuously monitor server performance and security to detect potential threats and operational issues proactively.                |
 | **Compliance**      | Adhere to applicable legal, regulatory, and contractual requirements in server management practices.                                |
 
-### General Obligations
+#### General Obligations
 
 Redback Operations adheres to the following obligations under the Server Security Policy:
 
@@ -246,7 +154,7 @@ Redback Operations adheres to the following obligations under the Server Securit
 
 These sections outline essential components of the Server Security Policy, providing clarity on terminology, guiding principles, and obligations for Redback Operations.
 
-## Key Assets and Data Categories
+### Key Assets and Data Categories
 
 For Redback Operations, identifying the critical systems, applications, and data sets that require protection is crucial. This includes any sensitive information that needs heightened security measures. Here are typical IT assets and data categories that are critical and covered under the scope of this policy:
 
@@ -265,13 +173,13 @@ For Redback Operations, identifying the critical systems, applications, and data
 
 These assets and data types require monitoring to ensure they are protected from unauthorized access, modifications, or any other cyber threats.
 
-## Framework References
+### Framework References
 
 The Server Security Policy for Redback Operations incorporates specific controls from the Australian Signals Directorate (ASD’s) Information Security Manual. References to the ASD ISM security controls are referenced further in the policy, however the policy itself overlaps and aligns with ISO 27001:2022 standards and the CIS Security Controls v8 to ensure a comprehensive and robust approach to server security and risk management.
 
 These frameworks provide recognized best practices for maintaining the security, integrity, and availability of information systems.
 
-### ISO 27001:2022 Controls:
+#### ISO 27001:2022 Controls:
 
 -   **A.5.14 Information Security Policy:** Mandates developing, implementing, and maintaining an information security policy that aligns with organizational objectives, ensuring secure data processing and compliance.
 -   **A.8.1 Asset Management:** Highlights maintaining an inventory of information assets and assigning ownership, promoting accountability and protection.
@@ -282,7 +190,7 @@ These frameworks provide recognized best practices for maintaining the security,
 -   **A.14.1 System Development:** Ensures security is integrated across the software development lifecycle, reducing vulnerabilities, and supporting secure design.
 -   **A.14.2 Security in Development and Support Processes**: Ensures that information security is an integral part of information systems across the lifecycle, including development and support.
 
-### CIS Controls:
+#### CIS Controls:
 
 -   **Control 1: Inventory and Control of Enterprise Assets:** Ensures all devices and software are identified and managed, reducing unauthorized or unmanaged hardware and software.
 -   **Control 3: Data Protection:** Safeguards sensitive data throughout its lifecycle, using encryption and access controls.
@@ -294,49 +202,49 @@ These frameworks provide recognized best practices for maintaining the security,
 -   **Control 12: Boundary Defence**: Ensures that defences are effective at detecting, preventing, and correcting the flow of information transferring networks of different trust levels.
 -   **Control 13: Network Monitoring and Defence:** Establishes effective network security monitoring to detect, analyse, and respond to security incidents in real time.
 
-## Conclusion:  
+### Conclusion:  
 ISO 27001 controls and CIS benchmarks have been carefully selected to address the specific security needs of server environments at Redback Operations.
 
 By aligning the Server Security Policy with these established standards, Redback Operations ensures that its servers are well-protected against threats and are compliant with international best practices and regulatory requirements.
 
 This alignment not only secures the infrastructure but also supports the organization’s goals of maintaining operational integrity and business continuity.
 
-# Roles and Responsibilities
+## Roles and Responsibilities
 
 A clear definition of roles and responsibilities is crucial for effective server security management. At Redback Operations, the following roles play key parts in maintaining the security and integrity of servers:
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Key Roles
+### Key Roles
 
 The success of the Server Security Policy at Redback Operations relies on clearly defined roles and responsibilities. It is crucial for all stakeholders to understand their duties to ensure effective implementation, compliance, and maintenance of security standards.
 
-### Security Team
+#### Security Team
 
 -   Develop, review, and update the server security policy; implement security controls and measures; monitor security compliance; conduct regular security assessments; respond to security incidents.
 -   Accountable For: Maintaining the overall security posture of the organization’s server environments.
 
-### IT Department
+#### IT Department
 
 -   Assist in implementing security controls; manage and maintain server hardware and software; ensure timely application of patches and updates; support the Security Team in incident response activities.
 -   Operational management of servers and ensuring their compliance with the security policy.
 
-### System Administrators
+#### System Administrators
 
 -   Apply security configurations and settings; monitor system performance and logs; enforce access controls and permissions; directly handle the installation, maintenance, and upgrading of servers.
 -   Day-to-day management of servers, ensuring they are secure from unauthorized access and threats.
 
-### Management
+#### Management
 
 -   Approve security policies and resource allocations; ensure organization-wide compliance with security practices; foster a culture of security awareness.
 -   Strategic oversight and ensuring that security objectives align with the organization’s business goals.
 
-### End Users
+#### End Users
 
 -   Adhere to security policies and procedures; report any suspected security vulnerabilities or incidents to the IT or Security Team.
 -   Using server resources responsibly and maintaining awareness of security implications.
 
-## RACI Chart
+### RACI Chart
 
 To delineate responsibilities, the following RACI chart indicates who is Responsible, Accountable, Consulted, and Informed for key server security activities:
 
@@ -351,7 +259,7 @@ To delineate responsibilities, the following RACI chart indicates who is Respons
 | **Resource Allocation**         | C                 | R                 | I                         | A              | -             |
 | **Security Training**           | R                 | I                 | I                         | -              | C             |
 
-### Legend:
+#### Legend:
 
 -   R: Responsible – Performs the actual work to achieve the task.
 -   A: Accountable – Ultimately accountable for the completion and quality of the task.
@@ -360,7 +268,7 @@ To delineate responsibilities, the following RACI chart indicates who is Respons
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-# Strategic Overview & Controls
+## Strategic Overview & Controls
 
 The server security policy for Redback Operations is developed in line with the Australian Signals Directorate's Information Security Manual (ISM) and the Essential 8 Framework. It provides a holistic approach to safeguarding IT infrastructure against a broad spectrum of security threats.
 
@@ -400,9 +308,9 @@ https://www.cyber.gov.au/resources-business-and-government/essential-cyber-secur
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Operating System Hardening
+### Operating System Hardening
 
-### Operating System Selection
+#### Operating System Selection
 
 Choosing the right operating system is fundamental to building a secure server environment. Redback Operations should prioritize vendors that:
 
@@ -410,14 +318,14 @@ Choosing the right operating system is fundamental to building a secure server e
 -   Utilize memory-safe programming languages where possible (e.g., C\#, Go, Java, Ruby, Rust, Swift).
 -   Follow secure programming practices and demonstrate a strong commitment to maintaining the security of their products.
 
-### Operating System Releases and Versions
+#### Operating System Releases and Versions
 
 Regular updates and patches are crucial in maintaining secure servers:
 
 -   Use the latest or the previous release of operating systems, ensuring access to the latest security features.
 -   Where possible, choose 64-bit versions of operating systems, which support additional security functionalities.
 
-### Standard Operating Environments (SOEs)
+#### Standard Operating Environments (SOEs)
 
 Standardization improves consistency and reduces vulnerabilities:
 
@@ -425,7 +333,7 @@ Standardization improves consistency and reduces vulnerabilities:
 -   When SOEs are obtained from third parties, scan them for malicious code or configurations.
 -   Review and update SOEs annually to maintain current security baselines.
 
-### Hardening Operating System Configurations
+#### Hardening Operating System Configurations
 
 Secure configurations ensure resilient operating systems:
 
@@ -437,7 +345,7 @@ Secure configurations ensure resilient operating systems:
 -   Disable or remove Internet Explorer 11 to reduce vulnerabilities.
 -   Remove .NET Framework 3.5, including .NET 2.0 and 3.0, if possible.
 
-### OS Security Protections
+#### OS Security Protections
 
 Enable all available OS security protections:
 
@@ -445,7 +353,7 @@ Enable all available OS security protections:
 -   Enable Secure Boot & TPM Modules
 -   Prevent unprivileged users from disabling or modifying security features or running script execution engines.
 
-### Control References
+#### Control References
 
 -   ISM-1743: Operating systems are chosen from vendors with a proven security commitment.
 -   ISM-1407: The latest or previous operating system release is used.
@@ -469,16 +377,16 @@ These guidelines ensure that Redback Operations' server operating systems remain
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Application Management and Control
+### Application Management and Control
 
-### Application Management  
+#### Application Management  
 To minimize the risk posed by malicious applications, Redback Operations implements strict controls on application management:
 
 -   Unprivileged users are not allowed to install unapproved software.
 -   Approved software must be installed from organization-managed repositories or trusted application marketplaces.
 -   Unprivileged users cannot uninstall or disable approved software, preventing the removal of security features or critical system functions.
 
-### Application Control  
+#### Application Control  
 
 Application control helps to prevent the execution of malicious code on servers. Redback Operations follows a structured approach to application control:
 
@@ -486,13 +394,13 @@ Application control helps to prevent the execution of malicious code on servers.
 -   Use cryptographic hash rules, publisher certificate rules, or path rules while ensuring hardening measures are in place.
 -   Log and analyse application control events centrally to detect and investigate malicious behaviour.
 
-### Command Shell  
+#### Command Shell  
 
 Command shells, while useful for automating system tasks, can be exploited by malicious actors. By centrally logging command line process creation events, Redback Operations can detect malicious behaviour promptly.
 
 -   Command line process creation events are centrally logged.
 
-### PowerShell  
+#### PowerShell  
 
 PowerShell is a powerful tool but can be dangerous if exploited. The following controls protect against unauthorized usage:
 
@@ -502,7 +410,7 @@ PowerShell is a powerful tool but can be dangerous if exploited. The following c
 -   Protect PowerShell script block logs using Protected Event Logging.
 -   Ensure PowerShell remote execution policy is configured to use RemoteSigned.
 
-### Control References
+#### Control References
 
 -   ISM-1592: Unprivileged users cannot install unapproved software.
 -   ISM-0382: Unprivileged users cannot uninstall or disable approved software.
@@ -529,21 +437,21 @@ PowerShell is a powerful tool but can be dangerous if exploited. The following c
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Intrusion Prevention, Software Firewalls, Antivirus, and Device Access Control
+### Intrusion Prevention, Software Firewalls, Antivirus, and Device Access Control
 
-### Host-Based Intrusion Prevention System (HIPS)  
+#### Host-Based Intrusion Prevention System (HIPS)  
 Signature-based detection can miss new variants of malware. A Host-based Intrusion Prevention System (HIPS) uses behaviour-based detection to identify and block malicious activity, providing an extra layer of security for both workstations and critical servers at Redback Operations.
 
-### Software Firewall  
+#### Software Firewall  
 Network firewalls generally control communication between network segments based on ports and protocols but often fail to prevent malware propagation or data exfiltration. Software firewalls offer more granular control, allowing communication restrictions based on specific applications or services, effectively safeguarding servers, and workstations.
 
-### Antivirus Software  
+#### Antivirus Software  
 Malicious actors frequently reuse known vulnerabilities, and antivirus software on workstations and servers provides protection by leveraging signature-based, heuristic, and reputation-rating detection. Regular scanning and timely updates reduce the risk of exploitation.
 
-### Device Access Control Software  
+#### Device Access Control Software  
 External communication interfaces that facilitate Direct Memory Access (DMA) or removable media can be exploited if improperly managed, posing significant security risks. Device access control software or disabling external interfaces minimizes the risk.
 
-### Control References
+#### Control References
 
 -   ISM-1034: Implement a HIPS on critical and high-value servers.
 -   ISM-1416: Implement a software firewall on workstations and servers to control inbound and outbound network connections to an approved set of applications and services.
@@ -560,7 +468,7 @@ External communication interfaces that facilitate Direct Memory Access (DMA) or 
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Operating System Event Logging
+### Operating System Event Logging
 
 Note: Refer to the Monitoring & Log Analytics Policy within the ISMS for further information.
 
@@ -574,7 +482,7 @@ Centrally logging and analysing operating system events is essential for monitor
 -   Document security product-related events, such as antivirus or firewall actions.
 -   Capture information about when systems start up and shut down.
 
-### Control Reference:
+#### Control Reference:
 
 -   ISM-0582: Centrally log these operating system events:
     -   Track when applications or the operating system experience crashes or generate error messages.
@@ -587,13 +495,13 @@ Centrally logging and analysing operating system events is essential for monitor
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## User Application Hardening
+### User Application Hardening
 
-### User Applications
+#### User Applications
 
 This section pertains to applications typically installed on workstations and occasionally on servers (such as Remote Desktop Servers), such as office productivity suites, web browsers, email clients, PDF software, and security products like antivirus and firewalls.
 
-### User Application Selection
+#### User Application Selection
 
 To minimize vulnerabilities, Redback Operations should prioritize vendors that adhere to secure-by-design and secure-by-default principles, use memory-safe programming languages, follow secure programming practices, and maintain their products' security. Redback Operations should prioritize vendors that:
 
@@ -601,11 +509,11 @@ To minimize vulnerabilities, Redback Operations should prioritize vendors that a
 -   Use memory-safe programming languages when possible.
 -   Demonstrate secure programming practices and maintain their products' security.
 
-### User Application Releases
+#### User Application Releases
 
 Newer releases often contain improved security features that make exploitation more difficult. Using the latest releases ensures protection against known vulnerabilities.
 
-### Hardening User Application Configurations
+#### Hardening User Application Configurations
 
 Proper configuration hardening prevents exploitation by malicious actors. The following controls should be followed:
 
@@ -630,7 +538,7 @@ Proper configuration hardening prevents exploitation by malicious actors. The fo
 -   Prevent changes to security product settings by users.
 -   Implement Microsoft’s attack surface reduction rules where applicable.
 
-### Control References:
+#### Control References:
 
 -   ISM-1915: Approved configurations developed, implemented, and maintained.
 -   ISM-1806: Change default accounts and credentials.
@@ -655,7 +563,7 @@ Proper configuration hardening prevents exploitation by malicious actors. The fo
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Microsoft Office Macros
+### Microsoft Office Macros
 
 Microsoft Office macros are written in Visual Basic for Applications and can automate tasks, enhancing productivity. However, macros can be exploited by malicious actors to compromise systems. Therefore, Redback Operations enforces strict controls over macro usage to minimize risks.
 
@@ -671,7 +579,7 @@ Microsoft Office macros are written in Visual Basic for Applications and can aut
 -   Prevent users from changing Microsoft Office macro security settings.
 -   Log all allowed and blocked macro execution events centrally.
 
-### Control References
+#### Control References
 
 -   ISM-1671: Disable Microsoft Office macros for users without a demonstrated business requirement.
 -   ISM-1488: Block macros in Microsoft Office files originating from the internet.
@@ -688,15 +596,15 @@ Microsoft Office macros are written in Visual Basic for Applications and can aut
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Server Application Hardening
+### Server Application Hardening
 
-### Server Applications
+#### Server Applications
 
 This section covers applications with specific server functionality, such as Microsoft Active Directory Domain Services (AD DS), database management systems, email servers, and web hosting software.
 
 **Note: User applications are covered under user application hardening.**
 
-### Server Application Selection
+#### Server Application Selection
 
 Selecting server applications from vendors that follow secure-by-design and secure-by-default principles is critical to minimizing vulnerabilities. Vendors should also use memory-safe programming languages (C\#, Go, Java, Ruby, Rust, Swift) and maintain secure programming practices. Redback Operations should prioritize vendors that:
 
@@ -704,11 +612,11 @@ Selecting server applications from vendors that follow secure-by-design and secu
 -   Use memory-safe programming languages where possible (C\#, Go, Java, Ruby, Rust, Swift).
 -   Maintain secure programming practices and product security.
 
-### Server Application Releases
+#### Server Application Releases
 
 Newer server application releases include improved security features that complicate exploitation by malicious actors. Using unsupported versions leaves organizations exposed to previously mitigated vulnerabilities.
 
-### Hardening Server Application Configurations
+#### Hardening Server Application Configurations
 
 Default or unapproved configurations can lead to an insecure environment, making server applications prime targets for exploitation. Redback Operations should:
 
@@ -718,14 +626,14 @@ Default or unapproved configurations can lead to an insecure environment, making
 -   Disable or remove unneeded accounts, components, services, and features.
 -   Remove installation files and logs once applications are fully installed.
 
-### Restricting Privileges for Server Applications
+#### Restricting Privileges for Server Applications
 
 If a server application runs as a local administrator or root account, it can pose a significant security risk. Applications should:
 
 -   Configure server applications to run as separate accounts with the minimum privileges needed.
 -   Restrict the file system access of accounts under which server applications run.
 
-### Control References
+#### Control References
 
 -   ISM-1826: Choose server applications from vendors committed to secure principles and practices.
 -   ISM-1483: Use the latest release of internet-facing server applications.
@@ -739,7 +647,7 @@ If a server application runs as a local administrator or root account, it can po
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Microsoft Active Directory Domain Services (AD DS) Hardening
+### Microsoft Active Directory Domain Services (AD DS) Hardening
 
 Microsoft AD DS Domain Controllers  
 Microsoft AD DS domain controllers contain highly sensitive data, including hashed credentials. Dedicated domain administrator accounts should be exclusively used for AD DS management, ensuring they can't be used to administer other systems.
@@ -748,7 +656,7 @@ Microsoft AD DS domain controllers contain highly sensitive data, including hash
 -   Avoid using passwords in Group Policy Preferences
 -   Centrally log security events.
 
-### Microsoft AD DS Account Hardening  
+#### Microsoft AD DS Account Hardening  
 
 Misconfigured accounts pose a significant security risk. Malicious actors can gain access to AD DS and move laterally throughout the network. Redback Operations mitigates these risks by implementing the following guidelines:
 
@@ -769,7 +677,7 @@ Misconfigured accounts pose a significant security risk. Malicious actors can ga
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Microsoft AD DS Security Group Memberships  
+### Microsoft AD DS Security Group Memberships  
 
 Built-in security groups have elevated permissions that can be exploited. Limit vulnerabilities by ensuring:
 
@@ -777,7 +685,7 @@ Built-in security groups have elevated permissions that can be exploited. Limit 
 -   Remove disabled accounts from security groups.
 -   Ensure no user accounts are part of the Pre-Windows 2000 Compatible Access group.
 
-### Control References
+#### Control References
 
 -   ISM-1827: Administer AD DS using dedicated domain administrator accounts.
 -   ISM-1828: Disable the Print Spooler service on AD DS domain controllers.
@@ -790,26 +698,26 @@ Built-in security groups have elevated permissions that can be exploited. Limit 
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Authentication Hardening
+### Authentication Hardening
 
-### Account and Authentication Types
+#### Account and Authentication Types
 
 These guidelines apply to all account types, including unprivileged, privileged, break glass, and service accounts, covering both interactive and non-interactive authentication.
 
-### Authenticating to Systems
+#### Authenticating to Systems
 
 Users must be authenticated before gaining access to a system and its resources. This can be achieved via multi-factor authentication (MFA), such as a username with a passphrase and security key, or through single-factor authentication (SFA) as a less secure alternative.
 
 -   Authenticate users before granting system access.
 
-### Insecure Authentication Methods
+#### Insecure Authentication Methods
 
 Authentication methods must resist theft, interception, duplication, forgery, unauthorized access, and modification. Weak hashing algorithms in Local Area Network (LAN) Manager and NT LAN Manager (NTLM) can be easily compromised. Disable these protocols and use Kerberos for Windows authentication.
 
 -   Disable authentication methods susceptible to replay attacks.
 -   Disable LAN Manager and NTLM authentication methods.
 
-### Multi-Factor Authentication (MFA)
+#### Multi-Factor Authentication (MFA)
 
 MFA uses two or more factors to confirm user identity:
 
@@ -822,7 +730,7 @@ MFA is vital for administrative activities, online services, privileged accounts
 -   Ensure MFA used for authenticating online services, data repositories, and systems is phishing resistant.
 -   Log successful and unsuccessful MFA events centrally.
 
-### Single-Factor Authentication
+#### Single-Factor Authentication
 
 Single-factor authentication (SFA) remains vulnerable to credential cracking tools. If multi-factor authentication (MFA) is not supported, use SFA with strong passphrases. Key recommendations include:
 
@@ -830,7 +738,7 @@ Single-factor authentication (SFA) remains vulnerable to credential cracking too
 -   Avoid categorically predictable words, meaningful sentences, or publicly available material.
 -   Log successful and unsuccessful SFA events centrally to detect malicious behaviour.
 
-### Setting Credentials for User Accounts
+#### Setting Credentials for User Accounts
 
 Ensure credentials for user accounts are securely issued and managed:
 
@@ -840,7 +748,7 @@ Ensure credentials for user accounts are securely issued and managed:
 -   Ensure users change credentials on first use.
 -   Prevent users from reusing memorized credentials across systems.
 
-### Setting Credentials for Break Glass, Local Administrator, and Service Accounts
+#### Setting Credentials for Break Glass, Local Administrator, and Service Accounts
 
 Common usernames or weak credentials can lead to rapid exploitation of break glass, local administrator, and service accounts. Secure these accounts by following these guidelines:
 
@@ -850,14 +758,14 @@ Common usernames or weak credentials can lead to rapid exploitation of break gla
 -   Credentials for these accounts are a minimum of 30 characters.
 -   Create service accounts as group Managed Service Accounts.
 
-### Changing Credentials
+#### Changing Credentials
 
 Credentials typically do not require frequent changes unless specific conditions arise:
 
 -   Update credentials when compromised, suspected of compromise, stored/transferred in the clear, shared account membership changes, or when not changed in 12 months.
 -   Change KRBTGT credentials twice if the domain is compromised, suspected of compromise, or if not updated in 12 months.
 
-### Protecting Credentials
+#### Protecting Credentials
 
 Protect credentials by following these guidelines:
 
@@ -868,17 +776,17 @@ Protect credentials by following these guidelines:
 -   Protect credentials with a password manager, hardware security module, or by hashing, salting, and stretching them before storage in a database.
 -   Regularly scan networks to identify and remediate credentials stored in the clear.
 
-### Account Lockouts
+#### Account Lockouts
 
 Locking accounts after several failed attempts reduces the success rate of brute-force attacks like credential guessing or spraying. Implement these practices:
 
 -   Lock accounts (except break glass) after a maximum of five failed logon attempts.
 
-### Session Termination
+#### Session Termination
 
 Terminating user sessions daily and after inactivity supports system maintenance and helps remove malicious actors lacking persistence.
 
-### Session and Screen Locking
+#### Session and Screen Locking
 
 Session and screen locks prevent unauthorized access to authenticated sessions. Key requirements include:
 
@@ -887,13 +795,13 @@ Session and screen locks prevent unauthorized access to authenticated sessions. 
 -   Require users to authenticate to unlock.
 -   Deny users the ability to disable the screen lock.
 
-### Logon Banner
+#### Logon Banner
 
 A logon banner reminds users of security responsibilities when accessing systems. Include:
 
 -   System sensitivity/classification, access requirements, usage policies, and monitoring activities.
 
-### Control Reference:
+#### Control Reference:
 
 -   ISM-1546: Users are authenticated before they are granted access to a system and its resources.
 -   ISM-1603: Authentication methods susceptible to replay attacks are disabled.
@@ -958,22 +866,22 @@ A logon banner reminds users of security responsibilities when accessing systems
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Virtualization Hardening
+### Virtualization Hardening
 
-### Hypervisors
+#### Hypervisors
 
 Both Type 1 and Type 2 hypervisors must be treated according to their role:
 
 -   Type 1 Hypervisors: Run on bare metal and should be treated as lightweight operating systems.
 -   Type 2 Hypervisors: Run on top of general-purpose operating systems and should be treated as applications.
 
-### Containerization
+#### Containerization
 
 Containers offer versatile deployment but must be managed like any system.
 
 -   Applying patches and ensuring patched images are used is crucial.
 
-### Functional Separation Between Computing Environments
+#### Functional Separation Between Computing Environments
 
 Malicious actors can exploit misconfigurations or vulnerabilities in software-based isolation mechanisms to compromise multiple environments. Key practices include:
 
@@ -985,7 +893,7 @@ Malicious actors can exploit misconfigurations or vulnerabilities in software-ba
 -   Perform integrity and log monitoring for both isolation mechanisms and underlying OS.
 -   Physical servers used for SECRET and TOP SECRET computing environments should only host environments of the same classification and security domain.
 
-### Control References:
+#### Control References:
 
 -   ISM-1460: Select isolation mechanisms from secure vendors.
 -   ISM-1604: Harden isolation mechanisms and restrict administrative access.
@@ -997,31 +905,31 @@ Malicious actors can exploit misconfigurations or vulnerabilities in software-ba
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-# Policy Review
+## Policy Review
 
 The objective of this policy review section is to ensure that the security controls and guidelines within the Server Security Policy remain relevant, effective, and aligned with evolving security threats, organizational needs, and compliance requirements.
 
 **Note: Company layout and infrastructure does not reflect the standards outline in this policy at the time of this document’s creation and is considered a long-term strategy to implement when company maturity has improved.**
 
-## Responsibility for Reviews
+### Responsibility for Reviews
 
 The Chief Information Security Officer (CISO) is designated as the primary initiator of the reviews for the cyber security policy at Redback Operations. A review committee assists in evaluating the effectiveness and relevance of the policy.
 
-## Frequency of Reviews
+### Frequency of Reviews
 
 Reviews are scheduled to occur at least annually. However, more frequent reviews are conducted if there are significant changes in technology, business practices, or compliance requirements. Ad-hoc reviews are also permitted in response to security incidents or major failures in the existing policy.
 
-## Proposing and Approving Changes
+### Proposing and Approving Changes
 
 Any member of the review committee can propose changes during the review process. These proposals should be supported by a rationale and, where possible, data to substantiate the change. After a thorough discussion within the committee, the CISO presents the proposed changes to senior management for approval.
 
-## Communication Plan for Updates
+### Communication Plan for Updates
 
 Once changes are approved, the updated policy is communicated to all stakeholders through internal memos, meetings, and training sessions. All employees must understand the changes and how they impact their roles and responsibilities. Regular training sessions are updated to reflect the new policy standards.
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-# Appendix
+## Appendix
 
 https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism/cyber-security-guidelines/guidelines-system-hardening
 

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 sidebar_label: Monitoring & Log Analytics
-description: This policy refers to the Monitoring & Log Analytics High-Level Guidelines for Redback Operations.
+title: Monitoring & Log Analytics
 ---
 
 <div style={{ width: '100%' }}>
@@ -57,74 +57,7 @@ description: This policy refers to the Monitoring & Log Analytics High-Level Gui
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Table of Contents
-
-- [Scope](#scope)
-  - [Purpose](#purpose)
-    - [Objectives](#objectives)
-  - [Common Terminology](#common-terminology)
-    - [Definitions](#definitions)
-    - [Guiding Principles](#guiding-principles)
-    - [General Obligations:](#general-obligations)
-  - [Key Assets and Data Categories](#key-assets-and-data-categories)
-  - [Framework References](#framework-references)
-    - [ISO 27001:2022 Controls:](#iso-270012022-controls)
-    - [CIS Controls:](#cis-controls)
-  - [Roles and Responsibilities](#roles-and-responsibilities)
-    - [Chief Information Security Officer (CISO)](#chief-information-security-officer-ciso)
-    - [IT Security Manager](#it-security-manager)
-    - [Network Administrator](#network-administrator)
-    - [System Administrator](#system-administrator)
-    - [Database Administrator](#database-administrator)
-    - [Application Manager](#application-manager)
-    - [Security Analyst](#security-analyst)
-    - [Compliance Officer](#compliance-officer)
-    - [IT Support Staff](#it-support-staff)
-  - [RACI Chart](#raci-chart)
-    - [Legend](#legend)
-  - [Types of Digital Assets Covered Under the Log Analytics Policy](#types-of-digital-assets-covered-under-the-log-analytics-policy)
-    - [Web-facing Applications and Services](#web-facing-applications-and-services)
-    - [Network Infrastructure](#network-infrastructure)
-    - [Cloud Services and Infrastructure](#cloud-services-and-infrastructure)
-    - [Email and Communication Servers](#email-and-communication-servers)
-    - [Remote Access Services](#remote-access-services)
-    - [IT Assets](#it-assets)
-- [Monitoring \& Log Analytics Lifecycle](#monitoring--log-analytics-lifecycle)
-- [Log Collection Management, Practices \& Activities](#log-collection-management-practices--activities)
-  - [Data \& Log Types](#data--log-types)
-    - [User Access and Authentication Logs](#user-access-and-authentication-logs)
-    - [System and Application Changes](#system-and-application-changes)
-    - [Network Activity Logs](#network-activity-logs)
-    - [Data Access and Usage Logs](#data-access-and-usage-logs)
-  - [Log Formats](#log-formats)
-    - [Standardized Formats](#standardized-formats)
-    - [Detailed Elements](#detailed-elements)
-    - [Encryption and Secure Streaming](#encryption-and-secure-streaming)
-  - [Security Operations Centre (SOC) Activities](#security-operations-centre-soc-activities)
-    - [Real-time Monitoring and Analysis](#real-time-monitoring-and-analysis)
-  - [Log Collection Frequency \& Retention](#log-collection-frequency--retention)
-    - [Log Collection Standards](#log-collection-standards)
-    - [Retention Duration](#retention-duration)
-    - [Secure Storage and Destruction](#secure-storage-and-destruction)
-  - [Compliance with Standards \& Controls](#compliance-with-standards--controls)
-  - [Auditing \& Review](#auditing--review)
-  - [Documentation and Training](#documentation-and-training)
-  - [SIEM/SOC Logging Protection](#siemsoc-logging-protection)
-    - [Data Encryption:](#data-encryption)
-    - [Access Control:](#access-control)
-    - [Log Integrity:](#log-integrity)
-    - [Regular Security Assessments:](#regular-security-assessments)
-    - [Redundancy and Backup:](#redundancy-and-backup)
-- [Policy Review](#policy-review)
-  - [Responsibility for Reviews](#responsibility-for-reviews)
-  - [Frequency of Reviews](#frequency-of-reviews)
-  - [Proposing and Approving Changes](#proposing-and-approving-changes)
-  - [Communication Plan for Updates](#communication-plan-for-updates)
-  - [Documentation and Record-Keeping](#documentation-and-record-keeping)
-
-<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
-
-# Scope
+## Scope
 
 The Monitoring & Log Analytics Cyber Security Policy will apply to all IT systems and networks owned or operated by Redback Operations.
 
@@ -138,11 +71,11 @@ Log analytics supports the identification of trends, unexpected occurrences, and
 
 **Note: This policy is a high-level policy that refers to a theoretical future deployment of a SIEM/SOC solution for Redback Operations.**
 
-## Purpose
+### Purpose
 
 This monitoring and log analytics policy is designed to support Redback Operations in achieving and maintaining high standards of security and compliance throughout its operations. The purpose of this policy is multi-faceted and supports our commitment to maintaining the integrity, confidentiality, and availability of our data and systems.
 
-### Objectives
+#### Objectives
 
 The objectives that this policy intends to achieve are:
 
@@ -163,11 +96,11 @@ The objectives that this policy intends to achieve are:
 
 This policy is essential not only for achieving technical and operational goals but also for fostering a culture of security and compliance at all levels of the organization. It serves as a foundational security policy for guiding and securing technical systems implemented within Redback Operations.
 
-## Common Terminology
+### Common Terminology
 
 This sub-heading refers to common terminology, components, KPI & KGI indicators covered under this policy:
 
-### Definitions
+#### Definitions
 
 The table provided below presents the expanded definitions and components list relevant to the Monitoring & Log Analytics Cyber Security Policy:
 
@@ -184,7 +117,7 @@ The table provided below presents the expanded definitions and components list r
 | Security Information and Event Management (SIEM) | A solution that aggregates and analyses activity from many different resources across your IT infrastructure, used for real-time analysis of security alerts generated by applications and network hardware. |
 | Forensic Analysis                                | The detailed investigation of logs and other data following a security incident, aimed at understanding the actions that led to the incident and gathering evidence.                                         |
 
-### Guiding Principles
+#### Guiding Principles
 
 Here’s a table that details the guiding principles relevant to the Monitoring & Log Analytics Cyber Security Policy:
 
@@ -200,7 +133,7 @@ Here’s a table that details the guiding principles relevant to the Monitoring 
 | Comprehensiveness | Ensures all relevant data is captured, providing a detailed and complete view of system and user activities.      |
 | Security          | Mandates that logs and their management processes adhere to the highest standards of data protection.             |
 
-### General Obligations:
+#### General Obligations:
 
 Here’s a table that details the obligations that Redback Operations adheres to through the Monitoring & Log Analytics Cyber Security Policy:
 
@@ -216,7 +149,7 @@ Here’s a table that details the obligations that Redback Operations adheres to
 | Comprehensiveness | Ensures all relevant data is captured, providing a detailed and complete view of system and user activities.      |
 | Security          | Mandates that logs and their management processes adhere to the highest standards of data protection.             |
 
-## Key Assets and Data Categories
+### Key Assets and Data Categories
 
 For Redback Operations, identifying the critical systems, applications, and data sets that require monitoring and logging is crucial. This includes any sensitive information that needs heightened security measures. Here are typical IT assets and data categories that are critical:
 
@@ -235,18 +168,18 @@ For Redback Operations, identifying the critical systems, applications, and data
 
 These assets and data types require robust monitoring to ensure they are protected from unauthorized access, modifications, or any other cyber threats.
 
-## Framework References
+### Framework References
 
 The Monitoring and Log Analytics Policy leverages the following framework controls to ensure a robust approach to information security and risk management:
 
-### ISO 27001:2022 Controls:
+#### ISO 27001:2022 Controls:
 
 -   **A.12.1 Operations Security**: Involves correct and secure operations of information processing facilities to enhance the overall security of operations.
 -   **A.12.4 Logging and Monitoring**: Ensures that events are recorded and analysed to detect, prevent, and recover from security incidents.
 -   **A.12.7 Information Systems Audit Considerations**: Manages the audit of information systems to ensure compliance with security policies and standards without disrupting business processes.
 -   **A.16.1 Management of Information Security Incidents and Improvements**: Focuses on ensuring a consistent and effective approach to the management of information security incidents, including communications on security events.
 
-### CIS Controls:
+#### CIS Controls:
 
 -   **Control 3: Data Protection**: Protects data through controls that enforce confidentiality and integrity, ensuring availability as required for monitoring and logging purposes.
 -   **Control 6: Audit Log Management**: Focuses on the collection, management, and analysis of audit logs to help detect and understand security incidents.
@@ -258,56 +191,56 @@ These controls have been specifically selected to enhance the effectiveness of t
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Roles and Responsibilities
+### Roles and Responsibilities
 
 For Redback Operations, clearly defined roles and responsibilities are essential to maintain an effective monitoring and log management system. Here are the typical roles involved and their respective duties:
 
-### Chief Information Security Officer (CISO)
+#### Chief Information Security Officer (CISO)
 
 -   Oversees the cybersecurity strategy, including monitoring and log analytics policies.
 -   Ensures that all monitoring and log management practices comply with internal and external regulations.
 
-### IT Security Manager
+#### IT Security Manager
 
 -   Manages the daily operations of security systems and ensures the effective implementation of the log analytics policy.
 -   Leads the security team in developing and maintaining security protocols.
 
-### Network Administrator
+#### Network Administrator
 
 -   Responsible for the management and monitoring of network devices including routers, switches, and firewalls.
 -   Ensures that all network configurations align with the security standards.
 
-### System Administrator
+#### System Administrator
 
 -   Oversees the monitoring of all server and end-user devices.
 -   Manages the collection, storage, and maintenance of log data from servers and other critical systems.
 
-### Database Administrator
+#### Database Administrator
 
 -   Monitors database operations and ensures that access logs are maintained and reviewed.
 -   Responsible for the security and integrity of database assets.
 
-### Application Manager
+#### Application Manager
 
 -   Ensures that all application logs are collected and analysed.
 -   Monitors the performance of business-critical applications and ensures they meet the required standards.
 
-### Security Analyst
+#### Security Analyst
 
 -   Analyses log data to identify, investigate, and respond to potential security threats.
 -   Acts quickly to mitigate any detected threats or breaches.
 
-### Compliance Officer
+#### Compliance Officer
 
 -   Monitors compliance with legal and regulatory requirements pertaining to log management and cybersecurity.
 -   Coordinates internal and external audits of cybersecurity practices.
 
-### IT Support Staff
+#### IT Support Staff
 
 -   Provides support to end-users on security best practices and assists with incident response.
 -   Assists in the management of monitoring tools and systems.
 
-## RACI Chart
+### RACI Chart
 
 A RACI chart is a valuable management tool used to delineate the roles and responsibilities across different team members for specific activities within a project or process. It clarifies expectations, enhances communication, and ensures clear ownership of tasks, aiding in project and process management.
 
@@ -321,7 +254,7 @@ A RACI chart is a valuable management tool used to delineate the roles and respo
 | **Policy training and updates**          | -         | C                       | -                  | -                 | -                   | -                        | -                     | -                       | R                     |
 | **Log data management**                  | -         | -                       | C                  | R                 | R                   | C                        | C                     | C                       | C                     |
 
-### Legend
+#### Legend
 
 -   R (Responsible): Performs the activity or does the work.
 -   A (Accountable): Ultimately accountable for the correctness and thoroughness of the activity. Only one Accountable per task.
@@ -330,18 +263,18 @@ A RACI chart is a valuable management tool used to delineate the roles and respo
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Types of Digital Assets Covered Under the Log Analytics Policy
+### Types of Digital Assets Covered Under the Log Analytics Policy
 
 This structured list of assets defines (but is not limited to) the broad scope of the Log Analytics Cyber Security Policy, ensuring that all critical systems and infrastructure are monitored in alignment with this policy.
 
-### Web-facing Applications and Services
+#### Web-facing Applications and Services
 
 -   **Public Websites, Gateways, and Portals**
     -   Includes main websites, customer portals, and blogs hosted on domains owned by Redback Operations.
 -   **Web Applications**
     -   Online applications providing services or interactions to users, such as web-based email systems, CRM platforms, custom business applications, and APIs.
 
-### Network Infrastructure
+#### Network Infrastructure
 
 -   **DNS Servers**
     -   Servers responsible for resolving domain names into IP addresses.
@@ -350,7 +283,7 @@ This structured list of assets defines (but is not limited to) the broad scope o
 -   **VPN/Remote Access Gateways**
     -   Endpoints for VPN access that allow secure remote connections to the internal network, like SSL VPN appliances.
 
-### Cloud Services and Infrastructure
+#### Cloud Services and Infrastructure
 
 -   **Cloud-based Web Hosting**
     -   Services used for hosting websites and web applications on cloud platforms.
@@ -359,14 +292,14 @@ This structured list of assets defines (but is not limited to) the broad scope o
 -   **IaaS, PaaS & SaaS Services**
     -   Cloud-based applications accessed over the Internet, including Salesforce CRM, Google Workspace, and cloud infrastructures like Google Cloud Platform and Microsoft Azure.
 
-### Email and Communication Servers
+#### Email and Communication Servers
 
 -   **Email Servers**
     -   Servers handling incoming and outgoing email communications, including SMTP, IMAP, and POP3 servers.
 -   **Unified Communications Systems**
     -   Systems providing services such as VoIP, video conferencing, and instant messaging, e.g., Microsoft Teams or Zoom.
 
-### Remote Access Services
+#### Remote Access Services
 
 -   **Remote Desktop Services**
     -   Services allowing remote control of desktops or servers, such as Remote Desktop Protocol (RDP) endpoints.
@@ -375,7 +308,7 @@ This structured list of assets defines (but is not limited to) the broad scope o
 -   **Privileged Access Management Platform**
     -   Platform used for managing identities and facilitating privileged access to sensitive systems.
 
-### IT Assets
+#### IT Assets
 
 -   **Servers**
     -   Includes web, application, and database servers.
@@ -388,7 +321,7 @@ This structured list of assets defines (but is not limited to) the broad scope o
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-# Monitoring & Log Analytics Lifecycle
+## Monitoring & Log Analytics Lifecycle
 
 The typical Monitoring & Log Analytics Lifecycle for effective systems can be defined as:
 
@@ -398,39 +331,39 @@ The typical Monitoring & Log Analytics Lifecycle for effective systems can be de
 
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
-# Log Collection Management, Practices & Activities
+## Log Collection Management, Practices & Activities
 
 Redback Operations subscribes to a comprehensive framework for the collection, formatting, management, and analysis of log data across all IT systems and networks. This framework is designed to ensure the integrity, availability, and confidentiality of log information, which is crucial for maintaining security, facilitating incident response, and complying with legal and regulatory obligations.
 
-## Data & Log Types
+### Data & Log Types
 
-### User Access and Authentication Logs
+#### User Access and Authentication Logs
 
 Track all user login, logout, and authentication attempts to monitor unauthorized access attempts and user activity.
 
-### System and Application Changes
+#### System and Application Changes
 
 Record all updates, configuration changes, and software installations to ensure system integrity and audit system changes.
 
-### Network Activity Logs
+#### Network Activity Logs
 
 Capture all data related to network traffic, including firewall logs, intrusion detection system logs, and network access logs, essential for detecting potential threats and malicious activities.
 
-### Data Access and Usage Logs
+#### Data Access and Usage Logs
 
 Document access to sensitive data and actions performed on the data, critical for protecting data privacy and detecting data breaches.
 
-## Log Formats
+### Log Formats
 
-### Standardized Formats
+#### Standardized Formats
 
 Logs are standardized to JSON or XML formats, which simplifies parsing and integration with various log analysis tools, aiding in automation and rapid response by SOC teams.
 
-### Detailed Elements
+#### Detailed Elements
 
 Logs incorporate essential elements like timestamp, user ID, event type, source IP, destination IP, and action details, providing comprehensive traceability and context for security analysis.
 
-### Encryption and Secure Streaming
+#### Encryption and Secure Streaming
 
 All logs are encrypted during transmission and at rest. This ensures the confidentiality and integrity of log data, protecting it against unauthorized access and tampering.
 
@@ -438,9 +371,9 @@ Utilize secure channels (e.g., TLS/SSL) for log transmission to ensure that data
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Security Operations Centre (SOC) Activities
+### Security Operations Centre (SOC) Activities
 
-### Real-time Monitoring and Analysis
+#### Real-time Monitoring and Analysis
 
 SOC teams utilize real-time log data to identify and respond to incidents swiftly, employing advanced tools for anomaly detection and threat hunting.
 
@@ -456,9 +389,9 @@ The following rules apply to Incident Response & Forensics:
 
 **Refer to the Incident Response Policy & relevant playbooks for further information.**
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
-## Log Collection Frequency & Retention
+### Log Collection Frequency & Retention
 
-### Log Collection Standards
+#### Log Collection Standards
 
 The following rules apply in relation to Log Collection, Retention & Storage requirements:
 
@@ -469,7 +402,7 @@ The following rules apply in relation to Log Collection, Retention & Storage req
 -   Critical systems and security logs are collected in real-time to facilitate immediate analysis and response to potential security threats.
 -   Application and system logs are configured to capture data per session or transaction, while network logs are typically collected at regular intervals, adjusted based on traffic volume and risk assessment.
 
-### Retention Duration
+#### Retention Duration
 
 The following rules apply in relation to Retention requirements:
 
@@ -477,7 +410,7 @@ The following rules apply in relation to Retention requirements:
 -   All logs must be retained for a minimum of 12 months, subject to target source criticality. Critical systems such as financial or personally identifiable information (PII) handling systems must retain logs for a minimum of 24 months.
 -   Logs must be archived in a secure manner at the end of their active life and must be readily accessible for audit purposes for an additional 12-month post-retirement.
 
-### Secure Storage and Destruction
+#### Secure Storage and Destruction
 
 Logs are securely stored in encrypted formats with access controls strictly limiting access to authorized personnel only.
 
@@ -485,48 +418,48 @@ Logs are securely stored in encrypted formats with access controls strictly limi
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## Compliance with Standards & Controls
+### Compliance with Standards & Controls
 
 The log management practices defined in this policy align with CIS Controls for effective log management and ISO/IEC 27001 standards for information security management, ensuring data governance and compliance adherence with global cybersecurity industry standards.
 
 By enhancing the log collection practices as outlined, Redback Operations strengthens its cybersecurity framework, ensuring that log management not only meets compliance requirements but also supports proactive security monitoring and incident management effectively. This detailed approach facilitates a secure, compliant, and efficient operational environment.
 
-## Auditing & Review
+### Auditing & Review
 
 Compliance audits of log management practices must be conducted **annually** to ensure adherence to this policy and relevant legal or regulatory standards. Audit trails must be maintained for all access and changes to log data, to provide accountability and traceability.
 
-## Documentation and Training
+### Documentation and Training
 
 All procedures related to log management must be fully documented and updated annually or following significant changes to the IT environment. Staff involved in log management must receive regular training on their responsibilities under this policy and on the secure handling of log data.
 
-## SIEM/SOC Logging Protection
+### SIEM/SOC Logging Protection
 
 To ensure the confidentiality, integrity, and availability of log data at Redback Operations, it is critical to implement security measures. Here are the minimum high-level requirements for protecting the integrity of the Redback Operations SIEM/SOC platform:
 
-### Data Encryption:
+#### Data Encryption:
 
 -   Utilize strong encryption standards such as AES-256 for log data at rest and TLS for log data in transit to protect against unauthorized access and interception.
 
 **Note: Refer to the Cryptography Policy within the Redback Operations ISMS for further detail.**
 
-### Access Control:
+#### Access Control:
 
 -   Implement strict access controls using role-based access control (RBAC) to ensure only authorized personnel have access to log data.
 -   Use multi-factor authentication (MFA) for systems accessing log data to add an additional layer of security and adhere to common industry framework controls such as CIS.
 
-### Log Integrity:
+#### Log Integrity:
 
 -   Apply cryptographic hashing to log entries to detect and prevent unauthorized changes.
     -   Any alteration of the log data will result in a different hash value, indicating tampering.
 -   Use log management solutions that support log immutability (such as write-once-read-many (WORM) storage) to prevent alteration or deletion of log data.
 
-### Regular Security Assessments:
+#### Regular Security Assessments:
 
 -   Conduct regular security assessments of the log management infrastructure to identify vulnerabilities.
 
 **Note: Refer to the Attack Surface Management policy referenced in the Redback Operations ISMS for further detail.**
 
-### Redundancy and Backup:
+#### Redundancy and Backup:
 
 -   Regularly backup log data to secure, geographically dispersed locations to prevent data loss from local disasters or system failures.
 
@@ -534,29 +467,29 @@ To ensure the confidentiality, integrity, and availability of log data at Redbac
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-# Policy Review
+## Policy Review
 
 Regular reviews and timely updates to the Monitoring & Log Analytics Cyber Security Policy are essential for keeping it relevant and effective at Redback Operations.
 
 **Note: Company layout and infrastructure does not reflect the standards outline in this policy at the time of this document’s creation and is considered a long-term strategy to implement when company maturity has improved.**
 
-## Responsibility for Reviews
+### Responsibility for Reviews
 
 The Chief Information Security Officer (CISO) is designated as the primary initiator of the reviews for the cyber security policy at Redback Operations. A review committee assists in evaluating the effectiveness and relevance of the policy.
 
-## Frequency of Reviews
+### Frequency of Reviews
 
 Reviews are scheduled to occur at least annually. However, more frequent reviews are conducted if there are significant changes in technology, business practices, or compliance requirements. Ad-hoc reviews are also permitted in response to security incidents or major failures in the existing policy.
 
-## Proposing and Approving Changes
+### Proposing and Approving Changes
 
 Any member of the review committee can propose changes during the review process. These proposals should be supported by a rationale and, where possible, data to substantiate the change. After a thorough discussion within the committee, the CISO presents the proposed changes to senior management for approval.
 
-## Communication Plan for Updates
+### Communication Plan for Updates
 
 Once changes are approved, the updated policy is communicated to all stakeholders through internal memos, meetings, and training sessions. It is crucial to ensure that all employees understand the changes and how they impact their roles and responsibilities. Regular training sessions are updated to reflect the new policy standards.
 
-## Documentation and Record-Keeping
+### Documentation and Record-Keeping
 
 Detailed records of all review meetings, discussions, decisions made, and the reasoning behind changes are maintained meticulously. The version history of the policy is documented to track changes over time and provide context for future amendments.
 
