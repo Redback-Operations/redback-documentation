@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 17
 ---
 
 # Feasibility Study on Implementing OpenCTI Template
@@ -8,6 +8,8 @@ Feasibility Study on Implementing OpenCTI Template (Guide)
 
 :::info
  **Last Edited:** 12 May 2024. **Authors:** Devika Sivakumar  **Version:** 1.0.
+
+[PDF template here](docs\Feasibility-Study-on-OpenCTI-Template.pdf)
 :::
 
 ## 1. Introduction

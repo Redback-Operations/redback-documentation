@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Redback Operations Business Continuity Plan 2024-2025
@@ -8,6 +8,8 @@ A Business Continuity Plan to ensure the minimal continuity of Redback Operation
 
 :::info
 **Effective Date:** 13 May 2024. **Last Edited:** 13 May 2024. **Author:** Joel Daniel **Document Reference:** ROBCP-1. **Expiry Date:** 7 March 2025. **Version:** 1.0.
+
+[PDF version here](docs\Redback-Operations-Business-Continuity-Plan-2024-2025.pdf)
 :::
 
 
