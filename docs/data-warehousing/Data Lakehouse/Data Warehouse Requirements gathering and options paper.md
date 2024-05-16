@@ -1,8 +1,8 @@
 --- 
-sideba_position: 3
+sidebar_position: 1
 ---
 
-# Redback Operations - Requirements Gathering & Options Paper
+# Requirements Gathering & Options Paper
 
 ## Background
 Redback Operations is currently without a permanent scalable contemporary data solution. While workarounds currently exist such as storing data in GitHub folders or on the personal computers of company members, this is far from best practice and doesn’t represent a sustainable longer-term solution.
@@ -16,20 +16,6 @@ The first step, and that being the focus of this document and Project 4, is to e
 While a data warehouse or data storage solution is a key component, the overall goal to properly implement a data solution in line with industry standards would mean a complete overhaul of the existing data processes for Redback (in some cases implementing for a lack of current data processes). This would consist of a body of work more akin to a ‘Data Transformation’ than a Data warehouse implementation.
 
 While planning and implementing a project of this size given the timeframe would be ambitious for any company, a data transformation would require the introduction of many fundamental aspects typical of a high-functioning data department. This better ensures a solution foundation rooted in industry standards, including appropriate data architecture, data modeling, overall data framework, insights management, and data security.
-
-## Table of Contents
-1. [Background](#background)
-2. [A Note on Data Warehouse](#a-note-on-data-warehouse)
-3. [The Plan](#the-plan)
-4. [Requirements Gathering](#requirements-gathering)
-5. [Options](#options)
-   - [IOMETE](#iomete)
-   - [N8n](#n8n)
-   - [Dremio](#dremio)
-   - [Microsoft Fabric/Azure](#microsoft-fabricazure)
-   - [MongoDB](#mongodb)
-   - [Apache Hudi](#apache-hudi)
-6. [Data Storage](#data-storage)
 
 ## A Note on Data Warehouse
 ‘Data Warehouse Team’ is this company’s project allocated to a data storage solution as has been the project objective since its inception. The project name has been appropriate for general understanding given that practically, yes, this project aims to implement a data storage solution; however, if any recommendation of this document is to be approved and bring the project up to industry standards and best practices, the project’s objective would be looking to acquire and implement a state-of-the-art Data Lakehouse or similar company-wide data storage solution, no longer a standalone Data Warehouse for one project alone.
