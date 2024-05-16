@@ -8,6 +8,8 @@ import TabItem from '@theme/TabItem';
 
 # Using Styled Components
 
+> **Document Creation:** 12 May, 2024. **Last Edited:** 12 May, 2024. **Authors:** Leesa Ward.
+
 ## What is Styled Components?
 
 Styled Components is a CSS-in-JS library that allows you to write CSS directly in your JavaScript files, co-located with the React component code that outputs the HTML and handles interactivity. 
