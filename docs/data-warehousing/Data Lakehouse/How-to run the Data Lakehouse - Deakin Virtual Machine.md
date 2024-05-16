@@ -1,5 +1,5 @@
 --- 
-sideba_position: 3
+sidebar_position: 2
 ---
 # How to Use the Redback Operations Data Lakehouse
 
