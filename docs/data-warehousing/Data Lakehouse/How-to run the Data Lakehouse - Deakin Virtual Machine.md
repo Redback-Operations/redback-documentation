@@ -15,7 +15,7 @@ To access the virtual machine, an account must be set up by someone with Admin a
 
 ### To Access the Virtual Machine, Enter the Following Commands:
 
-'ssh [yourname]@redback.it.deakin.edu.au'
+`ssh [yourname]@redback.it.deakin.edu.au`
 
 4. 
 
