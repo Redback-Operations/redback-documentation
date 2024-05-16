@@ -37,6 +37,8 @@ This site uses markdown (.md or .mdx) for the files. Please do not upload word d
 
     with `x` being the position (in a positive integer) that you want this document to appear within its section.
 
+- Do not add a contents list, this is automatically generated
+
 - Each individual page is simply a markdown page, **[examples here, view the source code of these pages for guidance](https://redback-operations.github.io/redback-documentation/docs/category/examples--tutorials)**
 
 - Keep relevant images, videos, and other documents within appropriate files in each *section* (each respective folder within `docs`) to avoid bloat in the main site folder.
