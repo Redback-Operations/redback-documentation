@@ -39,11 +39,11 @@ Before raising a pull request, please ensure the below checks pass.
     
     Note that the file names match the folder names, and all are in `PascalCase` (this is the general React convention). If you use the generator script to create new [pages/routes](./new-routes.md) and [components](./new-components.md), they will follow this automatically.
 
-6. Run unit tests, and if any of the tests related to the components you've worked on or used fail, fix the problem
+5. Run unit tests, and if any of the tests related to the components you've worked on or used fail, fix the problem
     ```bash
     npm run test:unit
     ```
-7. When all checks are passing and your work is ready for peer feedback, create a pull request on GitHub.
+6. When all checks are passing and your work is ready for peer feedback, create a pull request on GitHub.
 
 ## Useful links
 - [Packaging pull requests](../../onboarding/github/pull-requests)
