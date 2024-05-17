@@ -21,6 +21,24 @@ Before raising a pull request, please ensure the below checks pass.
     ```
 4. **Important!** If you got any errors from the project structure check, fix them before proceeding. If your feature/change cannot work with the current configuration in `project-structure.json`, include the necessary config change in your pull request so it can be assessed by reviewers, and to ensure that non-compliant code does not get merged. Documentation for the linter can be found at [eslint-plugin-project-structure](https://github.com/Igorkowalski94/eslint-plugin-project-structure).
 
+   For most work, the main directory structure and naming conventions to be aware of follow the below pattern:
+   ```
+   - src/
+        - routes/ (all apps EXCEPT Redback UI)
+              - RouteName/
+                    - RouteName.tsx
+                    - RouteName.style.ts
+                    - RouteName.test.tsx
+        - components/
+              - ComponentName/
+                    - ComponentName.tsx
+                    - ComponentName.style.ts
+                    - ComponentName.test.tsx
+                    - ComponentName.stories.tsx (Redback UI only)
+   ```
+    
+    Note that the file names match the folder names, and all are in `PascalCase` (this is the general React convention). If you use the generator script to create new [pages/routes](./new-routes.md) and [components](./new-components.md), they will follow this automatically.
+
 5. Run unit tests, and if any of the tests related to the components you've worked on or used fail, fix the problem
     ```bash
     npm run test:unit
