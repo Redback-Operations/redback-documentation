@@ -1,8 +1,9 @@
 ---
 sidebar_position: 5
 ---
-# Phishing Attack
-Phishing-Attack-Red-Team-Usecase
+# Phishing Attack Red Team Usecase
+
+Phishing Attack Red Team Usecase
 
 :::info
 **Effective Date:** 10 May 2024. **Last Edited:** 10 May 2024. **Author:** Liya Thomas **Document Reference:** IURTU -1. **Expiry Date:** 10 May 2025. **Version:** 1.0.

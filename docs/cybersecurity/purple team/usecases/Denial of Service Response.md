@@ -1,8 +1,9 @@
 ---
 sidebar_position: 2
 ---
-# Denial of Service Incident
-Denial of Service  Incident Red Team Usecase
+# Denial of Service Red Team Usecase
+
+Denial of Service Red Team Usecase
 
 :::info
 **Effective Date:** 29 April 2024. **Last Edited:** 25 April 2024. **Author:** Liya Thomas **Document Reference:** DoSRTU-1. **Expiry Date:** 29 April 2025. **Version:** 1.0.

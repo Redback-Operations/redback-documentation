@@ -1,7 +1,8 @@
 ---
 sidebar_position: 3
 ---
-# Elevation Of Pivilage
+# Elevation Of Pivilage Red Team Usecase
+
 Elevation Of Pivilage Red Team Usecase
 
 :::info

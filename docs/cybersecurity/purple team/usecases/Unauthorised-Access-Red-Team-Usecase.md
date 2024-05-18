@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
 ---
-## Unauthorised-Access 
-Unauthorised-Access-Red-Team-Usecase
+## Unauthorised-Access Red Team Usecase
+ 
+Unauthorised Access Red Team Usecase
 
 :::info
 **Effective Date:** 6 MAY 2024. **Last Edited:** 6 MAY 2024. **Author:** Liya Thomas **Document Reference:** UARTU-1 **Expiry Date:** 6 MAY 2025. **Version:** 1.0.
