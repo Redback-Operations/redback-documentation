@@ -2,12 +2,13 @@
 sidebar_position: 3
 ---
 
+# Anonymization and Masking in Healthcare Data
+Implementation and Rationale
+
 :::info
 **Effective Date:** 30 Apr 2024. **Last Edited:** 10 May 2024. **Author:** Meghana Kaveti
 **Document Reference:** Data Anonymization. **Expiry Date:** 29 April 2025. **Version:** 1.0.
 :::
-
-# **Anonymization and Masking in Healthcare Data: Implementation and Rationale**
 
 
 ## Introduction:
@@ -61,7 +62,7 @@ innovation in healthcare research.
 anonymization and masking fosters trust among patients, healthcare providers, and regulatory 
 bodies, bolstering the integrity of healthcare data management practices.
 
-### **Conclusion:**
+## Conclusion:
 The implementation of anonymization and masking techniques in healthcare data 
 management is indispensable for preserving patient privacy, complying with regulations, 
 facilitating research, and building trust within the healthcare ecosystem. By anonymizing 
