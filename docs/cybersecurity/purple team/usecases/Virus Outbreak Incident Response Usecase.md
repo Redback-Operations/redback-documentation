@@ -1,10 +1,10 @@
 ---
-sidebar_position: 10
+sidebar_position: 7
 ---
 
-# Virus Outbreak Incident Red Team Usecase 
+# Virus Outbreak Red Team Usecase 
 
-Virus Outbreak Incident Red Team Usecase
+Virus Outbreak Red Team Usecase
 
 :::info
 **Effective Date:** 6 May 2024. **Last Edited:** 5 May 2024. **Author:** Liya Thomas **Document Reference:** VORTU-1. **Expiry Date:** 6 May 2025. **Version:** 1.0.

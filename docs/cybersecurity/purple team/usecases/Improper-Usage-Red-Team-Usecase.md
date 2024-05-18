@@ -1,7 +1,8 @@
 ---
 sidebar_position: 4
 ---
-# Improper Usage
+# Improper Usage Red Team Usecase
+
 Improper Usage Red Team Usecase
 
 :::info
