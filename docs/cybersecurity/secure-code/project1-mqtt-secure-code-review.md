@@ -1,6 +1,15 @@
-| Author Name | Team                | Reviewed By | Review for |
-|-------------|---------------------|-------------|------------|
-| Mehak       | secure coding team  | Ben Stephens | Project 1  |
+---
+sidebar_position: 13
+---
+
+# MQTT Code Review
+Secure Code Review for Project 1
+
+:::info
+
+**Author:** Mehak
+
+:::
 
 ## Secure Coding Review and Improvements for Project 1
 
