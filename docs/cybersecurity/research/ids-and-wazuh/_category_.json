@@ -1,8 +1,8 @@
 {
-  "label": "Wazuh Implementation",
+  "label": "Wazuh and IDS Implementation",
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "Wazuh Implementation Guide and Setup"
+    "description": " This folder contains comprehensive documentation and guides for implementing Intrusion Detection Systems (IDS) and Wazuh on the virtual machine (VM). "
   }
 }
