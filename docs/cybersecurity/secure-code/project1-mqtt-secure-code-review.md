@@ -48,7 +48,8 @@ Below code includes the following improvements:
 - Code structure is improved for better readability and maintainability.
 - Secure key exchange mechanism is implemented.
 
-```python
+```
+python
 #!/usr/bin/env python
 # coding: utf-8
 
@@ -153,3 +154,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
