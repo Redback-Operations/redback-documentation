@@ -1,3 +1,6 @@
+---
+sidebar_position: 17
+---
 ﻿SIT782CapstoneTeamProject(B)
 
 **ResearchReport**
@@ -8,7 +11,7 @@ HiveMQ- IntroductionandImplementation![](img/Aspose.Words.114eff74-acd5-48d9-906
 
 :::info
 
-*Author:* AyushKumarSom
+*Author:* AyushKumarSom. **Date:** 20/May/2024.
 
 :::
 
