@@ -1,0 +1,67 @@
+---
+sidebar_position: 3
+---
+
+# Data Parsing Implementation in Node.js for Arduino Sensor Data
+
+## Overview
+
+For this project, the goal was to capture sensor data from an Arduino device, transmit it via a serial connection, and store it in a MongoDB database using a Node.js application. To enhance the utility and accessibility of the stored data for future querying and analysis, it was essential to implement data parsing before data storage.
+
+## Rationale
+
+Raw data transmitted from Arduino typically includes various sensor readings in a non-structured format, which might be interspersed with metadata or other information. Storing such data directly into a database can lead to issues with data retrieval, increase the complexity of query operations, and potentially affect performance due to the unstructured nature of the data. By parsing the data before storage:
+
+- Structure is imposed, making the database schema more consistent and predictable.
+- Data integrity is enhanced as only valid and correctly formatted data is stored.
+- Query performance is improved, allowing for more efficient data analysis and retrieval operations.
+
+## Data Parsing Process
+
+### Step 1: Data Reception
+
+The Node.js application listens to the serial port for data transmitted by the Arduino. Each piece of data received is a string that potentially contains multiple sensor readings formatted in a predefined pattern.
+Example of raw data received:
+
+```text
+18:45:19.234 -> Speed: 1.01 Direction: Down
+```
+
+### Step 2: Parsing Logic
+
+The data parsing function extracts relevant pieces of information from the raw data strings using regular expressions. This method ensures that only the necessary data (e.g., speed and direction) is extracted, ignoring any irrelevant metadata or formatting characters.
+Parsing Function Example:
+
+```
+javascript
+function parseData(data) {
+    const speedMatch = data.match(/Speed: ([\d.]+)/);
+    const directionMatch = data.match(/Direction: (\w+)/);
+    if (speedMatch && directionMatch) {
+        return {
+            speed: parseFloat(speedMatch[1]),
+            direction: directionMatch[1],
+            timestamp: new Date() // Adding a timestamp for each data entry
+        };
+    }
+    return null; // Return null if data does not match expected pattern
+}
+
+```
+
+## Benefits
+
+Implementing data parsing within this Node.js application provided several key benefits:
+
+- **Improved Data Management**: Structured data storage makes it easier to manage, update, and delete data entries.
+- **Enhanced Analytical Capabilities**: Well-structured data supports more complex queries and analytical operations such as aggregations and statistical analysis.
+- **Scalability**: As the system scales and handles more data sources or varied data formats, maintaining structured data input becomes crucial for system performance and reliability.
+
+## Conclusion
+
+Data parsing plays a critical role in the efficient and effective storage and management of sensor data in IoT applications. By structuring data before it enters the database, the system ensures that the data is ready for immediate use in applications and analyses, thus enhancing the overall utility of the data collection system.
+
+[GitHub Project Link](https://github.com/Bhumika-Chauhan09/redback-orion/blob/main/csv.js)
+
+
+[Mongo prior steps Link](https://drive.google.com/file/d/1Oz2dcAg6w2c4dPY5FORJOHEOjJ0Ecvb1/view?usp=drive_link)
