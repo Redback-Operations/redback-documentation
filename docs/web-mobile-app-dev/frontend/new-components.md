@@ -5,7 +5,7 @@ sidebar_label: Creating a new component
 
 # Creating Components
 
-> **Document Creation:** 7 May, 2024. **Last Edited:** 7 May, 2024. **Authors:** Leesa Ward.
+> **Document Creation:** 7 May, 2024. **Last Edited:** 19 May, 2024. **Authors:** Leesa Ward.
 
 :::info[Definition]
 A component is a reusable piece of code that can be used to build elements of a user interface. Components can be as simple as a button or as complex as a form. They are used to break down the user interface into smaller, more manageable parts.
@@ -36,3 +36,4 @@ If you are creating your component in Redback UI, this will also generate:
 
 ### Further reading
 - [What are components in the front-end and why do we need them?](https://dev.to/xavortm/what-are-components-in-the-front-end-and-why-do-we-need-them-2o2p) - Alex Dimitrov 
+- [Dos and Don'ts - Tech Stack](http://localhost:3000/redback-documentation/docs/web-mobile-app-dev/frontend/dos-donts#tech-stack) - Redback docs
