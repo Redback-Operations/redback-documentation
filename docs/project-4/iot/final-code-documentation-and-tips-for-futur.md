@@ -16,6 +16,10 @@ Documentation and Future Guide for Integration and Final code
 
 This document provides a detailed explanation of the multi-sensor code, including its functionality, required libraries, installation instructions, challenges addressed, and considerations for future integration.
 
+
+## Schematic Diagram
+![Schematic Diagram](img/schematic%20diagram.png) 
+
 ## Code Functionality
 
 The code integrates an Arduino board with various sensors to create a multi-sensory data acquisition system. It captures data from the following sensors:
@@ -90,6 +94,10 @@ The development process encountered a few challenges that were addressed through
     - **Power Management Techniques:** Implement power management techniques in the code, such as putting unused sensors in sleep mode to reduce power draw.
     - **External Power Source:** If battery capacity is insufficient, consider using an external power supply.
 
+
+- **Data Synchronization Issues:** With multiple sensors collecting data at different intervals, ensuring that the data is synchronized can be difficult. This can be resolved by:
+    -**Timestamping Data:** Implementing a system where each data reading is timestamped when collected, allowing for proper synchronization during data analysis.
+
 ## Things to Keep in Mind While Integrating Sensors
 
 Here are some crucial aspects to consider when integrating various sensors into your project:
@@ -100,6 +108,11 @@ Here are some crucial aspects to consider when integrating various sensors into 
 - **Sensor Placement:** Proper sensor placement is crucial for accurate data collection. For example, the accelerometer should be securely mounted to capture valid motion data. Refer to the sensor's datasheet for recommended placement guidelines.
 - **Calibration:** Some sensors may require calibration to ensure accurate readings. Follow the calibration procedures outlined in the sensor's datasheet.
 - **Data Fusion:** While this code focuses on collecting data from individual sensors, you can explore data fusion techniques to combine information from multiple sensors for a richer understanding of the monitored system.
+
+- **Baud Rate Mismatch** Ensure that all devices using serial communication (like GPS) are set to the correct baud rate.
+- **Function Conflicts** Ensure that integrating the accelerometer code does not interfere with the functions or libraries used by the heart rate and GPS sensors.
+- **Buffer Overflows** Serial buffers might overflow if not read frequently enough. Ensure your code is reading serial data as quickly as it is being received.
+
 
 ## Additional Notes
 
