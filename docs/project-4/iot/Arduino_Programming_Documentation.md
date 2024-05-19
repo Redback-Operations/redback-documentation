@@ -1,5 +1,13 @@
+---
+sidebar_position: 8
+---
+
 
 # Overview of Studied Arduino Programming Concepts
+
+:::info
+*Author:* Sohil Nagpal
+:::
 
 ## Introduction
 
