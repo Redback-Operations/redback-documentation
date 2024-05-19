@@ -1,5 +1,11 @@
-
+---
+sidebar_position: 14
+---
 # Research on Closed-Loop Systems and FSMs for Sensor Integration
+
+:::info
+*Author:* Sohil Nagpal
+:::
 
 ## Introduction
 

@@ -1,5 +1,11 @@
-
+---
+sidebar_position: 10
+---
 # Integration of the MAX30102 Sensor in Our Project
+
+:::info
+*Author:* Sohil Nagpal
+:::
 
 ## Introduction
 

@@ -1,5 +1,11 @@
-
+---
+sidebar_position: 11
+---
 # Understanding Oximeter Sensor Technology
+
+:::info
+*Author:* Sohil Nagpal
+:::
 
 ## Introduction
 

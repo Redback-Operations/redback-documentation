@@ -1,5 +1,11 @@
-
+---
+sidebar_position: 12
+---
 # Guide to Exporting Sensor Data from Serial Monitor to CSV
+
+:::info
+*Author:* Sohil Nagpal
+:::
 
 ## Introduction
 

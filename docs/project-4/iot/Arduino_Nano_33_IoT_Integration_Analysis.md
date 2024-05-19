@@ -1,5 +1,11 @@
-
+---
+sidebar_position: 9
+---
 # Integration of Arduino Nano 33 IoT in Our Project: An Analysis
+
+:::info
+*Author:* Sohil Nagpal
+:::
 
 ## Introduction
 

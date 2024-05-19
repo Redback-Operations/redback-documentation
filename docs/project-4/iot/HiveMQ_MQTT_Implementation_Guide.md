@@ -1,5 +1,11 @@
-
+---
+sidebar_position: 13
+---
 # Implementing HiveMQ and MQTT in Sensor Data Collection
+
+:::info
+*Author:* Sohil Nagpal
+:::
 
 ## Introduction
 
