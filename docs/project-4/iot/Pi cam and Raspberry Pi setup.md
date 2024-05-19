@@ -1,10 +1,13 @@
+---
+sidebar_position: 18
+---
 ﻿![](img/Aspose.Words.de9d713f-e027-4030-9a63-812ba2ca541f.001.jpeg)
 
 **PiCamandRaspberryPisetup![](img/Aspose.Words.de9d713f-e027-4030-9a63-812ba2ca541f.002.png)**
 
 :::info
 
-*Author:* AyushKumarSom
+*Author:* AyushKumarSom. **Date:** 20/May/2024.
 
 :::
 
