@@ -115,3 +115,5 @@ For more information about routing, see the [React Router](./react-router.md) pa
 
 As mentioned briefly above, your page should be made up of components. If you find you're putting a lot of code in your page file, you should consider breaking it up into smaller components. This will make your code easier to read, maintain, and test; and will allow use of your components on other pages so we don't duplicate functionality or design elements unnecessarily. For more information, proceed to the [Creating a new component](./new-components.md) guide.
 
+## Further reading
+- [Dos and Don'ts - Tech Stack](http://localhost:3000/redback-documentation/docs/web-mobile-app-dev/frontend/dos-donts#tech-stack) - Redback docs

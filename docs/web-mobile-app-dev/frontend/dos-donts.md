@@ -6,6 +6,8 @@ sidebar_position: 1
 
 ## Common mistakes and how to avoid them
 
+> **Document Creation:** 7 May, 2024. **Last Edited:** 19 May, 2024. **Authors:** Leesa Ward.
+
 ### Where to do your work
 
 <table>
@@ -56,6 +58,40 @@ sidebar_position: 1
 <br/>
 
 ### Tech Stack
+
+<table>
+    <tr>
+        <th scope="row" style={{"text-align":"left","min-width":"12rem"}}>Mistake</th>
+        <td>![Action to avoid](./img/icon-warning.svg) Using PropTypes in React.</td>
+    </tr>
+    <tr>
+        <th scope="row" style={{"text-align":"left"}}>Why it's a mistake</th>
+        <td>![Explanation](./img/icon-info.svg) [PropTypes are deprecated](https://legacy.reactjs.org/blog/2017/04/07/react-v15.5.0.html#new-deprecation-warnings) and their use would [block future upgrades](https://react.dev/blog/2024/04/25/react-19-upgrade-guide#removed-proptypes-and-defaultprops).</td>
+    </tr>
+    <tr>
+        <th scope="row" style={{"text-align":"left"}}>What to do instead</th>
+        <td>![Correct action](./img/icon-success.svg) Use TypeScript with a type (or interface) in place of PropTypes. The Redback UI repository has some examples you may find helpful, and using the [generator for new components](./new-components.md) in Redback projects will set up the boilerplate for this for you.</td>
+    </tr>
+</table>
+
+<br/>
+
+<table>
+    <tr>
+        <th scope="row" style={{"text-align":"left","min-width":"12rem"}}>Mistake</th>
+        <td>![Action to avoid](./img/icon-warning.svg) Using [class components](https://react.dev/reference/react/Component) in React.</td>
+    </tr>
+    <tr>
+        <th scope="row" style={{"text-align":"left"}}>Why it's a mistake</th>
+        <td>![Explanation](./img/icon-info.svg) There may be some edge cases where class components are still appropriate and they are not officially deprecated, but they are considered to be a [legacy API](https://react.dev/reference/react/legacy) and are [not recommended](https://react.dev/reference/react/Component) for new components.</td>
+    </tr>
+    <tr>
+        <th scope="row" style={{"text-align":"left"}}>What to do instead</th>
+        <td>![Correct action](./img/icon-success.svg) Use [function components](https://react.dev/learn/your-first-component#defining-a-component) in the first instance, or [migrate](https://react.dev/reference/react/Component#alternatives) if you have already developed a class component. For new components in a Redback project, using the [generator script](./new-components.md) will set up the boilerplate for a function component for you.</td>
+    </tr>
+</table>
+
+<br/>
 
 <table>
     <tr>
