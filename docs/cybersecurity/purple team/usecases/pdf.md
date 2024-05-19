@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 10
 ---
 
 # PDF Files (Downloads)
@@ -13,3 +13,6 @@ Find below the documents referenced in the Usecases page.
 - [Phishing-Attack-Red-Team-Usecase](docs\Phishing-Attack-Red-Team-Usecase.pdf)
 - [Root-Access-Red-Team-Usecase](docs\Root-Access-Red-Team-Usecase.pdf)
 - [Unauthorised-Access-Red-Team-Usecase](docs\Unauthorised-Access-Red-Team-Usecase.pdf)
+- [Data Theft Incident Response Usecase](docs\Data-Theft-Red-Team-Usecase.pdf)
+- [Malware Outbreak Incident Response Usecase](docs\Malware-Outbreak-Red-Team-Usecase.pdf)
+- [Virus Outbreak Incident Response Usecase](docs\Virus-Outbreak-Red-Team-Usecase.pdf)

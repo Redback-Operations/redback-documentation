@@ -1,8 +1,9 @@
 ---
 sidebar_position: 6
 ---
-# Root-Access
-Root-Access-Red-Team-Usecase
+# Root-Access Red Team Usecase
+
+Root Access Red Team Usecase
 
 :::info
 **Effective Date:** 29 April 2024. **Last Edited:** 29 April 2024. **Author:** Liya Thomas **Document Reference:** RARTU-1 **Expiry Date:** 29 April 2025. **Version:** 1.0.
