@@ -1,3 +1,6 @@
+---
+sidebar_position: 16
+---
 ﻿![](img/Aspose.Words.5b0b30ef-3253-40bf-82db-23048ab1c0c2.001.jpeg)
 
 **Future EnhancementsforPi CamSetup![](img/Aspose.Words.5b0b30ef-3253-40bf-82db-23048ab1c0c2.002.png)**
@@ -6,7 +9,7 @@ SIT782-CapstoneTeamProject(B)
 
 :::info
 
-*Author:* AyushKumarSom
+*Author:* AyushKumarSom. **Date:** 20/May/2024.
 
 :::
 
