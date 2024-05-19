@@ -1,3 +1,6 @@
+---
+sidebar_position: 20
+---
 ﻿![](img/Aspose.Words.97b2f3f9-643c-479e-9c8f-33a0b8257fbc.001.jpeg)
 
 **SettingUpthe Athlete Insight HubWebsite UsingVite React![](img/Aspose.Words.97b2f3f9-643c-479e-9c8f-33a0b8257fbc.002.png)**
@@ -6,7 +9,7 @@ SIT782-CapstoneTeamProject (B)
 
 :::info
 
-*Author:* AyushKumarSom
+*Author:* AyushKumarSom. **Date:** 20/05/2024.
 
 :::
 
