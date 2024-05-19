@@ -1,13 +1,14 @@
-﻿![](img/Aspose.Words.67994655-b471-4a1d-8e71-bf18a1c11a24.001.jpeg)
+---
+sidebar_position: 15
+---
+![](img/Aspose.Words.67994655-b471-4a1d-8e71-bf18a1c11a24.001.jpeg)
 
 **FSMandClosed-loop integration![](img/Aspose.Words.67994655-b471-4a1d-8e71-bf18a1c11a24.002.png)**
 
 Project 4-PlayerTrackingandCrowdMonitoring
 
 :::info
-
-*Author:* AyushKumarSom
-
+**Authors:** Ayush Kumar Som. **Date:** 20/May/2024.
 :::
 
 5![](img/Aspose.Words.67994655-b471-4a1d-8e71-bf18a1c11a24.002.png)
