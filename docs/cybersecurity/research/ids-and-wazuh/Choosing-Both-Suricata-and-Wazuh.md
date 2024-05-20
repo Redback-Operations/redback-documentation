@@ -3,44 +3,42 @@ sidebar_position: 5
 ---
 
 :::info
- **Last Edited:** 19 May 2024. **Author:** Tushar Sharma, Pranav Sharma  **Version:** 2.0.
+ **Last Edited:** 19 May 2024. **Author:** Tushar Sharma, Pranav Sharma  **Version:** 3.0.
 :::
 
 # Choosing Both Suricata and Wazuh: Understanding Their Unique Qualities
 
 ## Introduction
 
-Redback Operations, focuses on developing cutting-edge connected fitness devices. It requires the paramount importance of protecting user data and ensuring the integrity of the products. To enhance the security of the software systems within Redback Operations. To achieve this, we have implemented both Wazuh and Suricata on our virtual machine (VM) which will handle all the software project and data. This initiative is proactive approach to cybersecurity which aims to mitigate risks, ensure compliance, and enhance the safety, reliability, and peace of mind associated with our connected fitness technology. This document provides an overview of the need for implementing both Wazuh and Suricata, the strategic reasons behind their deployment, and the benefits they offer in terms of security, compliance, scalability, and operational efficiency.
+Redback Operations focuses on developing cutting-edge connected fitness devices. It requires the paramount importance of protecting user data and ensuring the integrity of the products. To enhance the security of the software systems within Redback Operations. We have implemented both Wazuh and Suricata on our virtual machine (VM) which will handle all the software project and data. This initiative is proactive approach to cybersecurity which aims to mitigate risks, ensure compliance, and enhance the safety, reliability, and peace of mind associated with our connected fitness technology. This document provides an overview of the need for implementing both Wazuh and Suricata, the strategic reasons behind their deployment, and the benefits they offer in terms of security, compliance, scalability, and operational efficiency.
+
 
 ## Why We Implemented Both Wazuh and Suricata?
 
 ###  1. Enhanced Security Posture
 
-Combining Wazuh and Suricata enhances the ability to detect and respond to security threats. Wazuh provides real-time analysis of logs and system activities, while Suricata offers deep packet inspection and network traffic analysis [1] [2]. Together, they create a strong security framework capable of identifying and mitigating both internal and external threats.
+Wazuh is a Security Information and Event Management (SIEM) solution which focuses on collecting and analysing logs and events from hosts, applications, and network devices for security monitoring and threat detection [1]. Whereas Suricata is a Network Intrusion Detection System (NIDS) that focuses on inspecting network traffic and packets to detect threats like intrusions, DDoS attacks, and suspicious network activities. By combining these two solutions, we can achieve comprehensive security coverage, by combining both solutions.
 
-### 2. Compliance and Reporting
+### 2. Scalability and Flexibility
 
-Wazuh’s comprehensive monitoring and reporting capabilities ensure that Redback Operations meets regulatory compliance requirements such as GDPR, HIPAA, and PCI DSS. Suricata complements this by offering detailed insights into network traffic, helping in submission inspects.
-This dual approach strengthens the position during compliance audits and reduces the risk of non-compliance penalties.
+Both Wazuh and Suricata are designed to scale with our growing infrastructure. Wazuh can handle log and event monitoring across multiple endpoints, while Suricata efficiently processes high-speed network traffic. This ensures that our security measures remain effective as our operations expand, without the need for frequent upgrades or replacements.
 
+### 3. Improved Operational Efficiency
 
-### 3. Scalability and Flexibility
+Centralizing security monitoring with Wazuh and leveraging Suricata's network detection capabilities streamlines our security operations. This reduces the workload on security teams and project handlers, enabling efficient threat detection and response.
 
-Both Wazuh and Suricata are designed to scale with our growing infrastructure. Wazuh handles log and event monitoring across multiple endpoints, while Suricata efficiently processes high-speed network traffic. This ensures that our security measures remain effective as our operations expand, without the need for frequent upgrades or replacements.
+### 4. Comprehensive Security Monitoring
 
-### 4. Improved Operational Efficiency
+Implementing both solutions helps to providing comprehensive security monitoring and threat detection capabilities. Wazuh aids in monitoring host activities, file integrity, and security configurations, while Suricata helps identify external threats and monitor overall network health.
 
-Centralizing security monitoring with Wazuh and leveraging Suricata's network detection capabilities streamline our security operations. This reduces the workload to security teams and project handlers. Additionally, the ability to see the workflow of project handlers enables us to monitor who did what and when, ensuring accountability and transparency.
-
-### 5. Comprehensive Security Monitoring
-
-By implementing both Wazuh and Suricata, we have significantly enhanced our ability to detect and respond to security threats. Wazuh's host-based monitoring complements Suricata's network-based detection, providing comprehensive coverage across our entire infrastructure [2]. This layered defence mechanism ensures that we can monitor and protect against a wide range of cyber threats, ensuring the safety, reliability, and integrity.
 
 ## Why we didn’t Implemented Only One Solution
 
-Implementing only one solution, whether Wazuh or Suricata, would expose significant security risks and operational challenges. As Relying solely on one solution would create critical security gaps. For example, relying solely on Wazuh for host-based monitoring might overlook network-level threats, while depending exclusively on Suricata for network detection might miss insights into system-level activities and events. This fragmented approach leaves us vulnerable to various cyber threats, compromising our ability to maintain compliance with regulatory requirements and reducing operational efficiency.
-Regulatory compliance requirements demand a comprehensive approach to security monitoring and threat detection. Implementing only one solution that may not provide the necessary breadth and depth of coverage to meet these requirements effectively. For instance, while Wazuh's robust monitoring capabilities help us meet regulatory standards by providing detailed insights into host-level activities and events, Suricata's network-based detection capabilities are equally crucial for identifying and mitigating threats that originate from external sources or traverse our network infrastructure.
-A single solution may lack the scalability and flexibility needed to adapt to the ongoing projects that are growing. Wazuh and Suricata are designed to scale seamlessly, offering flexibility in deployment and management across various environments. By leveraging both solutions, we can accommodate changes in our infrastructure without compromising security effectiveness or operational efficiency, ensuring that our security measures remain robust and effective in the face of evolving threats.
+Implementing only one solution, whether Wazuh or Suricata, would expose significant security risks and operational challenges. As Relying solely on one solution would create critical security gaps [1]. For example, relying solely on Wazuh for host-based monitoring might overlook network-level threats, while depending exclusively on Suricata for network detection might miss insights into system-level activities and events. This fragmented approach leaves us vulnerable to various cyber threats, compromising our ability to maintain compliance with regulatory requirements and reducing operational efficiency.
+
+Implementing only one solution that may not provide the necessary breadth and depth of coverage to meet these requirements effectively. For instance, while Wazuh's robust monitoring capabilities help us meet regulatory standards by providing detailed insights into host-level activities and events, Suricata's network-based detection capabilities are equally crucial for identifying and mitigating threats that originate from external sources or traverse our network [1].
+
+A single solution may lack the scalability and flexibility needed to adapt to the ongoing projects that are growing. Wazuh and Suricata are designed to scale seamlessly, offering flexibility in deployment and management across various environments. It ensures that our security measures remain robust and effective in the face of evolving threats.
 Additionally, adopting a multi-layered security approach enhances our ability to detect and respond to sophisticated cyber threats effectively. Combining the capabilities of Wazuh and Suricata allows us to correlate security events and incidents across different layers of our infrastructure, providing a more comprehensive view of our security landscape.
 
 
@@ -49,23 +47,24 @@ Additionally, adopting a multi-layered security approach enhances our ability to
 
 |  | **Wazuh** | **Suricata** |
 |-------------|-----------|--------------|
-| 1. | It is the Host-based Intrusion Detection System. | It is Network-based Intrusion Detection System. |
-| 2. | It provides the detailed host-level activities and events. | It only focusses on network traffic analysis. |
-| 3. | It can detect anomalies in configuration files, and system calls and logs. | It inspects network packets and traffic pattern. |
-| 4. | It coverers malware infections, unauthorized access attempts and file integrity issues. | It can detect the network intrusions, DDoS attacks, and suspicious network traffic. |
-| 5 | It utilises the system resources to run such as CPU, memory. | It primary utilises the network resources such as bandwidth and latency. |
-| 6. | It helps in regulatory compliance by monitoring host activities. | It aids in identifying external threats and monitoring the overall network health. |
-| 7. | [Deploying Wazuh](https://redback-operations.github.io/redback-documentation/docs/cybersecurity/research/ids-and-wazuh/deploying-wazuh) | [Intrusion Detection System](https://redback-operations.github.io/redback-documentation/docs/cybersecurity/research/ids-and-wazuh/intrusion-detection-system) |
+| 1. | Wazuh is a Security Information and Event Management (SIEM) solution. | It is Network-based Intrusion Detection System (NIDS).  |
+| 2. | It collects and analyses logs and events from hosts, applications, and network devices for security monitoring and threat detection. | It inspects network traffic and packets to detect threats like intrusions, DDoS attacks, and suspicious network activities. |
+| 3. | It provides a comprehensive security monitoring platform. | It focuses solely on network-based threat detection. |
+| 4. | It utilises the system resources to log traffic inspection such as CPU, memory. | It primary utilises the network resources such as bandwidth and latency for traffic inspection. |
+| 5 | It helps in regulatory compliance by monitoring host activities, file integrity and security configurations. | It aids in identifying external threats and monitoring the overall network health. |
+| 6.| [Deploying Wazuh](https://redback-operations.github.io/redback-documentation/docs/cybersecurity/research/ids-and-wazuh/deploying-wazuh) | [Intrusion Detection System](https://redback-operations.github.io/redback-documentation/docs/cybersecurity/research/ids-and-wazuh/intrusion-detection-system) |
 
 
 ## Conclusion 
 
-The deployment of both Wazuh and Suricata on our VM significantly bolsters Redback Operations' cybersecurity posture. By leveraging the strengths of these two solutions, we ensure comprehensive threat detection, regulatory compliance, and operational efficiency by implemented both Host-based and Network-based Detection system. This multi-layered security strategy will remain essential in protecting the projects.
+The deployment of Wazuh as a Security Information and Event Management (SIEM) solution and Suricata as a Network Intrusion Detection System (NIDS) on our virtual machine (VM) significantly enhances Redback Operations' cybersecurity posture. The integration of Wazuh and Suricata creates a multi-layered security approach, ensures the protection from a wide range of cyber threats. By combining the capabilities of a SIEM and a NIDS, we demonstrate our commitment to providing a secure and reliable environment.
 
 
 ## Reference
 
-[1] 	Mark, “Exploring Suricata: Your Guide to Network Security,” How to Do IT, 19 03 2024. [Online]. Available: https://www.howto-do.it/what-is-suricata/#:~:text=Suricata%E2%80%99s%20Key%20Features%3A%20Functionality%20as%20both%20an%20IDS,inspection%20capabilities%20Regular%20rule%20set%20and%20signature%20updates.
-[2] 	Wazuh, [Online]. Available: https://documentation.wazuh.com/current/getting-started/index.html.
-[3] 	“What is Suricata,” Suricata, [Online]. Available: https://docs.suricata.io/en/latest/what-is-suricata.html.
+
+[1] 	I. O. Odike, “Responding to network attacks with Suricata and Wazuh XDR,” Wazuh, 11 November 2022. [Online]. Available: https://wazuh.com/blog/responding-to-network-attacks-with-suricata-and-wazuh-xdr/.
+
+[2] 	M. Stromann, “Suricata vs Wazuh,” LiveEnterprise, 06 August 2023. [Online]. Available: https://www.liventerprise.org/compare/Suricata_vs_Wazuh/.
+
 
