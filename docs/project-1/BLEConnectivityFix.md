@@ -1,4 +1,7 @@
-﻿# How to fix Bluetooth Connectivity for Raspberry Pi with Wahoo device connection?
+---
+sidebar_position: 1
+---
+ # How to fix Bluetooth Connectivity for Raspberry Pi with Wahoo device connection?
 
 Due to the volatility of BLE connection, while running the script to have the Raspberry Pi send data to the cloud, you might have encountered the following message:
 
