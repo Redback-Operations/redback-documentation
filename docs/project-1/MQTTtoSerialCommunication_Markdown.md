@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-#Moving from Wireless MQTT connection to Serial
+# Moving from Wireless MQTT connection to Serial
 
 To switch from MQTT to serial communication for handling the button presses, you will need to modify your setup to use a serial connection (e.g., USB serial) instead of MQTT. Additionally, you will need a way to dynamically detect the serial port used by your device.
 
@@ -17,13 +17,13 @@ b)  	Setup Serial Communication: Initialize the serial connection and read butto
 
 
 
-##Code Example
+## Code Example
 
 Here is an example Python script that replaces MQTT with serial communication. This script will dynamically find the correct serial port and read the button states from the Raspberry Pi.
 
 
 
-##Required Libraries
+## Required Libraries
 
 First, make sure you have the <code>pyserial</code> library installed:
 
@@ -39,7 +39,7 @@ d)  	Main Loop: Continuously calls the <code>ButtonTest</code> function every se
 
 
 
-##Handling Serial Port Changes
+## Handling Serial Port Changes
 
 If the serial port changes, the script will dynamically detect the correct port at startup. Ensure that your VR game or receiving system is set up to handle incoming data over the serial connection.
 
@@ -49,7 +49,7 @@ Below are detailed steps to implement serial communication for handling button p
 
 
 
-##Steps to Implement Serial Communication
+## Steps to Implement Serial Communication
 
 a)   	Install Required Libraries
 
@@ -81,7 +81,7 @@ c)   	Identify Available Serial Ports Dynamically
 
 To make your system robust and flexible, it's important to dynamically identify the serial port that the Raspberry Pi will use to communicate with the VR game. This way, you won't have to manually specify the port each time it changes.
 
-In this function, <code>serial.tools.list_ports.comports()</code> lists all available serial ports. The function checks each port description for identifiers such as "USB" or "ACM". If a suitable port is found, it returns the port name (e.g., <code>/dev/ttyUSB0</code>).
+In this function, '''serial.tools.list_ports.comports()''' lists all available serial ports. The function checks each port description for identifiers such as "USB" or "ACM". If a suitable port is found, it returns the port name (e.g., '''/dev/ttyUSB0''').
 
 
 
