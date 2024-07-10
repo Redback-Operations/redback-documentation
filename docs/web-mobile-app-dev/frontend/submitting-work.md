@@ -4,8 +4,21 @@ sidebar_position: 9
 
 # Submitting code
 
-> **Document Creation:** 6 May, 2024. **Last Edited:** 6 May, 2024. **Authors:** Leesa Ward.
+> **Document Creation:** 6 May, 2024. **Last Edited:** 10 July, 2024. **Authors:** Leesa Ward.
 
+## Small pull requests, often
+
+Please favour raising small pull requests often over one or two large ones. This makes it easier for reviewers to understand the changes, and for you to make changes based on feedback. It also makes it easier to keep your branch up to date with the main branch as others' work gets merged in. 
+
+For example, instead of building an entire webpage and raising your first PR in week 10, raise a PR for the first component you build in week 3 or 4, then another for another component in week 5 or 6, etc.
+
+## One feature or change per pull request
+
+Please limit each pull request to one discrete unit of work, e.g., one new component for Redback UI, one new graph for a dashboard, one bugfix, etc. This makes it easier for reviewers to understand the changes and for feedback and discussion to be focused on a single topic.
+
+This usually means you will have a separate branch per feature or change, so you can continue working on another unit of work while the first is being reviewed.
+
+## Ensuring your pull request is ready for review
 
 Before raising a pull request, please ensure the below checks pass.
 
