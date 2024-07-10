@@ -190,10 +190,19 @@ Product Owner: **Daniel Lai**
 
 The aim of this new project is to encourage/improve the interest and engagement from primary school students in the area of robotics through learning to program and by using different devices such as BugBox. 
  
-In Primary schools today it is common to see devices like Bee-Bot, pressing buttons on the top allows the bee to move in those directions in the order given, a midway point between the BugBox and Bee-Bot appropriate to high school students is the end goal for this project.  
+In Primary schools today it is common to see small programmable robotic devices. The aim of this project is to evolve the online learning platform, introduce gamification, and identify the best approach for the platform.
+
 Formal research, planning and development are yet to begin, so if you would like to join this start-up, please be enthusiastic about robotics and willing to actively participate in the development and creation process!
 
-**Tech Stack TBD**
+**Tech Stack:**
+- JavaScript
+- HTML
+- CSS
+- NodeJS library (for flashing compiled sketch files to Arduino microcontroller boards)
+- Microsoft Planner to be used for task planning
+- GitHub
+- **Hardware**: Arduino Nano
+
 
 #### Data Warehousing Team
 
