@@ -5,7 +5,7 @@ sidebar_label: Getting started
 
 # Getting started with a project
 
-> **Document Creation:** 23 March, 2024. **Last Edited:** 6 May, 2024. **Authors:** Leesa Ward.
+> **Document Creation:** 23 March, 2024. **Last Edited:** 10 July, 2024. **Authors:** Leesa Ward.
 
 ## Prerequisites
 - [Git](https://git-scm.com/downloads) installed
@@ -22,7 +22,7 @@ sidebar_label: Getting started
 - Git GUI such as GitKraken, SourceTree, GitHub Desktop (if you prefer this over working only with terminal commands)
 
 ## Getting Started
-1. Fork the repository to your own account
+1. Fork the repository you will be working on to your own account
    ![Screenshot of how to fork a repo](./img/fork-example.png)
 
 2. Clone the repository to your local machine
@@ -30,29 +30,30 @@ sidebar_label: Getting started
     git clone https://github.com/your-username/your-repo-name.git
     ```
    (or SSH if you have set up SSH access to your GitHub account)
-3. Create a branch for your current work, following the Capstone [Branching Guidelines](https://verdant-raindrop-f3e404.netlify.app/processes/quality-assurance/git-contributions-guide/#branching-guidelines)
+3. Select a task to work on from the [Planner Board](https://tasks.office.com/deakin365.onmicrosoft.com/en-US/Home/Planner/#/plantaskboard?groupId=d4b3d587-9b20-4ac0-9de2-b842fd9dce46&planId=TOGdCftBI0mZ937fEIW0jsgAHPsL). If a suitable task does not exist for you but you have identified something that needs to be done, create a task for it and assign yourself. If it is a large feature, break it up into small, discrete tasks.
+4. Create a branch for your current work, following the Capstone [Branching Guidelines](https://verdant-raindrop-f3e404.netlify.app/processes/quality-assurance/git-contributions-guide/#branching-guidelines)
     ```bash
     git branch <branch-name>
     ```
-4. Check out your branch
+5. Check out your branch
     ```bash
     git checkout <branch-name>
     ```
-5. Open your terminal and navigate to the project directory
+6. Open your terminal and navigate to the project directory
     ```bash
     cd path/to/your-repo-name
     ```
-6. Run `npm install` to install the project dependencies
+7. Run `npm install` to install the project dependencies
     ```bash
    npm install
     ```
-7. Run `npm run dev` to start the development server
+8. Run `npm run dev` to start the development server
     ```bash
     npm run dev
     ```
-8. Open a web browser and navigate to `http://localhost:5173` to view the application (or different port if specified in the terminal output).
-9. Make your changes.
-10. Commit your changes regularly and push your branch up to GitHub.
+9. Open a web browser and navigate to `http://localhost:5173` to view the application (or different port if specified in the terminal output).
+10. Make your changes.
+11. Commit your changes regularly and push your branch up to GitHub.
 
 
 ## Useful links
