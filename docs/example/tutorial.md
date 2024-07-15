@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Important Research
+# Important Research (Tutorial Video)
 
 Tutorial for Redback Operations
 
