@@ -44,8 +44,8 @@ The FTMS control point characteristic enables control over the FTMS functions. F
 
 ## Wahoo Devices
 
-- KICKR Smart Trainer
-- KICKR Climber
-- Wahoo Headwind Smart Bluetooth Fan
-- Wahoo Cadence Sensor
-- Wahoo Heart Rate Monitor
+- [KICKR Smart Trainer](KICKR-Smart-Trainer.md)
+- [KICKR Climber](KICKR-Climber.md)
+- [Wahoo Headwind Smart Bluetooth Fan](Wahoo-Headwind-Smart-Bluetooth-Fan.md)
+- [Wahoo Cadence Sensor](Wahoo-Cadence-Sensor.md)
+- [Wahoo Heart Rate Monitor](Wahoo-Heart-Rate-Monitor.md)
