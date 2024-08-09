@@ -11,9 +11,9 @@ A review of the current ISMS (Information Security Management System) Policy
 **Document Creation:** 5 August, 2024. **Last Edited:** 5 August, 2024. **Authors:** Tom Mirarchi.
 <br></br>**Document Code:** ISMSPR. **Effective Date:** 1 August 2024. **Expiry Date:** 1 August 2025.
 
-[PDF version here](docs\policy-review-isms.pdf)
+[PDF version here](..\docs\policy-review-isms.pdf)
 
-[Checklist](docs\policy-review-isms-checklist.pdf) 
+[Checklist](..\docs\policy-review-isms-checklist.pdf) 
 :::
 
 ## Introduction
