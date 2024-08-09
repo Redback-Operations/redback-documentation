@@ -29,10 +29,11 @@ This assessment was conducted on the 31st of July 2024 and the report was comple
 **Is compliant with ISO/IEC 27001 standard? - YES**
 
 Scope is well written and fits the requirements needed. No work is needed for this section. But work outside of the ISMS policy might be needed to create policies for each of the assets listed in the scope. As some have policies and some do not
+
 Policies that need to be created:
 
     •	Cloud security
-
+    
     •	BYOD & MDM
 
 
