@@ -22,6 +22,8 @@ The scope of this review is to analyse the current ISMS (Information Security Ma
 
 Each section is based off the number of requirements needed for an ISMS policy as told from ISO/IEC 27001. Sections may not contain notes as they are already compliant with the standard. The section structure of the current policy should also mimic this unless otherwise noted
 
+This assessment was conducted on the 31st of July 2024 and the report was completed on the 1st of August 2024 
+
 ## 1. Scope
 
 **Is compliant with ISO/IEC 27001 standard? - YES**
