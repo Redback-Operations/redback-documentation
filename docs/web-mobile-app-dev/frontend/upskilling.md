@@ -5,11 +5,13 @@ sidebar_label: Upskilling resources
 
 # General upskilling resources
 
+> **Document Creation:** 8 August, 2024. **Last Edited:** 8 August, 2024. **Authors:** Leesa Ward.
+
 Don't know React? Never used a CSS-in-JS library like Styled Components? Tripping over TypeScript? Here are some resources to help you get up to speed on our front-end tech stack in a general sense. 
 
 :::important
 
-There are many ways to achieve the same thing in web development, but it is important to follow a set of conventions and patterns individual projects to ensure consistency and maintainability. These upskilling resources are general suggestions for gaining an understanding of the technologies we use; the implementation specifics may differ slightly so please always ensure you follow the Redback-specific guides in this website.
+There are many ways to achieve the same thing in web development, but it is important to follow a set of conventions and patterns in individual projects to ensure consistency and maintainability. These upskilling resources are general suggestions for gaining an understanding of the technologies we use; the implementation specifics may differ slightly so please always ensure you follow the Redback-specific guides in this website.
 
 :::
 
