@@ -1,7 +1,11 @@
-# REQUIREMENTS GATHERING SUMMARY REPORT
-## PROJECT 1, 2, 3, 4, 5
+---
+sidebar_position: 1
+---
 
-_(Week 1, T2, 2024)_
+# Requirements Gathering Summary Report
+Projects 1, 2, 3, 4, 5
+
+> Week 1, T2, 2024
 
 ### 1. Data Sources and Formats
 
