@@ -46,9 +46,9 @@ To determine whether OpenCTI can effectively support and enhance the threat inte
 
 ### Cybersecurity Team Needs:
 
- - Blue Team: Focused on defensive operations using tools like SIEM, Nagios, and Wazuh, OpenCTI could provide enhanced threat intelligence that integrates directly into these tools.
- - Red Team: Engaged in penetration testing and vulnerability assessments, the Red Team could benefit from the latest threat intelligence to simulate real-world attack scenarios.
- - SecDevOps: Tasked with integrating and deploying security tools, the SecDevOps team could use OpenCTI to ensure that deployed systems are aligned with the latest threat landscapes.
+ - **Blue Team**: Focused on defensive operations using tools like SIEM, Nagios, and Wazuh, OpenCTI could provide enhanced threat intelligence that integrates directly into these tools.
+ - **Red Team**: Engaged in penetration testing and vulnerability assessments, the Red Team could benefit from the latest threat intelligence to simulate real-world attack scenarios.
+ - **SecDevOps**: Tasked with integrating and deploying security tools, the SecDevOps team could use OpenCTI to ensure that deployed systems are aligned with the latest threat landscapes.
 
 ### Project-Specific Needs:
 
