@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Bandit: Advanced Security Scanning for Redback Operations
 
 ## Introduction
@@ -220,7 +224,8 @@ jobs:
         path: security_scan_report.txt
 ```
 This workflow ensures that every pull request is automatically scanned using our advanced security scanning tool.
-# Impact and Results
+
+## Impact and Results
 Since implementing our custom Bandit solution and enhancing it with additional features, we've observed:
 
 A 60% reduction in security vulnerabilities in our Python codebase (up from 40% with our initial implementation)
@@ -240,7 +245,6 @@ Integration with dependency scanning tools to catch vulnerabilities in third-par
 Machine learning-based analysis to detect complex, context-dependent vulnerabilities
 
 Enhanced reporting with trend analysis and historical comparisons
-
 
 
 ## Conclusion
