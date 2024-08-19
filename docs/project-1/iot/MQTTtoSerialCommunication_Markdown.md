@@ -3,6 +3,12 @@ sidebar_position: 2
 ---
 # Moving from Wireless MQTT connection to Serial
 
+:::danger[Important!]
+
+The VR headset does not have serial support and hence the following cannot be implemented.
+
+:::
+
 To switch from MQTT to serial communication for handling the button presses, you will need to modify your setup to use a serial connection (e.g., USB serial) instead of MQTT. Additionally, you will need a way to dynamically detect the serial port used by your device.
 
 
