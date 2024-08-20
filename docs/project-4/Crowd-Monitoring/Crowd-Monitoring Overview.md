@@ -131,8 +131,102 @@ cv2.destroyAllWindows()
 print(f"Processed video saved to {output_path}")
 ```
 **Camera testing with YOLOv8**
+```python
+!pip install opencv-python numpy ultralytics Flask
+```
+```python
+!pip install "pymongo[srv]"
+```
+```python
+from flask import Flask, Response
+import cv2
+import numpy as np
+from ultralytics import YOLO
+from pymongo import MongoClient
+from datetime import datetime, date
+import time
+from dotenv import load_dotenv
+import os
 
---Waiting for input--
+# Load YOLO model
+model = YOLO('yolov8n.pt')  # or use a different YOLO version
+
+# RTSP stream URL
+# Retrive the RTSP stream URL from iSpy or Wireshark
+# Replace the rtsp_url with your own RTSP stream URL
+rtsp_url = ''
+
+# Connect to the RTSP stream
+cap = cv2.VideoCapture(rtsp_url)
+
+#MongoDB connection
+client = MongoClient('')
+db = client["CrowdTracking"]
+collection = db["Crowd"]
+
+#variables for frame_id and date format
+frame_id = 0
+current_date = date.today()
+update_interval = 1 # Update interval in seconds
+last_update_time = 0
+
+while True:
+        current_time = time.time()
+        # Read the frame from the stream
+        # If the frame was not read, then break the loop and print an error
+        ret, frame = cap.read()
+        if not ret:
+            print('Error reading the frame')
+            break
+
+        # Perform YOLO detection
+        results = model(frame)
+
+        # Process results with box coordinates and confidence scores
+        for result in results:
+            boxes = result.boxes.cpu().numpy()
+            for box in boxes:
+                x1, y1, x2, y2 = map(int, box.xyxy[0])
+                conf = box.conf[0]
+                cls = int(box.cls[0])
+            
+                if cls == 0:  # Assuming class 0 is person
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                    cv2.putText(frame, f'Person: {conf:.2f}', (x1, y1 - 10),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+        
+        # This update allows to save the number of persons detected to MongoDB
+        # for every update_interval seconds
+        if current_time - last_update_time < update_interval:
+            now = datetime.now()
+            # Save the number of persons detected to MongoDB
+            # Save the frame_id, timestamp and the total number of persons detected
+            data = {
+            
+                "frame_id": frame_id,
+                "timestamp": now.strftime("%d/%m/%Y %H:%M:%S"),
+                "total_persons": len(boxes)
+            }
+            collection.insert_one(data)
+            last_update_time = current_time
+
+        # Display the number of persons detected on the frame       
+        cv2.rectangle(frame, (10, 10), (310, 60), (255, 255, 255), -1)
+        cv2.putText(frame, f'Total Persons: {len(boxes)}', (20, 40),
+                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+
+        frame_id += 1
+
+        # Display the frame
+        cv2.imshow('Crowd Detection', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+cap.release()
+cv2.destroyAllWindows()
+```
+> ## Result
+![Live Camera Tracking](img\live_camera.png)
 
 ## Visualization
 We will need to visualize data to display and analysis on dashboard. 
@@ -391,4 +485,4 @@ video_writer.release()
 cv2.destroyAllWindows()
 ```
 ## Results
-input GIF
+![Transformation result](img\gif.gif)
