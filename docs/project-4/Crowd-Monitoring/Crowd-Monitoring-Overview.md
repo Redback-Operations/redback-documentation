@@ -228,6 +228,8 @@ cv2.destroyAllWindows()
 > ## Result
 ![Live Camera Tracking](img\live_camera.png)
 
+--Waiting for input--
+
 ## Visualization
 We will need to visualize data to display and analysis on dashboard. 
 
