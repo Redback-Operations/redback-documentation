@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Greyhound Detection and Tracking Project
 ![readme style: standard](https://img.shields.io/badge/readme%20style-standard-brightgreen)
 ![Roboflow](https://img.shields.io/badge/Roboflow-Model%20Status-blue)
