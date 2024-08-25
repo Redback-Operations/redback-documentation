@@ -1,0 +1,50 @@
+name: Security Scan
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  owasp-scan:
+    runs-on: ubuntu-latest #asdasddsadasddsadssadasdsad
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install bandit safety
+        pip install -r requirements.txt  # Assuming you have dependencies
+
+    - name: Run Security Scanner
+      run: |
+        python scanner.py . > scan_results.txt
+
+    - name: Comment on PR with results
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const fs = require('fs');
+          const scanResults = fs.readFileSync('scan_results.txt', 'utf8');
+          if (scanResults.includes('HIGH') || scanResults.includes('MEDIUM')) {
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `:warning: Security Scanner detected issues in this pull request:\n\`\`\`\n${scanResults}\n\`\`\``
+            });
+          } else {
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `:white_check_mark: No security issues detected by the Security Scanner.`
+            });
+          }
