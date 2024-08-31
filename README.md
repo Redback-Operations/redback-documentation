@@ -69,10 +69,6 @@ This will create a banner displaying the appropriate information. The last line 
 
 Please test locally, as a file with broken links or markdown can stop the whole site from working, `npm run start` to do so.
 
-Currently, pushes to the gh pages site must be made manually from an admin of the project.
+There are basic checks in place on GitHub within pull requests, please make sure as a reviewer the code is checked to ensure complete compliancy with the Docusuarus platform. Test locally as needed.
 
-If that happens to be you, from your terminal of choice, within the main branch of the repo, input `GIT_USER=<YOUR USERNAME> yarn deploy` and pray it works,
-
-***DO NOT MANUALLY UPDATE THE `GH PAGES` branch.***
-
-Auto deployment is a WIP.
+Upon approving pull requests, the GH Pages will build itself assuming nothing is wrong.
