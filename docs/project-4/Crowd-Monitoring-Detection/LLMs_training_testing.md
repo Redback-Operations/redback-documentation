@@ -1,11 +1,17 @@
-### Documentation for training the LLMs on custon data `Train_llms.ipynb`
+---
+sidebar_position: 1
+---
+# Training and testing LLMs
 
-#### Overview:
+## Documentation for training the LLMs on custom data `Train_llms.ipynb`
+
+### Overview:
 This notebook is designed to fine-tune a large language model (LLM) using the `unsloth` library. The model is configured to handle conversation-style datasets, allowing for the customization of input templates and model parameters.
 
-#### Steps:
+### Steps:
+
 1. **Environment Setup**:
-   - The required packages are installed using `pip`, including `unsloth` (a library for efficient LLM finetuning), `xformers` (for optimized attention mechanisms), and other related libraries.
+   - The required packages are installed using `pip`, including `unsloth` (a library for efficient LLM fine tuning), `xformers` (for optimized attention mechanisms), and other related libraries.
 
    ```python
    %%capture
@@ -41,17 +47,20 @@ This notebook is designed to fine-tune a large language model (LLM) using the `u
 4. **Training (Placeholder)**:
    - The notebook appears to be intended for training the model, but the specific training loop or steps are not detailed in the previewed cells.
 
-#### Usage:
+### Usage:
+
 - This notebook is intended for users who wish to fine-tune an LLM for chat-based applications. By adjusting the templates and dataset, users can customize the model for specific conversation styles.
 
 ---
 
-### Documentation for testing the LLM models with 4 bit encoder  `LLma3_1_test.ipynb`
+## Documentation for testing the LLM models with 4 bit encoder  `LLma3_1_test.ipynb`
 
-#### Overview:
-This notebook is designed to test a pre-trained LLM (`Meta-Llama-3.1-8B-Instruct`) using the `unsloth` library. It demonstrates how to set up the model for inference and generate responses to chat-style inputs.
+### Overview:
 
-#### Steps:
+- This notebook is designed to test a pre-trained LLM (`Meta-Llama-3.1-8B-Instruct`) using the `unsloth` library. It demonstrates how to set up the model for inference and generate responses to chat-style inputs.
+
+### Steps:
+
 1. **Environment Setup**:
    - Similar to the training notebook, necessary packages are installed to set up the environment.
 
@@ -93,7 +102,8 @@ This notebook is designed to test a pre-trained LLM (`Meta-Llama-3.1-8B-Instruct
    tokenizer.batch_decode(outputs)
    ```
 
-#### Usage:
+### Usage:
+
 - This notebook is intended for testing and validating the performance of a pre-trained LLM in generating responses to chat-based inputs. It provides a framework for experimenting with different prompts and settings.
 
 ---
