@@ -77,7 +77,7 @@ Contributions are welcome! Please follow the standard contribution guidelines:
 - [*Chris Abbey*](https://github.com/rissicay)
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Acknowledgements
 We would like to extend our gratitude to the following:
