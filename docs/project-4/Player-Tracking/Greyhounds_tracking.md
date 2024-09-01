@@ -15,20 +15,6 @@ This project focuses on detecting and tracking greyhounds in races. Using YOLOv8
 - [View our project on Roboflow](https://universe.roboflow.com/greyhound-tracking-ioamr/australian-greyhound-racing)
 - [Relative speed of greyhounds](https://github.com/rissicay/redback-orion/blob/main/greyhound_tracking/notebooks/speed_test.ipynb)
 
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-  - [Prerequisites](#prerequisites)
-  - [Steps](#steps)
-- [Dataset](#dataset)
-- [Challenges Faced](#challenges-faced)
-- [Future Work](#future-work)
-- [Contributing](#contributing)
-- [Contributors](#contributors)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-
 ## Features
 - **Greyhound Detection:** Accurately detects and identifies all greyhounds in each video frame.
 - **Tracking and Sorting:** Tracks the positions of the greyhounds throughout the race.
