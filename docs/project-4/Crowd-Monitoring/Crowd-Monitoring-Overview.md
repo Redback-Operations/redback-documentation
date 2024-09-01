@@ -22,7 +22,8 @@ CCTV >> YOLOv8 >> MongoDB >> Website/Dashboard
 # Initialize libraries
 This tells you the versions of both PyTorch and CUDA that are installed for **Environment setup**:
 
-```python
+```
+python
 import torch
 !nvcc --version
 TORCH_VERSION = ".".join(torch.__version__.split(".")[:2])
@@ -31,7 +32,8 @@ print("torch: ", TORCH_VERSION, "; cuda: ", CUDA_VERSION)
 ```
 
 We will use YOLOv8 in this project:
-```python
+```
+python
 !pip install ultralytics
 
 from IPython import display
@@ -41,7 +43,9 @@ import ultralytics
 ultralytics.checks()
 ```
 Supervision library:
-```python
+
+```
+python
 !pip install supervision==0.2.0
 
 from IPython import display
@@ -50,7 +54,8 @@ display.clear_output()
 import supervision as sv
 print("supervision", sv.__version__)
 ```
-```python
+```
+python
 import os
 HOME = os.getcwd()
 print(HOME)
@@ -63,7 +68,8 @@ https://media.roboflow.com/supervision/video-examples/people-walking.mp4
  *After downloaded, you will need to import into to your directory if using on Google Colab.*
 
 **Video testing with YOLOv8 model**
-```python
+```
+python
 # Importing Libraries
 from ultralytics import YOLO, solutions
 from ultralytics.solutions import object_counter
@@ -138,13 +144,16 @@ We have two methods with Camera integration:
 **RTSP Camera testing with YOLOv8**
 
 **Camera testing with YOLOv8**
-```python
+```
+python
 !pip install opencv-python numpy ultralytics Flask
 ```
-```python
+```
+python
 !pip install "pymongo[srv]"
 ```
-```python
+```
+python
 from flask import Flask, Response
 import cv2
 import numpy as np
@@ -237,6 +246,7 @@ cv2.destroyAllWindows()
 ![Live Camera Tracking](img\live_camera.png)
 
 # Load YOLO model
+```
 model = YOLO('yolov8n.pt')  # or use a different YOLO version
 
 # RTSP stream URL
@@ -319,7 +329,8 @@ cv2.destroyAllWindows()
 ## Camo Studio - Virtue Camera on Yolov8
 We will use Camo Studio app. We will need to download it on your mobile device and PC via App store/Google Play. After setup the app via QR code, we can now use our mobile device as a virtue camera for VS Code.
 
-```python
+```
+python
 import cv2
 import numpy as np
 from ultralytics import YOLO
@@ -485,7 +496,8 @@ We need to calculate corresponse mapping matrix H for homography transformation.
 **TESTING**
 
 Fetching and draw track path of camera view
-```python
+```
+python
 import cv2
 import numpy as np
 from ultralytics import YOLO
@@ -568,7 +580,8 @@ video_writer.release()
 cv2.destroyAllWindows()
 ```
 **Draw floor plan**
-```python
+```
+python
 from google.colab.patches import cv2_imshow
 import numpy as np
 
@@ -621,7 +634,8 @@ if __name__ == "__main__":
 ```
 
 **Perform transformation and draw tracking path on floor plan**
-```python
+```
+python
 import cv2
 import numpy as np
 from ultralytics import YOLO
