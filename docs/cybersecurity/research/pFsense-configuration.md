@@ -17,7 +17,7 @@ In this guide you will be able to set up your own pfsense in a virtual environme
 ### 1. Setup the wizard
 
 When you first enter your pFsense LAN IP address into your browser, you’ll be met with a setup wizard. 
-![new](img/wizard.PNG)
+![new](img\wizard.PNG)
 If you logged into pFsense and you didn’t get prompt with a setup wizard, click on **System -> Setup Wizard** and that should start up the setup wizard. 
 
 1. Click on **Next** twice as they are irrelevant. 
@@ -25,7 +25,7 @@ If you logged into pFsense and you didn’t get prompt with a setup wizard, clic
 3. pFsense NTP Time Server is completely fine, so leave that as is. Then change the Time zone to wherever you are, for me, I am in Melbourne, so I chose **Australia/Melbourne** as my Time zone. 
 4. On step 4, configuring WAN, you will want to leave that as is, since our WAN DHCP will give us IP addresses. 
 5. Step 5 is important as the default LAN IP is a popular IP address. It is recommended to change it; I will change mine to 10.32.30.1, you can change it to whatever you like, I’d recommend keeping it as a private address. Keep the subnet mask as 24. 
-![name](img/LAN.png)
+![name](img\LAN.png)
 6. It is highly recommended to change your password to something secure. At least 8 characters in total with upper- and lower-case characters, include numbers and a special character for a secure password. 
 7. Now your wizard is complete, all you need to do is click **Reload**. 
 8. You will notice that you lost access to your pFsense, that is because you changed your LAN IP. Next you will have to release and renew your DHCP. To do this open your CMD and type in the following commands, **ipconfig /release -> ipconfig /renew**. Then type **ipconfig** to check if the DHCP has successfully renewed a new IP. 
@@ -49,7 +49,7 @@ Note: Make sure you do this before you make big changes and updates to your pfse
 To access your DHCP configuration access **Services -> DHCP Server**  
 
 Once you access your DHCP settings, you will notice an end-of-life service message, to ensure the stability of your pfsense for the foreseeable future you will want to change to the newer version.
-![name](img/kea.png)
+![name](img\kea.png)
 Follow the steps shown in the image above, change to **Kea DHCP** and make sure you scroll down to the bottom and click **Save**.   
 
 You can change your IP address range, by default it is set to its maximum, that is fine, you can change that if you like. 
@@ -74,7 +74,7 @@ By default, SSH on pfsense is disabled, you can enable by accessing advanced set
 
 To do this go to **System -> Advanced** 
 
-![name](img/ssh.png)
+![name](img\ssh.png)
 
 1. Scroll down to SSH section and enable SSH by ticking **Enable Secure Shell** 
 2. Due to security concerns make sure SSHd Key is **Public Key Only**. Keep SSH port at 22. 
@@ -90,7 +90,7 @@ It's simple to install, all you need to download is the 64bit MSI installer and 
 
 If everything is correct you should be prompted to login into your pfsense username.
 
-![nane](img/putty.png)
+![nane](img\putty.png)
 
 Now you should be in an SSH session for your pfsense. 
 
@@ -107,7 +107,7 @@ In this section I will show you how to install snort in pfsense and configure a 
 7. Once all settings have been applied, scroll down to the bottom and click save. 
 8. Go back to **Snort Interfaces** under **Snort Status**, click the blue start button to activate and to the right of your new LAN snort rule, and then click on the Pencil under **Actions**. 
 
-![name](img/action.png)
+![name](img\action.png)
 
 9. Go to **LAN Rules**, here we can create simple rules, in this guide I will make an ICMP rule that will be blocking all pings. 
 10. Enter this rule in the **Defined Custom Rules** text box: **“reject icmp any any -> any any (msg:”ping blocked”;sid:1000001)“** and click **save**. 
