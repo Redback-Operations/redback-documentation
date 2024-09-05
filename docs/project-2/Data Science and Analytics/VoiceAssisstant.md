@@ -44,9 +44,9 @@ The project uses the following external sources as part of its design:
 Trains the model based on the neuralintents.assistants module and the `intents.json` file.  
 Fits the model with `epoch=50`.
 Outputs model to `./models/` as:  
-- {model_name}.keras - A zip file containing the config of the model, .h5 state with the weights and biases and a JSON metadata file
-- {model_name}_intents.pkl - A serialized byte stream of the intents object structure.
-- {model_name}_words.pkl - A serialized byte stream of the bag-of-words object structure the model was trained on.
+- [model_name].keras - A zip file containing the config of the model, .h5 state with the weights and biases and a JSON metadata file
+- [model_name]_intents.pkl - A serialized byte stream of the intents object structure.
+- [model_name]_words.pkl - A serialized byte stream of the bag-of-words object structure the model was trained on.
 
 # Future Plans
 - Broaden scope of the voice assistants subject matter
