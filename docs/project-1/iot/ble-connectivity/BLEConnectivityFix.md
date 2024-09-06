@@ -1,6 +1,13 @@
 ---
-sidebar_position: 1
+sidebar_position: 80
 ---
+
+:::danger[Important!]
+
+This PDF document is old and some of its contents may be wrong. You should not need to use this and instead rely on the newer `ble_auto_connect.sh` script.
+
+:::
+
  # How to fix Bluetooth Connectivity for Raspberry Pi with Wahoo device connection?
 
 Due to the volatility of BLE connection, while running the script to have the Raspberry Pi send data to the cloud, you might have encountered the following message:
