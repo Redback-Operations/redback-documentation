@@ -25,7 +25,7 @@ If you logged into pFsense and you didn’t get prompt with a setup wizard, clic
 3. pFsense NTP Time Server is completely fine, so leave that as is. Then change the Time zone to wherever you are, for me, I am in Melbourne, so I chose **Australia/Melbourne** as my Time zone. 
 4. On step 4, configuring WAN, you will want to leave that as is, since our WAN DHCP will give us IP addresses. 
 5. Step 5 is important as the default LAN IP is a popular IP address. It is recommended to change it; I will change mine to 10.32.30.1, you can change it to whatever you like, I’d recommend keeping it as a private address. Keep the subnet mask as 24. 
-![name](img\LAN.png)
+![name](img\pFsense-Lan.png)
 6. It is highly recommended to change your password to something secure. At least 8 characters in total with upper- and lower-case characters, include numbers and a special character for a secure password. 
 7. Now your wizard is complete, all you need to do is click **Reload**. 
 8. You will notice that you lost access to your pFsense, that is because you changed your LAN IP. Next you will have to release and renew your DHCP. To do this open your CMD and type in the following commands, **ipconfig /release -> ipconfig /renew**. Then type **ipconfig** to check if the DHCP has successfully renewed a new IP. 
