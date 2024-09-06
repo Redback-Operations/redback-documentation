@@ -1,4 +1,6 @@
-
+---
+sidebar_position: 2
+---
 # Predictive modelling of Alzheimer's Disease
 
 Alzheimer's is brutal brain disorder that is one of the leading causes of dementia across our aged community.  
@@ -6,7 +8,7 @@ It is incurable and effects quality of life for the patient and their loved ones
 
 The aim of this project is to research and develop an advanced predictive model leveraging both existing datasets as well as data captured by the IoT Smartwatch. 
 
-# Data Analytics
+## Data Analytics
 
 We make use of Jupyter Notebooks to conduct and display our work with assisstance from following Python libraries:
 - Data Analytics:
@@ -41,7 +43,7 @@ The Dataset (n=373) consists of the following columns:
 |ASF|Atlas Scaling Factor - Automated Normalisation of head size / brain analysis[^5]|Continuous [unitless]|
 |nWBV|Normalized Whole Brain Volume (percent of voxels in masked image labeled as grey / white matter)[^6].|Discrete: [0%-100%]|
 
-# Approach
+## Approach
 
 >Please discuss the logic behind your workflow here
 

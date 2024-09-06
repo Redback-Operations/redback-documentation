@@ -1,3 +1,6 @@
+---
+sidebar_position: 6
+---
 # Parkinson's Disease Prediction Model
 
 This feature has been undertaken to predict the presence of Parkinson's Disease based on the features expressed by patients that can be extracted from the patient's vocal patterns. Parkinson's Disease is a neurodegenerative disorder that has the common symptoms of[^1]:
@@ -11,7 +14,7 @@ This feature has been undertaken to predict the presence of Parkinson's Disease 
 
 At present, the cause of Parkinson's is utterly unknown but more data collected about patients as well as early intervention and care may aid to slow the onset. 
 
-# Data Analysis
+## Data Analysis
 
 To analyse this data, as well as to train machine learning classification models, a number of python libraries have been incorporated into the project:
 - Data Analytics / Transformation:
@@ -24,7 +27,7 @@ To analyse this data, as well as to train machine learning classification models
     - [Scikit-Learn](https://scikit-learn.org/stable/api/index.html)
 
 
-## Dataset
+### Dataset
 The dataset used at this stage is the Oxford Parkinson's Disease Detection Dataset[^2]. This dataset consists of 195 voice recordings of 31 people, 23 of which have been diagnosed with Parkinson's Diseas
 
 The data has the following features:

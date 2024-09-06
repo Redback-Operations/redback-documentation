@@ -4,7 +4,7 @@ sidebar_position: 1
 # Best Practices for Collaborative Python Development 
 <hr></hr>
 
-# Develop in a Virtual Environment
+## Develop in a Virtual Environment
 
 Using a virtual environment in Python is simple and ensures that there won't be any conflicts between a previously installed version of a library and that which you are running. It functionally allows you to pretend that you're running a clean Python3 installation with just the packages you need in that particular instance.
 Furthermore, It also provides the advantage that you can provide a `requirements.txt` file, which gives an easy method to share the necessary file versions that work together and solves a great proportion of "It works on my machine issues"
@@ -16,7 +16,7 @@ Same is especially true as conda does provide similiar functionality in that you
 
 With that out of the way, let's examine Virtual environments:
 
-# 1. PIP
+## 1. PIP
 
 > Do you install your packages by running `pip install {packagename}`?  
 > Read this bit 
@@ -26,14 +26,14 @@ First things first, we want to ensure that python is in your shell's path. to do
 If this results in output that shows the current python version and and interpreter (denoted by the `>>>` prompt ) you should be good to go.  
 If not, ask an LLM chatbot to walk you through it with your particular OS / terminal info. 
 
-## Creating a venv:
+### Creating a venv:
 In your terminal navigate to the folder your project (or projects if they're related and going to share packages) is located and type  
 `python -m .venv .`
 
 This will create a hidden folder in that directory (the `.` argument) named `.venv` that contains the python bin info and will be where all of your installed libraries are contained. You can technically name it whatever you like, but in this case its convention, and .venv is already included in the gitignore. 
 Since our collaborators probably wont be using the exact same python binary, we dont want to force them to download personalized junk. What we do want to do, is to provide them with a list of things they need to make our application / jupyter notebook to work like it does on our machine. 
 
-## Entering a venv:
+### Entering a venv:
 If you've just create the venv from above, you can activate it by typing:
 
 1. UNIX (MAC / Linux)
@@ -46,12 +46,12 @@ If you've just create the venv from above, you can activate it by typing:
 
 You'll know it was a success if in your terminal it shows up with (.venv) before the prompt.
 
-## Logging your packages:
+### Logging your packages:
 Now download all your packages and when you've got everything your jupyter notebook or python script requires, run   
 `pip freeze > requirements.txt`  
 This will output all of the packages in this venv and write them to a file named `requirements.txt`
 
-## Installing someone elses venv
+### Installing someone elses venv
 Then, all anyone needs to do to get a working build of your code on their machine, should be to download the repo, navigate to the project folder, make their own venv and run:
 `pip install -r requirements.txt`
 or failing that:
@@ -59,7 +59,7 @@ or failing that:
 
 
 
-# 2. Conda
+## 2. Conda
 > Do you install your packages by running `Conda install {packagename}`?  
 > or just downloaded Anaconda for a unit ages ago and have everything already?  
 > Read this bit 
@@ -69,7 +69,7 @@ This can be tested by opening a terminal and running `conda`.
 
 You should get some version info. if you get a file not found error, ask an LLM chatbot to walk you through it with your particular OS / terminal info.
 
-## Creating a venv:
+### Creating a venv:
 
 In your terminal navigate to the folder your project (or projects if they're related and going to share packages) is located and type  
 `conda create -n .venv`
@@ -80,12 +80,12 @@ You can also specify python version by appending the `version=x.x` as well as in
 
 Since our collaborators probably wont be using the exact same python binary, we dont want to force them to download personalized junk. What we do want to do, is to provide them with a list of things they need to make our application / jupyter notebook to work like it does on our machine. 
 
-## Logging your packages:
+### Logging your packages:
 Now download all your packages and when you've got everything your jupyter notebook or python script requires, run   
 `conda list -e > requirements.txt`  
 This will output all of the packages in this venv and write them to a file named `requirements.txt`
 
-## Installing someone elses venv
+### Installing someone elses venv
 Then, all anyone needs to do to get a working build of your code on their machine, should be to download the repo, navigate to the project folder, make their own venv and run:
 `conda create -n .venv --file requirements.txt`
 

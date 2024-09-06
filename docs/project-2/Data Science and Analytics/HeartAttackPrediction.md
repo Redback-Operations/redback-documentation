@@ -1,8 +1,11 @@
+---
+sidebar_position: 5
+---
 # Heart Attack Prediction
 
 This feature has been built with the intention of providing an early warning for Heart disease based on indicators collected by the wearable's sensor array. This feature seeks to provide users and their support network an alert to worrying decreases in cardiovascular health.
 
-# Data Analytics
+## Data Analytics
 
 To analyse this data, as well as to train machine learning classification models, a number of python libraries have been incorporated into the project:
 
@@ -20,7 +23,7 @@ To analyse this data, as well as to train machine learning classification models
     - [imblearn](https://imbalanced-learn.org/stable/references/index.html#api)
 
 
-## Dataset 1
+### Dataset 1
 The dataset used in heart_attack_prediction.ipynb is the Heart Attack Risk Prediction Dataset synthesized by Sourav Banerjee with the assistance of ChatGPT[^1]
 
 
@@ -53,7 +56,7 @@ The dataset used in heart_attack_prediction.ipynb is the Heart Attack Risk Predi
 
 
 
-## Dataset 2
+### Dataset 2
 >Please cite the sources of this dataset. I tried my damndest but couldnt find it  
 
 The dataset used in the Heart_Disease_Prediction.ipynb notebook:

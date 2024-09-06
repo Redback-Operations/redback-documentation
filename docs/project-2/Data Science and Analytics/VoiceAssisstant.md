@@ -1,3 +1,6 @@
+---
+sidebar_position: 8
+---
 # Voice Assistant feature for Elderly Care Wearable.
 
 The goal of this sub-project is to develop and integrate voice assistant functionality into the Elderly care wearable device. 
@@ -5,7 +8,7 @@ This is done with the intention of offering a useful method of interacting with 
 
 This feature aims to be able to answer verbal queries relating to the user's daily scheduling and provide information relating to the user's health based on locally recorded data.
 
-# Implementation
+## Implementation
 At present the voice assistant is able to repond to queries relating to local time, weather and basic assistance to reported symptoms.
 Features in active development include mental health counselling / guidance, making calls, dictating messages and conducting health assessments. 
 
@@ -17,9 +20,9 @@ The project uses the following external sources as part of its design:
 - [LocationTagger](https://github.com/kaushiksoni10/locationtagger): A Python library implementing location extraction from NLP
 - [requests](https://github.com/psf/requests): A library for generating HTTP/1.1 requests
 
-## Structure
+### Structure
 
-### Voice Assistant Runtime
+#### Voice Assistant Runtime
 **main.py**  
     Spins up the UI module `pygame_win` and `speech_to_text` modules and executes them in parallel,  
     Handles overall program execution and termination.
@@ -38,7 +41,7 @@ The project uses the following external sources as part of its design:
     Calls the get_response function from the `generate_response.py` module,  
     Verbally outputs the generated response.
 
-### Training
+#### Training
 
 **train_model.py**
 Trains the model based on the neuralintents.assistants module and the `intents.json` file.  
@@ -48,13 +51,13 @@ Outputs model to `./models/` as:
 - [model_name]_intents.pkl - A serialized byte stream of the intents object structure.
 - [model_name]_words.pkl - A serialized byte stream of the bag-of-words object structure the model was trained on.
 
-# Future Plans
+## Future Plans
 - Broaden scope of the voice assistants subject matter
 - Support more languages / multilingualism
 - Build compatability with emerging health care technologies
 - Implementation into the wearable. 
 
-# Local Development 
+## Local Development 
 To run the project on a local machine, follow these steps:
 
 1. Clone the repository from GitHub

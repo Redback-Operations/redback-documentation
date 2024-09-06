@@ -1,8 +1,11 @@
+---
+sidebar_position: 7
+---
 # Sleep Disorder Prediction
 
 This feature aims to quantify both sleep quality and quantity by measuring motion from sleeping wearers of the IoT device. Sleep quality and monitoring has proven to be significant in recent time for many preventative health care outcomes. For this reason Smartwatches boasting this capability have flooded the market. To capitalize on these capabilities and hopefully provide these benefits to our users, Redback has undertaken predictive modelling of sleep disorders. 
 
-# Data Analytics
+## Data Analytics
 
 > Please fill this out with a walkthrough of your analytics and ML model training workflow
 
@@ -23,7 +26,7 @@ To analyse this data, as well as to train machine learning classification models
 
 
 
-## Dataset
+### Dataset
 >Talk about Data Preprocessing  
 
 The dataset used for initial training of the model is ICHI14-BORAZIO[^1][^2], collected from 42 subjects aged 28 - 86, wearing high frequency 3d inertial data loggers over 409 hours. 

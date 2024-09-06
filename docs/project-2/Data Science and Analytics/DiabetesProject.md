@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Predictive Modelling of Diabetes 
 Diabetes has become a leading cause for concern amongst Australia's population, with over 1.3 Million people confirmed cases and 500,000 more estimated undiagnosed type 2 cases.[^1]
 
@@ -5,7 +9,7 @@ The scale of this issue is compounded by the fact that on average each of these 
 
 It is from this perspective that we aim to develop a predictive model for diabetes risk to improve the ability for medical professionals to make timely detections and interventions as well as to give users agency in preventing this disease. 
 
-# Data Analytics
+## Data Analytics
 
 To analyse this data, as well as to train machine learning classification models, a number of python libraries have been incorporated into the project:
 - Data Analytics / Transformation:
@@ -20,7 +24,7 @@ To analyse this data, as well as to train machine learning classification models
     - [KerasTuner](https://keras.io/keras_tuner/#quick-introduction)
 
 
-## Dataset 1
+### Dataset 1
 https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset  
 The original poster is coy[^3] about the source of the data but it is still one of the most popular datasets across Kaggle. 
 
@@ -40,7 +44,7 @@ The columns are as follows
 |blood_glucose_level|Blood glucose at time of recording|Discrete: [mg/dL]|
 |diabetes|Whether the patient has been diagnosed with diabetes|Nominal: [0: false, 1: true]|
 
-## Dataset 2
+### Dataset 2
 https://archive.ics.uci.edu/dataset/529/early+stage+diabetes+risk+prediction+dataset
 
 This dataset is provided in the UC Irvine ML repo and was collected using questionnaires from the patients of the Syhlet Diabetes Hospital in Bangladesh.[^4]
@@ -67,7 +71,7 @@ The Dataset contains 17 columns and 520 records
 |Obesity||Nominal: [No, Yes]|
 |Class|Presense of Diabetes|Nominal: [Negative, Positive]|
 
-# Approach
+## Approach
 > Please discuss your analytics workflow / methodology here
 
 
