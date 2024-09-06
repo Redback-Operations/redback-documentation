@@ -1,8 +1,8 @@
 {
-  "label": "Website",
+  "label": "Project 2",
   "position": 4,
   "link": {
     "type": "generated-index",
-    "description": "Website For Project 2"
+    "description": "The Elderly IoT Smartwatch Project."
   }
 }
