@@ -37,8 +37,9 @@ With a way to work on the codebase now installed and configured, you may find th
 `./Codebase/Complete_Code/`. \
 At present this is a monolithic file containing the entire firmware for the device but in future we will be modularizing it for ease of maintenance. 
 
->🚩 **Important** 🚩 \
-> Please ensure that any API keys in use are added to `secrets.h` and add that file to your .gitignore
+:::warning
+Please ensure that any API keys in use are added to `secrets.h` and add that file to your .gitignore
+:::
 
 Work on the PCB has been conducted in [Altium Designer](https://www.altium.com/altium-designer) however the files can be imported into KiCAD. 
 
