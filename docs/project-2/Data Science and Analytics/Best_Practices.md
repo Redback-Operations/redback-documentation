@@ -28,9 +28,9 @@ If not, ask an LLM chatbot to walk you through it with your particular OS / term
 
 ### Creating a venv:
 In your terminal navigate to the folder your project (or projects if they're related and going to share packages) is located and type  
-`python -m .venv .`
+`python -m venv .venv`
 
-This will create a hidden folder in that directory (the `.` argument) named `.venv` that contains the python bin info and will be where all of your installed libraries are contained. You can technically name it whatever you like, but in this case its convention, and .venv is already included in the gitignore. 
+This tells python to use the venv module to create a folder named `.venv` that contains the python bin info and will be where all of your installed libraries are contained. You can technically name it whatever you like, but in this case its convention, and .venv is already included in the gitignore. 
 Since our collaborators probably wont be using the exact same python binary, we dont want to force them to download personalized junk. What we do want to do, is to provide them with a list of things they need to make our application / jupyter notebook to work like it does on our machine. 
 
 ### Entering a venv:
