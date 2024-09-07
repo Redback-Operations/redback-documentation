@@ -37,7 +37,8 @@ const config = {
     locales: ['en'],
   },
   plugins: [
-    require.resolve('docusaurus-lunr-search')
+    require.resolve('docusaurus-lunr-search'),
+    require.resolve('plugin-image-zoom'),
   ],
   presets: [
     [
@@ -124,6 +125,10 @@ const config = {
       prism: {
         theme: prismThemes.nightOwlLight,
         darkTheme: prismThemes.dracula,
+      },
+      
+      imageZoom: {
+        selector: '.markdown :not(em) > img',
       },
     }),
 };
