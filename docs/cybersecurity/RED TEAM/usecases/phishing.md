@@ -1,7 +1,7 @@
 ---
 sidebar_position: 13
 ---
-# PHISHING
+# Phishing
 
 Phishing is a type of cybercrime that takes advantage of human behavior to trick people into revealing confidential information or downloading harmful software. It remains one of the most common and effective methods employed by cybercriminals to illegally access personal and financial data. The term "phishing" reflects the analogy of fishing, where attackers cast broad nets to ensnare unsuspecting victims.
 
