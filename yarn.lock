@@ -3489,9 +3489,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001125, caniuse-lite@^1.0.30001587, caniuse-lite@^1.0.30001591:
-  version "1.0.30001596"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001596.tgz"
-  integrity sha512-zpkZ+kEr6We7w63ORkoJ2pOfBwBkY/bJrG/UZ90qNb45Isblu8wzDgevEOrRL1r9dWayHjYiiyCMEXPn4DweGQ==
+  version "1.0.30001658"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001658.tgz"
+  integrity sha512-N2YVqWbJELVdrnsW5p+apoQyYt51aBMSsBZki1XZEfeBCexcM/sf4xiAHcXQBkuOwJBXtWF7aW1sYX6tKebPHw==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -8605,11 +8605,6 @@ media-typer@0.3.0:
   resolved "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz"
   integrity sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==
 
-medium-zoom@^1.0.8:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/medium-zoom/-/medium-zoom-1.1.0.tgz"
-  integrity sha512-ewyDsp7k4InCUp3jRmwHBRFGyjBimKps/AJLjRSox+2q/2H4p/PNpQf+pwONWlJiOudkBXtbdmVbFjqyybfTmQ==
-
 memfs@^3.1.2, memfs@^3.4.3:
   version "3.5.3"
   resolved "https://registry.npmjs.org/memfs/-/memfs-3.5.3.tgz"
@@ -10077,12 +10072,6 @@ pkg-up@^3.1.0, pkg-up@3.1.0:
   integrity sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==
   dependencies:
     find-up "^3.0.0"
-
-"plugin-image-zoom@github:flexanalytics/plugin-image-zoom":
-  version "1.1.0"
-  resolved "git+ssh://git@github.com/flexanalytics/plugin-image-zoom.git#8e1b866c79ed6d42cefc4c52f851f1dfd1d0c7de"
-  dependencies:
-    medium-zoom "^1.0.8"
 
 portfinder@^1.0.28:
   version "1.0.32"
