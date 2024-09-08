@@ -1,14 +1,14 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Project 1
+# Project 1 - Smart Bike Project
 
 Cyber Security Guidelines
 
 :::info
-**Document Creation:** 1 April, 2023. **Last Edited:** 31 August, 2023. **Authors:** Indiah Smith.
-<br></br>**Document Code:** CSG P1. **Effective Date:** 1 September 2023. **Expiry Date:** 1 September 2024.
+**Document Creation:** 23 September, 2023. **Last Edited:** 23 September, 2023. **Authors:** Indiah Smith.
+<br></br>**Document Code:** CSG P7. **Effective Date:** 23 September 2023. **Expiry Date:** 23 September 2024.
 :::
 
 ## Purpose and Scope of the Policy
@@ -61,19 +61,39 @@ The **Australian Cyber Security Centre** (ACSC) recommends that organisations im
 
 ### Monitoring Data Importation and Exportation
 
-All data transfers should be logged with information on who authorised the transfer of data, what data was transferred, where the data was transferred to or from, why the data was transferred, when the data was transferred and how the data was transferred.
+- Monitoring of data transfers should take place regularly to identify any unusual
+activities or abuse of data transfer privileges.
 
-Monitoring of data transfers should take place regularly to identify any unusual activities or abuse of data transfer privileges.
+- Users transferring data should be held accountable for data transfers and ensure
+systems are secure and authorised to withhold the data.
+
+### Data Logging
+
+To preserve system integrity and manage data transfer privileges, employees should
+log all forms of data transfers and include information such as:
+
+1. Who the data transfer was performed by;
+
+2. What data was transferred;
+
+3. Where the data was transferred to;
+
+4. When the data was transferred; and
+
+5. How the data was transferred.
 
 ## Database Systems
 
 ### Communication of Database Servers and Internet of Things
 
-All data communicated between database servers and cloud servers should be encrypted due to its susceptibility to being captured by an adversary.
+- All data communicated between database servers and cloud servers should be encrypted due to its susceptibility to being captured by an adversary.
+
+- Wearable devices may be referred to as the “Internet of Medical Things” (IoMT) which
+refers to the connection of the devices to health information technology systems.
 
 ### Protection of Database Contents
 
-Users of the database should be aware of the sensitivity associated with the contents of the database. All sensitive data collected by the Orion model should be classified as such and protected through the use of access privileges to restrict database users’ ability to access, insert, modify or remove contents of the database in alignment with their role within the company.
+Users of the database should be aware of the sensitivity associated with the contents of the database. All sensitive data collected by the wearable devices should be classified as such and protected through the use of access privileges to restrict database users’ ability to access, insert, modify or remove contents of the database in alignment with their role within the company.
 
 ## Managing Cyber Security Incidents
 
@@ -94,6 +114,16 @@ Appropriate data sources should be retained by the company and event logs should
 An incident management policy should be established to initiate a plan for detecting and responding to malicious activity and cover the responsibilities of the action plan, the allocation of resources, and guidelines for responding to cyber security events and cyber security incidents.
 
 An incident management policy should be reviewed annually for compliance purposes.
+
+### Security Risk Management Plan
+
+A framework should be established to:
+
+1. Assess and identify the most valuable assets and information held by the business;
+
+2. Identify vulnerabilities that the organisation may be susceptible to; and
+
+3. Handle the identified threats that may impact the company.
 
 ### Cyber Security Incident Register
 
@@ -136,9 +166,18 @@ If the infection cannot be removed, the system should be restored to a known goo
 Personal information refers to information or an opinion about an identified individual, or an
 individual who is reasonably identifiable.<sup>2</sup>
 
-Sensitive information is defined in s 6(1) of the Privacy Act 1988 (‘Privacy Act’) and includes
-health information and biometric information and is afforded a higher level of privacy
-protection under the APP 3, 6 and 7.
+Sensitive information is defined in s 6(1) of the Privacy Act 1988 (‘Privacy Act’). The data
+collected by the mobile app should be subject to the requirements where it satisfies the
+elements of personal or sensitive information. Exercise metrics such as duration, intervals,
+distance, resistance and threshold is not considered “health information” and the privacy
+policy should communicate to users all the ways their data will be used. Users should be
+provided with an opportunity to opt-out at any time.
+
+Default protections should be private by default and users should physically have to adjust
+settings to enable their data to be shared and control how it may be used.
+
+The mobile app should be set up with two-factor authentication to ensure a code is generated
+and sent to a trusted device before it can be accessed.
 
 The 13 Australian Privacy Principles (APPs) are contained under s 28(1) of the Privacy Act and
 provide regulations on how personal information should be handled.
@@ -149,11 +188,21 @@ information under APP 11.
 
 - The company should take reasonable steps to ensure personal information is
 protected from misuse, interference and loss, in addition to authorised access,
-modification and disclosure under APP 11.1.
+modification and disclosure under APP 11.1. These reasonable steps include the
+development of adequate cyber-security practices to meet the privacy protection
+requirements.
 
 - The company should take reasonable steps to ensure personal information is
 destroyed or de-identified where it is no longer necessary for any purpose for which
 it may be used or disclosed under the APP 11.2.
+
+- The company should collect the minimal amount of personal information that is
+reasonably necessary to carry out its functions or activities under APP 3.
+
+- The company should secure personal information in adherence with APP 1 by
+implementing procedures relating to internal practices, processes and systems,
+governance, and any dealings with third-party providers that go beyond the scope of
+technical security measures.
 
 - If the company provides personal information to a cloud service provider for the
 purpose of storage of data and providing access to the personal information, this will
@@ -176,12 +225,40 @@ contract.
 
 Consent is required as authority for the company to handle consumer information in a particular way (APPs 7.3, 7.4 and 8.2(b)).
 
-Consent should be express or implied (s 6(1)) and fulfil the four elements of consent:
+- Consent should be express or implied (s 6(1)). Express consent must be given explicitly
+orally or in writing. Implied consent is inferred from the conduct of the individual and
+the circumstances in which it is given. The company should opt to source express
+consent from individuals when obtaining health and biometric data (APP 3.3). Users
+must have the ability to customise or disable their devices in accordance with their
+preferences and requirements.
 
-1. Adequately informed;
-2. Voluntary consent;
-3. Current and specific consent;
-4. And capacity to understand.
+- The elements of consent that must be fulfilled are as follows:
+
+  - The individual must be adequately informed prior to providing consent;
+
+  - The consent must be given voluntarily;
+
+  - The individual must be capable of understanding and communicating the consent; and
+
+  - The consent must be current and specific.
+
+- When transmitting the data through IoT, the company should make efforts to:
+
+  - Communicate who will be processing the data and their core responsibilities;
+
+  - Communicate how the data will be used from the point of sale and on set-up; and
+
+  - Communicate information in specific increments of time.
+
+- Prior to using the device, the user should provide consent to the Terms and Conditions
+and Privacy Policy indicating how their data will be used.
+
+- Informed consent should be obtained upon change to the health of the individual, or
+the technical system.
+
+- Where data is used for a secondary purpose unrelated to the primary purpose, an
+individual should provide additional consent and be informed as to how their data is
+being collected and communicated.
 
 ### De-Identification Requirements
 
@@ -201,28 +278,97 @@ identifying information.
 Personal identification data must be able to be transformed in a manner that prevents
 any person with unauthorised access from tracing it back to an individual.
 
-## Health Information
+### Rights of Data Subjets
 
-‘Health information’ refers to information or an opinion that is also classified as personal
-information and may include information about the health or a disability of the individual,
-an individual’s expressed wishes about the future provision of health services to him or her,
-or a health service provided, or to be provided, to an individual.
+Data subjects may exercise any of the following rights at any time in relation to the
+protection of data.
 
-- Genetic information about an individual refers to information in a form that may be
-predictive of the health of the individual or a genetic relative of the individual (s
-6(1)).
+- Right of access to their data and knowledge of whether it is being processed.
 
-- An APP entity will hold personal information ‘if the entity has possession or control
-over a record that contains the personal information’ (s 6(1)). The term ‘record’
-refers to a document or an electronic or other device (s 6(1)).
+- Right to rectification where data is inaccurate and the individual may request for
+their data to be corrected.
+
+- Right of erasure to restrict the data from being processed.
+
+- Right to be informed in a clear and concise manner prior to the collection and use
+of data.
+
+- Right to object meaning that data subjects can express if they do not want their
+personal data to be processed.
+
+- Right not to be subject to a decision based on automated processing.
+
+## Security and Privacy of VR
+
+Cybersecurity concerns surrounding IoT devices are applicable to virtual reality headsets. The
+regulations encapsulating virtual reality are currently not administered in the law. However,
+these systems are subject to ethical and privacy implications and cyber security foundations
+should be applied when using VR systems.
+
+- Users should implement the following safeguards when using the VR system:
+
+  - Devices should be kept up to date and security patches should be applied;
+
+  - Application software should be kept up to date;
+
+  - A VPN should be used when the device is online;
+
+  - Apply caution when disclosing personal information; and
+
+  - Review privacy policies to understand how the data is being collected and used.
 
 ## Physical Security
 
 This section outlines the physical protections that should be implemented to safeguard
-people and assets to comply with the Work Health and Safety Act 2011.
+people and assets to comply with the Work Health and Safety Act 2011 and meet
+cyber security standards. These protections should be proportionate with the assessed
+sensitivity or risk of damage or loss.
+
+### Physical Access to Systems
+
+A security zone should be established and systems should be secured in premises that
+have been assessed by the physical security certification authority and meet
+appropriate standards to secure the sensitive data appropriately.
+
+### Physical Access to Devices and Servers
+
+- The company should have a separate server room to secure network devices and
+servers with appropriate keys to control access to this room.
+
+- Physical security such as enclosures or security containers should be implemented to
+prohibit unauthorised access or damage to equipment.
+
+- Workstations and keyboards should not be visible to people outside of the premises
+and measures such as privacy films should be implemented to prevent observation
+from unauthorised people.
+
+- The company must securely dispose of physical assets.
+
+## Securing ICT Equipment
+
+ICT equipment should be secured when it is not in use and this may be achieved
+through security containers, sanitisation of memory upon shutdown or encryption of
+hard drives.
 
 ## Notification Requirements
 
 Where an data breach incident occurs that is likely to compromise the rights of an
 individual, they must be notified immediately, and the relevant regulatory body must be
 informed within 72 hours.
+
+### Nofifiable Data Breaches Scheme
+
+- Under the Notifiable Data Breaches (NDB) scheme, companies under the Privacy Act
+must undertake an assessment where there has been a data loss or unauthorised
+access to or disclosure of personal information.
+
+- The company must notify the OAIC where the incident is likely to result in harm to an
+individual.
+
+## MQTT Security Practices
+
+Appropriate encryption methods should be implemented through Transport Layer
+Security (TLS) or Secure Socket Layer (SSL certificates). Authorisation methods and
+access permissions should be implemented to ensure only authorised users or
+devices can access certain data. This can be done through access control lists (ACLs)
+or role-based access control (RBAC).
