@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
-# Important Research
+# Important Research (Tutorial Video)
 
 Tutorial for Redback Operations
 
@@ -12,7 +12,7 @@ By **John Doe**. **15/04/2024**
 
 :::
 
-**[Video here!](https://youtu.be/AbDBXuXaJ_s)**
+## **[Video here!](https://youtu.be/AbDBXuXaJ_s)**
 
 
 ## Very Important
