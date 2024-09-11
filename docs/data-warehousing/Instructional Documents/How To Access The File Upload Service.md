@@ -1,3 +1,7 @@
+--- 
+sidebar_position: 1
+---
+
 # How To Use The Data Warehouse File Upload Service
 
 ## Part 1 - Uploading a File
@@ -10,14 +14,14 @@ The link below contains a guide to a quick setup for the Deakin VPN
 ##### NOTE: you may need to 'log in' on the top right corner to access the VPN webpage
 [Cisco AnyConnect – Deakin Software Library](https://software.deakin.edu.au/2019/04/16/cisco-anyconnect/)
 
-[Picture of VPN]
+![Picture of VPN](./pictures/VPN.png)
 
 #### Step 2 - Accessing the Streamlit app
 
 Once the VPN is successfully set-up and if properly authenticated you can access the streamlit app that serves as the user interface for the service using the following address
 				http://10.137.0.149/
 
-[Picture of FUS] 
+![Picture of FUS](./pictures/FUS.png)
 
 #### Step 3 - Uploading a file
 
@@ -30,7 +34,7 @@ Please make the name descriptive but brief.
 
 If successful, the website will show 'Uploaded Successfully'.
 
-[Picture of Uploaded Success]
+![Picture of Uploaded Success](./pictures/upsuccess.png)
 
 ## Part 2 - Retrieving a File
 
