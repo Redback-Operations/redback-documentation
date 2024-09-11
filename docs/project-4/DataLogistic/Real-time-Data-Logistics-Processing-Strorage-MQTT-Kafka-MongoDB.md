@@ -17,6 +17,68 @@ sudo docker compose up --scale sensor=1
 ```
 
 
+### 1.4 How to communicate with the server
+
+Currently, we simulate the real-time data by sending demo data regularly with sensor.js in Data_collection folder. 
+
+```JavaScript
+function main() {
+    const mqtt = require('mqtt');
+    // Connect to the message broker
+    const client = mqtt.connect(
+        {
+            host: 'mosquitto',
+            port: 1883
+        }
+    );
+
+    // Read csv
+    let collectedData = (require("fs").readFileSync("./demo_data.csv", "utf8")).split("\r");
+    collectedData.shift();
+    client.on('connect', () => {
+        console.log('Sensor '+ process.env.HOSTNAME + ' is now connected to the MQTT broker');
+
+        publishCollectedData(collectedData, 'Image', client);
+    });
+}
+```
+
+One can changes the demo data by reading from CSV file by some other data source to push data to our MQTT after the connection.
+
+
+### 1.6 How to integrate existing models
+
+One can update the model path to integrate models into the existing pipeline for data analysis and then add the data and analysis reults into MongoDB for further analysis, visualization or recording.
+
+
+```Python
+# Data Analysis for Crowd Monitering and Player Tracking
+m = load(```Model Path```)
+print("Starting Data Analysis")
+for message in my_consumer:
+    print("------------- Model Analysis -------------")
+    print(f"Data {message} is being processed")
+    message = message.value
+    df_pred = pd.DataFrame.from_records([{"ds": message['ts']}])
+    df_pred['ds'] = pd.to_datetime(df_pred['ds'])
+    forecast = m.predict(df_pred)
+    forecast['sensor'] = message['sensor']
+    my_producer.send('analytics_results', value= forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper', 'sensor']].to_json(orient="index", date_format='iso'))
+```
+
+
+### 1.6 How to visualize existing data
+
+Access the followign URL with browser to visualize existing data
+
+```
+http://localhost:8081/
+```
+
+![alt text](figs/implement_result_6.png)
+
+
+
 ## 2. Requirements
 
 ### 2.1 Introduction
@@ -52,10 +114,10 @@ The Real-Time Data Processing and Storage System aims to provide a robust and ef
 5) Monitoring and Alerts: Provides monitoring capabilities and alerts for system health.
 
 
-### 6.5 Deployment
+### 2.5 Deployment
 The system will be deployed using Docker containers for MongoDB and Kafka. Detailed deployment instructions will be provided to stakeholders for easy setup and maintenance. Continuous monitoring and logging will be implemented to ensure system stability and performance.
 
-### 7.6 Challenges Faced and Solutions
+### 2.6 Challenges Faced and Solutions
 
 1) Configuration Issues: Addressed by refining Docker container configurations and port mappings.
 
@@ -63,7 +125,7 @@ The system will be deployed using Docker containers for MongoDB and Kafka. Detai
 
 3) Error Handling: Enhanced error handling mechanisms for better fault tolerance and system reliability.
 
-### 7.7 Future Enhancements
+### 2.7 Future Enhancements
 
 1) Scalability: Implement mechanisms for horizontal scaling to handle increased data load.
 
@@ -164,13 +226,25 @@ Kafka depends on Zookeeper for distributed coordination and management of topics
  ![alt text](figs/implement_result_7.png) 
  
  	
- 
- 
- 
+ ## 6. Reference
 
+  [1] https://mqtt.org/
 
+  [2] https://hub.docker.com/_/eclipse-mosquitto
 
+  [3] https://github.com/eclipse/mosquitto
 
+  [4] https://kafka.apache.org/
 
+  [5] https://github.com/apache/kafka
 
+  [6] https://hub.docker.com/r/apache/kafka
+
+  [7] https://www.mongodb.com/
+  
+  [8] https://github.com/mongodb/mongo
+
+  [9] https://hub.docker.com/_/mongo
+
+  [10] https://github.com/sergio11/iot_event_streaming_architecture
 
