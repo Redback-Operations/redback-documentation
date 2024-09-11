@@ -8,20 +8,26 @@ Documentation of Wazuh:
 
 :::INFO
 
-Author: **Lachlan Harrison** **31/08/2024**
+Author: **Lachlan Harrison**, **31/08/2024**
 
 :::
 
 ## Section 1 - Capabilities of Wazuh
 
 Wazuh is an open source and completely free security platform which can be utilized for many features. The tool itself is accessible via this link: https://wazuh.com/ 
+
 When we utilize the Wazuh tool, every user that interacts with the platform is presented with many opportunities to learn various concepts ranging from hacking methods to security methods to strengthen your systems and protect yourself from any attacker in which may discover the various vulnerabilities and exploit them for their own gains. When we mention these systems, they are referred to as Agents in which we can deploy various agents across the platform. The tool itself as well allows for further analysis into your agents across the dashboard in which the user can also discover various information about their agent, various configurations and standards to improve their security with this tool.
+
 We can also allow for Wazuh to send security alerts to our devices via a chosen method which can range from platforms like Slack to our own Emails. This tool is referred to as a SIEM tool (Security, Information and Event Management) which all of these elements are showcased in Wazuh’s interface. SIEM categorised tools are very important in Cyber Security elements as they are efficient with providing the appropriate analysis, detailed information, security recommendations and also real-time events that are occurring within our linked agents.
+
 Wazuh utilizes a simplistic method of analyzing our agents and due to this, the platform itself only requires a Linux server along with another machine to monitor the output of the tool which includes another computer. Many Linux servers are supported with Wazuh including various popular services such as Ubuntu, Debian and Cloud Lenode. The implementation of this tool is also relatively easy and has already been discussed. 
 The open-sourced tool as stated before provides users with a unique learning experience in which there is plenty of learning opportunities to grow and develop their knowledge in how to keep their devices safer from discovered vulnerabilities as well as providing users with knowledge of potential risks and how they can be mitigated to prevent enumeration, exploitation and compromises. This allows for users to become more cyber safe, reinforces their agent’s defences against cyber attacks and provides users with the knowledge to prevent these cases in the future.
+
 Wazuh’s system requirements are quite slim even if utilizing a Virutal machine, this creates for easier access to reach more users as well as easier performance on the machine. These include a minimum requirement of 2GB of RAM along with 2 CPU cores whereas the recommended requirements aim for 4GB of RAM and 8 CPU cores allowing for a better performance and smoother experience when analyzing agents.
 
 Wazuh provides a lot of analysis opportunities for users to discover while utilizing the platform along with users to learn various concepts and potential vulnerabilities within their linked agents.
+
+
 
 ## Section 2 - What can we learn from Wazuh?
 
@@ -42,19 +48,26 @@ The platform also displays to the user a Secure Configuration Assessment (SCA) w
 Intel provided on various security events is extremely critical for incident response and for developing a safer agent and reduce the risk of enumeration and compromise. The intel Wazuh provides includes authentication failures/success, top alerts as well as providing an entire list of security alerts for the associated agent in which we can obtain in the interface.
 The tool provides so much information for the user and assists in becoming more secure with their agents as well as constant monitoring for any new changes needed to mitigate vulnerabilities that are discovered and any abnormal behaviour detected in which the user is able to respond accordingly. 
 
+
+
 ## Section 3 - Why Wazuh? Why do we need this tool?
 
 Since implementing Wazuh into Redback Operations, Wazuh provides many reasons as to why this tool should be utilized including various elements that provide an opportunity for the user to develop their own cyber safe environment.
 Security Awareness – Wazuh provides users knowledge of potential vulnerabilities and also how to mitigate these vulnerabilities to reduce the risk of a compromise or enumeration by an attacker by providing detailed information and solutions to make the user more aware of what is happening and why this is a risk.
 Incident Response – The platform allows for active response to real events occurring on their linked agents including various attacks and file changes to at which the user can act upon these incidents and take the necessary steps required to mitigate these attacks and risks.
+
 Securing of Devices – With the constant evolution of Cyber threats, Wazuh adapts and informs the user of these new threats by creating awareness of new exploits/vulnerabilities discovered within an agent and how to mitigate these risks hence why this tool provides a great opportunity for users to further secure their devices by adjusting configurations and making appropriate changes to mitigate the security alerts that are being detected.
+
 Safety – The tool itself protects user’s machines by providing adequate information to the user as to how to improve their safety and security to protect themselves from foreign attacks/interference which in turn creates ease of access for company members to continue their work on their projects knowing that the agent they are utilizing has its security enhanced due to the correct configurations and implementations utilized within the agent.
+
 Accessibility – Having a relatively easy to understand User Interface (UI), many users can easily navigate Wazuh’s dashboard to locate their agents and analyse the discovered elements. This creates an easy and also safe method of learning of what is being displayed to the user which for example, various vulnerabilities along with their MITRE techniques utilized to exploit this vulnerability and solutions to mitigate these vulnerabilities.
+
 Compliance – Wazuh provides members the opportunity to be compliant with various standards that are followed throughout many companies including but not limited to MFA and minimalized password sharing. Through this, users can become more cyber safe and also by following these standards, users can also create a more cyber safe environment for their companies.
 
 ### Conclusion:
+As a free open-sourced platform, Wazuh provides plenty of information and opportunities for members to learn about various cyber security principles, concepts and risks in which every one can learn how to mitigate. 
 
-As a free open-sourced platform, Wazuh provides plenty of information and opportunities for members to learn about various cyber security principles, concepts and risks in which every one can learn how to mitigate. From easy implementation, low requirements and plenty of concepts that can be learnt, this platform is an extremely important asset to utilize in further enhancing a cyber safe environment to reduce the risk of exploitation, enumeration and compromise of a linked agent while also having various areas to develop our understanding of cyber security principles including but not limited to, Incident Response, Security awareness and safety.
+From easy implementation, low requirements and plenty of concepts that can be learnt, this platform is an extremely important asset to utilize in further enhancing a cyber safe environment to reduce the risk of exploitation, enumeration and compromise of a linked agent while also having various areas to develop our understanding of cyber security principles including but not limited to, Incident Response, Security awareness and safety.
 
 ### Extra Resources:
 
