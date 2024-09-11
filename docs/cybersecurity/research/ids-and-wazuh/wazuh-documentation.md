@@ -14,9 +14,10 @@ Author: **Lachlan Harrison**, **31/08/2024**
 
 ## Section 1 - Capabilities of Wazuh
 
-Wazuh is an open source and completely free security platform which can be utilized for many features in which will be discussed in this documentation. The tool itself is accessible via this link: https://wazuh.com/ 
+Wazuh is an open source and completely free security platform which can be utilized for many features and learning which will be discussed in this documentation. The tool itself is accessible via this link: https://wazuh.com/ 
 
 When we utilize the Wazuh platform, every user that interacts with the platform is presented with many opportunities to learn various concepts ranging from hacking methods to security methods to strengthen your systems and protect yourself from any attacker in which may discover the various vulnerabilities and exploit them for their own gains. These are all a threat in the modern world and thus we have adopted to utilizing Wazuh to assist in detecting these threats and mitigating them as soon as possible to reduce the liklihood of a compromise or enumeration agaisnt members of the company.
+
 When we mention these systems, they are referred to as Agents in which we can deploy various agents across the platform. The tool itself as well allows for further analysis into your agents across the dashboard in which the user can also discover various information about their agent, various configurations and standards to improve their security with this platform.
 
 - We can also allow for Wazuh to send security alerts to our devices via a chosen method which can range from platforms like Slack to our own Emails. This tool is referred to as a SIEM tool (Security, Information and Event Management) which all of these elements are showcased in Wazuh’s interface. SIEM categorised tools are very important in Cyber Security elements as they are efficient with providing the appropriate analysis, detailed information, security recommendations and also real-time events that are occurring within our linked agents.
@@ -57,7 +58,7 @@ The tool provides so much information for the user and assists in becoming more 
 
 Since implementing Wazuh into Redback Operations, Wazuh provides many reasons as to why this tool should be utilized including various elements that provide an opportunity for the user to develop their own cyber safe environment.
 
-1. **Security Awareness**– Wazuh provides users knowledge of potential vulnerabilities and also how to mitigate these vulnerabilities to reduce the risk of a compromise or enumeration by an attacker by providing detailed information and solutions to make the user more aware of what is happening and why this is a risk.
+1. **Security Awareness** – Wazuh provides users knowledge of potential vulnerabilities and also how to mitigate these vulnerabilities to reduce the risk of a compromise or enumeration by an attacker by providing detailed information and solutions to make the user more aware of what is happening and why this is a risk.
 
 2. **Incident Response** – The platform allows for active response to real events occurring on their linked agents including various attacks and file changes to at which the user can act upon these incidents and take the necessary steps required to mitigate these attacks and risks.
 
@@ -70,7 +71,7 @@ Since implementing Wazuh into Redback Operations, Wazuh provides many reasons as
 6. **Compliance** – Wazuh provides members the opportunity to be compliant with various standards that are followed throughout many companies including but not limited to MFA and minimalized password sharing. Through this, users can become more cyber safe and also by following these standards, users can also create a more cyber safe environment for their companies.
 
 ### Conclusion:
-As a free open-sourced platform, Wazuh provides plenty of information and opportunities for members to learn about various cyber security principles, concepts and risks in which every one can learn how to mitigate. 
+As a free open-sourced platform, Wazuh provides plenty of information and opportunities for members to learn about various cyber security principles, concepts and risks in which every one can learn how to mitigate and also utilize the platform in a positive manor to assist in protecting themselves from the evolving world of cyber threats and attacks. 
 
 From easy implementation, low requirements and plenty of concepts that can be learnt, this platform is an extremely important asset to utilize in further enhancing a cyber safe environment to reduce the risk of exploitation, enumeration and compromise of a linked agent while also having various areas to develop our understanding of cyber security principles including but not limited to, Incident Response, Security awareness and safety.
 
