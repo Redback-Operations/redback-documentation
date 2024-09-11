@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Pipeline for Real-time Data Logistics Handling and Storage
 
 
