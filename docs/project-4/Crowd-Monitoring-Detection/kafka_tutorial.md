@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 ## Crowd Monitoring & Player Tracking Project Plan: Apache Kafka
 
 ### Introduction
