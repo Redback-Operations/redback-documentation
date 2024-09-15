@@ -1,0 +1,9 @@
+{
+    "label": "Red Team",
+    "position": 5,
+    "link": {
+      "type": "generated-index",
+      "description": "Documents relating to purple team activities such as Playbooks, Usecases, Policies etc..."
+    }
+  }
+  

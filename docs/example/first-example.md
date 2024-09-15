@@ -8,7 +8,7 @@ Start with this tutorial!
 
 ## Welcome to the Redback Operations documentation platform
 
-First and foremost, this platform is primarily deployed using **Markdown** (.md files), however, if you are experienced in **.mdx** files, or basic **HTML**, **CSS**, or **JavaScript**, feel free to play around with them too. Examples of this can be found in our [advanced tutorial](/docs/example/advanced-tutorial).
+First and foremost, this platform is primarily deployed using **Markdown** (.md files), however, if you are experienced in **.mdx** files, or basic **HTML**, **CSS**, or **JavaScript**, feel free to play around with them too.
 
 
 ## Prerequisites

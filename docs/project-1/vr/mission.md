@@ -20,3 +20,6 @@ If you have already added the missions into the activators and found out that yo
 When testing the missions, there are a few things with the mission activator that you should consider:
 - Make sure that all empty objects with missions are placed inside Objectives > Missions for the missions to work. Any game object (not prefab) should be added alongside your mission empty objects so they can be used such as Mission 1 with robot and b (non prefab game objects). If robot and b were put anywhere else, they will black out and not work.
 - Make sure that there are missions on the list. If the mission list is empty, they will run all the missions in the file as the mission list serves as an activator / deactivator
+- When making missions in different scenes, make sure the Objectives from City Scene is copied to the new scene, if haven't already, and from the Mission Activator script, make sure that the list has the same number of elements in each scene. it is OK for the element to be blank for the particular mission that is on a specific scene. 
+- For point above, only work on any missions in CityScene until other scenees are stated useable for testing purposes.
+
