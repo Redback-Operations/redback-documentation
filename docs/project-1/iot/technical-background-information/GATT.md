@@ -1,13 +1,23 @@
 ---
 sidebar_position: 1
 ---
-# Wahoo Device Interfacing
+# Interfacing with Wahoo Devices
 
 The Raspberry Pi communicates with the bike through Bluetooth Low Energy (BLE), specifically by pairing with the KICKR smart trainer (the other devices automatically pair with the KICKR smart trainer). The KICKR smart trainer runs an ATT server on it which the Raspberry Pi can then read and write values from/to. This document covers how the above works regarding the bike.
 
 ![image](img/wahoo_network_map.png)
 
 *A map of the network of Wahoo devices & Raspberry Pi.*
+
+:::danger[Important!]
+
+A few corrections:
+
+* The TICKR heart rate monitor does not connect through or pair with the KICKR smart trainer.
+* The Wahoo cadence sensor is redundant.
+* We are unsure of if the Wahoo Headwind Fan connects through KICKR.
+
+:::
 
 ## <u>**G**</u>eneric <u>**ATT**</u>ribute Profile (**GATT**)
 
@@ -41,11 +51,3 @@ As these machines may also need to be controlled by a client to execute some sor
 ![image](img/control_point_request.png)
 
 The FTMS control point characteristic enables control over the FTMS functions. Functions have unique operation codes (Op Codes) which are used to request they be executed. To send commands to the control point, the client must first subscribe to indications for the control point and then request control over the control point by using the Request Control Op Code 0x00. If control is given, then other functions can be executed by writing their Op Code and parameter values to the control point. Control over the control point can also be reset by writing the Op Code 0x01.
-
-## Wahoo Devices
-
-- [KICKR Smart Trainer](KICKR-Smart-Trainer.md)
-- [KICKR Climber](KICKR-Climber.md)
-- [Wahoo Headwind Smart Bluetooth Fan](Wahoo-Headwind-Smart-Bluetooth-Fan.md)
-- [Wahoo Cadence Sensor](Wahoo-Cadence-Sensor.md)
-- [Wahoo Heart Rate Monitor](Wahoo-Heart-Rate-Monitor.md)
