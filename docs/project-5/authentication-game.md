@@ -10,7 +10,6 @@ Creating a extra step in secure login for kids
 **Document Creation:** 15 September, 2024. **Last Edited:** 16 September, 2024. **Author:** Jessica Maugueret
 :::
 
-#
 
 ## Avatar Creation Progress
 I was tasked by Dylan, my mentor, to create avatars for the drag-and-drop game, with the goal of bringing a robotic feel to the characters while maintaining the design integrity of the AI-generated images provided. Dylan had initially created an AI image that served as the starting point, offering the basic shapes and design language. My role was to adapt these forms, adding mechanical elements and enhancing them with shading and texture to give them a more dynamic, industrial look.
