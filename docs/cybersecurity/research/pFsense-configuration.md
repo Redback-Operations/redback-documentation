@@ -18,6 +18,7 @@ In this guide you will be able to set up your own pfsense in a virtual environme
 
 When you first enter your pFsense LAN IP address into your browser, you’ll be met with a setup wizard. 
 ![new](img\wizard.PNG)
+
 If you logged into pFsense and you didn’t get prompt with a setup wizard, click on **System -> Setup Wizard** and that should start up the setup wizard. 
 
 1. Click on **Next** twice as they are irrelevant. 
@@ -50,6 +51,7 @@ To access your DHCP configuration access **Services -> DHCP Server**
 
 Once you access your DHCP settings, you will notice an end-of-life service message, to ensure the stability of your pfsense for the foreseeable future you will want to change to the newer version.
 ![kea](img\kea.png)
+
 Follow the steps shown in the image above, change to **Kea DHCP** and make sure you scroll down to the bottom and click **Save**.   
 
 You can change your IP address range, by default it is set to its maximum, that is fine, you can change that if you like. 
@@ -76,6 +78,7 @@ To do this go to **System -> Advanced**
 
 ![ssh](img\ssh.png)
 
+
 1. Scroll down to SSH section and enable SSH by ticking **Enable Secure Shell** 
 2. Due to security concerns make sure SSHd Key is **Public Key Only**. Keep SSH port at 22. 
 3. Now you will need to download putty and puttygen.exe, so you will be able to generate a public and private key. You can download from here: [download here.](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) 
@@ -91,6 +94,16 @@ It's simple to install, all you need to download is the 64bit MSI installer and 
 If everything is correct you should be prompted to login into your pfsense username.
 
 ![puty](img\putty.png)
+1. once you have downloaded putty Gen, click on **generate** and move your mouse around the screen to generate a key. 
+2. You will then want to save the private key on your PC, it is recommended to you a passphrase. 
+3. Copy the public key that’s in the text box. 
+4. In your pfsense navigate to **System -> User Manager**. On the right of your user account you will see **Actions** pen, click on that. 
+5. Scroll down to the **Keys** section and past in your public key in the text box. Make sure you click on **Save** before exiting. 
+6. Open Putty and put in your **LAN IP address** in the session tab and make sure the **Connection Type** is set as **SSH**. 
+7.  You will then need to navigate in putty: **Connection -> SSH -> Auth -> Credentials to authenticate with -> Then browse and enter your private key file for authentication**. You should then be able to connect to your pfsense via SSH by clicking **Open** 
+
+If everything is correct you should be prompted to login into your pfsense username.
+
 
 Now you should be in an SSH session for your pfsense. 
 
