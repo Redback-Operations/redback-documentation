@@ -6,10 +6,8 @@ sidebar_position: 6
 
 Documentation of the Wazuh open-source security platform:
 
-:::INFO
-
+:::Info
 Author: **Lachlan Harrison**, **31/08/2024**
-
 :::
 
 ## Section 1 - Capabilities of Wazuh
