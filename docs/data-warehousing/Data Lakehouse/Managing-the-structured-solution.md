@@ -4,7 +4,7 @@ sidebar_label: Managing the structured dremio solution
 ---
 
 # Maintaining the structured Dremio solution
-<br>
+<br></br>
 
 ### Accessing the virtual machine
 Follow this [guide](https://redback-operations.github.io/redback-documentation/docs/data-warehousing/Data%20Lakehouse/How-To%20-%20Accessing%20the%20Redback%20Operations%20Virtual%20Machine) which will walk you through connecting to the VM running the dremio, minio and the flask api docker containers, it also has the docker-compose file for dremio and minio though that can be found on [github](https://github.com/Redback-Operations/redback-data-warehouse/blob/main/File%20Upload%20Service/data-lakehouse2.yml) aswell. The guide has a prerequesite of having installed [anyconnect VPN](https://www.deakin.edu.au/students/student-life-and-services/health-wellbeing-and-safety/safety-security/online-safety-security/secure-your-devices/vpn).
