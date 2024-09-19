@@ -91,3 +91,15 @@ Data published to topics, either by the Smartbike or an application, should foll
 `bike/000001/incline/control` will change the incline of the KICKR Climb when valid values are published to it.
 
 `bike/000001/speed/report` will forward speed value updates from the Smartbike if subscribed to.
+
+## Further Information
+
+See our [MQTT client-class](https://github.com/Redback-Operations/redback-smartbike-iot/blob/main/Drivers/lib/mqtt_client.py).
+
+View implemented topics in the drivers' code:
+
+- [KICKR Smart Trainer & Climb](https://github.com/Redback-Operations/redback-smartbike-iot/blob/main/Drivers/kickr_climb_and_smart_trainer/wahoo_device.py)
+- [Wahoo Headwin Fan](https://github.com/Redback-Operations/redback-smartbike-iot/blob/main/Drivers/fan/fan.py)
+- [TICKR Heart Rate Monitor](https://github.com/Redback-Operations/redback-smartbike-iot/blob/main/Drivers/heart_rate_sensor/heartrate.py)
+- [Wahoo Cadence Sensor](https://github.com/Redback-Operations/redback-smartbike-iot/blob/main/Drivers/cadence_sensor/cadence.py)
+- [Button Driver](https://github.com/Redback-Operations/redback-smartbike-iot/blob/main/Drivers/button_control/button_control.py)

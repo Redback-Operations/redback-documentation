@@ -20,9 +20,9 @@ To install the library run the follow command
 
 To find out more about `paho-mqtt` view the [documentation](https://eclipse.dev/paho/files/paho.mqtt.python/html/index.html) or [source code](https://github.com/eclipse/paho.mqtt.python).
 
-## Lib.mqtt_client
+## MQTTClient
 
-To simplify and standardise using MQTT, a paho based client-class has been implemented in `Drivers/lib/mqtt_client.py` and should be used in all drivers and programs using MQTT.
+To simplify and standardise using MQTT, a paho based client-class (`MQTTClient`) has been implemented in `Drivers/lib/mqtt_client.py` and should be used in all drivers and programs using MQTT.
 
 ```Python
 from lib.mqtt_client import *
