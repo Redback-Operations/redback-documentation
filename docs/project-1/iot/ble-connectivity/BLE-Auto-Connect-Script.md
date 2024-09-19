@@ -10,13 +10,13 @@ sidebar_position: 1
 
 This script was created to handle persistent BLE issues we had with the bike. Connecting to the bike was not consistent, with failed pairing on start up and even manually connecting using the `bluetoothctl` interface on the Raspberry Pi not working consistently. This script should resolve these issues by using `bluetoothctl` and `expect` script to act like a user and automatically resolve the BLE connection.
 
-1. ## Starting the Script
+## Starting the Script
 
 To start this script run the following command from the home directory: 
 
 `bash iot/scripts/ble-auto-connect/ble_auto_connect.sh`
 
-2. ## Script Requirements
+## Script Requirements
 
 ### Expect Installed
 
@@ -40,7 +40,7 @@ Ensure that the bike is not on standby: the BLE indicator light on the KICKR is 
 
 *If it is on standby rotate the pedals a few times*
 
-3. ## Expected Process Behaviour
+## Expected Process Behaviour
 
 Use the following as a guide to confirm that the script is working correctly.
 
@@ -94,4 +94,4 @@ Some improvements to the script are desireable and left for future team members 
 - `bluetoothctl` - https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.html
 - `expect` introduction - https://phoenixnap.com/kb/linux-expect
 - Reading files using `tcl` (the backbone of `expect`) - https://wiki.tcl-lang.org/page/How+do+I+read+and+write+files+in+Tcl
-- Shell script & expect script located in `iot/scripts/ble_auto_connect.sh`
+- Shell script & expect script located in [scripts/ble-auto-connect/](https://github.com/Redback-Operations/redback-smartbike-iot/tree/main/scripts/ble-auto-connect)
