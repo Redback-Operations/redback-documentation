@@ -3,7 +3,7 @@ sidebar_position: 4
 sidebar_label: Managing the structured dremio solution
 ---
 
-## Maintaining the structured Dremio solution
+# Maintaining the structured Dremio solution
 <br>
 
 ### Accessing the virtual machine
