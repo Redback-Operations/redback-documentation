@@ -3,7 +3,7 @@ sidebar_position: 5
 sidebar_label: Dremio api (for data analysts)
 ---
 
-## How to access data stored in dremio datawarehouse (for data analysts)
+# How to access data stored in dremio datawarehouse (for data analysts)
 <br>
 
 ### Connecting to deakins network
