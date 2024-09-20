@@ -16,13 +16,14 @@ If you have already added the missions into the activators and found out that yo
 - For the bike, there is a need to collect items, press buttons or bump into things that usually when the script is directly added into the bike for mission testing purposes, any collision function is used such as OnTriggerEnter for the interaction. However, that will only work when the script is added directly to the bike. With the Mission Activator using an empty object to store the mission script, alternate ways can be used depending on the mission's content in the update function. 
 - To collect items, finding game objects with tags such as FindGameObjectsWithTag() and FindWithTag() functions for array and a singular item respectively as well as using activeSelf for the gameObject that is set to false to indicate the item's removal thanks to the bike is a good start for an alternate way from the collision function but still a guideline depending how the mission is created.
     - An example code for item collection using finding game object with tags:
+  ```
     //Finding an array of stars. Game tag made at the star prefab as 5.
     GameObject[] starFind = GameObject.FindGameObjectsWithTag("5");
     //Once the array reaches 0, all stars are collected.
     if(starFind.Length == 0)
     {
         Debug.Log("All stars are found");  
-    }
+```
 - SetActives are also important parts in mission because they can detect the success of the mission by the object's in the area. To understand the meaning better, please refer to previous missions such as Mission 1 and Mission 5 in Unity.
     
 
