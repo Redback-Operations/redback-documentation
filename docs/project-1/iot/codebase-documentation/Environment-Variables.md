@@ -40,6 +40,14 @@ Some vairables of interest include:
 | `FAN_ALIAS_PREFIX` | BLE advertised name of the **Wahoo headwind fan** - used by driver to connect via BLE |
 | `HEART_RATE_ADAPTER_NAME` | Adapter address of the Raspberry Pi's **BLE adapter** - used by drivers to connect via BLE - the same value for `FAN_ADAPTER_NAME` & `CADENCE_ADAPTER_NAME` |
 
+## Adding, Removing, & Editing Variables
+
+To modify the `.env` file open the `.env` file in the home directory using `nano`:
+
+```
+nano .env
+```
+
 ## Loading using `bash` script
 
 To load the environment variables using a `bash` script add the following:
