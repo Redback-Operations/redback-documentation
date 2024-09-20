@@ -67,9 +67,11 @@ echo "Smartbike ID: ${DEVICE_ID}"
 
 ## Passing to `python` using `bash` script
 
-To parse the variable to a `python` program, the `python` program must configure an `ArgumentParser` using the `argparse` module:
+To parse the variable to a `python` program, the `python` program must include the `python` `shebang` at the top of the file and configure an `ArgumentParser` using the `argparse` module:
 
 ```python
+#!/usr/bin/env python3
+
 import os
 from argparse import ArgumentParser
 
@@ -115,6 +117,8 @@ python3 ~/iot/Drivers/my-driver/driver.py
 In the python program use the `os` module to load the environment variables directly:
 
 ```python
+#!/usr/bin/env python3
+
 import os
 
 ...
@@ -125,3 +129,4 @@ device_id = os.getenv('DEVICE_ID')
 ## Further Information
 
 - More information on [argparse](https://docs.python.org/3/library/argparse.html)
+- More information on [shebangs](https://en.wikipedia.org/wiki/Shebang_(Unix))
