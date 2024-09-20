@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # BLE Auto Connecting Script
 
-![image](img/bike-architecture.png)
+![image](../img/architecture/bike-architecture.png)
 
 Script location: [scripts/ble-auto-connect/](https://github.com/Redback-Operations/redback-smartbike-iot/tree/main/scripts/ble-auto-connect)
 
@@ -36,7 +36,7 @@ The KICKR's MAC address must be accurately stored in the hidden `.env` file, in 
 
 Ensure that the bike is not on standby: the BLE indicator light on the KICKR is blinking blue and not off
 
-![image](img/kickr-connected.jpg)
+![image](../img/smartbike-photos/kickr-connected.jpg)
 
 *KICKR BLE indicator light located above ANT+ indicator light*
 
@@ -95,7 +95,7 @@ Connection established with bike via BLE
 
 And the BLE indicator light on the KICKR should become solid:
 
-![image](img/kickr-connected.jpg)
+![image](../img/smartbike-photos/kickr-connected.jpg)
 
 ### Script Failure
 
