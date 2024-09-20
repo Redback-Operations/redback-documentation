@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # BLE Auto Connecting Script
 
-[Network archetecture chart highlighting relevant section (KICKR + Pi) to be inserted]
+![image](img/bike-architecture.png)
 
-[Insert script location link]
+Script location: [scripts/ble-auto-connect/](https://github.com/Redback-Operations/redback-smartbike-iot/tree/main/scripts/ble-auto-connect)
 
 This script was created to handle persistent BLE issues we had with the bike. Connecting to the bike was not consistent, with failed pairing on start up and even manually connecting using the `bluetoothctl` interface on the Raspberry Pi not working consistently. This script should resolve these issues by using `bluetoothctl` and `expect` script to act like a user and automatically resolve the BLE connection.
 
@@ -36,15 +36,13 @@ The KICKR's MAC address must be accurately stored in the hidden `.env` file, in 
 
 Ensure that the bike is not on standby: the BLE indicator light on the KICKR is blinking blue and not off
 
-[Image to be inserted]
+![image](img/kickr-connected.jpg)
 
-*If it is on standby rotate the pedals a few times*
+*KICKR BLE indicator light located above ANT+ indicator light*
+
+If it is on standby rotate the pedals a few times.
 
 ## Expected Process Behaviour
-
-Use the following as a guide to confirm that the script is working correctly.
-
-[Flow chart of scripts decision logic to be inserted]
 
 The script follows a simple flow of commands reacting to expected outputs to terminal from `bluetoothctl` commands and writing input commands into the terminal.
 
@@ -52,31 +50,58 @@ The script follows a simple flow of commands reacting to expected outputs to ter
 
 Once the script has been started, it enters commands into the terminal interface like a user, waiting for expected output from commands and responding to resolve any issues. 
 
-[Image of script process to be inserted]
+```
+Agent registered
+[bluetooth]# default-agent
+Default agent request successful
+[bluetooth]# connect d9:07:e8:1c:db:94
+Attempting to connect to d9:07:e8:1c:db:94
+[CHG] Device D9:07:E8:1C:DB:94 Connected: yes
+Failed to connect: org.bluez.Error.Failed
+[CHG] Device D9:07:E8:1C:DB:94 Connected: no
+[bluetooth]# connect d9:07:e8:1c:db:94
+Attempting to connect to d9:07:e8:1c:db:94
+[CHG] Device D9:07:E8:1C:DB:94 Connected: yes
+Connection successful
+[Wahoo KICKR 58CB]# exit
+```
 
 **DO NOT** attempt to enter anything into command-line during this process - if you must, terminate the script using `Ctrl + C` before doing so.
 
 ### BLE Scanning
 
-[Image of BLE scanning to be inserted]
+```
+[CHG] Controller B8:27:EB:DB:48:17 Discovering: yes
+[NEW] Device CB:81:82:06:8A:F8 HEADWIND AF28
+[NEW] Device E4:8F:3B:BB:66:82 E4-8F-3B-BB-66-82
+[NEW] Device F2:93:DE:57:0C:2C F2-93-DE-57-0C-2C
+[CHG] Device D9:07:E8:1C:DB:94 RSSI: -45
+[CHG] Device D9:07:E8:1C:DB:94 UUIDs: 00001818-0000-1000-8000-00805f9b34fb
+[CHG] Device D9:07:E8:1C:DB:94 UUIDs: 00001826-0000-1000-8000-00805f9b34fb
+[NEW] Device C1:44:45:FD:29:12 C1-44-45-FD-29-12
+[NEW] Device 47:0B:B1:7F:C4:E6 47-0B-B1-7F-C4-E6
+[NEW] Device D7:C1:4A:AF:BF:C1 D7-C1-4A-AF-BF-C1
+```
 
-If the KICKR has not been registered by `bluetoothctl` then the script will automatically initiate a scan for all local BLE devices. 
+If the KICKR has not been registered by `bluetoothctl` then the script will automatically initiate a scan for all local BLE devices yielding a spam of output like above. This output should only last a few seconds at most a minute.
 
 ### Script Completion
 
 If a connection was successfully achieved, an output to the terminal should indicate so:
 
-`Connection established with bike via BLE`
+```
+Connection established with bike via BLE
+```
 
-[Image to be inserted]
+And the BLE indicator light on the KICKR should become solid:
+
+![image](img/kickr-connected.jpg)
 
 ### Script Failure
 
-The above process should only take a few seconds but can fail for unknown reasons and enter into a loop. If this happens, use `Ctrl + C` to terminate the script and then restart both the bike & Pi, and re-run the script.
+The above process should only take a few seconds to a minute but can fail for unknown reasons and enter into a loop. If this happens, use `Ctrl + C` to terminate the script and then restart both the bike & Pi, and re-run the script.
 
-If this does not fix the issue then refer to the BLEConnectivityFix document to connect manually.
-
-[Insert link to BLEConnectivityFix above]
+If this does not fix the issue then refer to the [BLEConnectivityFix](BLEConnectivityFix.md) document to connect manually.
 
 ## Future
 
@@ -94,4 +119,4 @@ Some improvements to the script are desireable and left for future team members 
 - `bluetoothctl` - https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.html
 - `expect` introduction - https://phoenixnap.com/kb/linux-expect
 - Reading files using `tcl` (the backbone of `expect`) - https://wiki.tcl-lang.org/page/How+do+I+read+and+write+files+in+Tcl
-- Shell script & expect script located in [scripts/ble-auto-connect/](https://github.com/Redback-Operations/redback-smartbike-iot/tree/main/scripts/ble-auto-connect)
+- Bash script & expect script located in [scripts/ble-auto-connect/](https://github.com/Redback-Operations/redback-smartbike-iot/tree/main/scripts/ble-auto-connect)
