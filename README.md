@@ -12,6 +12,7 @@ Docusaurus instance for the consolidation of company research and documentation
 - Node.js
 - docusaurus npm package
 - yarn npm package
+- Run `npm i` to get all other packages
 - IDE, browser, and terminal of your choice
 - Git credentials configured on your machine
 

@@ -1,0 +1,99 @@
+---
+sidebar_position: 3
+---
+# Facial Features Extraction
+
+## Introduction
+
+This documentation provides a detailed explanation of facial feature extraction focusing on different tasks facial features : **Face Mask Detection**, **Age Group Detection**, and **Image Metadata Extraction**. Each notebook tackles a specific task using various techniques such as transfer learning, image preprocessing, and metadata extraction.
+
+## **1. Face Mask Detection** 
+
+### **Overview**
+This notebook focuses on detecting face masks in images. The objective is to classify whether a person is wearing a mask correctly, not wearing a mask, or wearing it incorrectly. The model used for this task leverages transfer learning, specifically using a pre-trained model, likely based on the **YOLO (You Only Look Once)** architecture, which is well-suited for object detection.
+
+### **Steps**:
+
+1. **Library Imports**:
+    - The notebook begins by importing libraries such as `os`, `shutil`, and `PIL` for image processing, `sklearn` for data splitting, and `tensorflow` for model building.
+
+2. **Folder Setup**:
+    - A directory structure is created to manage training, validation, and test datasets for face mask detection.
+
+3. **Bounding Box Conversion**:
+    - The notebook includes functions to convert bounding boxes from **VOC format** to **YOLO format**, necessary for training object detection models.
+
+4. **Training**:
+    - The model is fine-tuned using a pre-trained object detection model (likely YOLO), and the training process involves updating the model weights to classify face masks correctly.
+
+5. **Evaluation**:
+    - After training, the model is evaluated using metrics such as precision, recall, and mAP (mean Average Precision) to check its performance on the validation and test sets.
+
+### **Results**:
+- The notebook generates a model capable of classifying whether a person is wearing a mask, not wearing one, or wearing it incorrectly.
+
+---
+
+## **2. Age Group Detection** 
+
+### **Overview**
+This notebook performs **age group classification**. The goal is to classify faces into one of three categories: **YOUNG**, **MIDDLE**, and **OLD**. A **ResNet50** pre-trained model is used as a backbone for transfer learning, which provides powerful feature extraction, while custom layers are added for this specific classification task.
+
+### **Steps**:
+
+1. **Library Imports**:
+    - Libraries such as `pandas`, `numpy`, `cv2`, and `tensorflow.keras` are used for loading data, processing images, and building the neural network.
+
+2. **Loading and Preprocessing Data**:
+    - The dataset consists of images of faces with corresponding labels that denote the age group. Images are resized to **180x180 pixels** to match the input dimensions expected by **ResNet50**.
+    - Data augmentation techniques such as horizontal flipping and brightness adjustment are applied using `ImageDataGenerator` to enhance the dataset.
+
+3. **Model Architecture**:
+    - The notebook uses **ResNet50** as a base model, freezing its layers to retain the knowledge learned from large-scale datasets (e.g., ImageNet). Custom layers are added on top for classification into three age groups (YOUNG, MIDDLE, OLD).
+
+4. **Training the Model**:
+    - The model is trained for 10 epochs, and callbacks such as **ReduceLROnPlateau** and **EarlyStopping** are employed to optimize the training process.
+
+5. **Model Evaluation**:
+    - The performance of the model is visualized by plotting accuracy and loss curves for both training and validation sets. The model achieves around 80% accuracy on the validation set.
+
+6. **Test Predictions**:
+    - The trained model is used to predict the age group of a test image, demonstrating its ability to classify unseen images.
+
+### **Results**:
+- A trained model that can classify images of faces into age groups with an accuracy of around 80%.
+
+
+---
+
+## **3. Image Metadata Extraction** 
+
+### **Overview**
+This notebook demonstrates how to extract **EXIF metadata** from images using the **Pillow** library. Metadata, often embedded in images, contains useful information about the image's creation, such as the camera model, date and time of capture, and even GPS coordinates. The notebook provides a method for loading an image and extracting this metadata.
+
+### **Steps**:
+
+1. **Library Imports**:
+    - The **Pillow** library is used for handling image files and extracting metadata.
+
+2. **Opening an Image**:
+    - The image is loaded using `Image.open()`, a function from **Pillow**, which allows access to its metadata.
+
+3. **Extracting EXIF Data**:
+    - Metadata is extracted using the `_getexif()` function, which retrieves information stored in the image’s **EXIF (Exchangeable Image File Format)** data.
+
+4. **Converting EXIF Tags**:
+    - EXIF metadata is stored as numerical tags, and these are converted into human-readable format using the **ExifTags.TAGS** dictionary from Pillow.
+
+5. **Displaying Metadata**:
+    - The extracted metadata is displayed in a readable format, including information such as the camera make, model, and date the image was captured.
+
+### **Output**:
+- The notebook prints the EXIF metadata for the loaded image, providing useful information like camera settings, timestamp, and possibly GPS data.
+
+### **Common EXIF Tags**:
+- **Make**: The camera manufacturer.
+- **Model**: The camera model used.
+- **DateTime**: The date and time the image was captured.
+- **ExifImageWidth** and **ExifImageHeight**: The dimensions of the image.
+- **GPSInfo**: GPS coordinates where the image was taken (if available).
