@@ -6,9 +6,6 @@ sidebar_position: 3
 
 The intention of this page is to be a constantly changing list of needs for the platform.
 
-### Fix GitHub Actions Auto-Deployment
-
-Currently, there is an error that any new images added will be flagged as null when GitHub tries to deploy the site, despite this not being the case. Manual deployment is currently the only option.
 
 ### Add GitHub Actions Checklist
 
