@@ -321,7 +321,7 @@ to facilitate the secured connection TLS offers.
     sudo apt install certbot
     ```
 
-    Additional details can be found here: <https://certbot.eff.org/instructions>
+    Additional details can be found here: https://certbot.eff.org/instructions
 
 5.  Ensure you have a domain associated with your server IP, for this
     instructional we'll refer to it as mqttserver.domain.com
@@ -516,7 +516,7 @@ clients, but this is not essential.
 
 2.  Install Certbot -- this is dependent on which OS you are utilising,
     command line instructions can be found here:
-    <https://certbot.eff.org/instructions> . An example of this is:
+    https://certbot.eff.org/instructions . An example of this is:
 
     ```
     sudo apt-get update
