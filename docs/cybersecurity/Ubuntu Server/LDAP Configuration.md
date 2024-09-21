@@ -20,7 +20,8 @@ To set up the `RedOps Ubuntu Server` with LDAP, it's recommended to deploy this 
 :::important
 **Note the LDAP login credentials are:**
 **USER:** `rbosys`
-**PASS:** `admin`:::
+**PASS:** `admin`
+:::
 
 2. After importing the appliance and ensuring your network adapter settings are correct, boot the machine, sign in, and run the following commands to update the system:
 ```bash
