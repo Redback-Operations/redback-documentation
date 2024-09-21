@@ -45,7 +45,7 @@ Email phishing is a cyber-attack method that involves sending fraudulent emails 
 
 ## How it Works:
 
-![picture1](img/picture1.jpg)
+![picture1](img/Picture1.jpg)
 
 ### Email Phishing: A Systematic Analysis
 
@@ -71,11 +71,11 @@ Email phishing is a cyber-attack method that involves sending fraudulent emails 
 
 Here is a demonstration of how setoolkit is used to do credential harvesting:
 
-![picture2](img/picture2.jpg)
+![picture2](img/Picture2.jpg)
 
 ### SET Interface
 
-![picture3](img/picture3.jpg)
+![picture3](img/Picture3.jpg)
 
 The demonstration begins with the Social-Engineering Toolkit (SET) interface displayed in Kali Linux. This user-friendly tool provides various options for executing social engineering attacks, making it accessible for users to select specific attack types. The intuitive layout enables quick navigation through the toolkit’s features.
 
@@ -85,7 +85,7 @@ The demonstration begins with the Social-Engineering Toolkit (SET) interface dis
 
 ### Website Attack Vectors
 
-![picture4](img/picture4.jpg)
+![picture4](img/Picture4.jpg)
 
 After launching SET, the first action is to select "Website Attack Vectors." This option is crucial for initiating a phishing attack, as it enables the user to create or exploit a website. By choosing this option, I set the stage for simulating a real-world attack scenario.
 
@@ -94,7 +94,7 @@ After launching SET, the first action is to select "Website Attack Vectors." Thi
   - Essential for executing phishing attacks.
 
 ### Credential Harvester Attack Method
-![picture5](img/picture5.jpg)
+![picture5](img/Picture5.jpg)
 
 Following the selection of website attack vectors, the next step involves choosing the "Credential Harvester Attack Method." This method is fundamental for capturing user credentials entered on the cloned site. It showcases how attackers can gather sensitive information by deceiving users into providing their details on a fraudulent page.
 
@@ -103,7 +103,7 @@ Following the selection of website attack vectors, the next step involves choosi
   - Simulates real phishing tactics.
 
 ### Entering the IP Address
-![picture6](img/picture6.jpg)
+![picture6](img/Picture6.jpg)
 
 Next, I entered my Kali Linux IP address (192.168.1.120) into SET. This step is critical, as the IP address ensures that any data entered on the cloned site is directed back to my machine. Properly configuring the IP address allows for successful demonstration and analysis of the phishing technique.
 
@@ -112,7 +112,7 @@ Next, I entered my Kali Linux IP address (192.168.1.120) into SET. This step is 
   - Essential for the functionality of the cloned site.
 
 ### Cloning the Vulnerable Website
-![picture7](img/picture7.jpg)
+![picture7](img/Picture7.jpg)
 
 The demonstration proceeds with cloning a vulnerable website, specifically http://testphp.vulnweb.com/. This site was chosen for its harmlessness, allowing me to effectively simulate an attack without legal or ethical concerns. Cloning a legitimate login page serves to illustrate how attackers can trick users into entering sensitive information.
 
@@ -121,7 +121,7 @@ The demonstration proceeds with cloning a vulnerable website, specifically http:
   - Mimics real-world phishing scenarios.
 
 ### Displaying the Cloned Website
-![picture8](img/picture8.jpg)
+![picture8](img/Picture8.jpg)
 
 Finally, the cloned website is displayed in a web browser. The appearance of the cloned site closely mirrors that of the original, enhancing the realism of the phishing attempt. Any credentials entered on this page would be captured and displayed in the SET interface. This step emphasizes the risks associated with phishing attacks and the importance of user vigilance.
 
@@ -137,7 +137,7 @@ GoPhish is an open-source phishing framework for simulating phishing attacks and
 
 How to use:
 
-![picture9](img/picture9.jpg)
+![picture9](img/Picture9.jpg)
 Creating a Group in GoPhish 
 - Log in to your GoPhish dashboard.
 - On the left-hand menu, click on Groups.
@@ -145,7 +145,7 @@ Creating a Group in GoPhish
 - In the Name field, enter the name for your group.
 - Manually enter the details for each recipient in the table with columns like First Name, Last Name, Email, and Position.
 
-![picture10](img/picture10.jpg)
+![picture10](img/Picture10.jpg)
 Creating an Email Template in GoPhish 
 - Access the GoPhish dashboard.
 - From the left menu, select Email Templates.
@@ -156,7 +156,7 @@ Creating an Email Template in GoPhish
 - Attach any files if necessary.
 - Click Save Template to finalize and save your template.
 
-![picture11](img/picture11.jpg)
+![picture11](img/Picture11.jpg)
 Creating a Landing Page in GoPhish 
 - Go to the GoPhish dashboard.
 - Click on Landing Pages in the left menu.
@@ -166,7 +166,7 @@ Creating a Landing Page in GoPhish
 - Utilize the HTML editor to design your landing page content and add any necessary input fields.
 - Click Save Landing Page to save your changes and finish the setup
 
-![picture12](img/picture12.jpg)
+![picture12](img/Picture12.jpg)
 Creating a Sending Profile in GoPhish 
 - Navigate to the GoPhish dashboard.
 - Click on Sending Profiles in the left sidebar.
@@ -182,4 +182,4 @@ Creating a Sending Profile in GoPhish
 
 
 After completing the setup above. Now click on campaign and start a new one. Use the profiles already created and launch a campaign. After launching, the profiles should receive the email with phishing link:
-![picture13](img/picture13.jpg)
+![picture13](img/Picture13.jpg)

@@ -1,0 +1,8 @@
+{
+  "label": "BLE Connectivity",
+  "position": 20,
+  "link": {
+    "type": "generated-index",
+    "description": "BLE related documentation"
+  }
+}
