@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # **Certbot – Let's Encrypt TLS solution for Mosquitto MQTT broker**
 
 ## Proof of Concept
