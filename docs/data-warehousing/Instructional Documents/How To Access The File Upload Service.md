@@ -45,11 +45,15 @@ There are a few options to retrieve/download a file from the VM using the file u
 To access the file through an IDE you can access the list of files withe the Flask API
 to do this use the following code.
 
+#### To View the list of files
 
-import requests
+http://localhost:5000/list-files
+
+
+````import requests
 url = "http://localhost:5000/download-file/example.txt" 
  = requests.get(url)
-
+````
 
 
 ### Option B - Download from browser
