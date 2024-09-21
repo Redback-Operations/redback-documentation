@@ -62,8 +62,8 @@ Here are some ways you can further enhance the LDAP setup:
 
 ## Existing Documentation
 The following have both been written in Markdown and should be available in the sidebar.
-[Ubuntu Server LDAP Configuration](ref)
-[Ubuntu Server Optional Services](ref)
+Ubuntu Server LDAP Configuration
+Ubuntu Server Optional Services
 
 ## Useful Links
 - [Ubuntu install and configure LDAP](https://ubuntu.com/server/docs/install-and-configure-ldap)
