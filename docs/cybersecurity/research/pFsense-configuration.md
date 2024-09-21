@@ -76,7 +76,7 @@ By default, SSH on pfsense is disabled, you can enable by accessing advanced set
 
 To do this go to **System -> Advanced** 
 
-![ssh](img\ssh.png)
+![ssh](img\ssh.PNG)
 
 
 1. Scroll down to SSH section and enable SSH by ticking **Enable Secure Shell** 
@@ -93,7 +93,7 @@ It's simple to install, all you need to download is the 64bit MSI installer and 
 
 If everything is correct you should be prompted to login into your pfsense username.
 
-![puty](img\putty.png)
+![puty](img\putty.PNG)
 1. once you have downloaded putty Gen, click on **generate** and move your mouse around the screen to generate a key. 
 2. You will then want to save the private key on your PC, it is recommended to you a passphrase. 
 3. Copy the public key that’s in the text box. 
@@ -120,14 +120,14 @@ In this section I will show you how to install snort in pfsense and configure a 
 7. Once all settings have been applied, scroll down to the bottom and click save. 
 8. Go back to **Snort Interfaces** under **Snort Status**, click the blue start button to activate and to the right of your new LAN snort rule, and then click on the Pencil under **Actions**. 
 
-![action](img\action.png)
+![action](img\action.PNG)
 
 9. Go to **LAN Rules**, here we can create simple rules, in this guide I will make an ICMP rule that will be blocking all pings. 
 10. Enter this rule in the **Defined Custom Rules** text box: **“reject icmp any any -> any any (msg:”ping blocked”;sid:1000001)“** and click **save**. 
 11. Open CMD and ping, I chose to ping my LAN IP of 10.32.30.1 
 
 As shown in the **Blocked** tab we have blocked pings by snort after using ping: 
-![ids](img/ids.png)
+![ids](img/ids.PNG)
 
 
 ### 7. Configure LDAP for pfsense 
