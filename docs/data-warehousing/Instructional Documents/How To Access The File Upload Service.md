@@ -1,5 +1,5 @@
 --- 
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # How To Use The Data Warehouse File Upload Service
@@ -48,6 +48,8 @@ to do this use the following code.
 #### To View the list of files
 
 http://localhost:5000/list-files
+
+This will display all files in the directory
 
 
 ````import requests
