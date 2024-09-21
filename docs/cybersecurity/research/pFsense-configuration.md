@@ -50,7 +50,7 @@ Note: Make sure you do this before you make big changes and updates to your pfse
 To access your DHCP configuration access **Services -> DHCP Server**  
 
 Once you access your DHCP settings, you will notice an end-of-life service message, to ensure the stability of your pfsense for the foreseeable future you will want to change to the newer version.
-![kea](img\kea.png)
+![kea](img\kea.PNG)
 
 Follow the steps shown in the image above, change to **Kea DHCP** and make sure you scroll down to the bottom and click **Save**.   
 

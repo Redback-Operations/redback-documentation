@@ -54,7 +54,7 @@ In a word document, in the DESIGN tab > select WATERMARK > select CUSTOM WATERMA
 
 The following screenshot shows the settings for the watermark:
 
-![watermark-example](img\watermark-example.png)
+![watermark-example](img\watermark-example.PNG)
 
 
 ### Encryption Applications
