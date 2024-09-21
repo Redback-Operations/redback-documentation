@@ -24,7 +24,6 @@ utilising either the MQTT or CoAP protocols. We seek to outline
 associated risk and propose an implementation plan for a solution that
 will enhance the security posture across all associated devices.
 
-### 
 
 ### Definitions
 
