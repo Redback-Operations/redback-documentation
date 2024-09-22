@@ -29,9 +29,9 @@ cd "MongoDB Connection/Project1"
 
 ### 2. Create .env at your root directory
 
-- MONGO_URI=mongodb://<your_username>:<your_password>@<your_host>:<your_port>/?authSource=<your_authSource>
-- DB_NAME=<your_database_name>
-- COLLECTION_NAME=<your_collection_name>
+- MONGO_URI="mongodb://your_username:your_password@your_host:your_port/?authSource=your_authSource"
+- DB_NAME="your_database_name"
+- COLLECTION_NAME="your_collection_name"
 
 ### 3. Run Docker Compose to build the images and run the services:
 
@@ -42,6 +42,8 @@ cd "MongoDB Connection/Project1"
 ### 4. View the Application
 
 - Open your browser and navigate to http://localhost:5003/
+
+## Configuring MongoDB and Monitoring Logs
 
 ### Changing MongoDB Documents and Collections as needed
 
