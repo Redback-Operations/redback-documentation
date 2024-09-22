@@ -11,5 +11,6 @@ sidebar_position: x
 - Are all your images / videos named appropriately and in the correct location ("image1.png" e.g. will not be accepted)
 - Are all your code blocks properly closed off?
 - Does your file have an appropriate and descriptive file name, and main header?
+- Ensure all files are referenced correctly (They are case sensitive - if you save "image.png" you cannot reference "Image.PNG")
 
 Failure to include these will result in your request not being reviewed.

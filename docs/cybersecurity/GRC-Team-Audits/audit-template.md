@@ -59,3 +59,9 @@ The goal of this audit is to outline any gaps in compliance, and to formulate ac
 
 Auditors need to develop their own range of audit points for their respective project of audit, these may only apply to the project that they are auditing. 
 The structure for the General Audit Points section should be used. 
+
+## Summary
+
+After the audit has been completed, a report needs to be formed. The structure of this report can be sourced from existing reports, though the video link below includes a tutorial on how to conduct the audit and formulate an audit report.
+
+**Link:** https://youtu.be/FvGHO3ixBo8
