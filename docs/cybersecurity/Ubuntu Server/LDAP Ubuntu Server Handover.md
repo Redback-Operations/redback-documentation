@@ -19,14 +19,15 @@ To configure the environment to run the `RedOps Ubuntu Server` system I would re
     :::important
     **Note the system login credentials are:**
     **USER:** `rboadmin`
-    **PASS:** `admin`:::
+    **PASS:** `admin`
+    :::
 
-2. Once you have imported the appliance double check your network adapter settings to ensure that you are have either connected to the pfSense `internal` adapter or are using a `bridged` adapter. After successfully booting the machine, please sign in and run the following:
+3. Once you have imported the appliance double check your network adapter settings to ensure that you are have either connected to the pfSense `internal` adapter or are using a `bridged` adapter. After successfully booting the machine, please sign in and run the following:
     ```bash
     sudo apt update && sudo apt upgrade
     ```
 
-3. Before continuing please ensure that the systems password has been changed from `admin` and shared it with your team along with your IP and chosen external port (provided that the system will be port forwarded).
+4. Before continuing please ensure that the systems password has been changed from `admin` and shared it with your team along with your IP and chosen external port (provided that the system will be port forwarded).
     > To check your IP, run:  
    ```bash
    curl ifconfig.me
@@ -62,8 +63,8 @@ Here are some ways you can further enhance the LDAP setup:
 
 ## Existing Documentation
 The following have both been written in Markdown and should be available in the sidebar.
-Ubuntu Server LDAP Configuration
-Ubuntu Server Optional Services
+- [Ubuntu Server LDAP Configuration](https://redback-operations.github.io/redback-documentation/docs/cybersecurity/Ubuntu%20Server/LDAP%20Configuration)
+- [Ubuntu Server Optional Services](https://redback-operations.github.io/redback-documentation/docs/cybersecurity/Ubuntu%20Server/Optional%20Services)
 
 ## Useful Links
 - [Ubuntu install and configure LDAP](https://ubuntu.com/server/docs/install-and-configure-ldap)
