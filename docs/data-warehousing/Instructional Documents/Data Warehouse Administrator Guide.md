@@ -47,7 +47,7 @@ If you don't already have access: please request it from the Data Warehouse lead
 2. Connecting to the Deakin VPN
 The next part of accessing the Data Warehouse is connecting to Deakin's network which requires downloading and connecting to the Deakin anyconnect VPN and authenticating, using [anyconnect VPN](https://www.deakin.edu.au/students/student-life-and-services/health-wellbeing-and-safety/safety-security/online-safety-security/secure-your-devices/vpn)
 
-  ![anyconnectvpn](img.png)
+![anyconnectvpn](./pictures/anyconnectvpn.png)
 
 There are two recommended ways to access the virtual machine.
 #### Method 1. Using Command prompt.
@@ -80,7 +80,7 @@ Adding a new user is a common occurrence and once you have sudo/admin privileges
 
 Ensure to write down the credentials and send them through an appropriate means.
 
-![adduser vm](img.png)
+![adduser vm](./pictures/adduservm.png)
 
 The user will now have access to the VM providing they follow the steps and authenticate through the VPN first as well.
 
@@ -202,7 +202,7 @@ MinIO stores files in buckets that can be accessed with the combination of MinIO
 
 MinIO serves as a set of folders that use the VM's storage and can be accessed through credentials to upload/download data. Making it more user friendly than storing files on the VM directory alone.
 
-  ![Miniovis](img.png)
+  ![Miniovis](./pictures/Miniovis.png)
 
 At the time of writing MinIO is located on port `9000` and is accessed by a number of other Data Warehouse tools it's recommended this port isn't modified unless absolutely necessary as it will break tools downstream.
 
@@ -218,7 +218,7 @@ Accessing the MinIO object store through the GUI will first require entering the
 
 Once authenticated the user will be presented with a MinIO object store user-interface.
 
-![MinIO1](img.png)
+![MinIO1](./pictures/MinIO1.png)
 
 As mentioned above MinIO stores files in 'buckets' to accommodate for different file types (flat, semi-structured and object).
 
@@ -284,11 +284,11 @@ Use the 'Add source' button on the user interface
 
 Enter Credentials according to the source.
 
-![Adding a source 1](img.png)
+![Addingasource1](./pictures/Addingasource1.png)
 
 3. Go to 'Advanced Options' and tick 'enable compatibility mode'
 
-![Adding a source 2](img.png)
+![Addingasource2](./pictures/Addingasource2.png)
 
   
 
@@ -305,7 +305,7 @@ Dremio allows for creating tables or 'views' with T-SQL. What this means is with
 
 Once a source has been added. Enter the SQL interface on the left side of the GUI. This will bring up a text box that SQL commands can be written in and executed from. Resulting in a modified table that can be accessed downstream.
 
-![Dremio3](img.jpg)
+![Dremio3](./pictures/Dremio3.png)
 
   
 
@@ -339,7 +339,7 @@ By following the address: [http://10.137.0.149:8888/](http://10.137.0.149:8888/)
 
 This notebook exists and is running in the virtual machine where Spark jobs can be configured and ran. This represents a functionality to code and run distributed Spark jobs within the virtual machine and has the advantage of being able to process large datasets using the Spark DAG scheduler and partitioning data with distributed computing. At the time of writing without large production datasets in the VM there isn't currently a need for this functionality yet.
 
-![spark](img.jpg)
+![spark](./pictures/spark.png)
   
 
 ### GitHub and the Virtual Machine

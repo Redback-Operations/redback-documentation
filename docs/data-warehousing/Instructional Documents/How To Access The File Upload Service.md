@@ -14,7 +14,7 @@ The link below contains a guide to a quick setup for the Deakin VPN
 ##### NOTE: you may need to 'log in' on the top right corner to access the VPN webpage
 [Cisco AnyConnect – Deakin Software Library](https://software.deakin.edu.au/2019/04/16/cisco-anyconnect/)
 
-![anyconnectvpn](img.png)
+![anyconnectvpn](./pictures/anyconnectvpn.png)
 
 #### Step 2 - Accessing the Streamlit app
 
@@ -23,7 +23,7 @@ The File Upload Service is based on a streamlit app that is accessed through the
 Once the VPN is successfully set-up and if properly authenticated you can access the streamlit app that serves as the user interface for the service using the following address
 				http://10.137.0.149/
 
-![File Upload Service](img.png)
+![FileUploadService](./pictures/FileUploadService.png)
 
 
 ## Using the File Upload Service 
@@ -75,7 +75,7 @@ Please make the name descriptive but brief.
 
 If successful, the website will show 'Uploaded Successfully'.
 
-![fussuccess](img.png)
+![fussuccess](./pictures/fussuccess.png)
 
 ## Part 2 - Retrieving a File
 
@@ -122,6 +122,6 @@ Original files are stored in Bronze and Pre-processed in silver
 3. Once download is initiated an API URL will appear and a second download button that can be used to execute the download.
 
 
-![origdl](img.png)
+![origdl](./pictures/origdl.png)
 
-![viewsilv](img.png)
+![viewsilv](./pictures/viewsilv.png)
