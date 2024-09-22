@@ -1,22 +1,14 @@
+---
+sidebar_postion: 10
+---
 
 # Evaluation of ServiceNow (SNOW) Ticketing System
-
-## Contents
-
-1. [Introduction](#1introduction)  
-2. [Features of ServiceNow](#2-features-of-servicenow)  
-3. [Comparison with its competitors](#3-comparison-with-its-competitors)  
-4. [Integration with Our System](#4-integration-with-our-system)  
-5. [User Feedback and Case Studies](#5-user-feedback-and-case-studies)  
-6. [Recommendation](#6-recommendation)  
-7. [Conclusion](#7-conclusion)  
-8. [References](#references)
 
 ## 1. Introduction
 
 This report aims to evaluate the viability of the ServiceNow (SNOW) ticketing system for our team project. This evaluation includes an in-depth analysis of ServiceNow’s features, a comparative analysis with Redmine, a detailed integration strategy with our existing system, and user feedback and case studies. The final section provides a recommendation based on the findings.
 
-![Figure 1](/img/sn1.jpg)
+![Figure 1](./img/sn1.jpg)
 
 
 ## 2. Features of ServiceNow
@@ -57,7 +49,7 @@ ServiceNow is compared with its competitors, **Synergy** and **Zendesk**:
 5. **Resource Allocation**: Assign personnel, budget, and technical assets.
 6. **Risk Assessment and Mitigation**: Identify potential risks and develop strategies to mitigate them.
 
-![Figure 1](/img/sn2.png)
+![Figure 1](./img/sn2.png)
 
 ## 5. User Feedback and Case Studies
 
