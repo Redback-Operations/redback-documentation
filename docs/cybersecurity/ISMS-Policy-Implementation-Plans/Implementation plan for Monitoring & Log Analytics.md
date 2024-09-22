@@ -10,8 +10,9 @@ To develop an easy way to implement a cost-effective deployment plan for our Mon
 ## Key Subjects  
 
 ### 1. Research tools that can be used to collect and analyse log data:
-- **Splunk**: A popular log monitoring and analysis tool that collects, saves, examines, and reports on any sort of machine-made data, whether structured or unstructured application logs, using a multi-line interface.  
-- **Mezmo**: Allows you to monitor and analyse log files in real-time. It is accessible in the cloud and enables you to look up, save, and keep data from any application or system, such as Windows, Linux, AWS, and Python.  
+- **Splunk**:Redback currently uses Wazuh, which is a useful tool, however I believe Splunk should be added as well. Both have great log management and security monitoring, however they are driven by different approaches, with different sets of features. Wazuh is an open-source platform that provides centralised security event monitoring, threat detection, and compliance management. On the other hand, Splunk is a much broader platform that provides for advanced log analytics, machine learning-based threat detection, and powerful visualisation. Splunk also supports integrations with a wide range of third-party services and have their own tool (Machine Learning Toolkit-MLTK) which enables organisations to run machine learning models on their data for predictions and irregularity detection. This would be useful for Redback operations as they can use AI to help predict possible security threats.  
+- **Mezmo**: This tool also allows you to monitor and analyse log files in real-time. It is accessible in the cloud and enables you to look up, save, and keep data from any application or system, such as Windows, Linux, AWS, and Python. Mezmo could fit in with Wazuh by providing a strong log management and visualisation layer on top of Wazuh’s security monitoring and SIEM capabilities, resulting in a more comprehensive and efficient security solution
+
 
 ### 2. Redefine key assets and data categories  
 **Key Assets**
