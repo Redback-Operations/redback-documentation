@@ -66,6 +66,7 @@ To get started with Streamlit, we need to install the library using pip. Make su
 
    ```sh
    pip install streamlit
+   ```
 
 2. **Verify Installation:**
 
@@ -73,6 +74,7 @@ To get started with Streamlit, we need to install the library using pip. Make su
 
     ```sh
     streamlit hello
+    ```
 
 This will launch a sample web application, which is also featured on Streamlit's gallery page.
    
@@ -86,6 +88,7 @@ It’s recommended to create a virtual environment for your project to manage de
 
     ```sh
     cd path/to/your/project
+    ```
 
 2. **Create the Virtual Environment:**
 Run the following command to create a virtual environment named .venv:
