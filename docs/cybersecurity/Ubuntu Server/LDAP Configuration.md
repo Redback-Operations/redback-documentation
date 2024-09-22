@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Project RedOps: LDAP Ubuntu Server 
+# Ubuntu Server LDAP Configuration
 
 :::info
 **Document Creation:** 16 September, 2024. **Last Edited:** 18 September, 2024. **Authors:** Drew Baker.
