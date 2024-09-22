@@ -27,11 +27,11 @@ cd "MongoDB Connection/Project1"
 
 ```
 
-### 2. Create .evn at you root directory
+### 2. Create .env at your root directory
 
-- MONGO_URI=mongodb://admin:project1@10.137.0.149:27017/?authSource=admin
-- DB_NAME=mongodbVSCodePlaygroundDBB
-- COLLECTION_NAME=sales
+- MONGO_URI=mongodb://<your_username>:<your_password>@<your_host>:<your_port>/?authSource=<your_authSource>
+- DB_NAME=<your_database_name>
+- COLLECTION_NAME=<your_collection_name>
 
 ### 3. Run Docker Compose to build the images and run the services:
 
