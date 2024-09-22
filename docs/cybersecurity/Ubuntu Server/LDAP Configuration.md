@@ -53,7 +53,7 @@ curl ifconfig.me
 ```bash
 ldapsearch -x -LLL -H ldap:/// -b dc=redbackops,dc=org,dc=au
 ```
-or
+> or
 ```bash
 ldapsearch -Q -LLL -Y EXTERNAL -H ldap:///
 ```
