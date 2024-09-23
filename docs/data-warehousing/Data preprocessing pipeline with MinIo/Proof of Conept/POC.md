@@ -1,3 +1,7 @@
+---
+sidebar_position: 99
+---
+
 # Proof of Concept: Data Preprocessing Pipeline for MinIO Buckets at Redback Operations
 
 ## Project Overview
