@@ -112,6 +112,7 @@ Next, I entered my Kali Linux IP address (192.168.1.120) into SET. This step is 
   - Essential for the functionality of the cloned site.
 
 ### Cloning the Vulnerable Website
+
 ![picture7](img/Picture7.jpg)
 
 The demonstration proceeds with cloning a vulnerable website, specifically http://testphp.vulnweb.com/. This site was chosen for its harmlessness, allowing me to effectively simulate an attack without legal or ethical concerns. Cloning a legitimate login page serves to illustrate how attackers can trick users into entering sensitive information.
