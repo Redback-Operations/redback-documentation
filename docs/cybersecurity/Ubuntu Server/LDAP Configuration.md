@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Project RedOps: LDAP Ubuntu Server 
+# Ubuntu Server LDAP Configuration
 
 :::info
 **Document Creation:** 16 September, 2024. **Last Edited:** 18 September, 2024. **Authors:** Drew Baker.
@@ -53,7 +53,7 @@ curl ifconfig.me
 ```bash
 ldapsearch -x -LLL -H ldap:/// -b dc=redbackops,dc=org,dc=au
 ```
-or
+> or
 ```bash
 ldapsearch -Q -LLL -Y EXTERNAL -H ldap:///
 ```
