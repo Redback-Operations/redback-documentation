@@ -222,9 +222,9 @@ This gap analysis report highlights the urgent need for a comprehensive review a
 
 # Screenshots
 
-![Wazuh](img\Wazuh1.png)
+![Wazuh](img\wazuh1.png)
 
-![Wazuh](img\Wazuh2.png)
+![Wazuh](img\wazuh2.png)
 
 ![Wazuh](img\Wazuh3.png)
 
