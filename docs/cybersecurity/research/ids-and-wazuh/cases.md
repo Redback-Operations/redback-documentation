@@ -10,7 +10,7 @@ By **Prabhgun Singh**. **16/09/2024**
 
 # Screenshot of Wazuh
 
-![Wazuh](img\Case1.png)
+![Wazuh](img/Case1.png)
 
 # Use Case: Endpoint Integrity Monitoring for Critical System Files 
 
