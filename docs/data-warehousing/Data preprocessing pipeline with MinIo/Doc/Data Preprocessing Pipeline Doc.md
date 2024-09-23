@@ -1,3 +1,7 @@
+---
+sidebar_position: 99
+---
+
 # Data Preprocessing Pipeline with MinIO
 
 ## Introduction
