@@ -51,12 +51,12 @@ sudo curl -Lo /media/user/software/suspicious-file.exe https://secure.eicar.org/
 
 # Output in Wazuh Manager
 
-![Wazuh](img\Virus1.png)
+![Wazuh](img/Virus1.png)
 
-![Wazuh](img\Virus2.png)
+![Wazuh](img/Virus2.png)
 
-![Wazuh](img\Virus3.png)
+![Wazuh](img/Virus3.png)
 
-![Wazuh](img\Virus4.png)
+![Wazuh](img/Virus4.png)
 
-![Wazuh](img\Virus5.png)
+![Wazuh](img/Virus5.png)
