@@ -23,11 +23,11 @@ By **Prabhgun Singh**. **16/09/2024**
 
 Made this rule
 
-![Wazuh](img/Rule1.png)
+![Wazuh](../img/Rule1.png)
 
-![Wazuh](img/Rule2.png)
+![Wazuh](../img/Rule2.png)
 
-![Wazuh](img/Rule3.png)
+![Wazuh](../img/Rule3.png)
 
 # Case Study for Security Operations: Monitoring Authentication Failures
 
