@@ -4,6 +4,10 @@ sidebar_position: 6
 
 # Bandit: Advanced Security Scanning for Redback Operations
 
+:::info
+Author : Amir Zandieh 
+:::
+
 ## Introduction
 
 Bandit is an open-source tool designed for Python code analysis, focusing on identifying common security issues. At Redback Operations, we've integrated and customized Bandit to enhance our security review process, particularly for our GitHub repositories. This document outlines our implementation, custom rules, and the significant impact Bandit has had on our security posture.
@@ -248,4 +252,4 @@ Enhanced reporting with trend analysis and historical comparisons
 
 
 ## Conclusion
-Our journey with Bandit, from a simple scanning script to a comprehensive security analysis tool, has significantly enhanced Redback Operations' security review process. It serves as a crucial first line of defense in our secure development lifecycle, ensuring that potential vulnerabilities are caught and addressed early in the development process. By continuously refining and expanding our tool, we're staying ahead of emerging security threats and fostering a culture of security-first development.
+Our journey with Bandit, from a simple scanning script to a comprehensive  security analysis tool, has significantly enhanced Redback Operations' security review process. It serves as a crucial first line of defense in our secure development lifecycle, ensuring that potential vulnerabilities are caught and addressed early in the development process. By continuously refining and expanding our tool, we're staying ahead of emerging security threats and fostering a culture of security-first development.

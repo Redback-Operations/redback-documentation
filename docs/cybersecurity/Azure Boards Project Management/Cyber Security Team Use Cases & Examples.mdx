@@ -1,0 +1,246 @@
+---
+sidebar_position: 3
+sidebar_label: Cyber Security Team Use Cases & Examples
+title: Cyber Security Team Use Cases & Examples
+description: Azure Boards Design & Usage Guidelines for Redback Operations
+---
+<div style={{ width: '100%' }}>
+  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+    <thead>
+      <tr>
+        <th style={{ width: '20%', textAlign: 'center' }}>Version</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Modified By</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Approver</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Date</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Changes made</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ textAlign: 'center' }}>V1.0</td>
+        <td style={{ textAlign: 'center' }}>Daniel McAulay</td>
+        <td style={{ textAlign: 'center' }}>Daniel McAulay</td>
+        <td style={{ textAlign: 'center' }}>17/09/2024</td>
+        <td style={{ textAlign: 'center' }}>Document Creation</td>
+      </tr>
+      <tr>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+      </tr>
+      <tr>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+      </tr>
+      <tr>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+      </tr>
+      <tr>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 5. Team-Specific Usage and Processes
+
+This section provides detailed guidance on how each sub-team within the Redback Operations Cyber Security Team will utilize Azure Boards. The focus is on aligning Azure Boards\' capabilities with the specific responsibilities and workflows of the SecDevOps, Blue Team, Infrastructure, Red Team, and GRC teams.
+
+By customizing Azure Boards for each team, Redback Operations aims to enhance collaboration, improve task management, and streamline the execution of security and IT operations.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### 5.1 SecDevOps Team
+
+The SecDevOps team is responsible for integrating security into the software development lifecycle, automating security testing, and ensuring that secure coding practices are followed throughout the development process. Azure Boards will be used by the SecDevOps team to manage these activities efficiently.
+
+#### 5.1.1 Key Responsibilities
+
+-   Managing CI/CD pipelines and ensuring security is integrated at every stage.
+
+-   Conducting code reviews and automating security testing.
+
+-   Overseeing the implementation of secure development practices.
+
+#### 5.1.2 Usage of Azure Boards
+
+*Task Management*
+
+The SecDevOps team will use Azure Boards to track tasks related to CI/CD pipeline configuration, security testing automation, and code reviews. Work items will be created for each task, with detailed descriptions, assigned team members, and due dates.
+
+##### CI/CD Pipeline Integration
+
+Azure Boards will be integrated with GitHub, allowing the SecDevOps team to link work items to specific commits, branches, and pull requests. This integration will help manage code reviews and ensure that security checks are performed before code is merged.
+
+##### Security Testing with SonarQube
+
+SonarQube will be integrated with Azure Boards to automate the process of scanning code for security vulnerabilities. Results from SonarQube scans will be linked to work items in Azure Boards, enabling the team to track and remediate issues efficiently.
+
+##### Sprint Planning
+
+Sprints will be used to manage the workload of the SecDevOps team. During sprint planning, tasks will be moved from the backlog into the sprint, prioritized based on their importance to ongoing projects. The sprint board will provide a visual representation of task progress, helping the team stay on track.
+
+##### Workflow Example
+
+A typical workflow for the SecDevOps team might involve creating a task for setting up a new CI/CD pipeline, linking it to a GitHub branch, and automating security tests using SonarQube. As the pipeline is configured, the task would move through stages like \"To Do,\" \"In Progress,\" and \"Completed,\" with code reviews and security checks being documented in Azure Boards.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### 5.2 Blue Team
+
+The Blue Team is tasked with defending the organization's infrastructure against cyber threats. Their primary activities include monitoring for potential threats, responding to security incidents, and developing strategies to mitigate risks. Azure Boards will help the Blue Team manage these activities effectively.
+
+#### 5.2.1 Key Responsibilities
+
+-   Monitoring and responding to security incidents.
+
+-   Conducting threat hunting and proactive threat analysis.
+
+-   Developing and implementing mitigation strategies for identified threats.
+
+#### 5.2.2 Usage of Azure Boards:
+
+##### Incident Response Management
+
+The Blue Team will use Azure Boards to track security incidents from detection through to resolution. Work items will be created for each incident, with detailed logs of the incident, steps taken during the investigation, and final resolution.
+
+##### SIEM Tool Integration
+
+Azure Boards will be integrated with SIEM tools, enabling the automatic creation of work items when security alerts are triggered. These work items will be prioritized and assigned to team members based on the severity of the incident.
+
+##### Threat Hunting
+
+Tasks related to threat hunting and analysis will be managed in Azure Boards. The Blue Team will document their hypotheses, findings, and any actions taken in response to potential threats.
+
+##### Vulnerability Management
+
+The Blue Team will track vulnerabilities identified through monitoring and threat analysis in Azure Boards. Each vulnerability will be logged as a work item, with details on the affected systems, severity, and recommended remediation steps.
+
+##### Workflow Example
+
+When a security alert is triggered by the SIEM system, a work item is automatically created in Azure Boards. The Blue Team investigates the incident, documents their findings, and takes appropriate actions to contain and mitigate the threat. The work item is then moved through stages like \"Detection,\" \"Investigation,\" \"Mitigation,\" and \"Resolution.\"
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### 5.3 Infrastructure Team
+
+The Infrastructure Team is responsible for managing and maintaining the organization's IT infrastructure, including systems administration, network management, and infrastructure support. Azure Boards will be used to organize and track these essential activities.
+
+#### 5.3.1 Key Responsibilities
+
+-   Managing system administration tasks, including server maintenance and patch management.
+
+-   Configuring and maintaining network devices, firewalls, and monitoring systems.
+
+-   Ensuring the availability, security, and performance of IT infrastructure.
+
+#### 5.3.2 Usage of Azure Boards
+
+##### System Administration
+
+The Infrastructure Team will use Azure Boards to manage tasks related to server maintenance, user account management, and patch deployment. Each task will be logged as a work item, with details on the scope, timeline, and responsible team members.
+
+##### Network Management
+
+Tasks related to network configuration, firewall management, and system monitoring will be tracked in Azure Boards. For example, a task might be created for updating firewall rules or configuring a new VLAN, with progress tracked through different stages.
+
+##### Nagios Integration
+
+Nagios, used for system monitoring, will be integrated with Azure Boards to log alerts and issues as work items. This integration ensures that the team can respond quickly to any system outages or performance issues.
+
+##### Patch Management
+
+Azure Boards will help the Infrastructure Team manage the patching of servers, workstations, and network devices. Tasks will be created for each patch, with stages like \"Scheduled,\" \"In Progress,\" \"Testing,\" and \"Completed\" to track progress.
+
+##### Workflow Example
+
+A task is created in Azure Boards for a temperature alert in Nagios. The task is scheduled and moves through stages to alert the team and identify the cause behind the temperature warning. If Nagios detects any issues during or after the sensor is resolved, a new work item is created, and the Infrastructure Team is alerted to investigate and resolve the issue again.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### 5.4 Red Team
+
+The Red Team focuses on identifying and exploiting vulnerabilities within the organization's systems to simulate real-world cyberattacks. This team's activities are crucial for testing and improving the organization's defenses. Azure Boards will be instrumental in managing their operations.
+
+#### 5.4.1 Key Responsibilities
+
+-   Conducting penetration tests to identify security weaknesses.
+
+-   Performing vulnerability assessments and recommending remediation actions.
+
+-   Simulating real-world cyberattacks to test the organization's defences and validating incident response strategies.
+
+#### 5.4.2 Usage of Azure Boards:
+
+##### Penetration Testing
+
+The Red Team will use Azure Boards to manage and document their penetration testing activities. Each test will be tracked as a work item, with details on the scope, objectives, and findings.
+
+##### Vulnerability Assessment
+
+Vulnerabilities identified during tests or assessments will be logged as work items in Azure Boards. The Red Team will provide detailed descriptions of each vulnerability, including its severity and potential impact, and will track the remediation process.
+
+##### Integration with Testing Tools
+
+Tools like Kali Linux and Burp Suite will be used by the Red Team for testing, with results documented in Azure Boards. Work items can be linked to specific test cases or tools, providing a clear record of the testing process.
+
+##### Reporting and Collaboration
+
+After completing a test or assessment, the Red Team will use Azure Boards to generate reports and collaborate with other teams on remediation efforts. Work items related to remediation will be tracked and assigned to the appropriate teams.
+
+##### Workflow Example
+
+A penetration test is planned and documented as a work item in Azure Boards. The Red Team conducts the test using Kali Linux and Burp Suite, logging any vulnerabilities they discover. These vulnerabilities are then tracked through the remediation process, with detailed reports generated and shared with other teams.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### 5.5 GRC Team
+
+The Governance, Risk, and Compliance (GRC) Team ensures that the organization adheres to industry standards, regulatory requirements, and internal policies. They manage compliance, risk assessments, and policy development. Azure Boards will help the GRC Team organize and track these activities.
+
+#### 5.5.1 Key Responsibilities
+
+-   Conducting compliance audits and ensuring adherence to regulatory requirements.
+
+-   Performing risk assessments and managing identified risks.
+
+-   Developing and enforcing security policies and procedures.
+
+#### 5.5.2 Usage of Azure Boards:
+
+##### Compliance Audits
+
+The GRC Team will use Azure Boards to plan and execute compliance audits. Work items will be created for each audit, with details on the scope, standards being audited, and any findings that require attention.
+
+##### Risk Assessments
+
+Risks identified during assessments will be tracked as work items in Azure Boards. Each risk will include details on its likelihood, impact, and mitigation strategies, with ongoing monitoring and updates tracked in the system.
+
+##### Policy Development
+
+Tasks related to the development, review, and implementation of security policies will be managed in Azure Boards. Each policy will be tracked through stages from drafting to approval and implementation.
+
+##### Collaboration with Other Teams
+
+The GRC Team will work closely with other teams, such as Infrastructure and SecDevOps, to ensure that compliance and risk management efforts are aligned with operational practices. Azure Boards will be used to track these collaborative tasks and ensure that all teams are following the same guidelines.
+
+##### Workflow Example 
+
+A compliance audit is scheduled and documented as a work item in Azure Boards. The audit is conducted, and any findings are logged as separate work items, with details on the required corrective actions. The GRC Team collaborates with the relevant teams to ensure that all compliance issues are addressed, tracking the progress of these efforts in Azure Boards.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
