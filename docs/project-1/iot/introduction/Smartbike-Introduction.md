@@ -38,6 +38,7 @@ The **KICKR smart trainer** is a central piece of the Smartbike:
 - Sensing/simulating **speed**
 - Sensing cycling **cadence**
 - Sensing cycling **power**
+- Actuating pedal **resistance**
 - Connecting to the **KICKR Climb**
 - Connecting to the **KICKR Headwind Bluetooth Fan**
 
