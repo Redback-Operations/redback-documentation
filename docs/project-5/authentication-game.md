@@ -10,7 +10,6 @@ Creating a extra step in secure login for kids
 **Document Creation:** 15 September, 2024. **Last Edited:** 16 September, 2024. **Author:** Jessica Maugueret
 :::
 
-#
 
 ## Avatar Creation Progress
 I was tasked by Dylan, my mentor, to create avatars for the drag-and-drop game, with the goal of bringing a robotic feel to the characters while maintaining the design integrity of the AI-generated images provided. Dylan had initially created an AI image that served as the starting point, offering the basic shapes and design language. My role was to adapt these forms, adding mechanical elements and enhancing them with shading and texture to give them a more dynamic, industrial look.
@@ -26,32 +25,32 @@ You can see a timelapse of my work, showcasing the development of these avatars 
 ### Blue Robot
 Designed with a friendly and approachable appearance, the blue robot features a smiling expression, making it more appealing to children. The use of a generic, vibrant blue color enhances its broad appeal, creating a character that feels safe and inviting for younger audiences.
 
-![blue-robot](img\blue-robot.png) 
-![blue-robot-back](img\blue-robot-back.png)
+![blue-robot](img\blue-robot.PNG) 
+![blue-robot-back](img\blue-robot-back.PNG)
 
 ### Orange Robot
 The orange robot has a more rustic and edgy design, highlighted by its slightly mischievous grin. The color palette was chosen to give it a rugged look, which contrasts with the other characters, giving it a unique personality that might resonate with those who enjoy a more playful and less conventional character.
 
-![orange-robot](img\orange-robot.png) 
-![orange-robot-back](img\orange-robot-back.png)
+![orange-robot](img\orange-robot.PNG) 
+![orange-robot-back](img\orange-robot-back.PNG)
 
 ### Beige Robot
 This robot has a cutesy, rounded form, with wide, expressive features. The two-tone color scheme softens its appearance, making it a more comforting and approachable character. Its design is meant to appeal to users who favor warmth and familiarity.
 
-![beige-robot](img\beige-robot.png) 
-![beige-robot-back](img\beige-robot-back.png)
+![beige-robot](img\beige-robot.PNG) 
+![beige-robot-back](img\beige-robot-back.PNG)
 
 ### Green Robot
 With a more 3D appearance, the green robot stands out due to its distinctive pattern and structural design. The texture gives it depth, and its geometric shape makes it feel more modern and mechanical, attracting users who appreciate a more complex, detailed look.
 
-![green-robot](img\green-robot.png) 
-![green-robot-back](img\green-robot-back.png)
+![green-robot](img\green-robot.PNG) 
+![green-robot-back](img\green-robot-back.PNG)
 
 ### Purple Robot
 This character has a goofy and playful design, with exaggerated features like its wide mouth and antenna-like shapes. The use of purple makes it more whimsical, creating an energetic and fun character that can appeal to users who enjoy more lighthearted and quirky designs.
 
-![purple-robot](img\purple-robot.png) 
-![purple-robot-back](img\purple-robot-back.png) 
+![purple-robot](img\purple-robot.PNG) 
+![purple-robot-back](img\purple-robot-back.PNG) 
 
 Together, all the characters are designed to cater to different tastes and preferences, ensuring that there is a robot for everyone.
 
