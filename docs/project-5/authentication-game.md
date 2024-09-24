@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # 2-step Authentication
@@ -7,7 +7,7 @@ sidebar_position: 4
 Creating a extra step in secure login for kids
 
 :::info
-**Document Creation:** 15 September, 2024. **Last Edited:** 16 September, 2024. **Author:** Jessica Maugueret
+**Document Creation:** 15 September, 2024. **Last Edited:** 24 September, 2024. **Author:** Jessica Maugueret
 :::
 
 
@@ -54,6 +54,7 @@ This character has a goofy and playful design, with exaggerated features like it
 
 Together, all the characters are designed to cater to different tastes and preferences, ensuring that there is a robot for everyone.
 
+<br></br>
 
 ## Figma Prototyping
 
@@ -69,9 +70,72 @@ If you don't know where to click, click on the page randomly and options will po
 
 :::
 
-### [Development mode](https://www.figma.com/design/uKne8K75bIKJJVesM2T63o/Bugbox-Game)
+**[Development mode](https://www.figma.com/design/uKne8K75bIKJJVesM2T63o/Bugbox-Game)**
 
-### [Prototype mode](https://www.figma.com/proto/uKne8K75bIKJJVesM2T63o/Bugbox-Game?node-id=33-220&t=wmGtNy42fhJPNxCI-1&starting-point-node-id=33%3A220)
+**[Prototype mode](https://www.figma.com/proto/uKne8K75bIKJJVesM2T63o/Bugbox-Game?node-id=33-220&t=wmGtNy42fhJPNxCI-1&starting-point-node-id=33%3A220)**
 
 This entire process, from adapting AI-based designs to implementing them into a functional game prototype, marks significant progress toward the final version of the game.
 
+<br></br>
+
+### Gameplay
+
+**Here’s a step-by-step breakdown of how the authentication game works:**
+
+![Frame 8](img\Frame_8.png) 
+
+**1. Starting the Game (Frame 8 - Homepage)**
+
+- The game begins on the homepage of the BugBox website.
+- The user is prompted to click the "Code" button, which turns orange when hovered over.
+
+**2. Launching the Mini-Game**
+
+- Once the  ![Code Button](img\Code_Button.png)  button is clicked, the mini-game starts. 
+- Proposed Randomization Feature: Each time the mini-game starts, we want the positions of the avatar slots are randomized to ensure that the game is different every time the user plays. This is not apparent in the prototype.
+
+![Frame 3](img\Frame_2.png) 
+
+**3. Playing the Mini-Game**
+
+- The user sees a set of three avatars and their corresponding slots.
+- The goal is to drag each avatar into the correct slot.
+:::info
+
+- **Correct Move:** If the user drags an avatar into the correct slot, the game advances to the next frame (Frame 2 → Frame 3 → Frame 4).
+
+![Frame 3](img\Frame_3.png) ![Frame 4](img\Frame_4.png) 
+
+:::
+
+:::danger
+
+- **Wrong Move:** If an avatar is placed in the wrong slot, the game will prompt the user to restart (Frame 7).
+
+![Frame 7](img\Frame_7.png)
+
+:::
+<br></br>
+
+**4. Completing the Mini-Game**
+
+- Once all three avatars are placed correctly, the game reaches the final frame (Frame 5).
+- The user is prompted to click the "Go Play" button.
+
+![Frame 5](img\Frame_5.png) 
+
+**5. Login Page**
+
+- After clicking "Go Play," the user is directed to the login page (previously at the start of the game).
+- The user generates their credentials to log in.
+
+![Frame 1](img\Frame_1.png) 
+
+**6. Accessing the Code Playground**
+
+- After logging in, the user clicks "Go Play" again.
+- The user is then taken to Frame 6, which is the BugBox code playground.
+
+![Frame *](img\Frame_6.png) 
+
+This structure ensures that the game is played first, adding an interactive layer to the login process, as suggested by Dylan.
