@@ -27,6 +27,6 @@ The images show kids happily engaging in robotic and team activities, reflecting
 
 ## Final Moodboard
 
-Image
+![moodboard](img\Moodboard.jpg) 
 
 The board communicates an energetic, inclusive, and innovative brand identity targeted toward young learners and educators.
