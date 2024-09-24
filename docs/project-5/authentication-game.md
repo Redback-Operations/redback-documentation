@@ -18,7 +18,7 @@ Using Procreate, I took the AI-generated avatars and reimagined them with a robo
 
 In addition to designing the avatars, I also created the backing slots where the avatars will snap into place within the game. These backing slots are essential for providing clear visual cues to players about where to place the avatars, ensuring a smooth drag-and-drop experience. The backing slots are designed to complement the robotic aesthetic of the avatars, using similar color schemes and textures to keep the game's interface consistent. These slots are not only functional but also add to the overall immersive feel of the game.
 
-You can see a timelapse of my work, showcasing the development of these avatars in Procreate, via the following link: 
+You can see a timelapse of my work, showcasing the development of these avatars in Procreate, via the following link: https://youtu.be/IF8CXxdNBWU 
 
 ## Images
 
