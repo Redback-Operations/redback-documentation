@@ -4,7 +4,8 @@ Docusaurus instance for the consolidation of company research and documentation
 
 [View site here](https://redback-operations.github.io/redback-documentation/)
 
-[Approvers guide here](https://redback-operations.github.io/redback-documentation/docs/onboarding/github/approvers-guide)
+[Approvers guide here](https://redback-operations.github.io/redback-documentation/docs/documentation-maintenance/approval-guide)
+
 
 ## Prerequisites 
 
