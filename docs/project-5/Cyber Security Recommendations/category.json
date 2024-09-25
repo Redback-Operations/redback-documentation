@@ -1,0 +1,8 @@
+{
+    "label": "Cyber Security Recommendations",
+    "position": 4,
+    "link": {
+      "type": "generated-index",
+      "description": "BugBox cybersecurity recommendations and recommended implementations"
+    }
+  }
