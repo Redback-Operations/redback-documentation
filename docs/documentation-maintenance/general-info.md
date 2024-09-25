@@ -11,7 +11,7 @@ needed to get you going with the platform.
 Below is a general list of points with useful stuff. If you come across any issues not listed here, feel free to reach out to me (Kaleb) through Ben Stephens.
 
 ## General
-- This platform is based on Docusaurus. They have some amazing documnetation (here)[https://docusaurus.io/docs]. Especially their plugins, lots of good future improvements to the site there.
+- This platform is based on Docusaurus. They have some amazing documnetation [here](https://docusaurus.io/docs). Especially their plugins, lots of good future improvements to the site there.
 - If for whatever reason you need to manually deploy the site (as in the auto-deployment is not working). Open Git Bash to the location of the repo, and type `GIT_USER=<YOUR USERNAME> yarn deploy`. This needs to be done by an admin of the repo.
 - Try and ensure that students have decent names for their files and pages.
 - Ensure that proper file structure is followed (see tutorials for info).
@@ -23,7 +23,7 @@ Given pages are typically reviewed in the PR stage, most errors will be found du
 Unexpected character `/` (U+002F) before local name, expected a character that can start a name, such as a letter, `$`, or `_` (note: to create a link in MDX, use `[text](url)`)
 ```
 
-This is a URL not formatted properly. Ensure it is either using markdown `(text)[url]` or in plain text. This sometimes occurs when code blocks have not been used on code.
+This is a URL not formatted properly. Ensure it is either using markdown `[text](url)` or in plain text. This sometimes occurs when code blocks have not been used on code.
 
 ---
 
