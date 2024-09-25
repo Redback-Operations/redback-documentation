@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ![Finding the Services running on Port 27017](img/PortServices.png)
 
-#### Exaplanation:
+#### Explanation:
 - 	-sV: This option enables version detection. It attempts to determine the version of the service running on the open ports.
 -	-p 27017: This option tells nmap to scan only port 27017, which is commonly used by MongoDB.
 -	The output tells that port 27017/tcp is open and that it is running MongoDB. However, nmap could not fully identify the version of MongoDB.
@@ -68,7 +68,7 @@ sidebar_position: 1
 - **How the mongodb-brute Script Works:**
     -	The mongodb-brute script is part of Nmap's scripting engine (NSE), specifically designed for brute-forcing MongoDB credentials.
     -	The script tests for a variety of default or common credentials (like admin:admin, root:password) and can be configured to use custom username/password lists if specified.
-    -	If successful, it will report back which credentials were used to access the MongoDB instance, which could indicate a security vulnerability (weak password).
+    -	If successful, it will report back which credentials were used to access the MongoDB instance, which could indicate a security vulnerability (weak password).But the scan didn't reveal any credentials for the MongoDB Service.
 
 ### Installing Docker:
 
