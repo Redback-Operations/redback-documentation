@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # STREAMLIT VS GRADIO
 
 ## INTRODUCTION
@@ -43,7 +47,8 @@ Choosing between Streamlit and Gradio depends on specific project requirements a
 
 ![streamlit vs gradio](images/image-5.png)
 
-Reference: <https://stackshare.io/stackups/gradio-vs-streamlit#:~:text=In%20summary%2C%20Gradio%20and%20Streamlit%20have%20some%20key,community%20and%20documentation%20support%2C%20and%20ease%20of%20use.>
+Reference: [Gradio vs. Streamlit Comparison on StackShare](https://stackshare.io/stackups/gradio-vs-streamlit#:~:text=In%20summary%2C%20Gradio%20and%20Streamlit%20have%20some%20key,community%20and%20documentation%20support%2C%20and%20ease%20of%20use.)
+
 
 
 # Streamlit Tutorial
@@ -324,7 +329,8 @@ cd my_streamlit_app
 
 ### REFERENCES
 
-1. The guidance on installing Streamlit using Anaconda: <https://chatgpt.com/>
-2. <https://streamlit.io/>
-3. <https://www.youtube.com/watch?v=ZZ4B0QUHuNc&list=PLtqF5YXg7GLmCvTswG32NqQypOuYkPRUE>
-4. <https://medium.com/@ShahabH/streamlit-vs-gradio-a-comprehensive-comparison-cc2f28b7b832>
+1. [The guidance on installing Streamlit using Anaconda](https://chatgpt.com/)
+2. [Streamlit Official Website](https://streamlit.io/)
+3. [YouTube Tutorial on Streamlit](https://www.youtube.com/watch?v=ZZ4B0QUHuNc&list=PLtqF5YXg7GLmCvTswG32NqQypOuYkPRUE)
+4. [Streamlit vs. Gradio: A Comprehensive Comparison](https://medium.com/@ShahabH/streamlit-vs-gradio-a-comprehensive-comparison-cc2f28b7b832)
+
