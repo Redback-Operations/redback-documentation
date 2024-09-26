@@ -1,5 +1,5 @@
 ---
-sidebar_position: 13
+sidebar_position: 
 ---
 # Evilginx2 and GoPhish Tool Usage Demonstration for Phishing
 
