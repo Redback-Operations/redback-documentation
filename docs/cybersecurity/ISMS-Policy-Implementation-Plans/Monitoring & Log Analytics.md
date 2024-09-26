@@ -2,6 +2,8 @@
 sidebar_position: 4
 ---
 
+**Author:** Muhamed Badri Abdulkadir 
+
 # Monitoring & Log Analytics  
 
 ## Objective Summary
