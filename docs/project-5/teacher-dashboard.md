@@ -67,4 +67,4 @@ The Freeze/Unfreeze Tab is a valuable tool for classroom management. If a teache
 
 In addition to these functionalities, the dashboard enhances usability with visual feedback; hovering over the tabs on the left changes them to their respective colors, including the freeze and unfreeze buttons. This feature not only improves the aesthetic appeal but also provides clear, immediate feedback to the teacher, creating a user-friendly experience.
 
-![Hover](img\Hover_Options.png) ![Hover Freeze/Unfreeze](img\Freeze:Unfreeze.png) 
+![Hover](img\Hover_Options.png) ![Hover Freeze/Unfreeze](img\Freeze_Unfreeze.png) 
