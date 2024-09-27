@@ -27,7 +27,7 @@ git clone https://github.com/<Your_GitHub_Username>/redback-smartbike-mobile.git
 cd redback-smartbike-mobile
 ```
 
-Replace <Your_GitHub_Username> with your actual GitHub username.
+Replace `<Your_GitHub_Username>` with your actual GitHub username.
 
 This will download the repository files to your local system and change your directory to the repository's root.
 
