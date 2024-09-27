@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 0
 ---
 
-# Mobile Dev
+# Mobile projects
 
 ## Project structure and repositories
 
