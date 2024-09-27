@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Smartbike project readme
+# Smartbike mobile app readme
 
 ## Redback SmartBike Mobile App Frontend Setup
 
