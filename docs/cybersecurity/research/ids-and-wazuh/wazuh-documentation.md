@@ -6,10 +6,8 @@ sidebar_position: 6
 
 Documentation of the Wazuh open-source security platform:
 
-:::INFO
-
+:::Info
 Author: **Lachlan Harrison**, **31/08/2024**
-
 :::
 
 ## Section 1 - Capabilities of Wazuh
@@ -79,5 +77,5 @@ From easy implementation, low requirements and plenty of concepts that can be le
 
 - MITRE ATT&CK Framework: https://attack.mitre.org/ 
 - Security Awareness Training Modules: https://classroom.google.com/c/NzAzMjgwOTI3MDIw?cjc=ppfbboc 
-- Link to Wazuh PowerPoint: (INSERT ONCE IMPLEMENTED)
-- Link to Wazuh Video Documentation: (INSERT ONCE UPLOADED WITH VALID LINK)
+- Link to Wazuh Video Documentation: https://youtu.be/g82PwIFLYYc?si=4pZzpdajIvHrIKlg
+- Also check out the Wazuh PowerPoint documentation below for a more visual approach!

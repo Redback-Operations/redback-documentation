@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-#Research Report 
+# Competitors Research Report 
 
 Identify competitors to BugBox
 
