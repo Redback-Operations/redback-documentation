@@ -15,6 +15,7 @@ Below is a general list of points with useful stuff. If you come across any issu
 - If for whatever reason you need to manually deploy the site (as in the auto-deployment is not working). Open Git Bash to the location of the repo, and type `GIT_USER=<YOUR USERNAME> yarn deploy`. This needs to be done by an admin of the repo.
 - Try and ensure that students have decent names for their files and pages.
 - Ensure that proper file structure is followed (see tutorials for info).
+- Previous web lead has done a lot of cool extensions for the site such as this [scrolling section](https://redback-operations.github.io/redback-documentation/docs/web-mobile-app-dev/frontend/redback-ui/), look through the web section for more examples.
 
 ## Errors
 Given pages are typically reviewed in the PR stage, most errors will be found during the auto deployment builds. Before approving PRs, please ensure you press "approve run" in the workflow block. If this returns an error, have a look! The most common are:
