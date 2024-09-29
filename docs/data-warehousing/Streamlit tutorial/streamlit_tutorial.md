@@ -2,9 +2,13 @@
 sidebar_position: 1
 ---
 
-# STREAMLIT VS GRADIO
 
-## INTRODUCTION
+# Streamlit Tutorial
+
+## STREAMLIT VS GRADIO
+
+### INTRODUCTION
+
 Streamlit and Gradio are popular open-source frameworks that simplify the process of transforming complex machine learning models into interactive applications. They cater to the needs of developers and data scientists, each offering distinct features and benefits.
 
 # Streamlit: Empowering Data Apps
