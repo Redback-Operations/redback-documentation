@@ -290,7 +290,7 @@ It is updated automatically in the app. We select always re-run(Can manually re-
 
 ![alt text](images/image-27.png)
 
-**Markdown Cheatsheet Link :** <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
+**Markdown Cheatsheet Link :** https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 
 # FREQUENTLY ASKED QUESTIONS

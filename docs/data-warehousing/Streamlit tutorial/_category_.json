@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "label": "Streamlit Tutorial and BugBox Solution",
     "position": 1,
+=======
+    "label": "Streamlit Tutorial",
+    "position": 99,
+>>>>>>> 5a343b1d75fde8bb3d63ef84aa4a41d09fded64f
     "link": {
       "type": "generated-index",
       "description": "Tutorial for downloading, installing, and coding with Streamlit and also the QR Code SOlution for Bugbox"
