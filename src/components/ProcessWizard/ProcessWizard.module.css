@@ -1,0 +1,125 @@
+.processWizard {
+    margin: 2rem 0;
+}
+
+.processWizardContent {
+    box-shadow: 0 0 0.25rem 0 var(--ifm-color-gray-400);
+    padding: 2rem;
+}
+
+.processWizardNavButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.processWizardNavButtons button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    color: white;
+    background-color: var(--ifm-color-primary);
+    border: none;
+    cursor: pointer;
+    font-family: var(--ifm-font-family-base);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.processWizardNavButtons button span {
+    font-size: 1.4em;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 1;
+    transform: translateY(-0.1em);
+}
+
+.processWizardNavButtons button:hover,
+.processWizardNavButtons button:focus,
+.processWizardNavButtons button:active {
+    background-color: var(--ifm-color-primary-dark);
+    text-decoration-color: currentColor;
+}
+
+.processWizardNavButtons button:only-child {
+    margin-left: auto;
+}
+
+.wizardStep {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.progressBar {
+    height: 0.25rem;
+    background-color: var(--ifm-color-primary);
+    transform: translateY(0.825rem);
+    margin-left: 7.14%;
+}
+
+.progressBarItems {
+    counter-reset: progress-items-counter;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    position: relative;
+    z-index: 10;
+    padding-left: 0;
+}
+
+.progressBarItem {
+    list-style: none;
+    counter-increment: progress-items-counter;
+    color: var(--ifm-color-gray-600);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-top: 0 !important;
+}
+
+.progressBarItem::before {
+    content: counter(progress-items-counter);
+    background-color: var(--ifm-color-gray-600);
+    margin-bottom: 0.25rem;
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.progressBarItem[data-current="true"],
+.progressBarItem[data-passed="true"] {
+    color: var(--ifm-color-primary);
+}
+
+.progressBarItem[data-current="true"]::before,
+.progressBarItem[data-passed="true"]::before {
+    background: var(--ifm-color-primary);
+}
+
+.processWizardStep {
+}
+
+.processWizardStep img {
+    max-height: 400px;
+    max-width: 540px;
+    width: auto;
+    display: block;
+    margin: 1rem auto;
+    border: 1px solid var(--ifm-color-gray-400);
+}
