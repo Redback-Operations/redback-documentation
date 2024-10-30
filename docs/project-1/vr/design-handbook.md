@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 # Design Handbook
 
@@ -93,9 +93,9 @@ Building models should be packed and delete redundant building models. Although 
 ![Building-Model-Assets](img/Building-Model-Assets.png)
 >Figure 6 Building Models Assets
 
-**Urban design reference**
-![Building-1](img/Building-1.jpg)![Building-3](img/Building-3.jpg)!
-![Building-4](img/Building-4.jpg)![Building-5](img/Building-5.jpg)
+**Urban design reference**  
+![Building-1](img/Building-1.jpg) ![Building-3](img/Building-3.jpg)!
+![Building-4](img/Building-4.jpg) ![Building-5](img/Building-5.jpg)
 ![Building-2](img/Building-2.jpg)
 
 When designing, attention should be paid to a certain mix of new and old buildings, but the overall style of the town should maintain a relatively old and rustic style. In residential areas, the scale of houses should be maintained at a moderate level and there should be no large-scale buildings.
