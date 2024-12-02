@@ -1,6 +1,6 @@
 {
   "label": "Secure Code Development",
-  "position": 7,
+  "position": 1,
   "link": {
     "type": "generated-index",
     "description": "Flutter and MQTT docs"
