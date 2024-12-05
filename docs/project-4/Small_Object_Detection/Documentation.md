@@ -6,7 +6,7 @@ The **Crowd Monitoring & Player Tracking** initiative is designed to transform t
 
 The primary goals of **Project Orion** are to enhance player safety by monitoring player fatigue, tracking performance, and identifying injury risks. Machine learning and predictive models will be applied to generate valuable data, guiding decisions to improve safety and performance. This project aims to lead in sports technology, introducing innovative approaches to tracking and analysing sports dynamics.
 
----
+
 
 ## Objectives
 
