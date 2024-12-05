@@ -100,9 +100,11 @@ deviation_penalty = 0.7
 
 
 ## Open Issues
-- SAHI integration causes processing delays.
-- Further optimization is needed for real-time performance.
-
+- While SAHI improves small object detection accuracy, it significantly increases execution time. 
+  - Execution time with YOLOv8 alone: **123.77 seconds**.
+  - Execution time with YOLOv8 + SAHI: **613.16 seconds**.
+- This fivefold increase in processing time makes SAHI unsuitable for production environments, particularly for real-time applications or scenarios with limited computational resources.
+- Further research and optimization are needed to balance accuracy and efficiency.
 
 
 ## Contributors
