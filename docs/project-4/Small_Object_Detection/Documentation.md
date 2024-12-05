@@ -22,7 +22,7 @@ The primary goals of **Project Orion** are to enhance player safety by monitorin
 ### Efficient Data Storage and Access
 - Design a data storage system that is efficient and easy to search.
 - Develop a user-friendly interface for quick access to specific information.
----
+
 
 ## Completed Deliveries
 
@@ -64,12 +64,12 @@ deviation_penalty = 0.7
 - Deployed an interactive application using **Streamlit** to visually showcase the model’s performance.
 - Users can input real-time data and view detection results through a visual interface.
 
----
+
 
 ## Performance Analysis
 - SAHI integration improves detection accuracy but introduces delays, raising concerns for real-time deployment.
 
----
+
 
 ## How to Use
 
@@ -97,19 +97,19 @@ deviation_penalty = 0.7
 4. **View Results**:
    - Upload a video or image of a football match to see the detection results.
 
----
+
 
 ## Open Issues
 - SAHI integration causes processing delays.
 - Further optimization is needed for real-time performance.
 
----
+
 
 ## Contributors
 - **MD Tajish Farhan**
 - **Sahil Guglani**
 
----
+
 
 ## Example Code
 
