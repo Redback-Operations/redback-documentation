@@ -2,8 +2,26 @@
 # Small Object Detection: Football Tracking Project
 
 ## Project Overview
-This project focuses on detecting footballs in match videos using state-of-the-art object detection techniques tailored for small objects. Key achievements include dataset creation, model training and modification, and deployment for visual performance analysis.
+The **Crowd Monitoring & Player Tracking** initiative is designed to transform the understanding of sports on the field. By integrating advanced computer vision models and IoT technologies, this initiative provides real-time insights into player movements, interactions, and crowd behaviour.
 
+The primary goals of **Project Orion** are to enhance player safety by monitoring player fatigue, tracking performance, and identifying injury risks. Machine learning and predictive models will be applied to generate valuable data, guiding decisions to improve safety and performance. This project aims to lead in sports technology, introducing innovative approaches to tracking and analysing sports dynamics.
+
+---
+
+## Objectives
+
+### Improve Our Models
+- Enhance the pose estimation model for sports-specific movements.
+- Create a reliable player-tracking model using face detection.
+- Optimize small object detection, particularly for tracking footballs in matches.
+
+### Research and Learning
+- Study the latest techniques in YOLOv8 and small object tracking.
+- Test and train models on new datasets, focusing on improving accuracy in critical areas.
+
+### Efficient Data Storage and Access
+- Design a data storage system that is efficient and easy to search.
+- Develop a user-friendly interface for quick access to specific information.
 ---
 
 ## Completed Deliveries
@@ -89,6 +107,7 @@ deviation_penalty = 0.7
 
 ## Contributors
 - **MD Tajish Farhan**
+- **Sahil Guglani**
 
 ---
 
