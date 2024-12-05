@@ -37,7 +37,9 @@ The primary goals of **Project Orion** are to enhance player safety by monitorin
   - **Latency issues**, unsuitable for immediate feedback scenarios.
   - Challenges with **resource-constrained devices**, such as IoT systems.
 
-[YOLOv8 Implementation Demonstration](https://youtu.be/c2xUFhsoxuU)
+<div align="center">
+<a href="https://youtu.be/c2xUFhsoxuU">YOLOv8 Implementation Demonstration</a>
+</div>
 
 ### SAHI Integration
 - Integrated **SAHI (Slicing Aided Hyper Inference)** with a patch size of 960x540.
@@ -67,8 +69,25 @@ deviation_penalty = 0.7
 
 
 ## Performance Analysis
-- SAHI integration improves detection accuracy but introduces delays, raising concerns for real-time deployment.
+The performance analysis revealed key insights into the challenges of deploying advanced detection models like YOLOv8 and SAHI in real-world scenarios:
 
+1. **Accuracy vs. Latency Tradeoff**:
+   - SAHI significantly improves detection accuracy for small objects like footballs by slicing images into smaller patches. 
+   - However, this improvement comes at a steep cost in terms of computational overhead and processing time.
+
+2. **Execution Time Comparison**:
+   - YOLOv8 alone processed the dataset in **123.77 seconds**, demonstrating its efficiency for general object detection.
+   - When combined with SAHI, the execution time skyrocketed to **613.16 seconds**, representing a fivefold increase.
+   - This drastic increase highlights the inefficiency of SAHI for real-time or resource-constrained environments.
+
+3. **Resource Utilization**:
+   - The additional computations required for slicing and processing with SAHI heavily taxed available resources.
+   - This resulted in higher memory usage, slower response times, and potential bottlenecks on devices with limited hardware capabilities.
+
+4. **Production Feasibility**:
+   - Given the significant processing delays, SAHI is not a viable option for production environments, especially for real-time sports analysis or IoT applications where quick feedback is critical.
+
+Future work will focus on optimizing the pipeline to balance accuracy and execution time, possibly exploring alternative methods or hybrid approaches.
 
 
 ## How to Use
