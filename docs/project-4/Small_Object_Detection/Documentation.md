@@ -138,7 +138,7 @@ Future work will focus on optimizing the pipeline to balance accuracy and execut
 import streamlit as st
 import cv2
 from sahi.predict import get_sliced_prediction
-from sahi.model import Yolov5DetectionModel
+from sahi.model import Yolov8DetectionModel
 
 # Streamlit App Configuration
 st.title("Small Object Detection: Football Tracking")
