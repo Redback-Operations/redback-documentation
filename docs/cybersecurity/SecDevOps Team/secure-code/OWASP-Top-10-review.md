@@ -29,7 +29,7 @@ Broken Access Control is a critical vulnerability that needs to be addresses whe
 ##### Examples of Access control Vulnerabilities can include: 
 -	Users being given more access then required to do their job (not using least privileges/deny by default)
 -	Viewing or editing someone else data 
--	Elevation of privileges – being able to act a user without actually being loged in or being able to make changes as If you are and admin however you are logged in as a user. 
+-	Elevation of privileges – being able to act a user without actually being logged in or being able to make changes as If you are and admin however you are logged in as a user. 
 -	Manipulating metadata such, such as replaying or tampering with a JSON Web Token access control token, or a cookie or hidden field manipulated to elevate privileges or abusing JWT invalidation.
 
 ##### How to Prevent 
@@ -40,7 +40,7 @@ Broken Access Control is a critical vulnerability that needs to be addresses whe
 -	Enforce record ownership through access control rather than accepting that the user can create, read, update, or delete any record.
 
 #### A02:2021 – Cryptographic Failures
-Cryptographic Failures or complete lack of crypto refers to sensitive data being exposed/released to people with no need/authorisation to view/edit/manipulate the data. Type of data that should always be encrypted during transit include finicial details, passwords and PII. A lot of this data is required to be kept secure under the Australian Privacy Principles. 
+Cryptographic Failures or complete lack of crypto refers to sensitive data being exposed/released to people with no need/authorisation to view/edit/manipulate the data. Type of data that should always be encrypted during transit include financial details, passwords and PII. A lot of this data is required to be kept secure under the Australian Privacy Principles. 
 
 ##### Example of Cryptographic Failures
 -	Using unsecure protocols such as HTTP, SMTP and FTP to transmit sensitive data
@@ -57,7 +57,7 @@ Cryptographic Failures or complete lack of crypto refers to sensitive data being
 -	Encrypt all data in transit with secure protocols
 -	Store passwords using strong adaptive and salted hashing function
 -	Always use authenticated encryption instead of just encryption.
--	Keys should be generated cryptographically randomly and stored in memory as byte arrays.
+-	Keys generated cryptographically randomly and stored in memory as byte arrays.
 #### A03:2021 – Injection
 Injections attacks occur when an application has malicious data into it. 
 
@@ -72,14 +72,13 @@ Injections attacks occur when an application has malicious data into it.
 -	To prevent mass disclosures of records via SQL injection use LIMIT and other SQL Controls. 
 
 #### A04:2021-Insecure Design 
-Insecure design covers all different weakens in an application, these weaknesses come around because of missing on ineffective control design. Insecure design is not the same as insecure implementation as secure implementation will still not rectify issues with insecure design and vice versa secure design will not fix issues that arise as a result of insecure implementation.
+Insecure design covers all different weaknesses in an application, these weaknesses come around because of missing on ineffective control design. Insecure design is not the same as insecure implementation as secure implementation will still not rectify issues with insecure design and vice versa secure design will not fix issues that arise as a result of insecure implementation.
 
 To rectify this issue, we need to ensure we design our applications with security in mind. Secure design ensures that threats are constantly evaluated and ensures that code is robustly designed and tested to prevent attacks which are known.
 When designing applications, we need to ensure that we use a secure development lifecycle which includes paved road methodology, secured component library, tooling, and threat modelling.
 
 ##### How to Prevent 
 -	Use a secure development lifecycle when developing any application 
--	Use threat modelling for critical authentication, access control, business logic, and key flows
 -	Use threat modelling for critical authentication, access control, business logic, and key flows
 -	At each tier of your application integrate plausibility checks 
 -	Integrate security language and controls into user stories
