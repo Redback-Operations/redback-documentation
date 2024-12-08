@@ -1,8 +1,8 @@
 {
-  "label": "Example Nested",
-  "position": 99,
+  "label": "MISP",
+  "position": 104,
   "link": {
     "type": "generated-index",
-    "description": "Folder-ception"
+    "description": "MISP deployment documentations"
   }
 }
