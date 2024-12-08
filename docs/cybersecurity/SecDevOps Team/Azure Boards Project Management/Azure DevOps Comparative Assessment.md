@@ -5,6 +5,11 @@ Sidebar position: 9
 # Comparative Analysis of Jira vs. Azure DevOps
 By Candice Smith
 
+:::info
+**Document Creation:** December 8, 2024. **Last Edited:** December 8, 2024. **Authors:** Candice Smith.
+**Document Code:** ADO-COMP-001. **Effective Date:** December 8, 2024. **Expiry Date:** December 8, 2025.
+:::
+
 ## Executive Summary
 
 Redback Operations have been utilising GitHub and Microsoft Planner to project manage the work being conducted by their Capstone cohorts each trimester. There are many challenges that go along with this approach; lack of interoperability between the two platforms, lack of functionality and scalability for Microsoft Planner, and GitHub is not the best tool to use for document repository purposes.
@@ -31,18 +36,18 @@ In this document we are presenting a comparison of the two systems and making ou
 
 ## Comparison Overview
 
-| Feature<br /> | Jira<br /> | Azure DevOps<br /> |
+| Feature | Jira | Azure DevOps |
 | --- | --- | --- |
-| **Task & Project Management**<br> | Good for agile frameworks (Scrum, Kanban). Provides robust tools for issue tracking, workflows, and reporting.<br> | Integrated Boards with agile tools, customisable workflows, and strong integration with CI/CD pipelines.<br> |
-| **Code Repository**<br> | Will rely on integration with external GitHub repositories. Native repo functionality available only in Bitbucket.<br> | Offers Azure Repos as a built-in Git-based repository or integrates seamlessly with GitHub.<br> |
-| **Pull Requests**<br> | Pull requests managed through GitHub. Tracks them as linked issues.<br> | Native pull request management within Azure Repos or integrates with GitHub.<br> |
-| **Document Repository**<br> | No native document repo; relies on Confluence or external tools like Google Drive or SharePoint.<br> | Supports document storage as part of Azure Repos or integrated storage in projects.<br> |
-| **Integrations**<br> | Strong ecosystem with Atlassian tools (Confluence, Bitbucket) and third-party apps.<br> | Tight integration with other Microsoft tools (e.g., Teams, SharePoint, Power BI) and GitHub.<br> |
-| **Reporting and Analytics**<br> | Excellent reporting with dashboards and 3rd-party apps. Advanced plugins available.<br> | Built-in advanced reporting and analytics tied to pipelines, test plans, and projects.<br> |
-| **Ease of Use**<br> | Straightforward for agile teams but may require customisation for other workflows.<br> | Familiar for organisations already using Microsoft tools; offers streamlined workflows.<br> |
-| **Scalability**<br> | Scales well for project management but depends on integrations for code and CI/CD.<br> | End-to-end solution for project management, repositories, and CI/CD in one platform. Scales well.<br> |
-| **Cost**<br> | Standard licensing is $7.53 per user per month. For 100 Students in a 12-week trimester that totals $2,259.<br> | Most students added as Stakeholders which is free. Only Leaders require basic licencing. There are some add-ons to watch out for, but this would be below $1,000.<br> |
-| **Other**<br> | Jira is a widely used platform, offering interaction with an industry standard.<br> | Azure offers a complete end-to-end solution that in tightly integrated with existing Teams and SharePoint tools.<br> |
+| Task & Project Management | Good for agile frameworks (Scrum, Kanban). Provides robust tools for issue tracking, workflows, and reporting. | Integrated Boards with agile tools, customisable workflows, and strong integration with CI/CD pipelines. |
+| Code Repository | Will rely on integration with external GitHub repositories. Native repo functionality available only in Bitbucket. | Offers Azure Repos as a built-in Git-based repository or integrates seamlessly with GitHub. |
+| Pull Requests | Pull requests managed through GitHub. Tracks them as linked issues. | Native pull request management within Azure Repos or integrates with GitHub. |
+| Document Repository | No native document repo; relies on Confluence or external tools like Google Drive or SharePoint. | Supports document storage as part of Azure Repos or integrated storage in projects. |
+| Integrations | Strong ecosystem with Atlassian tools (Confluence, Bitbucket) and third-party apps. | Tight integration with other Microsoft tools (e.g., Teams, SharePoint, Power BI) and GitHub. |
+| Reporting and Analytics | Excellent reporting with dashboards and 3rd-party apps. Advanced plugins available. | Built-in advanced reporting and analytics tied to pipelines, test plans, and projects. |
+| Ease of Use | Straightforward for agile teams but may require customisation for other workflows. | Familiar for organisations already using Microsoft tools; offers streamlined workflows. |
+| Scalability | Scales well for project management but depends on integrations for code and CI/CD. | End-to-end solution for project management, repositories, and CI/CD in one platform. Scales well. |
+| Cost | Standard licensing is $7.53 per user per month. For 100 Students in a 12-week trimester that totals $2,259. | Most students added as Stakeholders which is free. Only Leaders require basic licencing. There are some add-ons to watch out for, but this would be below $1,000. |
+| Other | Jira is a widely used platform, offering interaction with an industry standard. | Azure offers a complete end-to-end solution that in tightly integrated with existing Teams and SharePoint tools. |
 
 ## Detailed Comparison
 ### Task and Project Management
