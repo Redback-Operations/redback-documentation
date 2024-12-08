@@ -34,7 +34,7 @@ In this document we are presenting a comparison of the two systems and making ou
 * Access a more feature rich environment to being to implement new features and tools and elevate student contributions to Redback Operations.
 * Provide a secure and compliant research environment for future Redback Operations cohorts, protected by our Deakin network and credentials.
 
-## Comparison Overview
+## Comparison Overview 
 
 | Feature | Jira | Azure DevOps |
 | --- | --- | --- |
@@ -198,7 +198,7 @@ _Recommendation:_ While Jira offers the benefit of being an industry-standard pl
 
 As far as migration from Microsoft Planner to each of the above alternative solutions goes, Azure DevOps once again offers the best overall option being more straightforward when it comes to enablement, provides unified platform including repos protected by credentials delivering the security that is currently lacking in GitHub.
 
-## Recommendation – Azure DevOps
+## Recommendation –- Azure DevOps
 
 Following the above investigation, it is recommended that we move to the Azure DevOps platform rather than Jira for the following reasons:
 
