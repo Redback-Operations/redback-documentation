@@ -1,5 +1,5 @@
 ---
-Sidebar position: 9
+sidebar_position: 9
 ---
 
 # Comparative Analysis of Jira vs. Azure DevOps
