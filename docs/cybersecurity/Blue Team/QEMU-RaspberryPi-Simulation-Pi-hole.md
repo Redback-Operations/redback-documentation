@@ -77,7 +77,7 @@ This document is designed to serve as a reliable resource for setting up Pi-hole
    ```bash
    qemu-img.exe resize 2024-11-13-raspios-bookworm-armhf-lite.img +4G
    ```
-      ![QRPS](playbook\img\QRPS2.png)
+      ![QRPS](Playbook/img/QRPS2.png)
 
    - Rerun the `start.bat` file to confirm the changes. QEMU was restarted, resolving the space issue.
    ---
@@ -109,7 +109,7 @@ This document is designed to serve as a reliable resource for setting up Pi-hole
          sudo dpkg --configure -a
          sudo apt --fix-broken install
          ```
-         ![QRPS](playbook/img/QRPS3.png)
+         ![QRPS](Playbook/img/QRPS3.png)
 
       5. **Retry the Update and Upgrade**
          - After addressing the dependency issues, rerunning the update and upgrade process completes the system updates successfully:
@@ -137,7 +137,7 @@ This document is designed to serve as a reliable resource for setting up Pi-hole
          psk="Your-WiFi-Password"
    }
    ```
-      ![QRPS](playbook\img\QRPS4.png)
+      ![QRPS](Playbook/img/QRPS4.png)
 
 
    2. **Fix and Start Networking Services**:
@@ -151,7 +151,7 @@ This document is designed to serve as a reliable resource for setting up Pi-hole
    ```bash
    ping google.com
    ```
-      ![QRPS](playbook\img\QRPS5.png)
+      ![QRPS](Playbook/img/QRPS5.png)
 
 ---
 
@@ -207,7 +207,7 @@ This document is designed to serve as a reliable resource for setting up Pi-hole
       pihole -r
       ```
       - Select either **"Repair"** or **"Reconfigure"** as needed.
-         ![QRPS](playbook\img\QRPS6.png)
+         ![QRPS](Playbook/img/QRPS6.png)
 
 ---
 
@@ -221,7 +221,7 @@ This document is designed to serve as a reliable resource for setting up Pi-hole
    ```bash
    ifconfig
    ```
-   ![QRPS](playbook\img\QRPS6.1.png)
+   ![QRPS](Playbook/img/QRPS6.1.png)
 
 - Look for the IP address associated with your network interface, such as `eth0` or `wlan0`. For example, the IP address might be `10.0.2.15`.
 
@@ -234,7 +234,7 @@ This document is designed to serve as a reliable resource for setting up Pi-hole
       - **Primary DNS**: The IP address of the Pi-hole server, e.g., `10.0.2.15`.
       - **Secondary DNS**: A fallback DNS, e.g., `8.8.8.8` (Google DNS).
    4. Save the settings and restart the network adapter to apply the changes.
-      ![QRPS](playbook\img\QRPS7.png)
+      ![QRPS](Playbook/img/QRPS7.png)
 
 ### 2. **On Your Android Phone**
    - **Overview**: Configure your phone's Wi-Fi settings to route DNS queries through the Pi-hole server.
@@ -245,7 +245,7 @@ This document is designed to serve as a reliable resource for setting up Pi-hole
    ```bash
    ipconfig
    ```
-      ![QRPS](playbook\img\QRPS7.1.png)
+      ![QRPS](Playbook/img/QRPS7.1.png)
    - Look for the IPv4 Address under the active network connection. For example, the IP address might be `10.0.0.145`.
 
 ---
@@ -258,17 +258,17 @@ This document is designed to serve as a reliable resource for setting up Pi-hole
       - **DNS 2**: A fallback DNS, e.g., `8.8.8.8`.
    4. Save the changes.
 
-      ![QRPS](playbook\img\QRPS7.2.png)
+      ![QRPS](Playbook/img/QRPS7.2.png)
 ---
 
 ### 3. **Access the Pi-hole Admin Interface**: 
   - Use a web browser to access the Pi-hole dashboard for monitoring and configuration: 
     - From your laptop: Navigate to `http://10.0.2.15/admin`. 
-    ![QRPS](playbook\img\QRPS7.4.png)
+    ![QRPS](Playbook/img/QRPS7.4.png)
 ---
     - From your phone: Navigate to `http://10.0.0.145:8090/admin`. 
 
-      ![QRPS](playbook\img\QRPS7.3.png)
+      ![QRPS](Playbook/img/QRPS7.3.png)
 
   - The dashboard provides tools to view real-time DNS queries, blocklists, and system status.
 ---
@@ -283,12 +283,12 @@ This document is designed to serve as a reliable resource for setting up Pi-hole
   ```bash
   dig google.com @127.0.0.1
   ```
-  ![QRPS](playbook/img/QRPS8.png)
+  ![QRPS](Playbook/img/QRPS8.png)
 
   ```bash
   nslookup google.com 127.0.0.1
   ```
-  ![QRPS](playbook/img/QRPS9.png)
+  ![QRPS](Playbook/img/QRPS9.png)
 
 - These commands query the local Pi-hole server (`127.0.0.1`) to ensure DNS requests are being processed.
 
