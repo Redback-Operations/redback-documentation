@@ -2,6 +2,13 @@
 sidebar_position: 2
 ---
 
+:::info
+Document Creation: [5/12/2024]. Last Edited: [10/12/2024]. Authors: [Luk Gvozdenac].
+
+
+Document Code: [PE-2]. Effective Date: [10/12/2024]. Expiry Date: [10/12/2025].
+:::
+
 # Pose Estimation and Matching Project
 
 This project focuses on pose estimation Data Analytics and its usecase and application in improving accuracy and keyframe detection. This file is used to visualise data from the pose_estimation_matching.ipynb model and detect weakpoints in the algorithm.
