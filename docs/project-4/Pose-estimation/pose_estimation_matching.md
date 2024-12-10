@@ -2,6 +2,13 @@
 sidebar_position: 1
 ---
 
+:::info
+Document Creation: [5/12/2024]. Last Edited: [10/12/2024]. Authors: [Luk Gvozdenac].
+
+
+Document Code: [PE-1]. Effective Date: [10/12/2024]. Expiry Date: [10/12/2025].
+:::
+
 # Pose Estimation and Matching Project
 
 This project focuses on pose estimation and matching using OpenCV’s DNN (Deep Neural Network) module with a pre-trained TensorFlow model. The primary goal is to detect and classify human poses in images and videos, and to compare the similarity between different poses.
