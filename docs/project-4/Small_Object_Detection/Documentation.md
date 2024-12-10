@@ -2,11 +2,7 @@
 # Small Object Detection: Football Tracking Project
 
 ## Project Overview
-The **Crowd Monitoring & Player Tracking** initiative is designed to transform the understanding of sports on the field. By integrating advanced computer vision models and IoT technologies, this initiative provides real-time insights into player movements, interactions, and crowd behaviour.
-
-The primary goals of **Project Orion** are to enhance player safety by monitoring player fatigue, tracking performance, and identifying injury risks. Machine learning and predictive models will be applied to generate valuable data, guiding decisions to improve safety and performance. This project aims to lead in sports technology, introducing innovative approaches to tracking and analysing sports dynamics.
-
-
+### Small object detection, particularly for footballs, was a significant challenge in the tracking system due to their small size, rapid movement, and visual similarity to other objects like jerseys or field markings. To address this, the YOLOv8 architecture was enhanced with an additional convolutional head layer to detect objects as small as 4x4 pixels, improving ground-level football detection accuracy. A custom loss function was implemented to penalize misclassified bounding boxes, reducing false positives. SAHI (Slicing Aided Hyper Inference) further enhanced small object detection by focusing on localized regions but introduced latency, limiting real-time applicability. Frame interpolation techniques were also employed to improve detection continuity during rapid movements. These solutions provided robust football detection across diverse scenarios and video qualities.
 
 ## Objectives
 
@@ -22,9 +18,6 @@ The primary goals of **Project Orion** are to enhance player safety by monitorin
 ### Efficient Data Storage and Access
 - Design a data storage system that is efficient and easy to search.
 - Develop a user-friendly interface for quick access to specific information.
-
-
-## Completed Deliveries
 
 ### Custom Dataset Creation
 - Manually annotated **more than 1000 images** of football matches.
