@@ -14,7 +14,7 @@ This document provides a brief overview of the objective, rationale, and methodo
 
 ---
 
-## Project Background and Justification
+## Project Background, Objectives and Justification
 
 ### Project Background
 Redback Operations currently lacks an email infrastructure. As a result, it presents operational challenges which are outlined below:
@@ -42,11 +42,49 @@ The major objective of this project is to address the challenges listed above, a
 4. Enhancement of Scalability and Security  
 5. Development of Comprehensive Documentation  
 
+To support the achievement of the project objectives, **Microsoft 365 Exchange Online** was chosen as the preferred platform based on the following criteria:  
+1.	Advanced security features, compliance, and governance capabilities.  
+2.	Scalability features to support future growth and integration with the company’s other systems.  
+3.	Support for advanced security capabilities and email authentication protocols such as SPF, DKIM, and DMARC.  
+4.	High availability is supported by Microsoft’s global infrastructure.  
+
+---
+
+## Alternatives  
+Before proceeding with this project initiative of implementing a secure infrastructure using Microsoft 365 and GoDaddy, alternative solutions were explored to address the communication and security needs of Redback Operations. The alternatives explored are outlined below:  
+### 1.	Alternative 1: Use Free Email Services (e.g., Gmail, Hotmail, or Yahoo)  
+**Description:** Utilize free email services such as Gmail, Hotmail or Yahoo to create email accounts for Redback Operations.  
+
+**Advantages:**  
+•	Zero initial setup cost.  
+•	Easy to create and configure email accounts without requiring any specialized knowledge.  
+
+**Disadvantages:**  
+•	Lacks credibility and professionalism due to generic domains (eg: blueteam-redbackops@gmail.com).  
+•	Limited options for advanced configuration, customization, and security features compared to enterprise-grade solutions.  
+•	No provision for centralized administration of email identities and security policies.  
+
+**Conclusion:** This alternative was not selected due to limitations in scalability, security, and brand alignment.  
+
+### 2.	Alternative 2: Self-Hosted Email Server  
+Description: Set up an on-premises email server within Redback Operations’ on-premises infrastructure.  
+
+**Advantages:**  
+•	Full control over email infrastructure and security configurations.  
+•	No dependency on third-party providers.
+
+**Disadvantages:**  
+•	Requires an existing robust on-premises infrastructure, and likely incurs significant upfront implementation and ongoing maintenance efforts and costs.  
+•	Requires dedicated resources – in terms of infrastructure and personnel.  
+•	High risk of outages and downtime without proper redundancy mechanisms.  
+
+**Conclusion:** This alternative was not selected due to the lack of an existing robust on-premises infrastructure at Redback Operations, as well as the significant cost and efforts required for implementation and maintenance.
+
 ---
 
 ## Project Scope
 
-### Included in Scope:
+### Included in Scope
 1. Domain Registration  
 2. Email Service Provider (ESP) Setup  
 3. Email Account Creation  
@@ -56,7 +94,7 @@ The major objective of this project is to address the challenges listed above, a
      - **As-Built Documentation**
      - **Handover Documentation**
 
-### Excluded from Scope:
+### Excluded from Scope
 1. Integration with third-party tools or services (except for Valimail used for DMARC monitoring).
 
 ---
@@ -132,6 +170,33 @@ The major objective of this project is to address the challenges listed above, a
 
 4.15. Implement email retention and **DLP (Data Loss Protection)** policies.  
 4.16. Validate by attempting to delete sensitive emails and confirming that the policies prevent unauthorized deletion or sharing.
+
+---
+
+## Acceptance (Key Success Factors)
+
+The acceptance criteria for the project are outlined below:
+
+1. **Domain Registration**:  
+     Successful registration of a domain that aligns with the company’s branding.
+
+2. **Email Infrastructure**:  
+     Successful implementation of a functional email infrastructure.
+
+3. **Email Authentication Protocols**:  
+     Successful implementation and validation of email authentication security protocols (SPF, DKIM, DMARC).
+
+4. **CIS Benchmark Controls**:  
+     Successful implementation and validation of CIS Benchmark recommended controls.
+
+5. **Advanced Security Controls**:  
+     Successful implementation and validation of advanced security controls:
+     - Mail transport rules to block IoCs and unauthorized senders.
+     - Strict TLS encryption for email transmissions.
+     - Multi-Factor Authentication (MFA) for email accounts.
+     - Geofencing to restrict email access by location.
+     - Email activity logging and auditing.
+     - Email retention and Data Loss Protection (DLP) policies.
 
 ---
 
