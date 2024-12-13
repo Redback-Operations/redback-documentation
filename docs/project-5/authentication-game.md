@@ -7,7 +7,7 @@ sidebar_position: 2
 Creating a extra step in secure login for kids
 
 :::info
-**Document Creation:** 15 September, 2024. **Last Edited:** 24 September, 2024. **Author:** Jessica Maugueret
+**Document Creation:** 15 September, 2024. **Last Edited:** 13 December, 2024. **Author:** Jessica Maugueret
 :::
 
 
@@ -22,35 +22,53 @@ You can see a timelapse of my work, showcasing the development of these avatars 
 
 ## Images
 
-### Blue Robot
+### Geo - Blue Robot
 Designed with a friendly and approachable appearance, the blue robot features a smiling expression, making it more appealing to children. The use of a generic, vibrant blue color enhances its broad appeal, creating a character that feels safe and inviting for younger audiences.
 
 ![blue-robot](img\blue-robot.PNG) 
 ![blue-robot-back](img\blue-robot-back.PNG)
 
-### Orange Robot
+### Toast - Orange Robot
 The orange robot has a more rustic and edgy design, highlighted by its slightly mischievous grin. The color palette was chosen to give it a rugged look, which contrasts with the other characters, giving it a unique personality that might resonate with those who enjoy a more playful and less conventional character.
 
 ![orange-robot](img\orange-robot.PNG) 
 ![orange-robot-back](img\orange-robot-back.PNG)
 
-### Beige Robot
+### Tally - Beige Robot
 This robot has a cutesy, rounded form, with wide, expressive features. The two-tone color scheme softens its appearance, making it a more comforting and approachable character. Its design is meant to appeal to users who favor warmth and familiarity.
 
 ![beige-robot](img\beige-robot.PNG) 
 ![beige-robot-back](img\beige-robot-back.PNG)
 
-### Green Robot
+### Chim - Green Robot
 With a more 3D appearance, the green robot stands out due to its distinctive pattern and structural design. The texture gives it depth, and its geometric shape makes it feel more modern and mechanical, attracting users who appreciate a more complex, detailed look.
 
 ![green-robot](img\green-robot.PNG) 
 ![green-robot-back](img\green-robot-back.PNG)
 
-### Purple Robot
+### Zappy - Purple Robot
 This character has a goofy and playful design, with exaggerated features like its wide mouth and antenna-like shapes. The use of purple makes it more whimsical, creating an energetic and fun character that can appeal to users who enjoy more lighthearted and quirky designs.
 
 ![purple-robot](img\purple-robot.PNG) 
 ![purple-robot-back](img\purple-robot-back.PNG) 
+
+### Squeak - Yellow Robot
+The yellow robot radiates cheerfulness with its rounded form and lively expression. Its simple and vibrant design, highlighted by soft pigtails, makes it highly approachable for younger audiences. The character exudes energy and joy, appealing to those who enjoy playful and lighthearted themes.
+
+![yellow-robot](img\yellow-robot.PNG) 
+![yellow-robot-back](img\yellow-robot-back.PNG) 
+
+### Chopper - Pink Robot
+The pink robot is designed to resemble an octopus, blending marine-inspired elements with a playful robotic style. Its spherical body and tentacle-like base give it a soft yet dynamic look, while the propeller on top adds a whimsical touch. The textured shading and blush tones enhance its charm, making it a delightful character for users who enjoy unique and adorable designs.
+
+![pink-robot](img\pink-robot.PNG) 
+![pink-robot-back](img\pink-robot-back.PNG) 
+
+### Grumpy - Red Robot
+The red robot takes inspiration from a crab, with its angular, shell-like design and claw-like arms. Its tank-like body and claw-like features bring a sense of strength and resilience, while the sharp angles and deep red tones emphasize its assertive personality. Despite its tough exterior, the playful design ensures it remains engaging and fun for all users..
+
+![red-robot](img\red-robot.PNG) 
+![red-robot-back](img\red-robot-back.PNG) 
 
 Together, all the characters are designed to cater to different tastes and preferences, ensuring that there is a robot for everyone.
 
