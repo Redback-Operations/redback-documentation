@@ -140,16 +140,11 @@ Here are some of the commonly used commands:
 `docker compose` usually followed by the dockerfile that contains a list of containers.
 
   
+To run the docker compose which starts the core infrastructure (everything besides mongo db) the command done in the "Core DW Infrastructure" directory is:
 
-The Linux syntax with Docker requires specifying the .yml file in the event of actioning commands for the whole docker environment. In the Data Warehouse project's case, it is to perform an action on all the docker containers specified in the VM.
-At the time of writing the user would enter:
-
-`docker compose data-lakehouse2.yml up`
-
-'data-lakehouse2.yml' is a file that contains information on the containers, sort of like a list so that commands can be run on all containers at once.
+`docker compose up -d`
 
   
-
 There is a lot of documentation freely available for using docker on a Linux VM for more detailed information.
 
   
@@ -158,11 +153,11 @@ There is a lot of documentation freely available for using docker on a Linux VM 
 
 It is important to note that stopping docker containers individually or as a collective will remove data associated with the container.
 
-For instance, if I need to stop or restart the Dremio container and I have data within the Dremio container (SQL scripts, source information, usernames and admin information) this will remove this associated information unless there is a 'volume' consideration in the docker file. In the case of the data warehouse data-lakehouse2.yml there are volumes set up to capture information in the event of a restart or stop of the container.
+For instance, if I need to stop or restart the Dremio container and I have data within the Dremio container (SQL scripts, source information, usernames and admin information) this will remove this associated information unless there is a 'volume' consideration in the docker file. In the case of the core infrastructure there are volumes set up to capture information in the event of a restart or stop of the container.
 
   
 
-Below is an extract from the data-lakehouse2.yml. This serves as an example of using volumes to retain data.
+Below is an extract from the docker-compose.yml. This serves as an example of using volumes to retain data.
 
 ```
 
@@ -319,9 +314,43 @@ Alternatively, Dremio offers a SQL endpoint that through code you can query the 
 
 See the documentation of [Dremio API ](https://redback-operations.github.io/redback-documentation/docs/data-warehousing/Data%20Lakehouse/Dremio-API(For%20data%20analysts)) also located in the Data warehouse documentation for a detailed explanation.
 
+
+## Data Provenance Pipeline
+
+A key part of the infrastructure introduced in T3 of 2024 was the provenance pipeline with the purpose of tracking and storing historical meta data about all changes that occur in the system including data upload, transformation, access, deletion, etc.
+
+The key aspects of the pipeline are the ELK stack (elasticsearch, logstash, kibana) and a postgres database acting as a provenance store.
+
+### Logstash 
+
+Logstash is a tool for parsing data of various schemas and formats and directing them to another source, it is running on port 5044 though is only access through code.
+
+### Elasticsearch 
+
+Elasticsearch is the storage and querying tool for logs and has its own external volume and the raw json storage can be accessed through the below ports.
+
+See indexes: [http://10.137.0.149:9200/_cat/indices?v](http://10.137.0.149:9200/_cat/indices?v)
+
+Query minio logs: [http://10.137.0.149:9200/minio-*/_search?pretty/](http://10.137.0.149:9200/minio-*/_search?pretty/)
+
+Query file upload service logs: [http://10.137.0.149:9200/upload-service-*/_search?pretty](http://10.137.0.149:9200/upload-service-*/_search?pretty)
+
+### Postgres
+
+Postgres is the provenance store and must be accessed after terminal ssh into the VM using this command:
+
+```sh
+docker exec -it postgres psql -U <username> -d <database-name>
+```
+
+### Kibana
+
+Kibana is a tool for visualizing the logs stored in elasticsearch. Whilst it is connected to elasticsearch and operational, no dashboards have been created as of yet.
+
+Kibana: [http://10.137.0.149:5601](http://10.137.0.149:5601)
   
 
-### Nessie
+### Nessie (Not currently running in production)
 
 Nessie is a metadata store that captures information about the files in Dremio and keeps it in case of corruption or for historical analysis.
 
@@ -331,7 +360,7 @@ The Data Warehouse VM is running a Nessie instance, and the proof of concept has
 
   
 
-### Spark Notebooks and the Virtual Machines
+### Spark Notebooks and the Virtual Machines (Not currently running in production)
 
 The Data Warehouse virtual machine is successfully running Apache Spark as part of the dockerfile.
 
@@ -379,8 +408,7 @@ At the time of writing there are opportunities to:
 
   
   
-
-- Organise the docker file and containers into specific projects so they can be better managed, turned on/off, restarted, removed.
+- Implement the ability to bulk upload to the file upload service
 
 - Refine and expand the pre-processing data in the file upload service to accommodate more dynamic transformations of different types of data/data types.
 

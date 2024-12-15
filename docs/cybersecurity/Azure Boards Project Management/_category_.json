@@ -1,8 +1,0 @@
-{
-  "label": "Project Management - Azure Boards",
-  "position": 12,
-  "link": {
-    "type": "generated-index",
-    "description": "The following documentation is a reference for Project Leaders and team members on how to use Azure Boards for future project management & worklow management. Note that while this work primarily focuses on use cases for the Cyber Security team, other project teams can utilize this documentation to build their own project dashboards and workflows."
-  }
-}

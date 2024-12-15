@@ -100,7 +100,50 @@ A completed build will be created at the end of each trimester of work through t
 
 #### 6.3.1. User Interface Design Guidelines for Mobile
 
-TODO  
+##### 6.3.1.1 UI Clarity and Simplicity
+The UI should be clean, simple, and easy to navigate. Functional elements need to be visually distinct, ensuring that users can complete tasks intuitively without confusion. Labels, icons, and navigation elements should all be self-explanatory and unambiguous, promoting a seamless user experience.
+
+- Simple, minimalistic design that prioritizes usability over aesthetic complexity.
+- Clear labeling and visual hierarchy to direct user attention to key actions.
+- Consistent use of design elements like buttons and menus across all screens.
+
+##### 6.3.1.2 Platform-Specific Design Adherence
+The UI should respect the design guidelines of the respective platforms. For iOS, this means adhering to the Human Interface Guidelines with emphasis on smooth transitions and intuitive gestures. For Android, Material Design principles should be employed to ensure consistency and ease of use across devices.
+
+- iOS: Smooth, intuitive transitions with uniform typography.
+- Android: Use Material Design components such as FABs, cards, and consistent padding.
+
+##### 6.3.1.3 Functionality Over Aesthetics
+The primary focus should be on functionality rather than aesthetic appeal. Each UI element must contribute to improving the user experience by helping users accomplish their tasks effectively. Avoid unnecessary decorations that might hinder usability.
+
+- Functionality is prioritized in design decisions, ensuring users can accomplish tasks efficiently.
+- Tooltips and feedback mechanisms help guide users through complex workflows.
+
+##### 6.3.1.4 Consistency Across Platforms
+Consistency is key to creating a smooth, reliable user experience. While the app should conform to platform-specific design patterns, there should be a consistent look and feel across iOS and Android platforms. This includes colors, fonts, and iconography.
+
+- Maintain consistency in navigation, color schemes, and visual elements across platforms.
+- Ensure responsive design to support a variety of screen sizes.
+
+##### 6.3.1.5 Accessibility
+Not a must have but would be nice to consider accessibility features while creating designs. This also will also help in future during automation tool integration as accessibility lables are used by most tools. The UI must be accessible to users of all abilities, including those with disabilities. Features like screen reader support, voice control, and sufficient color contrast are essential for making the app usable by everyone.
+
+- Enable support for screen readers and voice commands.
+- Use high-contrast colors and legible fonts for readability.
+
+##### 6.3.1.6 Privacy and Safety in UI
+The app must ensure that users feel safe and that their privacy is respected. The design should include elements that make security and privacy settings easily accessible and understandable. Sensitive information should be handled securely, with features like data encryption and clear indicators of what personal data is being used.
+
+- Provide clear privacy settings with straightforward options for users to manage their data.
+- Ensure that any permissions requested are transparent, with explanations for why the data is needed.
+- Display alerts or notifications when personal data is being accessed or shared.
+
+##### 6.3.1.7 User Feedback and Error Handling
+The UI should provide users with clear feedback when they interact with the app. This includes error messages, confirmation dialogs, and loading indicators. Error messages should be informative and guide users towards resolving issues.
+
+- Provide clear, actionable error messages.
+- Use loading indicators and progress bars to show users when actions are in progress.
+
 
 #### 6.3.2. User Interface Design Guidelines for Unity
 
