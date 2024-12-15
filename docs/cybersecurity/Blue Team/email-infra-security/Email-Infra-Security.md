@@ -108,68 +108,78 @@ Description: Set up an on-premises email server within Redback Operations’ on-
 
 #### 2. Email Service Provider (ESP) Setup
 2.1. Research and select an ESP.  
-2.2. Set up email infrastructure by configuring the selected ESP with the registered domain.  
-2.3. Create initial email accounts (e.g., `admin@redbackops.com`).
+2.2. Set up email infrastructure by configuring the selected ESP.  
+2.3. Create an initial email account (e.g., `adm-redbackops@redbackops.com).
 
-### Phase 2 – Initial Email Setup and DNS Configuration
-#### 3. DNS Configuration & Validation
-3.1. Configure DNS records:  
-     - Add a TXT record to verify domain ownership.  
-     - Add an MX record to route emails to the domain.  
-     - Add a CNAME record to configure email settings for users automatically.  
-     - Add a TXT record to configure SPF.  
-     - Add CNAME records to configure DKIM.  
-     - Add a TXT record to configure DMARC.
+### Phase 2 – Initial Email Setup and DNS Configuration  
+#### 3. Email Infrastructure Setup  
+3.1.	Set up email infrastructure by configuring the selected ESP with the registered domain.
 
-3.2. Validate DNS propagation:  
-     - Use online tools such as **MXToolbox** and **Dmarcian**.  
-     - Use command-line tools such as `nslookup`.
+#### 4. DNS Configuration & Validation
+4.1. Configure DNS records:  
+4.1.1. Add a TXT record to verify domain ownership.  
+4.1.2. Add an MX record to route emails to the domain.  
+4.1.3. Add a CNAME record to configure email settings for users automatically.  
+4.1.4. Add a TXT record to configure SPF.  
+4.1.5. Add CNAME records to configure DKIM.  
+4.1.6. Add a TXT record to configure DMARC.  
+
+#### 5. DNS Propagation Validation:  
+5.1. Using online tools such as **MXToolbox** and **Dmarcian**.  
+5.2. Using command-line tools such as `nslookup`.  
+
+#### 6. New E-mail Identities/Users Creation  
+6.1.	Create the initial batch of new e-mail identities/users for Redback Operations.  
 
 ### Phase 3 – SPF, DKIM, and DMARC Implementation
-#### 4. Security Controls Implementation & Validation
-4.1. Implement fundamental email authentication protocols:  
-     - Configure SPF  
-     - Enable DKIM  
-     - Implement DMARC:
-          - Configure DMARC policy  
-          - Configure DMARC monitoring and reporting using Valimail
+#### 7. Email Authentication Protocols Implementation (SPF, DKIM, DMARC)  
+7.1. Configure SPF  
+7.2. Enable DKIM  
+7.3. Implement DMARC:  
+7.3.1. Configure DMARC policy  
+7.3.2. Configure DMARC monitoring and reporting using Valimail   
 
-4.2. Validate email authentication protocols:  
-     - Use online tools such as **MXToolbox**, **Dmarcian**.  
-     - Use command-line tools such as `nslookup`.
+#### 8. Email Authentication Protocols Validation (SPF, DKIM, DMARC)  
+8.1. Use online tools such as **MXToolbox**, **Dmarcian**.  
+8.2. Use command-line tools such as `nslookup`.  
 
-### Phase 4 – Additional security controls based on the CIS Foundations Benchmark guidelines
-4.3. Implement additional security controls based on **CIS Foundations Benchmark** guidelines:  
-     - Anti-phishing Policy  
-     - Anti-spam Policy  
-     - Anti-malware Policy  
-     - Safe Attachments Policy  
-     - Safe Links Policy  
-     - Content Filtering Policy  
-     - Common Attachment Types Filtering Policy  
-     - Connection Filtering Policy  
-     - Alert Policies  
+#### 9. Email Authentication Protocols Functional Test (SPF, DKIM, DMARC)  
+9.1.	Send test e-mail using a redbackops.com email account (e.g., adm-redbackops@redbackops.com) through Outlook, and checking e-mail headers.  
+9.2.	Send a test e-mail using a third-party email service provider (e.g.: MailChimp), sending a test e-mail, and checking e-mail headers.  
+9.3.	Perform a spoofing test using online tools such as https://www.dmarctester.com/ .  
 
-4.4. Validate using the recommended audit guidelines per the **CIS Foundations Benchmark**.  
+### Phase 4 – Additional security controls based on the CIS Foundations Benchmark guidelines  
+10. Implement additional security controls based on **CIS Foundations Benchmark** guidelines:  
+10.1. Anti-phishing Policy  
+10.2. Anti-spam Policy  
+10.3. Anti-malware Policy  
+10.4. Safe Attachments Policy  
+10.5. Safe Links Policy  
+10.6. Content Filtering Policy  
+10.7. Common Attachment Types Filtering Policy  
+10.8. Connection Filtering Policy  
+10.9. Alert Policies  
+
+11. Validate using the recommended audit guidelines per the **CIS Foundations Benchmark**.  
 
 ## Phase 5 – Additional Security Controls
-4.5.  Implement the use of mail transport rules to maintain a list of IoC and blocked senders list and reject emails from those IoC and blocked sender sources.  
-4.6.  Validate by adding a test sender address and IP address to the blocked senders list and confirming that the emails are blocked when sent from the listed sender address and IP address.  
+12. Implement the use of mail transport rules to maintain a list of IoC and blocked senders list and reject emails from those IoC and blocked sender sources.  
+13. Validate by adding a test sender address and IP address to the blocked senders list and confirming that the emails are blocked when sent from the listed sender address and IP address.  
 
-4.7.  Enforce **Strict TLS encryption** instead of Opportunistic TLS for all email transmissions to ensure data confidentiality and integrity during transport.  
-4.8.  Validate **Strict TLS encryption** by checking email headers and ensuring TLS is enforced.  
+14. Enforce **Strict TLS encryption** instead of Opportunistic TLS for all email transmissions to ensure data confidentiality and integrity during transport.  
+15. Validate **Strict TLS encryption** by checking email headers and ensuring TLS is enforced.  
 
-4.9.  Enforce **Multi-Factor Authentication (MFA)** for email accounts.  
-4.10. Validate MFA is enabled by attempting to log in and verifying that the second authentication step is prompted.  
+16. Enforce **Multi-Factor Authentication (MFA)** for email accounts.  
+17. Validate MFA is enabled by attempting to log in and verifying that the second authentication step is prompted.  
 
-4.11. Implement geofencing for email access.  
-4.12. Validate by attempting email access from an unauthorized location and ensuring access is blocked.  
+18. Implement geofencing for email access.  
+19. Validate by attempting email access from an unauthorized location and ensuring access is blocked.  
 
-4.13. Implement email activity logging and auditing.  
-4.14. Validate by reviewing logs and ensuring that email activities are captured.  
+20. Implement email activity logging and auditing.  
+21. Validate by reviewing logs and ensuring that email activities are captured.  
 
-4.15. Implement email retention and **DLP (Data Loss Protection)** policies.  
-4.16. Validate by attempting to delete sensitive emails and confirming that the policies prevent unauthorized deletion or sharing.
+22. Implement email retention and **DLP (Data Loss Protection)** policies.  
+23. Validate by attempting to delete sensitive emails and confirming that the policies prevent unauthorized deletion or sharing.
 
 ---
 
