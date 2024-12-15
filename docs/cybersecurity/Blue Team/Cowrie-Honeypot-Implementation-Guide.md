@@ -69,7 +69,7 @@ The necessary tools for installing the Cowrie honeypot are available after the c
 
 #### Reference Screenshot
 
-![HP](Playbook/img/HP1.jpg)
+![HP](Playbook/img/HP1.png)
 
 ---
 
