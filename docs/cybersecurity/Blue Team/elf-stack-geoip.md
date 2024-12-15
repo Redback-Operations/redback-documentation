@@ -115,8 +115,8 @@ Section Explanation
 
  #JSON Configuration Options
 1.	**keys_under_root: true**
-•	Brings the JSON fields directly into the root of the event in Elasticsearch.
-•	For example, if the JSON log contains {"field1": "value1", "field2": "value2"}, these fields will appear at the root level instead of being nested under a json object.
+- Brings the JSON fields directly into the root of the event in Elasticsearch
+- For example, if the JSON log contains `{"field1": "value1", "field2": "value2"}`, these fields will appear at the root level instead of being nested under a JSON object
 2.	**add_error_key: true**
 •	Adds an error key to the event if there is an issue parsing the JSON.
 •	Useful for debugging malformed logs or unexpected structures.
