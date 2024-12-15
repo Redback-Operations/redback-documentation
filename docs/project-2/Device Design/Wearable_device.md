@@ -13,7 +13,7 @@ This page and its siblings document the  hardware for Redback-Operation's *Lache
 
 # Background/Objective
 
-Lachesis (Lak-iss-iss) is the middle sister of the three fates who's role is the alotter of fates. We thought the name was apt as this device is ostensibly attempting to provide realtime predictions about potentially life altering ailments
+Lachesis (Lak-iss-iss) is the middle sister of the three moirai who's role is the alotter / measurer of each persons life and destiny. We thought the name was apt as this device is ostensibly attempting to provide realtime predictions about potentially life altering ailments
 
 The smartwatch aspect of this project will be the primary physical interface between our users and the work that has been conducted between each of our project teams. It is a bespoke design to facilitate the capture of data of interest to our Predictive Modelling and Analytics teams while also designed with the aim of providing a feature set that will encourage our users to actively engage with the device. 
 
