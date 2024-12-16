@@ -77,13 +77,15 @@ Ensure the following DNS records are published:
 **7.3.1. Configure DMARC Policy**
     - From the table above, add the corresponding TXT record to the domain’s DNS.
     - Information on DMARC tags: [DMARC Tags](https://mxtoolbox.com/dmarc/details/dmarc-tags).  
+
+![Protocols Implementation](./img-phase3/1_protocol-dns-configuration.jpg)  
   
 **7.3.2. Configure DMARC Monitoring and Reporting**  
 Use Valimail for DMARC monitoring and reporting:
   - `rua=mailto:dmarc_agg@vali.email`
   - `ruf=mailto:dmarc_agg@vali.email`  
 
-![Protocols Implementation](./img-phase3/1_protocol-dns-configuration.jpg)  
+![Protocols Implementation](./img-phase3/2_valimail-auth-report.jpg)  
 
 ## 8. Email Authentication Protocols Validation (SPF, DKIM, DMARC)
 ### 8.1. Using Online Tools (e.g., MXToolbox)
