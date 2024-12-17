@@ -2,21 +2,18 @@
 sidebar_position: 1
 ---
 
-# Wearable IoT device for the Elderly
+# Lachesis Hardware
 
-![Block Diagram of the Smart watch and its components](img/IoTWearableBlock.drawio.png)
+![image of the custom PCB](./img/PCB_progress_image_top.jpg)
 
-This page and its children document the design and implementation of the hardware for Redback-Operations Smart Watch Project.
 
-We're eagerly seeking a name and branding for it with the shortlist of:
-- Safeguardia
-- Elli
-- Readbackaware
-- Awarewear
-- Lachesis
+
+This page and its siblings document the  hardware for Redback-Operation's *Lachesis*.
 
 
 # Background/Objective
+
+Lachesis (Lak-iss-iss) is the middle sister of the three moirai who's role is the alotter / measurer of each persons life and destiny. We thought the name was apt as this device is ostensibly attempting to provide realtime predictions about potentially life altering ailments
 
 The smartwatch aspect of this project will be the primary physical interface between our users and the work that has been conducted between each of our project teams. It is a bespoke design to facilitate the capture of data of interest to our Predictive Modelling and Analytics teams while also designed with the aim of providing a feature set that will encourage our users to actively engage with the device. 
 
@@ -24,28 +21,37 @@ When designing the hardware we've had to balance the considerations between our 
 
 
 
-
 # Getting Started
 
-In the interest of making this as accessible to the developer as it is to the user, we have opted to base our device on the [Arduino Nano IoT 33](https://store-usa.arduino.cc/products/arduino-nano-33-iot). This means that all one needs to start developing for the project is the Arduino IDE or a compatible tool-chain.
+In the interest of making this as accessible to the developer as it is to the user, we have opted to base our device on the [Arduino Nano IoT 33](https://store-usa.arduino.cc/products/arduino-nano-33-iot). This means that coding for the device is pretty simple, barring some quirks outlined in [the notes from the board evaluation](./Board_shakedown.md).
+You can even use the Arduino IDE. And we did for a while but that lead to some shoddy code practices and massive inconvenience so we've started a major code refactor using the [PlatformIO framework](https://platformio.org/).
 
-The Arduino IDE is available [here](https://www.arduino.cc/en/software) with binaries for Windows 10+, macOS (intel / apple) and Linux (appimage but its available in many package repos and can be compiled from source). 
 
-Going forward we will be migrating development to [PlatformIO](https://platformio.org/), A platform anogstic development environment for microcontrollers with extensions in a number of IDE's and text editors. 
+Doing so gives easy organisation, dependency management, unit testing and support for many more boards in case it is decided to use a processor with more oomph down the line. 
+The only thing to really note if you are only used to Arduino IDE is that instead of programming in an Arduino abstraction of C++, you're programming in a C++ file that includes the Arduino Library. 
 
-With a way to work on the codebase now installed and configured, you may find the device software under 
-`./Codebase/Complete_Code/`. \
-At present this is a monolithic file containing the entire firmware for the device but in future we will be modularizing it for ease of maintenance. 
+i.e 
+`` #include <Arduino.h> ``
+
+If you're very proficient you can do away with Arduino altogether and start using Zephyr RTOS as the platform but that will probably require another major code refactor so only do it if you feel confident that you can reimplement the existing codebase and more importantly, document it for future students
+
+
+
+With a way to work on the codebase now installed and configured, you may find the device software under  
+``./Codebase/Complete_Code/``  
 
 :::warning
-Please ensure that any API keys in use are added to `secrets.h` and add that file to your .gitignore
+Please ensure that any API keys in use are added to `secrets.h` and that it is still present in .gitignore
 :::
 
 Work on the PCB has been conducted in [Altium Designer](https://www.altium.com/altium-designer) however the files can be imported into KiCAD. 
 
 # Prerequisites
 
-The libraries in use are mostly available within the Arduino Library Manager and are drivers for the sensors and display module. Please make sure that you have them enabled / installed. 
+You can install the PlatformIO extension in VS code (recommended) or any of the other text editors listed [here](https://platformio.org/install/integration)
+Once installed the extension is installed simply use it to open the project folder and it will automatically retrieve the required libraries outlined in the `platformio.ini`  
+
+The packages below are listed for posterity because while you dont have to go through the trouble of manually installing them anymore, they generally also have references to each libraries documentation. 
 
 - [SPI.h - Built into Arduino.](https://www.arduino.cc/reference/en/language/functions/communication/spi/)
   - Enables communication with the Serial Peripheral Interface Protocol.
@@ -56,14 +62,8 @@ The libraries in use are mostly available within the Arduino Library Manager and
 - [Adafruit_Sensor.h - Available through the Library Manager and on github.](https://github.com/adafruit/Adafruit_Sensor)
   - Prerequisite Framework for other Adafruit Libraries.
 
-- [DHT.h - Available through the Library Manager and on github.](https://github.com/adafruit/DHT-sensor-library)
-  - Library for the DHT humidity / temperature sensor family. (Deprecated in the Mk2)
-
 - [Adafruit_GFX.h - Available through the Library Manager and on github.](https://github.com/adafruit/Adafruit-GFX-Library)
   - Core graphics library for Adafruit displays. 
-
-- [Adafruit_SSD1306.h - Available through the Library Manager and on github.](https://github.com/adafruit/Adafruit_SSD1306)
-  - Monochrome OLED display used in the initial prototype (Deprecated in the Mk2).
 
 - [Wire.h - Available through the Library Manager.](https://www.arduino.cc/reference/en/language/functions/communication/wire/)
   - Enables communication with the I2C protocol.
@@ -80,22 +80,23 @@ The libraries in use are mostly available within the Arduino Library Manager and
 - [WiFiUdp.h - Available through the Library Manager.](https://www.arduino.cc/reference/en/libraries/wifi/wifiudp/)
   - Library for UDP packet Tx / Rx.
 
-- [DFRobot_MAX30102.h - Must be downloaded and installed from the official repo.](https://github.com/DFRobot/DFRobot_MAX30102)
+- [DFRobot_MAX30102](https://github.com/DFRobot/DFRobot_MAX30102)
   - Library for the Heart-Rate and Oximeter Sensor.
   - To Install, download the library from the repo and save in your \Arduino\libraries directory.
 
-- [ThingSpeak.h - Available through the Library Manager and on github.](https://github.com/mathworks/thingspeak-arduino)
-  - Communications library for writing to the ThingSpeak API endpoints. This will probably be deprecated in the future due to the limited fields avaialable.
+- [ThingSpeak](https://github.com/mathworks/thingspeak-arduino)
+  - Communications library for writing to the ThingSpeak API endpoints. This is no longer being used due to data privacy concerns. 
+  - Get in touch with the data warehouse team because requirements have been established for capturing data and storing it in a secured Uni system however that got backburnered due to more pressing issues
 
-
+![Block Diagram of the Smart watch and its components](img/IoTWearableBlock.drawio.png)
 
 # Installation
 
-A fresh from the fab Mk2 PCB will require the burning of a bootloader before it can be used with the Arduino IDE.\
-The easiest way is to use another arduino acting as an ISP programmer. \
-This is easy but might be a bit scary your first time because fair warning, if you do it wrong you can brick the board.\
-But trust me, read the steps twice and then follow them step by step and she'll be right, you got this. \
-The official walkthrough is available [here](https://support.arduino.cc/hc/en-us/articles/8991429732124-Burn-the-bootloader-on-Arduino-Nano-33-IoT).
+A fresh from the fab Mk2 PCB will require the burning of a bootloader before it can be programmed over USB
+Detailed overview of this process is available in the [Board Bootloader page](./Board_Init.md) but for a quick overview check out the [official arduino page](https://support.arduino.cc/hc/en-us/articles/8991429732124-Burn-the-bootloader-on-Arduino-Nano-33-IoT)
+Notes:
+    - I used a Flipper Zero with the [DAP link community app](https://lab.flipper.net/apps/dap_link) because all of the JTAG debuggers I had around didn't support CMSIS-DAP / SWD (but I was just pilfering the old stuff from the hackerspace so go figure) and I came across [this video](https://www.youtube.com/watch?v=CvNKtrzIV8Y) which instantly cured my kickstarter backer buyer's remorse. It's a very interesting watch if you want to learn about debug interfaces.
+    - Just make sure that whatever you're using works over 3.3V or you'll probably fry the PCB
 
 # Folder Structure
 
@@ -126,17 +127,26 @@ The folder structure compartmentalizes the three aspects of our hardware reposit
 
 # Project Status
 
-Presently, we are constructing the first iteration to fit an actual wristwatch form factor. A number of components have been changed or removed and the rest are in the process of being integrated into a custom PCB based on the Arduino Nano IoT 33. Once this prototype has been ordered, work on the project will snowball as we work to programmatically integrate everything into a new firmware for the device as well as building out a case. 
+T3-24 was spent attempting to bring the board to an operational state and while it technically is, it is mired with issues which are outlined on the [Board Shakedown Page](./Board_shakedown.md)
+Due to the time spent trying to resolve these issues, the Code refactor isn't up to feature parity with the previous breadboard based prototype and assuming that the board isn't written off, work will need to be done to bring it back up to scratch. 
+
+Work has begun on a helper library for the new waveshare display as writing arbitrary elements to the screen is somewhat cumbersome. This venture is being led by Marcel Rumy who has taken the extension and will hopefully have more to say about it in January.
 
 # Future Considerations
 
-We've reached the limit of the Arduino IoT Nano 33's avaliable I/O and so any further additions will require either consolidation or migration to a new base Microcontroller. We are working to refactor the codebase such that it isn't monolithic. Based on testing with the new device it might be worth considering a larger screen but that determination has been set aside for later 
+We've reached the limit of the Arduino IoT Nano 33's avaliable I/O and so any further additions will require either clever hacks to consolidate the I/O or migration to a new base Microcontroller.This was perhaps the prime motivator behind the migration to PlatformIO, but all of the previously noted features are definitely a factor.
+Considering the difficulty involved in hardware manufacture and the issues outlined in the hand over document, it might even be worth pivoting the project to an off the shelf smart watch and writing an app for it to integrate with the other aspects of the project. This decision will be left in your hands dear reader as I have no idea what sort of talents will be available to you. 
 
 # Compliance and Safety
 As this is a data collection platform targeting health data in particular, it is **paramount** that any subjects who have their data captured provide informed consent to the data capture. 
-Please make use of the consent forms located under `Documentation/ReleaseForms` if using on someone not directly involved with development. 
+Anyone working on this must complete and understand the Redback ethics and security module to understand their responsibilities.
 
-It was mentioned above however it bares repeating: \
+:::danger
+An issue noted during shakedown testing is that due to a fault in the hardware design, the TMP36 temperature sensor becomes untouchably hot after a very short time of the board being powered. 
+If the board is not decommisioned due to this issue alone, please be wary
+:::
+
+It was mentioned above however it bares repeating: 
 Credentials and Secrets such as API_Keys are scraped from public repos **constantly**.\
  Please make use of the secrets.h file for WiFi credentials, user accounts and API keys and add it to your `.gitignore`.\
 Failure to do so will be grumbled at and subsequently mocked. 
@@ -148,3 +158,6 @@ The software is bound under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html
 The Datasheets are the property of their relevant authors and are only provided here for reference. 
 Written Artefacts, reports and visual media are tbd
 
+:::info
+**Document Creation:** 5 September 2024. **Last Edited:** 15 December 2024. **Authors:** Lachlan Costigan
+:::
