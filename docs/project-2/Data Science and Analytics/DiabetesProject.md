@@ -74,6 +74,10 @@ The Dataset contains 17 columns and 520 records
 ## Approach
 > Please discuss your analytics workflow / methodology here
 
+:::info
+**Document Creation:** 5 September 2024. **Last Edited:** 5 September 2024. **Authors:** Claire Van Gils, Lachlan Costigan
+:::
+
 
 [^1]: https://www.diabetesaustralia.com.au/about-diabetes/diabetes-in-australia/
 [^2]: https://www.abs.gov.au/statistics/health/causes-death/provisional-mortality-statistics/jan-may-2024

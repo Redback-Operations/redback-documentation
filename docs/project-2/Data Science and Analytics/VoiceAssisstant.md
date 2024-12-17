@@ -66,3 +66,7 @@ To run the project on a local machine, follow these steps:
 4. Use the code in neural_intents_code/assistants.py to update the neuralintents library code. NOTE: This step is required as for this feature, parts of the neuralintents>assistants.py code are updated.
 5. To retrain a model, run the train_model.py script
 6. Run the main.py script to start the voice assistant feature
+
+:::info
+**Document Creation:** 5 September 2024. **Last Edited:** 5 September 2024. **Authors:** Lachlan Costigan
+:::

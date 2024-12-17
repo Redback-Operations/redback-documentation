@@ -48,3 +48,6 @@ Models were trained using captured sensor data from the 1st wearable prototype
 
 >Please fill in with technical details of implementation 
 
+:::info
+**Document Creation:** 5 September 2024. **Last Edited:** 5 September 2024. **Authors:** Lachlan Costigan
+:::
