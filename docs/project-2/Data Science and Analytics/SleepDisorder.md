@@ -33,6 +33,11 @@ The dataset used for initial training of the model is ICHI14-BORAZIO[^1][^2], co
 
 >I dont have time to make a dataset summary table for this. 
 
+:::info
+**Document Creation:** 5 September 2024. **Last Edited:** 5 September 2024. **Authors:** Lachlan Costigan
+:::
+
 
 [^1]:Borazio, Marko & Berlin, Eugen & Kücükyildiz, Nagihan & Scholl, Philipp & Van Laerhoven, Kristof. (2014). Towards Benchmarked Sleep Detection with Inertial Wrist-worn Sensing Units. Proceedings - 2014 IEEE International Conference on Healthcare Informatics, ICHI 2014. 10.1109/ICHI.2014.24.   
 [^2]: [Source for the dataset itself](https://www.researchgate.net/publication/305212784_ICHI14-Borazio) 
+
