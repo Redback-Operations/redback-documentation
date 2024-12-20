@@ -64,3 +64,11 @@ sidebar_position: 1
 ## 
 ![Slide 20](./img/20_Conclusion.JPG)
 
+## Video Tutorials
+
+### MISP installation on Ubuntu using docker
+[![MISP installation on Ubuntu using docker](http://img.youtube.com/vi/x8T3hd1ItFs/0.jpg)](https://youtu.be/x8T3hd1ItFs)
+
+### Glance on MISP Dashboard
+[![Glance on MISP Dashboard](http://img.youtube.com/vi/9ZVIKV3WlHI/0.jpg)](https://youtu.be/9ZVIKV3WlHI)
+
