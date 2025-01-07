@@ -94,12 +94,37 @@ suite.
 #### _Pull Request Dashboard View_
 ![no-scroll-dashboard-view](/img/azure-boards-images/tech-use-guide/pr_view.png)
 
-#### _Query To Select PR's_
-![no-scroll-dashboard-view](/img/azure-boards-images/tech-use-guide/pr_view_query.png)
-
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
 ## Connecting to GitHub
+Setting up a reference to GitHub is relatively straightforward. To do so follow these steps:
+
+### _In GitHub_
+1. Go to the repository that you want to connect.
+2. Ask your team leader to add you as a "direct access" member. For team leaders,
+access this through **Repository Settings >> Collaborators and teams >> Manage access >> Direct access.**
+3. Now you need to generate a personal access token (PAT) through your user account settings. Go to
+**Settings >> Developer Settings >> Personal access tokens >> Tokens (classic) >> Generate new token.**
+4. Make sure that the token has the following, and only the following, permissions:
+    
+    <ol type="1" style={{ listStyleType: "decimal" }}>
+      <li> repo </li>
+      <li> admin:repo_hook </li>
+      <li> read:user </li>
+      <li> user:email </li>
+    </ol>
+
+### _In ADO_
+1. Go to **Project Settings >> Boards >> GitHub connections.**
+2. Click "New connection"
+3. Either paste your PAT or import it from a secure password manager.
+4. Click **Connect**.
+
+This will allow you to create new branches for tasks, or link tasks to existing 
+commits, PR's, or branches. Note that this is not related to the "Repos" service
+in ADO as this can only copy the GitHub repo and then host it separately. As of 
+writing this (January 2025) we are not planning on using this tool for repository 
+hosting.
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
@@ -117,5 +142,14 @@ of troubleshooting (from experience). Therefore, you should go to the
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
 ## Use of Custom Queries
+Azure DevOps gives you an easy to use query editor. As pictured below you add fields
+to check for, a logical operator for comparison, and the value. It is good practice 
+to have the following clause in all queries so that anything in the current semester
+is returned. More detail is included in the video demonstration.
+  
+` Changed Date > @Today - 100 `
+
+#### _Query To Select PR's_
+![no-scroll-dashboard-view](/img/azure-boards-images/tech-use-guide/pr_view_query.png)
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
