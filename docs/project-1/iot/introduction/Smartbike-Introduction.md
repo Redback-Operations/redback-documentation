@@ -8,6 +8,19 @@ sidebar_position: 2
 
 ...
 
+## Table of Contents
+1. [Introduction](#smartbike-introduction)
+2. [Makerspace](#makerspace)
+3. [Safety & Rules](#safety--rules)
+4. [Wahoo Components](#wahoo)
+    - [KICKR Smart Trainer](#kickr-smart-trainer)
+    - [KICKR Climb](#kickr-climb)
+    - [KICKR Headwind Bluetooth Fan](#kickr-headwind-blueooth-fan)
+    - [TICKR Heart Rate Monitor](#tickr-heart-rate-monitor)
+    - [Wahoo Cadence Sensor](#wahoo-cadence-sensor-redundant)
+5. [Raspberry Pi](#raspberry-pi)
+6. [Get Ready to Work with the Smartbike](#get-ready-to-work-with-the-smartbike)
+
 ## Makerspace
 
 The Smartbike is kept in the Makerspace under [building HF](https://www.deakin.edu.au/__data/assets/pdf_file/0003/817365/burwood-campus-map.pdf) on the Burwood campus. This is a fairly new space intended for IoT development which gives students access to equipment like soldering irons, 3D printers, laser cutting machines, etc. 
