@@ -165,12 +165,32 @@ The software and environment settings should be planned, documented, reviewed an
 
 ![](img/safe-code-guide/security-misconfiguration-eg.png)  
 
-In this example I provided what looks to be a really secure and safe running of Jupyter notebook, a tool that you would use regularly in data analysis with potentially sensitive data sets. However, 
-
+In this example an API token is hardcoded into the code for the request. As mentioned 
+above this is a common issue in pull request reviews. To use use tokens in code without including them in plain text you can store them with 3rd party services like cloud token hosting, or you can save them as environment variables on the server running the code.
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
 ## 6. VULNERABLE AND OUTDATED COMPONENTS
 
+### **_Gist_**
+
+Modern software is made up of a large number of inter-reliant parts that include in-house and 3rd party developers. Updates and patching are not automatic and require up to date knowledge of changes.
+
+### **_Look Out For_**
+
+- Document each component in the system as you build it to gain insight into dependency mappings.
+
+- Use automation tools to scan code repositories for outdated packages or ones with
+known security risks.
+
+- When adding dependencies make sure to subscribe to change alerts and newsletters.
+
+- **Always perform testing when updating or patching, not just when changing code.**
+
+### **_Example_**
+
+![](img/safe-code-guide/vulnerable-and-outdated-components-eg.png)  
+
+To illustrate how important it is to track your dependencies is, this single line includes the JavaScript Keras package. Within that package, 18 other packages are included, and within them who knows how many. It is impossible nowadays to write code from scratch or with just the standard libraries, and it is also impossible to directly verify every dependency relation within imported packages. That is why it is important to ensure all other areas of the system are secure, and that you use tools that can perform deep dependency scanning for you.
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
 ## 7. IDENTIFICATION AND AUTHENTICATION FAILURES
@@ -182,6 +202,26 @@ In this example I provided what looks to be a really secure and safe running of 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
 ## 9. SECURITY LOGGING AND MONITORING FAILURES
+
+### **_Gist_**
+
+You can't do anything about a security issue if you don't know about it. Monitoring and proper logging is required to gain valuable insight into issues so that they can be resolved.
+
+### **_Look Out For_**
+
+- Only log useful error information to people within the company. Providing too much information can aid bad actors.
+
+- When setting up internal logging functions in code, give as much information as possible.
+
+- Monitor groups of events and try to collate information.
+
+- Send important logs off to remote data stores so that they cannot be deleted by bad actors.
+
+### **_Example_**
+
+![](img/safe-code-guide/security-logging-and-monitoring-failures-eg.png)  
+
+In this example when the error thrown by the system is HIGH or above it may have to be kept for legal reasons such as sensitive user data leaks. It uses two sample functions. One to log to the usual place so that it is picked up by team members (the event itself should trigger monitoring), and the other to send it to a remote data store so that it can't be deleted by the bad actor that may have access to the server's file system.
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
