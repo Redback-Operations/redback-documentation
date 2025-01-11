@@ -38,7 +38,7 @@ This job scans the entire repository for vulnerable dependencies, and uploads th
 
 #### Steps
 
-1. **Run Trivy Vulnerability Scanner**: Trivy scans the entire repository. The `ignore-unfixed: true` option ensures that unfixed vulnerabilities are ignored in the results.
+1. **Run Trivy Vulnerability Scanner**: Trivy scans the entire repository. Unfixed vulnerabilities are ignored in the results.
 
 2. **Upload Trivy Scan Results**: The results are uploaded to GitHub’s Security tab, allowing maintainers to view and manage vulnerabilities directly within the repository's settings.
 
@@ -50,9 +50,9 @@ This job scans only the files changed in the pull request for vulnerabilities an
 
 #### Steps
 
-1. **Get Changed Files**: The job fetches the latest changes from the main branch and compares them with the current state of the PR. It lists the changed files and stores them in a file.
+1. **Get Changed Files**: The job fetches the latest changes from the main branch and compares them with the current state of the PR.
 
-2. **Run Trivy on Changed Files**: Trivy scans only the changed files for vulnerabilities. The scan focuses on high and critical vulnerabilities. If any vulnerabilities are detected, they will be saved in JSON format for each affected file.
+2. **Run Trivy on Changed Files**: Trivy scans only the changed files for vulnerabilities. The scan focuses on high and critical vulnerabilities. If any vulnerabilities are detected, they will be saved for each affected file.
 
 3. **Run Reviewdog**: Reviewdog parses the Trivy scan results and posts comments on the PR. If any vulnerabilities are found with "HIGH" or "CRITICAL" severity, they will be reported as errors.
 
@@ -74,7 +74,7 @@ This job scans only the files changed in the pull request for vulnerabilities an
 
 ### Trivy Repo Scan Results
 
-- Vulnerabilities in any files (including dependencies) will be detected and uploaded to the GitHub Security tab as a SARIF report.
+- Vulnerabilities in dependencies will be detected and uploaded to the GitHub Security tab as a SARIF report.
 - These results will help maintainers continuously monitor the repository’s dependencies and track vulnerabilities in the Security section of the repository settings.
 
 ### Trivy PR Check Results
