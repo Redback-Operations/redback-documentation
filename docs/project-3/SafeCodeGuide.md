@@ -1,0 +1,149 @@
+---
+sidebar_position: 4
+sidebar_label: Safe Code Guide
+title: Safe Code Guide
+description: Guide to secure code development for in-house pull request reviews.
+---
+---
+<div style={{ width: '100%' }}>
+  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+    <thead>
+      <tr>
+        <th style={{ width: '20%', textAlign: 'center' }}>Version</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Modified By</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Approver</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Date</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Changes made</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ textAlign: 'center' }}>V1.0</td>
+        <td style={{ textAlign: 'center' }}>Codey Funston</td>
+        <td style={{ textAlign: 'center' }}>Codey Funston</td>
+        <td style={{ textAlign: 'center' }}>01/01/2025</td>
+        <td style={{ textAlign: 'center' }}>Document Creation</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## BRIEF OVERVIEW
+
+This guide is based on the way that SecDevOps team members are advised to review pull requests from other projects. To reduce complexity for junior members and to ensure the most important security risks are looked out for, we check code against the OWASP top 10 web application critical security risks.
+
+OWASP stands for the Open Web Application Security Project. It is an open-source project that reaches out to key industry players every 4-5 years and collects data on the most critical cyber security issues pertaining to application development. Based on the data they compose the top 10 most important issues and release this is in their awareness document. The most recent one is OWASP Top 10:2021, with the next one coming soon around mid 2025.
+
+This source of security issues is well regarded in industry and is a perfect starting point for developers without much cyber security training. If you want to read more about it, the links below point to information from their website and good quality third parties.
+
+- [OWASP Top Ten Overview](https://owasp.org/www-project-to- 
+- [2021 Version – Extra Information](https://owasp.org/- 
+- [10 Minute Youtube Video – By Cyber Citadel](https://www.youtube.com/watch?v=hryt-rCLJUA&t=68s)
+- For those interested in LLM Security: [How the Top 10 Apply for LLM’s - IBM](https://www.youtube.com/watch?v=cYuesqIKf9A)
+- For those who want to experiment with live examples of insecure web applications: [OWASP Top 10 Examples - GitHub](https://github.com/lighthouse-labs/owasp-top-10-examples)
+
+In this guide I will be going through key things to look out for and examples from past semester’s pull requests in your project. Hopefully this will make it easier to understand and increase your ability to prevent un-safe code production from the start of the development life cycle.
+
+Note: A lot of the examples are like pseudo code and wouldn’t be used as is, however, they are helpful for understanding the principle so that you can apply/avoid the preventative measure or risk respectively.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 1. BROKEN ACCES CONTROL
+
+### **_Gist_**
+
+Access to resources and functionality should be enforced based on who is accessing it. Everything should be denied by default with any access given with the least amount of privilege possible. This is referred to as _whitelisting_.
+
+### **_Look Out For_**
+
+- API’s having the same permissions for all methods. This isn’t just important for “setters” like POST, but “getters” like GET. For example, you may centre your concern around preventing any damage to data through malicious POST and DELETE operations. However, that is more of a concern for maintaining the state of a system, not protecting it from getting data stolen with a GET request.
+
+- Exposing sensitive data through complex manipulation in the back end. For example, as illustrated in the example, SQL queries could result columns being returned that hold sensitive information. In the case of your exercise data there may be location information. To prevent this there should be a good understanding of data fields and data manipulation effects.
+
+### **_Example_**
+
+  
+![](img/safe-code-guide/broken-access-control-eg.png)
+
+This example is quite basic and clearly not safe by using the wildcard (\*). However, it highlights the concept of a data query returning unwanted fields (latitude and longitude).
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 2. CRYPTOGRAPHIC FAILURES
+
+### **_Gist_**
+
+Are the correct protocols, tools, and standards being used to protect data at rest and in transit? If not, they should be updated to be as secure as “reasonably practicable” (it is a balancing act as too much security can slow down software or add more complexity). For example, it would be unnecessary to use multi factor authentication for a login that is only used for marketing purposes since this would slow down the user for no extra gain.
+
+### **_Look Out For_**
+
+- Try to use HTTPS over HTTP.
+
+- Encrypt sensitive data when moving it between stores.
+
+- Don’t place sensitive data in the public facing GitHub repository.
+
+- Regularly check the encryption versions used if manually encrypting data on servers. Use the latest ones once they have been tested.
+
+- Store passwords as their hashes.
+
+### **_Example_**
+
+  
+![](img/safe-code-guide/cryptographic-failures-eg.png)
+
+This is similar to a common issue that comes up in pull request reviews, where login credentials are hardcoded for request code. Similarly, even if the passwords are stored on a database on the server, no extra effort is required for attackers to work out passwords once stolen if they are plain text.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 3. INJECTION
+
+### **_Gist_**
+
+Input from the user should not be used directly without checks and changes if necessary. Even if the data is being stored or used somewhere that is not vital to the program, or consists of sensitive information, it can still be used maliciously with clever syntax tricks.
+
+### **_Look Out For_**
+
+- Escape characters which have logical meaning in the language that is working with the data.
+
+- Something mentioned on the OWASP website which I think is pretty cool is preventing users from entering data structure names that cannot be escaped. One way to get around this with SQL tables is to name them differently to their front-end display. This is what I used in the example instead of a standard SQL injection with special characters.
+
+- Parameterize database queries.
+
+### **_Example_**
+
+![](img/safe-code-guide/injection-eg.png)  
+
+Here the table name is “obfuscated” slightly by not using an obvious name like “users”.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 4. INSECURE DESIGN
+
+­<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 5. SECURITY MISCONFIGURATION
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 6. VULNERABLE AND OUTDATED COMPONENTS
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 7. IDENTIFICATION AND AUTHENTICATION FAILURES
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 8. SOFTWARE AND DATA INTEGRITY FAILURES
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 9. SECURITY LOGGING AND MONITORING FAILURES
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 10. SERVER-SIDE REQUEST FORGERY (SSRF)
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
