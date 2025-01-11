@@ -195,9 +195,48 @@ To illustrate how important it is to track your dependencies is, this single lin
 
 ## 7. IDENTIFICATION AND AUTHENTICATION FAILURES
 
+### **_Gist_**
+
+Similar to broken access control (3). Have strong user authentication features and layering to prevent single points of entry. Don't allow bot-like actions to be used to bypass authentication with randomly generated user identification.
+
+### **_Look Out For_**
+
+- Set up multi-factor authentication when the resource or functionality being accessed has high value, data sensitivity, or power.
+
+- **Do not ever store passwords in plain text. If they are stolen there is no more protection.**
+
+- Prevent brute force attacks by stopping too many repeated attempts at login.
+
+- Test user accounts for weak passwords that would be included in most dictionaries.
+
+### **_Example_**
+
+![](img/safe-code-guide/identification-and-authentication-failures-eg.png)  
+
+This is a sneaky method to prevent bad actors from accessing your system's resources. It works by baiting port sniffing with unused ports that have no services listening on them. As soon as someone sniffs one of the bait ports their IP is blocked entirely from every port.
+
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
 ## 8. SOFTWARE AND DATA INTEGRITY FAILURES
+
+### **_Gist_**
+
+Assume the worst of other pieces of software and data. Whenever possible verify that software and external data is from who it says it is through signatures. Don't trust anything outside of your own artifacts. 
+
+
+### **_Look Out For_**
+
+- Check digital signatures.
+
+- Perform file hashes against trusted values to ensure file integrity.
+
+- Use industry trusted repositories.
+
+### **_Example_**
+
+![](img/safe-code-guide/software-and-data-integrity-failures-eg.png)  
+
+When downloading any file from an external source, after verifying its identify you should check the hash. This only has meaning when the file provider gives the hash. In the example the script prevents any execution when the files do not match by using 444 with _chmod_ to set it to read only for all users.
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
@@ -226,5 +265,26 @@ In this example when the error thrown by the system is HIGH or above it may have
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
 ## 10. SERVER-SIDE REQUEST FORGERY (SSRF)
+
+### **_Gist_**
+
+The server's file system contains data that attackers could use for malicious purposes. "Internal" file requests on the server can be injected by attackers.
+
+### **_Look Out For_**
+
+- Don't allow HTTP redirects from user controls.
+
+- Like (3) make sure any user input is checked and goes through sanitation before use.
+
+- Change file permissions for sensitive data to only allow access to users other than the one running the program.
+
+- Use whitelisting for internal network traffic so that even if an attacker passes other security measures they can't bypass the firewall/access control list.
+
+### **_Example_**
+
+![](img/safe-code-guide/SSRF-eg.png)  
+
+Here as soon as the server starts listening any outgoing HTTP request is denied.
+
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
