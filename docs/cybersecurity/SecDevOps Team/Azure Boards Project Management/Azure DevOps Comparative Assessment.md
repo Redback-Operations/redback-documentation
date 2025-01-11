@@ -1,7 +1,6 @@
 ---
-sidebar_position: 7
+sidebar_position: 9
 ---
-
 
 # Comparative Analysis of Jira vs. Azure DevOps
 By Candice Smith
