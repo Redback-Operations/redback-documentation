@@ -50,7 +50,7 @@ Note: A lot of the examples are like pseudo code and wouldn’t be used as is, h
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
-## 1. BROKEN ACCES CONTROL
+## 1. BROKEN ACCESS CONTROL
 
 ### **_Gist_**
 
@@ -122,9 +122,50 @@ Here the table name is “obfuscated” slightly by not using an obvious name li
 
 ## 4. INSECURE DESIGN
 
+### **_Gist_**
+
+Insecure design's a funny one because it isn't a specific feature of a piece of software that you should avoid or implement to prevent security risks. Instead it is more about how to approach the development process to ensure that security flaws are not built in to your system. Essentially you should consider the security risks of each part of your design and included risk assessments as you go.
+
+### **_Look Out For_**
+
+- Think about how an attacker might take advantage of a process, data storage, or core piece of logic.
+
+- Perform security checks regularly, trying to adhere to a secure DevOps practice, or "SecDevOps".
+
+- Use industry proven designs if possible, or seek advice from others with security experience when creating designs in-house.
+
+- **IMPORTANT: Don't leave security to last in the development process!**
+
+### **_Example_**
+
+![](img/safe-code-guide/insecure-design-eg.png)  
+
+The example I have used here is from the project's web app code. This is definitely not poorly written or designed as the sign in function was not fully setup when I was writing this :) If this code was left as is it would be prone to a brute force attack. This is because there is no functionality to stop allowing the client to try their username and password combination after a certain amount of tries.
 ­<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
 ## 5. SECURITY MISCONFIGURATION
+
+### **_Gist_**
+
+The software and environment settings should be planned, documented, reviewed and kept consistent. Make sure you check any 3rd party tools for default settings which add security risks to your system.
+
+### **_Look Out For_**
+
+- Use whitelist approach with permission configurations.
+
+- Keep configurations consistent across all environments and setups of the software.
+
+- Don't give global access to make configuration changes.
+
+- Consult other team members before making changes such as ports or user access.
+
+- Remove/change default credentials because these are very easy to find online with searches on forums.
+
+### **_Example_**
+
+![](img/safe-code-guide/security-misconfiguration-eg.png)  
+
+In this example I provided what looks to be a really secure and safe running of Jupyter notebook, a tool that you would use regularly in data analysis with potentially sensitive data sets. However, 
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 
