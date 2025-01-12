@@ -8,18 +8,22 @@ sidebar_position: 2
 
 ...
 
-## Table of Contents
-1. [Introduction](#smartbike-introduction)
-2. [Makerspace](#makerspace)
-3. [Safety & Rules](#safety--rules)
-4. [Wahoo Components](#wahoo)
-    - [KICKR Smart Trainer](#kickr-smart-trainer)
-    - [KICKR Climb](#kickr-climb)
-    - [KICKR Headwind Bluetooth Fan](#kickr-headwind-blueooth-fan)
-    - [TICKR Heart Rate Monitor](#tickr-heart-rate-monitor)
-    - [Wahoo Cadence Sensor](#wahoo-cadence-sensor-redundant)
-5. [Raspberry Pi](#raspberry-pi)
-6. [Get Ready to Work with the Smartbike](#get-ready-to-work-with-the-smartbike)
+## Quick Start Guide
+
+Follow these steps to quickly get started with the Smartbike:
+
+1. **Access the Makerspace**: Complete the [online induction](https://d2l.deakin.edu.au/d2l/home/1381894) and schedule your in-person induction.
+2. **Set Up Your Developer Environment**: Follow the guide [here](Developer-Environment-Setup.md).
+3. **Power On the Smartbike**:
+    - Connect the KICKR smart trainer to a power source.
+    - Connect the Raspberry Pi to the internet.
+4. **Connect Devices**:
+    - Pair the KICKR smart trainer, KICKR Climb, and TICKR heart rate monitor.
+    - Test the connections using the provided drivers.
+5. **Run the VR Application**:
+    - Start the VR game and ensure the Smartbike components are synchronized.
+
+> ⚠️ **Note**: Follow safety rules while using the Smartbike.
 
 ## Makerspace
 
