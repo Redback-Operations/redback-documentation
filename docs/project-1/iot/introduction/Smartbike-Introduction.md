@@ -139,3 +139,23 @@ Connected to the Raspberry Pi is two turning control buttons. The buttons are mo
 
 - Setup your [developer environment](Developer-Environment-Setup.md).
 - Learn how to [start the Smartbike](../operation/Starting-Smartbike.md).
+
+## Troubleshooting
+
+### Common Issues and Fixes
+
+1. **Raspberry Pi Not Connecting to Wi-Fi**:
+    - Check if the Wi-Fi credentials are correct in the configuration file.
+    - Restart the Raspberry Pi using `sudo reboot`.
+
+2. **TICKR Heart Rate Monitor Not Pairing**:
+    - Ensure the TICKR is awake by pressing its diodes until the LED lights up.
+    - Retry connecting within 30 seconds using the driver script.
+
+3. **KICKR Climb Not Responding**:
+    - Verify its connection to the KICKR smart trainer.
+    - Restart the KICKR smart trainer and reconnect.
+
+4. **VR Game Sync Issues**:
+    - Check the MQTT broker logs for connection errors.
+    - Restart the Raspberry Pi and VR application.
