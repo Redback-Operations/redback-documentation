@@ -24,6 +24,7 @@ Follow these steps to quickly get started with the Smartbike:
     - Start the VR game and ensure the Smartbike components are synchronized.
 
 > ⚠️ **Note**: Follow safety rules while using the Smartbike.
+
 ## Makerspace
 
 The Smartbike is kept in the Makerspace under [building HF](https://www.deakin.edu.au/__data/assets/pdf_file/0003/817365/burwood-campus-map.pdf) on the Burwood campus. This is a fairly new space intended for IoT development which gives students access to equipment like soldering irons, 3D printers, laser cutting machines, etc. 
