@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 7
 ---
 # Azure DevOps Quick Start Guide
 
