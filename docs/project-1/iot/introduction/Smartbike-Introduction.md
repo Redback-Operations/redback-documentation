@@ -8,6 +8,23 @@ sidebar_position: 2
 
 ...
 
+## Quick Start Guide
+
+Follow these steps to quickly get started with the Smartbike:
+
+1. **Access the Makerspace**: Complete the [online induction](https://d2l.deakin.edu.au/d2l/home/1381894) and schedule your in-person induction.
+2. **Set Up Your Developer Environment**: Follow the guide [here](Developer-Environment-Setup.md).
+3. **Power On the Smartbike**:
+    - Connect the KICKR smart trainer to a power source.
+    - Connect the Raspberry Pi to the internet.
+4. **Connect Devices**:
+    - Pair the KICKR smart trainer, KICKR Climb, and TICKR heart rate monitor.
+    - Test the connections using the provided drivers.
+5. **Run the VR Application**:
+    - Start the VR game and ensure the Smartbike components are synchronized.
+
+> ⚠️ **Note**: Follow safety rules while using the Smartbike.
+
 ## Makerspace
 
 The Smartbike is kept in the Makerspace under [building HF](https://www.deakin.edu.au/__data/assets/pdf_file/0003/817365/burwood-campus-map.pdf) on the Burwood campus. This is a fairly new space intended for IoT development which gives students access to equipment like soldering irons, 3D printers, laser cutting machines, etc. 
@@ -122,3 +139,23 @@ Connected to the Raspberry Pi is two turning control buttons. The buttons are mo
 
 - Setup your [developer environment](Developer-Environment-Setup.md).
 - Learn how to [start the Smartbike](../operation/Starting-Smartbike.md).
+
+## Troubleshooting
+
+### Common Issues and Fixes
+
+1. **Raspberry Pi Not Connecting to Wi-Fi**:
+    - Check if the Wi-Fi credentials are correct in the configuration file.
+    - Restart the Raspberry Pi using `sudo reboot`.
+
+2. **TICKR Heart Rate Monitor Not Pairing**:
+    - Ensure the TICKR is awake by pressing its diodes until the LED lights up.
+    - Retry connecting within 30 seconds using the driver script.
+
+3. **KICKR Climb Not Responding**:
+    - Verify its connection to the KICKR smart trainer.
+    - Restart the KICKR smart trainer and reconnect.
+
+4. **VR Game Sync Issues**:
+    - Check the MQTT broker logs for connection errors.
+    - Restart the Raspberry Pi and VR application.
