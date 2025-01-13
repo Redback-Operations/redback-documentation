@@ -1,0 +1,8 @@
+{
+  "label": "Azure",
+  "position": 102,
+  "link": {
+    "type": "generated-index",
+    "description": "Relating to Azure backend move"
+  }
+}

@@ -19,6 +19,10 @@ Ideally, all files and folders should have the same naming scheme. Currently, th
 
 Images should be enforced to have their own sub-folders, as currently most pages will just dump all their images into the img folder for that main folder. Likewise, all images should have a consistent naming scheme to make them identifiable to the file they are associated with.
 
+### .gitignore yarn and package locks
+
+These often have conflicts in PRs, they can possibly be added to .gitignore, but this will require research and trialling.
+
 ### Revamp Tutorials
 
 Create more sophisticated, easier to understand tutorials. As well as more advanced tutorials covering some of the plugins and other advanced tools on offer.

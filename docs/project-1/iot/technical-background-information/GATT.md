@@ -3,6 +3,18 @@ sidebar_position: 1
 ---
 # Interfacing with Wahoo Devices
 
+:::danger[Superduper Important!]
+
+I only discovered how previous developers new what characteristics and services did what right at the end of semester. They used the following document which contains the standardised UUIDs for GATT characteristics and services:
+
+https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Assigned_Numbers/out/en/Assigned_Numbers.pdf?v=1727185252414
+
+In combination with the Fitness Machine Service document:
+
+https://www.bluetooth.org/DocMan/handlers/DownloadDoc.ashx?doc_id=423422
+
+:::
+
 The Raspberry Pi communicates with the bike through Bluetooth Low Energy (BLE), specifically by pairing with the KICKR smart trainer (the other devices automatically pair with the KICKR smart trainer). The KICKR smart trainer runs an ATT server on it which the Raspberry Pi can then read and write values from/to. This document covers how the above works regarding the bike.
 
 ![image](img/wahoo_network_map.png)
@@ -16,6 +28,8 @@ A few corrections:
 * The TICKR heart rate monitor does not connect through or pair with the KICKR smart trainer.
 * The Wahoo cadence sensor is redundant.
 * We are unsure of if the Wahoo Headwind Fan connects through KICKR.
+* UUIDs can be found in this document:
+https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Assigned_Numbers/out/en/Assigned_Numbers.pdf?v=1727185252414
 
 :::
 
