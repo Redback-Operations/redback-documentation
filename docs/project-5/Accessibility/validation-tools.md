@@ -4,9 +4,7 @@ slidebar_position: 2
 # Accessibility Validation Tools and Their Implementation 
 
 :::info
-
 By **Corrina Maria Glover**
-
 :::
 
 ## Introduction 

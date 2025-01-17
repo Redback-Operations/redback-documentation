@@ -4,9 +4,7 @@ slidebar_position: 1
 # What is Accessibility and Why Do We Need It for Bugbox? 
 
 :::info
-
 By **Corrina Maria Glover**
-
 :::
 
 ## Introduction

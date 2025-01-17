@@ -4,9 +4,7 @@ slidebar_position: 3
 # Accessibility Guidelines for Developers
 
 :::info
-
 By **Corrina Maria Glover**
-
 :::
 ## Introduction
 
