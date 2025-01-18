@@ -85,7 +85,7 @@ We will explore the various tools available for accessibility validation, which 
 
 ## Demonstration Example 
 
-Let’s do a quick run down of how Accessibility Validation tools can be used, using the [bugbox site](Bugbox.au) site 
+Let’s do a quick run down of how Accessibility Validation tools can be used, using the [bugbox site](https://www.bugbox.au/) site 
 
 1. Using Lighthouse 
     As we can see, the accessibility parameter is really good, and it satisfies most conditions. Using Lighthouse allows us to view what is non-compliant, and we can work to make the page better.
