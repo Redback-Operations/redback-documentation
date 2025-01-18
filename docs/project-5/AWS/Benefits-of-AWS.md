@@ -3,6 +3,10 @@ sidebar_position: 2
 ---
 # The Benefits of Using AWS for Role-Based Access Control (RBAC) in Bugbox
 
+:::info
+By **Corrina Maria Glover, Rishubh Sethi, Adityan Balamuralidharan, Pranav**
+:::
+
 ## Introduction
 
 As Bugbox expands to offer an engaging and secure learning experience for young students, managing who can access what on the platform becomes very important. Role-Based Access Control (RBAC) is a security method that helps ensure users only have access to what they need based on their roles. Bugbox has chosen to use AWS Identity and Access Management (IAM) for RBAC, which makes managing user permissions easy, secure, and scalable. This document explains the benefits of using AWS for RBAC in Bugbox and how it helps manage user access securely.

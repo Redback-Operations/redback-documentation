@@ -3,6 +3,10 @@ sidebar_position: 1
 ---
 # Bugbox’s Role Based Access Control Guide
 
+:::info
+By **Corrina Maria Glover, Rishubh Sethi, Adityan Balamuralidharan, Pranav**
+:::
+
 ## Purpose
 
 The purpose of this document is to provide guidance on implementing Role-Based Access Control (RBAC) in Bugbox. By defining clear roles, responsibilities, and permissions, Bugbox ensures that users have appropriate access to resources based on their job functions, while protecting sensitive data and streamlining administrative tasks.

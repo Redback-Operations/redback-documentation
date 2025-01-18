@@ -3,6 +3,10 @@ sidebar_position: 4
 ---
 # Implementing Role-Based Access Control (RBAC) with IAM and S3 in AWS
 
+:::info
+By **Corrina Maria Glover, Rishubh Sethi, Adityan Balamuralidharan, Pranav**
+:::
+
 ## Introduction to AWS IAM and S3
 
 Amazon Web Services (AWS) offers a comprehensive set of cloud tools that help businesses manage their data and operations securely. Two important services for Bugbox are Identity and Access Management (IAM) and Simple Storage Service (S3).

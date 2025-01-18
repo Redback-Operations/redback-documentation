@@ -1,5 +1,9 @@
 # S3 Policy and User Access Design
 
+:::info
+By **Adityan Balamuralidharan**
+:::
+
 ## Key Concept: Policy with Dynamic Paths
 
 The policy dynamically assigns permissions to each student based on their username by using the variable `${aws:username}`. This ensures that each student can only access their own files.
