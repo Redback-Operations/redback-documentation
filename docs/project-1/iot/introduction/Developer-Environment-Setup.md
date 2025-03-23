@@ -9,9 +9,15 @@ Working with the Smartbike requires a few extra tools compared to working on app
 ## General Needs
 
 You still require general things like:
+General Needs
+To get started on the Smartbike project, ensure you have the following general tools set up:
+
+IDE of Your Choice: Use an Integrated Development Environment (IDE) such as Visual Studio Code, PyCharm, or Atom. Make sure to install any extensions related to Python and Raspberry Pi development.
 
 - IDE of your choice.
 - [GitHub Desktop app](https://desktop.github.com/download/) or [GitHub CLI](https://cli.github.com) or equivalent.
+  
+GitHub Desktop App or GitHub CLI: You’ll need one of these tools to manage version control and work with the repositories. Alternatively, you can use other Git tools like GitKraken or SourceTree.
 
 ## Project Repositories
 
