@@ -30,6 +30,9 @@ To ease development on the Raspberry Pi it is recommended to prepare the followi
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) or equivalent - for accessing the Raspberry Pi.
 - [FileZilla](https://filezilla-project.org/download.php?type=client) or [WinSCP](https://winscp.net/eng/download.php) or equivalent FTP application - for transfering files between your development environment and the Raspberry Pi.
 - Install dependencies such as Python's [gatt library](https://pypi.org/project/gatt/) and [paho MQTT](https://pypi.org/project/paho-mqtt/) - for hints during development.
+- Use the following commands:
+pip install gatt paho-mqtt
+These libraries are crucial for working with the Smartbike’s IoT functionality and network communication.
 
 ## Personal Mobile Hotspot
 
