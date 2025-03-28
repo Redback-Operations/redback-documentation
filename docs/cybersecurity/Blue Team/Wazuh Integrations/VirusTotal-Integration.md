@@ -5,17 +5,17 @@ sidebar_position: 1
 # Integrating VirusTotal into Wazuh
 
 :::info
-**Document Creation:** 27 Mar, 2025. **Last Edited:** 27 Mar, 2025. **Authors:** Robin Spoerl.
+**Document Creation:** 28 Mar, 2025. **Last Edited:** 28 Mar, 2025. **Authors:** Robin Spoerl.
 :::
 
 ## 1. Introduction 
-This document provides a brief overview of VirusTotal and the rationale behind integrating it with Wazuh on Redback Operations' VM. Additionally, this document will provide step-by-step instructions to show how future users can understand, maintain and improve the integration. 
+This document provides a brief overview of VirusTotal and the rationale behind integrating it with Wazuh on Redback Operations' VM. Additionally, this document will provide step-by-step instructions to show how future users can understand, maintain and improve the integration. It will also describe limitations and future work directions. 
 
 ## 2. Background
 
 Redback Operations currently protects its company VM with a Wazuh SIEM and installed agent. The agent is installed directly on the VM and gathers information about the operating environment. The information is then forwarded to the Wazuh SIEM, which provides an overview of all events tracked by the agent. Currently, apart from the basic rootcheck module, the agent is not configured to check for malicious files, which poses a security risk. 
 
-To this end, it is proposed that VirusTotal be integrated within Wazuh's FIM (file integrity module). The module can track changes made to key directories in real time, such as written files. If configured, the FIM module can extract the hashes of these written files and forward them to the online VirusTotal service. VirusTotal can lookup these hashes and note if they are malicious or benign. This lookup information can also be forwarded to the Wazuh SIEM. Thus, this integration allows Wazuh to check if any malicious files were written to an agent's system in real time.
+To this end, it is proposed that VirusTotal be integrated within Wazuh's FIM (file integrity module). The module can track changes made to key directories in real time, such as written files. If configured, the FIM module can extract the hashes of these written files and forward them to the online VirusTotal service. VirusTotal can look up these hashes and note if they are malicious or benign. This look up information can also be forwarded to the Wazuh SIEM. Thus, this integration allows Wazuh to check if any malicious files were written to an agent's system in real time.
 
 ## 3. Configuration Steps
 
@@ -55,33 +55,34 @@ Save your changes and restart the manager container.
 On the Wazuh dashboard, an option for VirusTotal will show up now. 
 ![Wazuh dashboard status](./img-virustotal/dashboard_status.png)
 
-### 3.3. Change the FIM settings
+### 3.3. Change the agent's FIM settings
 
 Now that the manager has been set up with VirusTotal, you need to modify the FIM settings to perform real-time scanning on a specified number of directories. By default, FIM performs a full system scan with several default system directories every 12 hours, but this is not ideal. To modify this, you need to access the **ossec.conf** file of the **agent**, NOT the **manager**. The agent file is by default stored under **/var/ossec/etc** in the agent's system. You need elevated privileges to access this file.
 ![Configuration directory of the agent](./img-virustotal/agent_etc_directory.png)
 
-Once there, you can choose any directories to monitor. Since malicious actors commonly use the **/tmp** and **/var/tmp** directories to store temporary files, it is valuable to monitor them. Also, since the Data Warehouse's file upload tool uses the **dw-bucket-bronze** directory, it is useful to monitor these directories in case a malicious file gets uploaded. While Deakin seems to have an IPS installed that detects malicious uploads on its network, it is valuable regardless to monitor this directory as an extra layer of security. 
+Once there, you can choose any directories to monitor. However, due to API limitations, these must be directories that are not very active. For example, since the Data Warehouse's file upload tool uses the **dw-bucket-bronze** directory, it is useful to monitor this directory in case a malicious file gets uploaded. While Deakin seems to have an IPS installed that detects malicious uploads on its network, it is valuable regardless to monitor this directory as an extra layer of security. 
 
-Finally, the **/bin**, **/sbin**, **/usr/bin** and **/usr/sbin** directories store important system and user binaries. It would be valuable to monitor these.  
+Finally, the  **/usr/bin** and **/usr/sbin** directories store important system and user binaries. It would be valuable to monitor these.  
 
 Add the following code block to the **syscheck** section:
 ```
-<directories check_all="yes" realtime="yes">/tmp, /var/tmp, /var/lib/docker/volumes/data-lakehouse_minio-data/_data/dw-bucket-bronze</directories>
-<directories check_all="yes" realtime="yes">/bin, /sbin, /usr/bin, /usr/sbin</directories>
+<directories check_all="yes" realtime="yes">/usr/bin, /usr/sbin, /var/lib/docker/volumes/data-lakehouse_minio-data/_data/dw-bucket-bronze</directories>
 ```
-**check_all** ensures that all important information is extracted from any files written to these directories, including their hashes. **realtime** ensures that these directories are always monitored. 
+**check_all** ensures that all important information is extracted from any files written to these directories, including their hashes. **realtime** ensures that these directories are always monitored. Note that you can modify these directories as needed.
 
 See the example screenshot.
 ![Agent configuration file](./img-virustotal/agent_config.png)
 
-Note in the previous screenshot the third line containing critical system files like **/etc/passwd** and **/etc/shadow**. While not entirely related to VirusTotal integration, these files and directories were added to the real-time checking module, away from the default 12-hour checks. The rationale behind this was that these files and directories contain critical information that, when modified, could be indicative of an attack. 
+Note in the previous screenshot the second line containing critical system files like **/etc/passwd** and **/etc/shadow**. While not entirely related to VirusTotal integration, these files and directories were added to the real-time checking module, away from the default 12-hour checks. The rationale behind this was that these files and directories contain critical information that, when modified, could be indicative of an attack.
 
 Save your changes and restart the wazuh-agent process.
 ![Restarting the Wazuh agent](./img-virustotal/restarting_agent.png)
 
 ### 3.4. Test VirusTotal integration
 
-You can write files to monitored directories and see corresponding alerts appear in both the FIM and VirusTotal modules. As an example, "tst.txt" files were written to the  **/tmp** and **/var/tmp** directories. The hashes of the files were extracted by FIM and sent to VirusTotal, which had no results.  
+You can write files to monitored directories and see corresponding alerts appear in both the FIM and VirusTotal modules. As an example, assume that you have modified the previous **sysconfig** block to monitor the non-critical **/tmp** and **/var/tmp** directories. While VirusTotal integration would not work well on these directories on an ongoing basis, they are good starting points nonetheless to try out the FIM without damaging anything. The actual company implementation does NOT monitor these directories.
+
+To demonstrate the monitoring, "tst.txt" files were written to the non-critical **/tmp** and **/var/tmp** directories. The hashes of the files were extracted by FIM and sent to VirusTotal, which had no results.  
 ![FIM](./img-virustotal/FIM.png)
 ![VirusTotal](./img-virustotal/virustotal.png)
 
@@ -93,9 +94,11 @@ Note the corresponding warning on the VirusTotal tab, with a label ("1") noting 
 
 ### 3.5. Limitations
 
-The tool was implemented using the Public API, which is limited to 500 requests per day and 4 requests per minute. Thus, system-wide monitoring is not an option with VirusTotal. Only key directories can be monitored. Consequently, future work will focus on broader signature-based tools, such as YARA and ClamAV, to complement this hash-based approach. 
+The tool was implemented using the Public API, which is limited to 500 requests per day and 4 requests per minute. Thus, VirusTotal cannot be used for system-wide monitoring. Likewise, the Public API is severely limited to directories which do have a lot of recurring file modifications. While this is useful for, say, the internal file upload tool, it also means that popular malware directories like **/tmp** cannot be effectively monitored. Consequently, future work will need to focus on tools that do not rely on APIs, like YARA and ClamAV, to complement this hash-based approach. 
 
-In addition, the public API is forbidden to be used in a commercial setting. Hence, if Redback Operations were to move to a commercial setting in the future, they would need to investigate the Premium API or other options. 
+In addition, the tool uses hashes to detect uploaded malware samples. Yet, these hashes are limited to known malware samples. If an attacker were to apply an obfuscation or modification technique to an existing sample, which they have not applied elsewhere, VirusTotal would likely not detect the sample. Thus, while this integration enhances a defence-in-depth strategy, it should not be relied upon as the sole security measure. 
+
+Finally, the Public API is forbidden to be used in a commercial setting. Hence, if Redback Operations were to move to a commercial setting in the future, they would need to investigate the Premium API or other options. 
 
 ## 4. References
 - [VirusTotal Integration Wazuh Guide](https://documentation.wazuh.com/current/user-manual/capabilities/malware-detection/virus-total-integration.html)
