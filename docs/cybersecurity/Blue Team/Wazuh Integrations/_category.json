@@ -1,0 +1,8 @@
+{
+  "label": "Wazuh Integrations",
+  "position": 104,
+  "link": {
+    "type": "generated-index",
+    "description": "Documents related to Wazuh integration activities on the company VM"
+  }
+}
