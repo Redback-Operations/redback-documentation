@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
-        Redback is a capstone project company within Deakin University. Students work on Redback's projects under the guidance of professional and academic mentors. Our focus is to deliver innovative IoT solutions that bridge the gap between technology and fitness.
+        Redback is a capstone project company within Deakin University. Students work on Redback's projects under the guidance of professional and academic mentors. Our focus is to deliver innovative IoT solutions that bridge the gap between technology and fitness..
       </>
     ),
   },
