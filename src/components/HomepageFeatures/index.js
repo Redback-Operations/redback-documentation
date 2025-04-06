@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
-        Redback is a capstone project company within Deakin University. Students work on Redback's projects under the guidance of professional and academic mentors.
+        Redback is a capstone project company within Deakin University. Students work on Redback's projects under the guidance of professional and academic mentors. Our focus is to deliver innovative IoT solutions that bridge the gap between technology and fitness.
       </>
     ),
   },
@@ -17,9 +17,10 @@ const FeatureList = [
     Svg: require('@site/static/img/docs.svg').default,
     description: (
       <>
-        We are in the process of moving documentation here. <br></br><br></br>
-        
-        You'll hopefully be able to find documentations for all projects here, as well as general company things. Feel free to add / edit as neccessary within reason of your project.
+        We are in the process of migrating documentation here. You will be able to find detailed documentation on all projects, guidelines, and general company information. Feel free to add or edit content relevant to your project within reason.
+        <br />
+        <br />
+        Contributions from students are encouraged to enhance the knowledge base and documentation structure.
       </>
     ),
   },
@@ -28,13 +29,13 @@ const FeatureList = [
     Svg: require('@site/static/img/question.svg').default,
     description: (
       <>
-        Redback Operations is on a mission to transform small steps in the virtual world into significant strides in reality. Our goal is to make you Smarter, Fitter, and Better by adding an element of enjoyment to physical activity. We specialize in developing cutting-edge connected fitness devices designed to enhance the quality of exercise and the effectiveness of training. as well as using different sensor technologies to prevent the risk of injury.
+        Redback Operations is on a mission to transform small steps in the virtual world into significant strides in reality. Our goal is to make you Smarter, Fitter, and Better by adding an element of enjoyment to physical activity. We specialize in developing cutting-edge connected fitness devices designed to enhance the quality of exercise and training effectiveness. Our sensor technology also focuses on injury prevention, improving overall safety during workouts.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
