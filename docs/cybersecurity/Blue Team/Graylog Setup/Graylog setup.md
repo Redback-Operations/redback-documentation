@@ -22,7 +22,7 @@ This report provides a comprehensive walkthrough of the setup and TLS configurat
 
 ### 1. Graylog Installation Summary
 
-#### 1.1 OS and Dependencies
+### 1.1 OS and Dependencies
 - **Operating System:** Ubuntu Server 22.04
 - **Java Runtime:** OpenJDK 17 is required for Graylog's backend engine.
 - Node name: capstone.node-1
@@ -31,7 +31,7 @@ This report provides a comprehensive walkthrough of the setup and TLS configurat
 sudo apt install openjdk-17-jre-headless
 ```
 
-#### 1.2 MongoDB Setup
+### 1.2 MongoDB Setup
 - **Purpose:** Stores Graylog metadata such as users, roles, and configuration settings.
 - **Version Installed:** MongoDB 6.0
 - After resolving held packages and source priority issues, MongoDB was successfully installed and confirmed to be running.
@@ -40,7 +40,7 @@ sudo apt install openjdk-17-jre-headless
 ![MongoDB Status](Img/image-4.png)
 
 
-#### 1.3 Graylog Server Installation
+### 1.3 Graylog Server Installation
 - Added the Graylog 5.1 repository and installed the package:
 ```bash
 wget https://packages.graylog2.org/repo/packages/graylog-5.1-repository_latest.deb
@@ -49,7 +49,7 @@ sudo apt update && sudo apt install graylog-server
 sudo systemctl start mongod
 ```
 
-#### 1.4 Graylog Web Interface Setup
+### 1.4 Graylog Web Interface Setup
 - Default web interface available at `http://<server-ip>:9000`
 - Configured initial admin user and accessed the dashboard for operational verification.
 
@@ -59,19 +59,19 @@ sudo systemctl start mongod
 
 ### 2. TLS Truststore Integration (Graylog ↔ Wazuh Indexer)
 
-#### 2.1 Problem Statement
+### 2.1 Problem Statement
 When attempting to connect Graylog with Wazuh’s OpenSearch-based indexer using HTTPS, the following error was encountered:
 ```text
 PKIX path validation failed: Path does not chain with any of the trust anchors.
 ```
 This indicated that Graylog’s JVM did not trust the certificate served by the Wazuh Indexer.
 
-#### 2.2 Solution Overview
+### 2.2 Solution Overview
 - Created a custom truststore specifically for Graylog.
 - Imported Wazuh's internal root CA into the truststore using `keytool`.
 - Updated Graylog’s JVM options to reference the custom truststore.
 
-#### 2.3 Certificate Preparation
+### 2.3 Certificate Preparation
 **Files used:**
 ```bash
 /etc/wazuh-indexer/certs/indexer.pem
@@ -89,13 +89,13 @@ To validate the certificate chain using OpenSSL, the following command was used:
 openssl s_client -connect capstone.node-1:9200 -CAfile /etc/wazuh-indexer/certs/root-ca.pem
 ```
 
-#### 2.4 Truststore Import
+### 2.4 Truststore Import
 ```bash
 cp /usr/share/graylog-server/jvm/lib/security/cacerts /etc/graylog/server/certs/cacerts
 keytool -importcert -keystore /etc/graylog/server/certs/cacerts   -storepass changeit -alias root_ca   -file /etc/wazuh-indexer/certs/root-ca.pem
 ```
 
-#### 2.5 JVM Truststore Activation
+### 2.5 JVM Truststore Activation
 Added the following options in `/etc/default/graylog-server`:
 ```bash
 -Djavax.net.ssl.trustStore=/etc/graylog/server/certs/cacerts
@@ -105,7 +105,7 @@ Added the following options in `/etc/default/graylog-server`:
 **Screenshot of JVM Truststore Import Success**
 ![JVM Truststore Import Success](Img/image-2.png)
 
-#### 2.6 Trust Validation
+### 2.6 Trust Validation
 Used `curl` to validate the chain and confirm a successful TLS handshake:
 ```bash
 curl -vk https://capstone.node-1:9200
@@ -116,7 +116,7 @@ curl -vk https://capstone.node-1:9200
 
 
 
-#### 3.0 Graylog Configuration Review
+### 3.0 Graylog Configuration Review
 
 
 Updated `/etc/graylog/server/server.conf`:
@@ -127,7 +127,7 @@ transport_tls_trust_store_path = /etc/graylog/server/certs/cacerts
 transport_tls_trust_store_password = changeit
 ```
 
-#### 3.1 Secure Alternative Format
+### 3.1 Secure Alternative Format
 Instead of embedding credentials in the URL, use the secure format:
 ```ini
 elasticsearch_hosts = https://capstone.node-1:9200
@@ -137,7 +137,7 @@ elasticsearch_password = admin
 
 ---
 
-#### 4. Final Verification
+### 4. Final Verification
 - Graylog successfully connected to Wazuh Indexer over HTTPS.
 - TLS certificate chain was validated.
 - Logs showed successful authentication and data ingestion.
