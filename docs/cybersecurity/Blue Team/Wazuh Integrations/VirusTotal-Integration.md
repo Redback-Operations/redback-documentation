@@ -84,7 +84,7 @@ You can write files to monitored directories and see corresponding alerts appear
 
 To demonstrate the monitoring, "tst.txt" files were written to the non-critical **/tmp** and **/var/tmp** directories. The hashes of the files were extracted by FIM and sent to VirusTotal, which had no results.  
 ![FIM](./img-virustotal/FIM.png)
-![VirusTotal](./img-virustotal/virustotal.png)
+![VirusTotal](./img-virustotal/virustotal_dashboard.png)
 
 Moreover, you can also test the VirusTotal integration using malicious files such as EICAR. EICAR is a "safe" malicious file used to test basic anti-virus capabilities. First, download the file in any monitored directory.
 ![Downloading Eicar](./img-virustotal/download_eicar.png)
