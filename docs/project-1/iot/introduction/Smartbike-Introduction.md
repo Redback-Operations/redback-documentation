@@ -4,6 +4,19 @@ sidebar_position: 2
 
 # Smartbike Introduction
 
+## Table of Contents
+1. [Introduction](#smartbike-introduction)
+2. [Makerspace](#makerspace)
+3. [Safety & Rules](#safety--rules)
+4. [Wahoo Components](#wahoo)
+    - [KICKR Smart Trainer](#kickr-smart-trainer)
+    - [KICKR Climb](#kickr-climb)
+    - [KICKR Headwind Bluetooth Fan](#kickr-headwind-blueooth-fan)
+    - [TICKR Heart Rate Monitor](#tickr-heart-rate-monitor)
+    - [Wahoo Cadence Sensor](#wahoo-cadence-sensor-redundant)
+5. [Raspberry Pi](#raspberry-pi)
+6. [Get Ready to Work with the Smartbike](#get-ready-to-work-with-the-smartbike)
+
 ![Smartbike Architecture](../img/architecture/bike-architecture.png)
 
 ...
