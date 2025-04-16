@@ -1,28 +1,21 @@
-# Redback Documentation Portal
+# redback-documentation
 
-This repository contains the Docusaurus instance used for consolidating company-wide research, technical documentation, and project-related knowledge.
+Docusaurus instance for the consolidation of company research and documentation
 
 [View site here](https://redback-operations.github.io/redback-documentation/)
 
 [Approvers guide here](https://redback-operations.github.io/redback-documentation/docs/documentation-maintenance/approval-guide)
 
----
 
-## 📦 Prerequisites
+## Prerequisites 
 
-Ensure your system has the following installed before proceeding:
-
-- Git
+- Git 
 - Node.js
-- Yarn (`npm install --global yarn`)
-- Docusaurus (`npm install @docusaurus/core`)
-- A code editor, browser, and terminal of your choice
+- docusaurus npm package
+- yarn npm package
+- Run `npm i` to get all other packages
+- IDE, browser, and terminal of your choice
 - Git credentials configured on your machine
-
-Install project dependencies by running:
-
-```bash
-npm install
 
 ## Section creation
 
