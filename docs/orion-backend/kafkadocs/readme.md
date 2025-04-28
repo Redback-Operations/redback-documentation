@@ -1,4 +1,7 @@
 # Kafka Python Documentation - Table of Contents
+---
+sidebar_position: 3
+---
 
 ## Introduction
 - [Project Overview](#project-overview)
