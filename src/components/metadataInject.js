@@ -37,7 +37,7 @@ function getGitMetadata(file) {
   let date = 'Unknown';
   try {
     author = execSync(`git log -1 --pretty=format:%an "${file}"`).toString().trim();
-    date = execSync(`git log -1 --pretty=format:%ad --date=short "${file}"`).toString().trim();
+    date = execSync(`git log -1 --pretty=format:%ad --date=format:'%d/%m/%Y' "${file}"`).toString().trim();
   } catch (error) {
     console.error(`Error getting git metadata for ${file}: ${error.message}`);
   }
@@ -72,7 +72,7 @@ function updateFile(file) {
     }
   }
 
-  const metadataBlock = `**Last updated by:** ${author}\n**Last updated on:** ${date}\n\n`;
+  const metadataBlock = `**Last updated by:** ${author}, **Last updated on:** ${date}\n\n`;
 
   // Insert metadata block after YAML frontmatter (if it exists) or at top
   const updatedContent = yamlFront
