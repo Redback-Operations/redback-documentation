@@ -2653,9 +2653,9 @@
     "@types/react" "*"
 
 "@types/react@*":
-  version "18.3.16"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.3.16.tgz"
-  integrity sha512-oh8AMIC4Y2ciKufU8hnKgs+ufgbA/dhPTACaZPM86AbwX9QwnFtSoPWEeRUj8fge+v6kFt78BXcDhAU1SrrAsw==
+  version "18.3.18"
+  resolved "https://registry.npmjs.org/@types/react/-/react-18.3.18.tgz"
+  integrity sha512-t4yC+vtgnkYjNSKlFx1jkAhH8LgTo2N/7Qvi83kdEaUtMDiwpbLAktKDaAMlRcJ5eSxZkH74eEGt1ky31d7kfQ==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
@@ -6291,7 +6291,7 @@ fs.realpath@^1.0.0:
 
 fsevents@~2.3.2:
   version "2.3.3"
-  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
   integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
 fstream@^1.0.12:
@@ -11650,7 +11650,7 @@ recursive-readdir@2.2.2, recursive-readdir@^2.2.2:
     prism-react-renderer "^2.3.1"
     react "^18.0.0"
     react-dom "^18.0.0"
-    redback-documentation "file:../../../Library/Caches/Yarn/v6/npm-redback-documentation-0.0.0-87778d40-fccf-4995-8155-adf15549e4d9-1734227025119/node_modules/redback-documentation"
+    redback-documentation "file:../../../../../../AppData/Local/Yarn/Cache/v6/npm-redback-documentation-0.0.0-5507a765-79bf-4b4d-aa8d-16386356020d-1737180440113/node_modules/redback-documentation"
     rehype-katex "^7.0.1"
     remark-math "^6.0.0"
     yarn "^1.22.22"
