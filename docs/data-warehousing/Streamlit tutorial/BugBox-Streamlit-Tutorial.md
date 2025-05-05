@@ -1,8 +1,16 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# STREAMLIT BUGBOX (QR-Code Solution) TUTORIAL
+# BUGBOX QR-Code Solution Tutorial
+
+:::info
+
+**Document Creation:** 29 September, 2024. **Last Edited:** 29 September, 2024. **Authors:** Daezel.
+<br></br> **Document Code:** DOC1. **Effective Date:** 29 September 2024. **Expiry Date:** 29 September 2025.
+:::
+
+<!-- Move to new folder: Bugbox = Project 5  -->
 
 ## Introduction
 

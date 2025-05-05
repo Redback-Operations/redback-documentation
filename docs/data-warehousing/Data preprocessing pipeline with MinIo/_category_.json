@@ -1,0 +1,8 @@
+{
+  "label": "MinIO",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Data Preprocessing Pipeline with MinIO"
+  }
+}

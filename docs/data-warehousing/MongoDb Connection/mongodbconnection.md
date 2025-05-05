@@ -5,8 +5,8 @@ sidebar_position: 1
 # MongoDB Connection Server
 
 :::info
-**Effective Date:** 15 August 2024. **Last Edited:** 20 September 2024. **Author:** Ben Dang (Redback Operations).
-**Document Reference:** MongoDB Connection. **Expiry Date:** 15 August 2025. **Version:** 1.0.
+**Document Creation:** 15 August 2024. **Last Edited:** 20 September 2024. **Author:** Ben Dang.
+<br></br> **Document Code:** DOC1. **Effective Date:** 15 August 2024. **Expiry Date:** 15 August 2025.
 :::
 
 This project is a web server application that connects to a MongoDB database. The setup uses Docker Compose to manage the services.

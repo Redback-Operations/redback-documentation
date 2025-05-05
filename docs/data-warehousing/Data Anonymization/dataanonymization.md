@@ -4,11 +4,9 @@ sidebar_position: 3
 
 # Anonymization and Masking in Healthcare Data
 
-Implementation and Rationale
-
 :::info
-**Effective Date:** 30 Apr 2024. **Last Edited:** 10 May 2024. **Author:** Meghana Kaveti
-**Document Reference:** Data Anonymization. **Expiry Date:** 29 April 2025. **Version:** 1.0.
+**Document Creation:** 30 April, 2024. **Last Edited:** 10 May, 2024. **Author:** Meghana Kaveti.
+<br></br> **Document Code:** DOC1. **Effective Date:** 30 April, 2024. **Expiry Date:** 30 April, 2025.
 :::
 
 ## Introduction:

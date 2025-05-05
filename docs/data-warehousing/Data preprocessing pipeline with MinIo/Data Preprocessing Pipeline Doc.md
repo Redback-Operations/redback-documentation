@@ -1,8 +1,14 @@
 ---
-sidebar_position: 99
+sidebar_position: 2
 ---
 
 # Data Preprocessing Pipeline with MinIO
+
+:::info
+
+**Document Creation:** 22 September, 2024. **Last Edited:** 22 September, 2024. **Authors:** Meghana Kaveti.
+<br></br> **Document Code:** DOC1. **Effective Date:** 22 September 2024. **Expiry Date:** 5 September 2025.
+:::
 
 ## Introduction
 The prevalence of data across various sectors necessitates efficient data management practices to ensure data is not only stored securely but is also readily available and processed for analysis. This documentation outlines the theoretical foundation for a data preprocessing pipeline developed to interface with MinIO, an object storage solution, facilitating streamlined data operations from raw data acquisition to processed data storage.

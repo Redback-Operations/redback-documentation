@@ -1,8 +1,13 @@
 ---
-sidebar_position: 99
+sidebar_position: 1
 ---
 
-# Proof of Concept: Data Preprocessing Pipeline for MinIO Buckets at Redback Operations
+# Proof of Concept: Data Preprocessing Pipeline with MinIO
+
+:::info
+**Document Creation:** 22 September, 2024. **Last Edited:** 22 September, 2024. **Authors:** Meghana Kaveti.
+<br></br> **Document Code:** DOC1. **Effective Date:** 22 September 2024. **Expiry Date:** 5 September 2025.
+:::
 
 ## Project Overview
 The goal of this Proof of Concept is to demonstrate the feasibility and functionality of a data 

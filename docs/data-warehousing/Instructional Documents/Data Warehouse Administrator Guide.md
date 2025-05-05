@@ -1,6 +1,7 @@
 --- 
 sidebar_position: 1
 ---
+<!-- This can be slipt up in to onboarding topics -->
 
 # Data Warehouse Administration
 
