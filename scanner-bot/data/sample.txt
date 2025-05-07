@@ -1,0 +1,6 @@
+My name is John Doe.
+Email: varshakanugula@example.com
+Phone: 987-654-3210
+Credit Card: 4111-1111-1111-1111
+IP: 192.171.1.23
+SSN: 123-45-6789

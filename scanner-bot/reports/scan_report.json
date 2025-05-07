@@ -1,0 +1,17 @@
+{
+    "emails": [
+        "varshakanugula@example.com"
+    ],
+    "phone_numbers": [
+        "987-654-3210"
+    ],
+    "credit_cards": [
+        "4111-1111-1111-1111"
+    ],
+    "ssns": [
+        "123-45-6789"
+    ],
+    "ips": [
+        "192.171.1.23"
+    ]
+}
