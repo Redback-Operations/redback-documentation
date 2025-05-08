@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+sidebar_label: Streamlit vs Gradio
 ---
 
 # Streamlit vs Gradio
@@ -7,7 +8,7 @@ sidebar_position: 1
 :::info
 
 **Document Creation:** 22 September, 2024. **Last Edited:** 22 September, 2024. **Authors:** Daezel.
-<br></br> **Document Code:** DOC1. **Effective Date:** 22 September 2024. **Expiry Date:** 22 September 2025.
+<br></br> **Document Code:** STR1. **Effective Date:** 22 September 2024. **Expiry Date:** 22 September 2025.
 :::
 
 ## INTRODUCTION

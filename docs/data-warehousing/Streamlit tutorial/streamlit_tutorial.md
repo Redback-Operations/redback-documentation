@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: Streamlit Guide
 ---
 
 # Streamlit Tutorial
@@ -7,10 +8,8 @@ sidebar_position: 2
 :::info
 
 **Document Creation:** 22 September, 2024. **Last Edited:** 22 September, 2024. **Authors:** Daezel.
-<br></br> **Document Code:** DOC1. **Effective Date:** 22 September 2024. **Expiry Date:** 22 September 2025.
+<br></br> **Document Code:** STR2. **Effective Date:** 22 September 2024. **Expiry Date:** 22 September 2025.
 :::
-
-# Streamlit Tutorial
 
 ## Open-Source Python Framework
 

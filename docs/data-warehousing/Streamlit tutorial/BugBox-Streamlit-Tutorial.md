@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+sidebar_label: Bugbox QR-Code Solution
 ---
 
 # BUGBOX QR-Code Solution Tutorial
@@ -7,10 +8,8 @@ sidebar_position: 3
 :::info
 
 **Document Creation:** 29 September, 2024. **Last Edited:** 29 September, 2024. **Authors:** Daezel.
-<br></br> **Document Code:** DOC1. **Effective Date:** 29 September 2024. **Expiry Date:** 29 September 2025.
+<br></br> **Document Code:** STR3. **Effective Date:** 29 September 2024. **Expiry Date:** 29 September 2025.
 :::
-
-<!-- Move to new folder: Bugbox = Project 5  -->
 
 ## Introduction
 

@@ -1,12 +1,13 @@
 ---
 sidebar_position: 1
+sidebar_label: MinIO Proof of Concept
 ---
 
 # Proof of Concept: Data Preprocessing Pipeline with MinIO
 
 :::info
 **Document Creation:** 22 September, 2024. **Last Edited:** 22 September, 2024. **Authors:** Meghana Kaveti.
-<br></br> **Document Code:** DOC1. **Effective Date:** 22 September 2024. **Expiry Date:** 5 September 2025.
+<br></br> **Document Code:** MIN1. **Effective Date:** 22 September 2024. **Expiry Date:** 5 September 2025.
 :::
 
 ## Project Overview

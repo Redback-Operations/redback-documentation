@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: MinIO Pipeline
 ---
 
 # Data Preprocessing Pipeline with MinIO
@@ -7,7 +8,7 @@ sidebar_position: 2
 :::info
 
 **Document Creation:** 22 September, 2024. **Last Edited:** 22 September, 2024. **Authors:** Meghana Kaveti.
-<br></br> **Document Code:** DOC1. **Effective Date:** 22 September 2024. **Expiry Date:** 5 September 2025.
+<br></br> **Document Code:** MIN2. **Effective Date:** 22 September 2024. **Expiry Date:** 5 September 2025.
 :::
 
 ## Introduction

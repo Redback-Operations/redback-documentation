@@ -1,11 +1,11 @@
 ---
 sidebar_position: 2
+sidebar_label: Mosquitto MQTT Broker
 ---
 
 # Mosquitto MQTT Broker
 
 :::info
-
 **Document Creation:** 6 May, 2025. **Last Edited:** 6 May, 2025. **Authors:** Richard Whellum.
 <br></br> **Document Code:** DOC1. **Effective Date:** 6 May, 2025. **Expiry Date:** 6 May, 2026.
 :::

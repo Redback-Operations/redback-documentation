@@ -1,12 +1,13 @@
 ---
 sidebar_position: 3
+sidebar_label: Anonymization Solution
 ---
 
 # Anonymization and Masking in Healthcare Data
 
 :::info
 **Document Creation:** 30 April, 2024. **Last Edited:** 10 May, 2024. **Author:** Meghana Kaveti.
-<br></br> **Document Code:** DOC1. **Effective Date:** 30 April, 2024. **Expiry Date:** 30 April, 2025.
+<br></br> **Document Code:** ANO1. **Effective Date:** 30 April, 2024. **Expiry Date:** 30 April, 2025.
 :::
 
 ## Introduction:

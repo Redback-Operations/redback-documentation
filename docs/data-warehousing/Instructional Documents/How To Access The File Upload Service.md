@@ -1,8 +1,14 @@
 --- 
-sidebar_position: 2
+sidebar_position: 5
+sidebar_label: File Upload Service
 ---
-<!-- This can be in the onboarding topics -->
+
 # How To Use The Data Warehouse - File Upload Service
+
+:::info
+**Document Creation:** 22 September, 2024. **Last Edited:** 22 September, 2024. **Authors:** kghdxx.
+<br></br> **Document Code:** ONB5. **Effective Date:** 22 September 2024. **Expiry Date:** 22 September, 2025.
+:::
 
 ## Part 1. Accessing the File Upload Service
 

@@ -1,6 +1,6 @@
 {
-  "label": "Mosquitto MQTT Broker",
-  "position": 6,
+  "label": "Mosquitto",
+  "position": 8,
   "link": {
     "type": "generated-index",
     "description": "General documentation for Mosquitto"
