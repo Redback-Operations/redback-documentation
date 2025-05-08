@@ -1,9 +1,14 @@
-
+---
+sidebar_position: 13
+---
 
 # Wazuh Login Troubleshooting Report
 
-**Author:** Elvis Ifeanyi Nwosu  
-**Date:** April 8, 2025  
+:::info
+Document Creation: 2025-04-9. Last Edited: 2025-04-26. Authors: Elvis Ifeanyi Nwosu
+
+Document Code: Wazuh_Login_Troubleshooting_V1. Effective Date: 2025-04-26. Expiry Date: 2026-04-26
+::: 
 **System:** Wazuhs Full Stack Deployment (Manager, Indexer, Dashboard) on Local VM
 
 
@@ -51,13 +56,13 @@ sudo systemctl status wazuh-indexer
  Confirmed manager was active but Dashboard and indexer failed.
 
 **Screenshot of Service Status wazuh-dashboard:**  
-![Service Status wazuh-dashboard](Img\image-4.png)
+![Service Status wazuh-dashboard](..\img\WFSv1-4.png)
 
 **Screenshot of Service Status wazuh-indexer:**
-![Service Status wazuh-indexer](Img\image-2.png)
+![Service Status wazuh-indexer](..\img\WFSv1-2.png)
 
 **Screenshot of Service Status wazuh-manager:**
-![Service Status wazuh-manager](Img\image-3.png)
+![Service Status wazuh-manager](..\img\WFSv1-3.png)
 
 ### Step 2: Reset Credentials
 
@@ -67,9 +72,6 @@ sudo /usr/share/wazuh-indexer/plugins/opensearch-security/tools/wazuh-passwords-
 
 Successfully reset passwords for users including `kibanaserver`.
 
-**Screenshot of new passwords:** 
-
-![Password Reset Output](Img\image.png)
 
 
 ### Step 3: Updated Keystore
@@ -95,7 +97,7 @@ sudo openssl x509 -req -in /etc/wazuh-dashboard/certs/dashboard.csr -signkey /et
  Successfully created private key and certificate.
 
 **Screenshot of regenerated dashboard certs:**  
-![regenerated dashboard certificates](Img\image-5.png)
+![regenerated dashboard certificates](..\img\WFSv1-5.png)
 
 
 
@@ -109,7 +111,7 @@ sudo chmod 600 /etc/wazuh-dashboard/certs/dashboard-key.pem
  Ensured proper access rights for dashboard service.
 
 **Screenshots of access permisssions**
-![Access rights permissions](Img\image-6.png)
+![Access rights permissions](..\img\WFSv1-6.png)
 
 ### Step 6: Restarted Services
 
@@ -122,7 +124,7 @@ sudo systemctl restart wazuh-manager
  Confirmed all services started successfully and dashboard became accessible.
 
 **Screenshot dashboard access prompt:**  
-![Dashboard Access](Img\image-7.png)
+![Dashboard Access](..\img\WFSv1-7.png)
 
 
 
