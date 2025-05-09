@@ -113,7 +113,7 @@ Flask-API: [http://10.137.0.149:5000/](http://10.137.0.149:5000/)
 
 ## The VM and Docker
 
-  
+⚠️ **WARNING:** Changes made to the Docker containers inside the VM affect the shared production environment. These containers are **NOT** isolated per user.
 
 The VM uses a Docker instance to run 'containers' or apps (different software we use as tools e.g. MongoDB).
 
