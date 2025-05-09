@@ -8,6 +8,8 @@ Document Creation: [09/05/2025]. Last Edited: [09/05/2025]. Authors: [Luk Gvozde
 Document Code: [PE-1]. Effective Date: [09/05/2025]. Expiry Date: [09/05/2026].
 :::
 
+## Code Location : Redback-Operations/redback-orion/tree/main/Player_Tracking/Pose_Matching_project/Pose_Estimation/pose-estimation-fitness
+
 # Pose Estimation Fitness Project
 
 This project focuses on pose estimation and strain analysis for fitness applications using a pre-trained Keypoint R-CNN model. The primary goal is to detect keypoints, evaluate exercise form, and visualize strain metrics.
