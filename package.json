@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
+    "prebuild": "chmod +x ./src/components/metadataInject.js && node ./src/components/metadataInject.js",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
@@ -24,6 +25,7 @@
     "prism-react-renderer": "^2.3.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "redback-documentation": "file:",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "yarn": "^1.22.22"
