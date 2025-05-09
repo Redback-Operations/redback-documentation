@@ -1,16 +1,14 @@
 ---
-sidebar_position: 5
-sidebar_label: Dremio api (for data analysts)
+sidebar_position: 2
+sidebar_label: Dremio API
 ---
 
 # How to access data stored in dremio datawarehouse (for data analysts)
-<br></br>
 
-### Connecting to deakins network
-First part of accessing the datawarehouse is connecting to deakins network which requires downloading and connecting to deakins network using [anyconnect VPN](https://www.deakin.edu.au/students/student-life-and-services/health-wellbeing-and-safety/safety-security/online-safety-security/secure-your-devices/vpn)
-
-Once there select your operating system which will redirect you to a guide explaining how to download, install and connect to deakins network. (If you get a permission error saying you dont have access ensure you are logged in at the top right after the redirection)
-<br></br>
+:::info
+**Document Creation:** 21 September, 2024. **Last Edited:** 21 September, 2024. **Authors:** Kaleb.
+<br></br> **Document Code:** DRE2. **Effective Date:** 21 September, 2024. **Expiry Date:** 21 September, 2025.
+:::
 
 ### Making a SQL request to dremio in jupyter
 The first step in ensuring you have the correct packages installed. Required for this guide can be downloaded with this command.

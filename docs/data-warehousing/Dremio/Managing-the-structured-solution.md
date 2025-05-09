@@ -1,15 +1,14 @@
 ---
-sidebar_position: 4
-sidebar_label: Managing the structured dremio solution
+sidebar_position: 1
+sidebar_label: Dremio Guide
 ---
 
 # Maintaining the structured Dremio solution
-<br></br>
 
-### Accessing the virtual machine
-Follow this [guide](https://redback-operations.github.io/redback-documentation/docs/data-warehousing/Data%20Lakehouse/How-To%20-%20Accessing%20the%20Redback%20Operations%20Virtual%20Machine) which will walk you through connecting to the VM running the dremio, minio and the flask api docker containers, it also has the docker-compose file for dremio and minio though that can be found on [github](https://github.com/Redback-Operations/redback-data-warehouse/blob/main/File%20Upload%20Service/data-lakehouse2.yml) aswell. The guide has a prerequesite of having installed [anyconnect VPN](https://www.deakin.edu.au/students/student-life-and-services/health-wellbeing-and-safety/safety-security/online-safety-security/secure-your-devices/vpn).
-
-In order to access the UI's for dremio and minio you will need to speak to the leader of the datawarehousing team who will either provide you with login details or direct you to someone who can.
+:::info
+**Document Creation:** 21 September, 2024. **Last Edited:** 21 September, 2024. **Authors:** Kaleb.
+<br></br> **Document Code:** DRE1. **Effective Date:** 21 September, 2024. **Expiry Date:** 21 September, 2025.
+:::
 
 ### How the solution works
 Think of the structured solution as a datalakehouse (Minio) which can store files of any type with Dremio layered over it as the interactable UI for doing sql queries on a sql table. They are linked through adding minio as a source for dremio to store and access the data. As of writing this documentation we have three buckets on minio though only project-2 and project-3 are connected to dremio. ![PHOTO OF DREMIO](img/dremio-ui.PNG) 
