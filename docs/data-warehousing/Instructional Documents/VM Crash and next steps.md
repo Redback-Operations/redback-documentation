@@ -1,3 +1,7 @@
+---
+sidebar_position: 50
+---
+
 #  After-Action Report: Data Warehouse Crash and Recovery (April 2025)
 
 ##  Summary
