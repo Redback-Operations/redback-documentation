@@ -1,0 +1,8 @@
+{
+  "label": "Wazuh - MISP Integration",
+  "position": 12,
+  "link": {
+    "type": "generated-index",
+    "description": "Wazuh MISP Integration documentation"
+  }
+}
