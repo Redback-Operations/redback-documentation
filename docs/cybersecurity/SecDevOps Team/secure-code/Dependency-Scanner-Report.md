@@ -5,35 +5,39 @@ sidebar_position: 4
 # Trivy Dependency Scan Results
 
 :::info
-**Document Creation:** 14 May, 2025. **Author:** Richard Whellum.  
-**Effective Date:** 14 May 2025. **Expiry Date:** 14 May 2026.
+**Document Creation:** 14 May, 2025. **Last Edited:** 14 May, 2025. **Authors:** Richard Whellum. 
+<br></br> **Document Code:** TRV2. **Effective Date:** 14 May, 2025. **Expiry Date:** 14 May, 2026.
 :::
 
 ## Background
 
-The Trivy dependency scanner was deployed to the Data Warehouse repository in T3 of 2024 to test its functionality. This is currently the only repository with this automated scanner. 
+The Trivy dependency scanner was deployed to the Data Warehouse repository in T3 of 2024 to test its functionality. At the time of writing, this is the only repository with the automated scanner. 
 
 In T1 of 2025, the scanner was run on forks of the Redback project repositories to determine the current state of vulnerabilities without affecting the work being performed by the project teams.
 
 ## Vulnerability Summary
 
-The full list of vulnerabilities can be found [here](https://deakin365.sharepoint.com/:x:/r/sites/RedbackOperations9/Shared%20Documents/Cyber%20Security%20Team/2025%20Trimester%201/Cybersecurity%20Team/SecDevOps/Trivy-Report.xlsx)
+The full report and vulnerability spreadsheet can be found in the Redback Sharepoint:
+
+[Report](https://deakin365.sharepoint.com/:x:/r/sites/RedbackOperations9/Shared%20Documents/Cyber%20Security%20Team/2025%20Trimester%201/Cybersecurity%20Team/SecDevOps/Trivy-Report.pdf)
+
+[Spreadsheet](https://deakin365.sharepoint.com/:x:/r/sites/RedbackOperations9/Shared%20Documents/Cyber%20Security%20Team/2025%20Trimester%201/Cybersecurity%20Team/SecDevOps/Trivy-Report.xlsx)
 
 The following is a summary of identified vulnerabilities across the Redback project repositories:
 
-| Repository                               | Vulnerability Count |
-|------------------------------------------|----------------------|
-| redback-data-warehouse                   | 15                   |
-| redback-ui                               | 16                   |
-| redback-smartbike-mobile                 | 1                    |
-| redback-smartbike-web                    | 6                    |
-| redback-smartbike-iot                    | 65                   |
-| redback-senior-tech                      | 7                    |
-| redback-senior-web                       | 6                    |
-| redback-orion                            | 80                   |
-| redback-orion-web                        | 6                    |
-| redback-fit-sports-performance           | 31                   |
-| redback-fit-web                          | 4                    |
+| Repository                               | Total Vulnerabilies | Critical| High | Medium | Low |
+|------------------------------------------|---------------------|---------|------|--------|-----|
+| redback-data-warehouse                   | 15                  |    .    |   2  |   11   |  2  |
+| redback-ui                               | 16                  |    .    |   6  |   6    |  4  |
+| redback-smartbike-mobile                 | 1                   |    .    |   .  |   1    |  .  |
+| redback-smartbike-web                    | 6                   |    .    |   2  |   4    |  .  |
+| redback-smartbike-iot                    | 65                  |    5    |  29  |   22   |  9  |
+| redback-senior-tech                      | 7                   |    1    |   4  |   2    |  .  |
+| redback-senior-web                       | 6                   |    .    |   2  |   4    |  .  |
+| redback-orion                            | 80                  |    8    |  36  |   33   |  3  |
+| redback-orion-web                        | 6                   |    .    |   2  |   4    |  .  |
+| redback-fit-sports-performance           | 31                  |    1    |  11  |   15   |  4  |
+| redback-fit-web                          | 4                   |    .    |   2  |   2    |  .  |
 
 ## Next Steps
 

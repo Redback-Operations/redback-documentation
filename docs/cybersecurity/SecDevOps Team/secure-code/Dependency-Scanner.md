@@ -5,8 +5,8 @@ sidebar_position: 3
 # Trivy Dependency Scan
 
 :::info
-**Document Creation:** 8 January, 2025. **Author:** Richard Whellum.
-<br></br> **Effective Date:** 13 January 2025. **Expiry Date:** 13 January 2026.
+**Document Creation:** 8 January, 2025. **Last Edited:** 14 May, 2025. **Authors:** Richard Whellum. 
+<br></br> **Document Code:** TRV1. **Effective Date:** 8 January, 2025. **Expiry Date:** 8 January, 2026.
 :::
 
 ## Overview
