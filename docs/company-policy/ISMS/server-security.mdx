@@ -24,11 +24,11 @@ description: Server Security High-Level Guidelines for Redback Operations
         <td style={{ textAlign: 'center' }}>Document Creation</td>
       </tr>
       <tr>
+        <td style={{ textAlign: 'center' }}>V0.3</td>
+        <td style={{ textAlign: 'center' }}>Riley Collis</td>
         <td style={{ textAlign: 'center' }}></td>
-        <td style={{ textAlign: 'center' }}></td>
-        <td style={{ textAlign: 'center' }}></td>
-        <td style={{ textAlign: 'center' }}></td>
-        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}>12/05/2025</td>
+        <td style={{ textAlign: 'center' }}>Update/Review</td>
       </tr>
       <tr>
         <td style={{ textAlign: 'center' }}></td>
@@ -220,30 +220,14 @@ A clear definition of roles and responsibilities is crucial for effective server
 
 The success of the Server Security Policy at Redback Operations relies on clearly defined roles and responsibilities. It is crucial for all stakeholders to understand their duties to ensure effective implementation, compliance, and maintenance of security standards.
 
-#### Security Team
-
--   Develop, review, and update the server security policy; implement security controls and measures; monitor security compliance; conduct regular security assessments; respond to security incidents.
--   Accountable For: Maintaining the overall security posture of the organization’s server environments.
-
-#### IT Department
-
--   Assist in implementing security controls; manage and maintain server hardware and software; ensure timely application of patches and updates; support the Security Team in incident response activities.
--   Operational management of servers and ensuring their compliance with the security policy.
-
-#### System Administrators
-
--   Apply security configurations and settings; monitor system performance and logs; enforce access controls and permissions; directly handle the installation, maintenance, and upgrading of servers.
--   Day-to-day management of servers, ensuring they are secure from unauthorized access and threats.
-
-#### Management
-
--   Approve security policies and resource allocations; ensure organization-wide compliance with security practices; foster a culture of security awareness.
--   Strategic oversight and ensuring that security objectives align with the organization’s business goals.
-
-#### End Users
-
--   Adhere to security policies and procedures; report any suspected security vulnerabilities or incidents to the IT or Security Team.
--   Using server resources responsibly and maintaining awareness of security implications.
+|**Role**           | **Key Responsibilities**                                                     |
+|-------------------|------------------------------------------------------------------------------|
+| **CISO**          | Lead policy updates, oversee risk, approve security strategies.              | 
+| **Security Team** | Implement controls, monitor compliance, perform regular security checks.     |
+| **IT Department** | Apply updates, maintain servers, assist in incident response.                |
+| **System Admins** | Apply configurations, monitor performance, enforce access controls.          |
+| **Management**    | Allocate resources, approve policy updates, ensure organizational alignment. |
+| **End Users**     | Follow access and security rules, report security concerns promptly.         |
 
 ### RACI Chart
 
@@ -308,6 +292,16 @@ https://www.cyber.gov.au/resources-business-and-government/essential-cyber-secur
 (Australian Signals Directorate, Guidelines for System Hardening, May 12 2024)
 
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+#### Prioritisation of Controls
+|**Control Area**             |**Priority**|
+|-----------------------------|------------|
+|Application Control          |Critical    |
+|Server Monitoring            |Critical    |
+|Operating System Hardening   |Important   |
+|Authentication Hardening     |Important   |
+
+** This ranking helps teams focus on the most urgent risks first, ensuring critical protections are implemented ahead of lower-priority measures.**
 
 ### Operating System Hardening
 
@@ -911,6 +905,11 @@ Malicious actors can exploit misconfigurations or vulnerabilities in software-ba
 The objective of this policy review section is to ensure that the security controls and guidelines within the Server Security Policy remain relevant, effective, and aligned with evolving security threats, organizational needs, and compliance requirements.
 
 **Note: Company layout and infrastructure does not reflect the standards outline in this policy at the time of this document’s creation and is considered a long-term strategy to implement when company maturity has improved.**
+
+### Audit and Update Frequency (Summary with further information below)
+- **Annual Review**: Every 12 months.
+- **Ad-Hoc Review**: After significant technology, compliance, or business changes.
+- **Expiry Date**: Clearly set at 1 May 2026 (renew or update before this date).
 
 ### Responsibility for Reviews
 
