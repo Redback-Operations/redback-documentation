@@ -149,20 +149,18 @@ Description: Set up an on-premises email server within Redback Operations’ on-
 9.3.	Perform a spoofing test using online tools such as https://www.dmarctester.com/ .  
 
 ### Phase 4 – Additional security controls based on the CIS Foundations Benchmark guidelines  
-10. Implement additional security controls based on **CIS Foundations Benchmark** guidelines:  
+#### 10. Implement additional security controls based on **CIS Foundations Benchmark** guidelines:  
 10.1. Anti-phishing Policy  
 10.2. Anti-spam Policy  
 10.3. Anti-malware Policy  
 10.4. Safe Attachments Policy  
-10.5. Safe Links Policy  
-10.6. Content Filtering Policy  
-10.7. Common Attachment Types Filtering Policy  
-10.8. Connection Filtering Policy  
-10.9. Alert Policies  
+10.5. Safe Links Policy   
+10.6. Common Attachment Types Filtering Policy  
+10.7. Connection Filtering Policy
 
-11. Validate using the recommended audit guidelines per the **CIS Foundations Benchmark**.  
+#### 11. Validate using the recommended audit guidelines per the **CIS Foundations Benchmark**.  
 
-## Phase 5 – Additional Security Controls
+### Phase 5 – Additional Security Controls
 12. Implement the use of mail transport rules to maintain a list of IoC and blocked senders list and reject emails from those IoC and blocked sender sources.  
 13. Validate by adding a test sender address and IP address to the blocked senders list and confirming that the emails are blocked when sent from the listed sender address and IP address.  
 
