@@ -118,6 +118,7 @@ Console.WriteLine(LocalIdentifier()) //Prints 10 and not Local
 ```
 As we can observe in our example, the `LocalIdentifier()` function in our second example keeps the `global` variable within the function and won't change. Whereas in our first example, our `global` variable is a global variable in which can always be easily changed despite us wanting to keep it as one consistent variable. Consistency is the key outcome for this practice!
 
+
 #### 5.	**Add comments and prioritize documentation:**
 It’s always wise to add comments to our code when writing it, there’s many benefits to doing so, but too much can make code messy and often relates back to our code smells in regards to dispensables but also our main accomplishments including readability, consistency and cross-team collaboration as comments can serve as documentation purposes also to inform other developers what is occurring, what needs to be done, etc. Here are some valid placements of when we should be adding comments versus when we should minimise it so that we don’t have too many dispensables occurring. Keeping in mind also that incorrect comments can mislead developers so we should always also be ensuring that we are accurate when writing a comment so that other developers can easily understand but also ourselves.
 
@@ -156,18 +157,9 @@ def complete_function() //Calculate the range of the dataset (REMOVE) - Codes pu
 print(range) //Print the range of the dataset here once finished function (REMOVE) - Improvements have already been made so we can remove this
 ```
 
+
 #### 6.	**Have efficient data processing:**
 When we code, we want to process data efficiently to achieve a result faster than something that may take longer due to incorrect coding/larger functions. This best practice method involves looking at dividing our code into smaller functions for reusability and maintainability which also achieves efficient maintenance should it be required. What this also means is that we need to be identifying any inefficient algorithms/data structures when conducting our code reviews and refactor them to create a more efficient solution.
-```
-//Example of poor data processing: (JavaScript)
-
-
-```
-```
-//Example of efficient data processing: (JavaScript)
-
-
-```
 
 
 #### 7.	**Have effective code review and refactoring:**
@@ -191,12 +183,16 @@ catch(ArgumentNullException)
 
 #### 9.	**Have security and privacy considerations:**
 With constant threats emerging, we want to mitigate any risk of any potential compromise. In saying this, having security considerations is of extreme importance and needs to always be implemented within our code. Some things we should not be doing at all, and this also comes with our code reviewing is:
+
 - **NO** Hardcoded passwords
 - **NO** Hardcoded usernames
 - **NO** Sensitive data coded or listed
+
 These three main points are a definite ‘no-go’ within coding as these can be easily leveraged against us and can often lead to attacks against our systems and unauthorised access. After all, most cyber security incidents are often caused by human error, so mitigating this risk can drastically reduce the likelihood of a compromise leading to an incident. These also come from secure coding practices including studying and analysing the OWASP Top 10, MITRE ATT&CK Framework, Cryptography Measures (Encryption/Decryption) and Security by design. Some resources will be provided for further information:
+
 - **OWASP Top 10:** https://owasp.org/www-project-top-ten/
 - **MITRE:** https://attack.mitre.org/
+
 The main priority with this coding standard is that we should always be thinking about security considerations while completing our work, not have it as an afterthought. 
 Always keep a tight security posture and always question to yourself, “Am I giving away any sensitive information in this file?”
 
@@ -215,5 +211,7 @@ We can achieve this by some simple comments at the top of the file describing th
 
 
 #### 11.	**Ensure there is daily backups/manual saving:**
-This is a simple measure that we can implement although it still can sometimes slip through. Although we always wish that our systems can never crash, sometimes this can still happen, they can crash, data loss can occur, glitches, hardware damage. All of which can affect the progress of our work. We should save our code daily for large projects but even for smaller files, something as simple as ***‘Ctrl+S’*** (on Windows) to save our file always ensures we are keeping our progress so that if one of these unprecedented scenarios occur, we can be confident that when we return, we can pick up our work where we left it off without fear of losing what we have worked on. Autosave can be viable but don’t always rely on it also. Manual saving after all is the key to achieving this best practice method. Always remember to keep saving your work throughout the duration of modification, don't leave it until the end of your session to save and exit!!
+This is a simple measure that we can implement although it still can sometimes slip through. Although we always wish that our systems can never crash, sometimes this can still happen, they can crash, data loss can occur, glitches, hardware damage. All of which can affect the progress of our work. 
+
+We should save our code daily for large projects but even for smaller files, something as simple as ***‘Ctrl+S’*** (on Windows) to save our file always ensures we are keeping our progress so that if one of these unprecedented scenarios occur, we can be confident that when we return, we can pick up our work where we left it off without fear of losing what we have worked on. Autosave can be viable but don’t always rely on it also. Manual saving after all is the key to achieving this best practice method. Always remember to keep saving your work throughout the duration of modification, don't leave it until the end of your session to save and exit!!
 

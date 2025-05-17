@@ -10,8 +10,8 @@ This section looks into how we can manually review our own code to catch any pot
 Author: **Lachlan Harrison**, **03/05/2025**
 :::
 
-For this section, various pieces of coding will be presented with various points of interest that need to be reviewed to apply our best practices to: (These will be done in Python and Markdown coding standards for the purpose of this demonstration)
-We will then point out what needed to be refactored and why for each coding example as well as a refactored version of the code to demonstrate these coding best practices in action and why it is needed.
+For this section, various pieces of coding will be presented with various points of interest that need to be reviewed to apply our best practices to: (This will be done in the Python coding standard for the purpose of this demonstration)
+We will then point out what needed to be refactored and why for the coding example as well as a refactored version of the code to demonstrate these coding best practices in action and why it is needed.
 
 - Here is a link to the video in which you can watch to see the code reviewing process in action: *VIDEO URL*
 
