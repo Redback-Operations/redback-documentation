@@ -1,6 +1,6 @@
 {
-  "label": "Data Lakehouse",
-  "position": 1,
+  "label": "Data Lakehouse Implementation",
+  "position": 2,
   "link": {
     "type": "generated-index",
     "description": "Documentation for the Data Lakehouse platform"
