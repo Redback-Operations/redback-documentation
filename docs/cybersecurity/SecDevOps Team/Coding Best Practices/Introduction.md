@@ -17,7 +17,7 @@ Throughout the module you will learn about Code Smells and what they are and how
 
 ### Contents:
 The module is constructed with a number of sections including:
-- **Introduction** <- You are here
+- **Introduction** You are here
 - **Section 1:** CODE SMELLS
 - **Section 2:** CODING BEST PRACTICES
 - **Section 3:** CODE REVIEWING
