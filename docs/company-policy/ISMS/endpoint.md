@@ -5,11 +5,13 @@ sidebar_position: 5
 # Endpoint Security
 
 Redback Operations Policy
+## Version History
 
-:::info
-**Document Creation:** 27 April, 2024. **Last Edited:** 27 April, 2024. **Authors:** Kaleb Bowen.
-<br></br>**Effective Date:** 10 May 2024. **Expiry Date:** 10 May 2025.
-:::
+| Version | Modified By | Approver | Edited On | Changes Made |
+|---------|-------------|----------|-----------|--------------|
+| V0.1    | Kaleb Bowen |  | 27/04/2024 | Initial document creation |
+| V1.0    | Nathasha Liyanage |  | 17/05/2025 | Review/Update  |
+
 
 ## Purpose
 
@@ -82,35 +84,70 @@ Attention should be given to any accessories connected to Redback Operations aff
 
 Endpoints must engage a lock-out of content through a shutdown or sign-out after 15 minutes of inactivity to prevent potential bad actors getting access to the device. Regardless, users, especially those with privileged access, should be locking their devices immediately when leaving the direct area around it. Devices used for testing or experimental purposes may be configured to stay awake for the duration of their tasking if adequate signage is in place, or the presence of an approved user is nearby, additionally programs not necessary to the tasking should be locked down where relevant.
 
-## Digital Security
+## Minimum Security Requirements
 
-### Patching
+### Device Security
+- All devices must use full disk encryption (e.g., BitLocker for Windows, FileVault for macOS).
+- Screen locks must be enabled with an auto-lock timeout of 10 minutes or less, requiring authentication for access.
+- Endpoints must engage a lock-out (shutdown or sign-out) after 15 minutes of inactivity, unless configured for testing purposes with adequate signage or supervision.
 
-Operating systems and software deployed by Redback Operations should be monitored for newly released updates and patches. Critical security patches must be applied within 48 hours of notification, whilst non-critical should be applied at the earliest reasonable time. 
+### Antivirus and Malware Protection
+- All devices must run real-time antivirus/malware protection (e.g., Microsoft Defender, Sophos, Avast) with full settings enabled.
+- Virus signatures and scanning engines must be updated weekly or more frequently.
+- All Windows endpoints must, at a minimum, run Windows Defender with full settings.
 
-Operating systems and software that reaches end-of-life should be removed from devices with alternatives identified as the security of these cannot be guaranteed.
+### Operating System and Software Updates
+- Operating systems and applications must enable automatic updates where possible.
+- Critical security patches must be applied within 48 hours of notification, and non-critical updates at the earliest reasonable time.
+- Disconnected or obsolete operating systems (e.g., Windows 7, macOS <10.15) are prohibited, and end-of-life software must be removed with alternatives identified.
 
-### Least Privilege
+### Application Control
+- Only necessary and authorized software may be installed on Redback devices.
+- Scripting environments (e.g., Python, PowerShell) must be used responsibly and only with permission to access sensitive systems.
+- Unauthorized software installation is prohibited.
 
-User access to endpoints should be implemented in accordance with the principle of least privilege. That being, users should only have access to the necessary functions to complete their tasking. This access should be reviewed regularly, on both intervals and when a user changes roles in the organisation. 
+### Administrator Privileges
+- Routine operations must not use administrator/root accounts.
+- Administrative access is restricted to system owners or those with absolute need, with specific permissions granted where possible.
+- Non-administrative users must log into locked-down accounts via group policy to prevent changes to core operating system aspects.
 
-Administrative access should be restricted to those with an absolute need, such system owners. Where possible, select permissions should be given rather than administrative access.
+### Network Access
+- Devices must connect only to secure, password-protected Wi-Fi networks.
+- Public Wi-Fi requires a secure VPN (e.g., university VPN or approved equivalent).
+- Software firewalls must be enabled on all devices (default for most operating systems).
 
-Least privilege should also be implemented in the case of sub-systems within the operating systems of Redback-owned devices. Non-administrative users should be logging onto accounts which are locked down appropriately to avoid changes being made to core aspects of the operating system. This should be implemented through group policy.
-
-### Malware Protection
-All Windows endpoints must, at a minimum, be running Windows Defender to the full settings available. 
+### Data Storage and Access
+- Sensitive data must not be stored on unauthorized cloud platforms (e.g., personal Google Drive, Dropbox) unless pre-approved.
+- Local sensitive data must be minimized and encrypted.
+- Sensitive and business-critical data should be stored on shared cloud repositories with relevant users, not locally.
+- Offsite physical backups are recommended for added redundancy.
 
 ### Authentication
-
-In every instance where the software allows it, 2-factor authentication, or multi-factor authentication should be used. The preferred method for this is through password and a token generator, such as Authy or Google Authenticate, or a physical token such as Yubikey.
-
-Attention should also be given to the storage of passwords. Each user accessing a Redback Operations endpoint should use a password manager, as well as maintaining healthy password practices including the usage of passphrases or complex passwords, and regularly checking against breach sites for leaked passwords.
+- Two-factor or multi-factor authentication (2FA/MFA) must be enabled wherever supported, using password and token generators (e.g., Authy, Google Authenticator) or physical tokens (e.g., Yubikey).
+- Users must use a password manager and maintain strong password practices (e.g., passphrases, complex passwords, regular breach checks).
 
 ### Redundancy and Backups
+- Regular backups must be conducted to ensure data redundancy.
+- Sensitive and business-critical data should be stored on shared cloud repositories, with offsite physical backups as an additional layer of redundancy.
 
-Regular backups should be conducted to ensure data redundancy practices are in place. Sensitive and business-critical data should not be primarily stored on the local endpoints, instead being stored on shared cloud repositories with other relevant users. Where possible, offsite physical backups should also be used as another added layer of redundancy.
+## Monitoring and Reporting
 
-### Training
+- Device logs must be regularly reviewed to identify suspicious activity.
+- Suspected malware, unauthorized access, or lost/stolen devices must be reported to the Redback Cybersecurity Team or project mentors within 24 hours.
+- Redback may require device conformance checks before granting access to critical systems.
 
-Users should complete company-standard training before having privileged access to systems.
+## Training and Awareness
+
+- All users must complete endpoint security awareness training upon joining Redback Operations, covering secure device use, data handling, phishing techniques, and incident reporting.
+- Users with privileged access to systems must complete additional company-standard training.
+
+## Non-Compliance
+
+Failure to comply with this policy may result in:
+- Suspension of access to Redback resources.
+- Referral to Deakin University IT and/or disciplinary action where warranted.
+- Mandatory retraining or device security review.
+
+## Review and Maintenance
+
+This policy will be reviewed every 6 months or upon significant changes to Redback’s operational model or security posture. Updates will be developed under version control and published on the Redback Documentation site.
