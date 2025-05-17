@@ -26,10 +26,11 @@ The following security controls have been implemented and validated using PowerS
 | Common Attachment Types Filtering | This policy enables the default anti-malware policy’s file type filter to block common high-risk attachment types. | 2.1.2 |
 | Connection Filtering Policy | This policy:<br></br>• Ensures no IP addresses are listed in the connection filtering policy to prevent filter bypass.<br></br>• Disables the safe sender list in the connection filter policy to prevent filter bypass. | 2.1.12, 2.1.13 |
 
-## 10. Implement and validate additional security controls based on CIS Foundations Benchmark guidelines
-Each control listed in the deliverables section was implemented step-by-step in a sequential order.
+## 10. Implement additional security controls based on CIS Foundations Benchmark guidelines
+Each control listed in the deliverables section was implemented step-by-step in a sequential order using PowerShell cmdlets.
 
-As for validation, each was validated using PowerShell cmdlets and via GUI validation immediately after implementation. The validation included checks for:
+## 11. Validate additional security controls based on CIS Foundations Benchmark guidelines 
+As for validation, each control was validated using PowerShell cmdlets and via GUI validation immediately after implementation. The validation included checks for:
 1. Policy creation and enablement status  
 2. Scope assignment to all accepted domains  
 3. Rule and policy priorities, and expected behaviours  
@@ -40,14 +41,7 @@ Validation details and screenshot references are listed below.
 ## Implementation and Validation with Screenshot References
 
 ### PowerShell Setup Steps
-Before implementing the controls, the following PowerShell setup steps were implemented:
-•	Installed the ExchangeOnlineManagement PowerShell module.
-•	Set execution policy to ‘Bypass’ for the current session  
-•	Imported the module
-•	Connected using an account with 'Global Administrator' or 'Exchange Administrator' permissions
-•	Enabled organization customization using ‘Enable-OrganizationCustomization’
-•	Verified that ‘IsDehydrated’ was set to ‘False’
-
+Before implementing the controls, the following PowerShell setup steps were implemented:  
 - Installed the ExchangeOnlineManagement PowerShell module.
 - Set execution policy to ‘Bypass’ for the current session.
 - Imported the module.
