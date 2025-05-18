@@ -1,6 +1,12 @@
 ---
 sidebar_position: 5
 ---
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
 # Phishing Attack Red Team Usecase
 
 Phishing Attack Red Team Usecase

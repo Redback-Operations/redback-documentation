@@ -2,6 +2,12 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** jessmoogs, **Last updated on:** 25/09/2024
+
+
+**Last updated by:** jessmoogs, **Last updated on:** 25/09/2024
+
+
 # Moodboard
 
 This mood board for BugBox: Robotics for Curious Minds presents a vibrant and playful visual identity that merges educational robotics with a fun, engaging environment for kids.

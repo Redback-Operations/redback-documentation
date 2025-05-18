@@ -2,6 +2,12 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** Vincent Tran, **Last updated on:** 22/08/2024
+
+
+**Last updated by:** Vincent Tran, **Last updated on:** 22/08/2024
+
+
 # Project Orion
 Named after the astute hunter of Greek mythology and the constellation that illuminates our night sky, Project Orion represents a pioneering venture poised to redefine our engagement with sports. Project Orion is a cutting-edge initiative designed to revolutionise the way we perceive and interact with the sports field. Orion, renowned for his ability to never lose track of his target, perfectly embodies our mission.
 

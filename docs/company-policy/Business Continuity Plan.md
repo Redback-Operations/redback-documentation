@@ -2,6 +2,18 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 15/05/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 15/05/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 15/05/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 15/05/2024
+
+
 # Redback Operations Business Continuity Plan 2024-2025
 
 A Business Continuity Plan to ensure the minimal continuity of Redback Operations business capabilities.

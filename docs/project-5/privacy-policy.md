@@ -2,6 +2,12 @@
 sidebar_position: 7
 ---
 
+**Last updated by:** jessmoogs, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** jessmoogs, **Last updated on:** 17/12/2024
+
+
 # Privacy Policy
 
 :::info

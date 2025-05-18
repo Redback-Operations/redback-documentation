@@ -2,6 +2,12 @@
 sidebar_position: 5
 ---
 
+**Last updated by:** KasparByrne, **Last updated on:** 25/09/2024
+
+
+**Last updated by:** KasparByrne, **Last updated on:** 25/09/2024
+
+
 # Cadence Sensor
 
 :::danger[Important!]

@@ -2,6 +2,18 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
 # Denial of Service Incident Response Playbook 
 
 Denial of Service Incident Response Playbook for Blue Team

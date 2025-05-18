@@ -2,6 +2,12 @@
 sidebar_position: 17
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 15/05/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 15/05/2024
+
+
 # Feasibility Study on Implementing OpenCTI Template
 
 Feasibility Study on Implementing OpenCTI Template (Guide)

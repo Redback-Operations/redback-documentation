@@ -2,6 +2,12 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** Brendan Kay, **Last updated on:** 12/05/2024
+
+
+**Last updated by:** Brendan Kay, **Last updated on:** 12/05/2024
+
+
 # Wearable Swim Stroke Analyser Specifications
 
 **Description:**

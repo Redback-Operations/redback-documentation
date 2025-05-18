@@ -2,6 +2,12 @@
 sidebar_position: 20
 ---
 
+**Last updated by:** Devika1010, **Last updated on:** 16/09/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 16/09/2024
+
+
 # Feasibility Study of Integrating Hayabusa into Redback Operations' Cybersecurity Framework
 
 :::info

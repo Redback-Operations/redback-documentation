@@ -1,6 +1,18 @@
 ---
 sidebar_position: 5
 ---
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
 # Introduction
 
 Pi-hole is a network-level ad and tracker blocker that enhances privacy and security by acting as a DNS sinkhole. It intercepts and blocks requests to ad and tracking domains for all devices connected to a private network, ensuring comprehensive protection. Developed in 2014 by Jacob Salmela as an open-source alternative to AdTrap, Pi-hole is optimized for low-power devices like the Raspberry Pi but can also run on almost any Linux-based system.

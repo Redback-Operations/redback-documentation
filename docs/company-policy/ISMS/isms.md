@@ -3,6 +3,18 @@ sidebar_position: 1
 sidebar_label: ISMS
 ---
 
+**Last updated by:** mirarchi53, **Last updated on:** 19/09/2024
+
+
+**Last updated by:** mirarchi53, **Last updated on:** 19/09/2024
+
+
+**Last updated by:** mirarchi53, **Last updated on:** 19/09/2024
+
+
+**Last updated by:** mirarchi53, **Last updated on:** 19/09/2024
+
+
 # Information Security Management System
 
 Redback Operations ISMS Guide

@@ -1,6 +1,12 @@
 ---
 sidebar_position: 10
 ---
+
+**Last updated by:** Candice88, **Last updated on:** 12/01/2025
+
+
+**Last updated by:** Candice88, **Last updated on:** 12/01/2025
+
 # Azure DevOps Quick Start Guide
 
 :::info

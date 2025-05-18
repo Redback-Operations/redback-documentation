@@ -2,6 +2,12 @@
 sidebar_position: 99
 ---
 
+**Last updated by:** buvan008, **Last updated on:** 23/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 23/09/2024
+
+
 # Gaps in Unauthorized Login Attempts
 1. Lack of Practical Reconnaissance: We need more hands-on experience in gathering intelligence about the target.
 2. Password Guessing Practice: We haven’t used tools like Hydra in real scenarios to see how effective they are.

@@ -3,6 +3,15 @@ sidebar_position: 7
 sidebar_label: Endpoint Security Deployment Plan
 ---
 
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
 # Endpoint Security Deployment Plan
 
 Endpoint Security Policy Deployment Plan

@@ -2,6 +2,12 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
+
 # Predictive Modelling of Diabetes 
 Diabetes has become a leading cause for concern amongst Australia's population, with over 1.3 Million people confirmed cases and 500,000 more estimated undiagnosed type 2 cases.[^1]
 

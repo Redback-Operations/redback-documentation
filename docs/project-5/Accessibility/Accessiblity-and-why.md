@@ -1,6 +1,12 @@
 ---
 slidebar_position: 1
 ---
+
+**Last updated by:** Adityan Balamuralidharan, **Last updated on:** 18/01/2025
+
+
+**Last updated by:** Adityan Balamuralidharan, **Last updated on:** 18/01/2025
+
 # What is Accessibility and Why Do We Need It for Bugbox? 
 
 :::info

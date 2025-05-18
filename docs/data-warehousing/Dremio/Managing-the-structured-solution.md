@@ -3,6 +3,12 @@ sidebar_position: 1
 sidebar_label: Dremio Guide
 ---
 
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
 # Maintaining the structured Dremio solution
 
 :::info

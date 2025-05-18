@@ -2,6 +2,12 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** Lachlan, **Last updated on:** 12/01/2025
+
+
+**Last updated by:** Lachlan, **Last updated on:** 12/01/2025
+
+
 # Lachesis Hardware
 
 ![image of the custom PCB](./img/PCB_progress_image_top.jpg)

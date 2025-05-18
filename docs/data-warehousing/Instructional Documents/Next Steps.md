@@ -2,6 +2,12 @@
 sidebar_position: 99
 sidebar_label: Next Steps
 ---
+
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
   
 
 # Data Warehouse Next Steps

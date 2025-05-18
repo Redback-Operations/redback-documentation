@@ -2,6 +2,12 @@
 sidebar_position: 4
 ---
 
+**Last updated by:** KasparByrne, **Last updated on:** 25/09/2024
+
+
+**Last updated by:** KasparByrne, **Last updated on:** 25/09/2024
+
+
 # Heart Rate Sensor
 
 The heart_rate_sensor driver drives the TICKR heart rate monitor, pulling heart rate data from the TICKR.

@@ -1,6 +1,12 @@
 ---
 sidebar_position: 10
 ---
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
 # Integration of the MAX30102 Sensor in Our Project
 
 :::info

@@ -1,3 +1,7 @@
+**Last updated by:** Tajish Farhan, **Last updated on:** 11/12/2024
+
+**Last updated by:** Tajish Farhan, **Last updated on:** 11/12/2024
+
 
 # Small Object Detection: Football Tracking Project
 

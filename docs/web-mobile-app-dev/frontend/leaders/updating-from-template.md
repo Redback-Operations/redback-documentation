@@ -3,6 +3,12 @@ sidebar_label: Shared deps & config (the web app template repo)
 sidebar_position: 1
 ---
 
+**Last updated by:** Leesa Ward, **Last updated on:** 12/05/2024
+
+
+**Last updated by:** Leesa Ward, **Last updated on:** 12/05/2024
+
+
 # Shared dependencies and configuration
 
 > **Document Creation:** 12 May, 2024. **Last Edited:** 12 May, 2024. **Authors:** Leesa Ward.

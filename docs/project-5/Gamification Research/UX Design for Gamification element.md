@@ -2,6 +2,12 @@
 sidebar position: 4
 ---
 
+**Last updated by:** Khushpreet Kaur Randhawa, **Last updated on:** 29/09/2024
+
+
+**Last updated by:** Khushpreet Kaur Randhawa, **Last updated on:** 29/09/2024
+
+
 # Report over the User Experience Design for Gamification element of BugBox
 
 :::important

@@ -1,3 +1,7 @@
+**Last updated by:** brendankntb, **Last updated on:** 31/03/2024
+
+**Last updated by:** brendankntb, **Last updated on:** 31/03/2024
+
 # Heart Rate Zones
 
 This document provides information on heart rate zones to support sports performance analysis.

@@ -1,6 +1,18 @@
 ---
 sidebar_position: 2
 ---
+
+**Last updated by:** Sarthak Sharma, **Last updated on:** 15/12/2024
+
+
+**Last updated by:** Sarthak Sharma, **Last updated on:** 15/12/2024
+
+
+**Last updated by:** Sarthak Sharma, **Last updated on:** 15/12/2024
+
+
+**Last updated by:** Sarthak Sharma, **Last updated on:** 15/12/2024
+
 # Cowrie Honeypot Implementation Guide
 
 :::important

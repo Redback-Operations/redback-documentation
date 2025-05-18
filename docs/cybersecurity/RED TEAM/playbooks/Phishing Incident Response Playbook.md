@@ -2,6 +2,15 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
 # Phishing Incident Response Playbook 
 
 Phishing Incident Response Playbook for Blue Team

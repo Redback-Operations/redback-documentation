@@ -2,6 +2,12 @@
 sidebar_position: 5
 ---
 
+**Last updated by:** ConnorJar, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** ConnorJar, **Last updated on:** 03/12/2024
+
+
 # How to update the APK and EXE files 
 
 It is essential to update the Android Package Kit (APK) and Executable (EXE) files of the VR game to include all the students’ additions to the game, creating a final build version playable on both a PC and a VR headset. The APK file is used to play the game on the VR headset in the Makerspace, while the EXE file can run on a variety of devices, including Windows, Mac, and Linux systems. 

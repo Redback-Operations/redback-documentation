@@ -2,6 +2,18 @@
 sidebar_position: 6
 ---
 
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
 # Improper Usage Incident  Response Playbook 
 Improper Usage Incident  Response Playbook For Blue Team 
 

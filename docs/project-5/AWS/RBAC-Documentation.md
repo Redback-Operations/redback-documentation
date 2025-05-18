@@ -1,6 +1,12 @@
 ---
 sidebar_position: 1
 ---
+
+**Last updated by:** Adityan Balamuralidharan, **Last updated on:** 18/01/2025
+
+
+**Last updated by:** Adityan Balamuralidharan, **Last updated on:** 18/01/2025
+
 # Bugbox’s Role Based Access Control Guide
 
 :::info

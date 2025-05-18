@@ -2,6 +2,12 @@
 sidebar_position: 12
 ---
 
+**Last updated by:** Manasa, **Last updated on:** 23/09/2024
+
+
+**Last updated by:** Manasa, **Last updated on:** 23/09/2024
+
+
 # SET Email Phishing
 
 ## Introduction

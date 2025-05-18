@@ -2,6 +2,12 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** KasparByrne, **Last updated on:** 24/09/2024
+
+
+**Last updated by:** KasparByrne, **Last updated on:** 24/09/2024
+
+
 # Starting the Smartbike
 
 The Smartbike can be started from the Raspberry Pi. After being started, the Raspberry Pi will send and receive data over MQTT.

@@ -3,6 +3,12 @@ sidebar_position: 6
 sidebar_label: Creating a new component
 ---
 
+**Last updated by:** Leesa Ward, **Last updated on:** 08/08/2024
+
+
+**Last updated by:** Leesa Ward, **Last updated on:** 08/08/2024
+
+
 # Creating Components
 
 > **Document Creation:** 7 May, 2024. **Last Edited:** 19 May, 2024. **Authors:** Leesa Ward.

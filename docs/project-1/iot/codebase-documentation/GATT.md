@@ -2,6 +2,12 @@
 sidebar_position: 5
 ---
 
+**Last updated by:** KasparByrne, **Last updated on:** 23/09/2024
+
+
+**Last updated by:** KasparByrne, **Last updated on:** 23/09/2024
+
+
 # GATT Code
 
 ![bike-architecture](../img/architecture/bike-architecture.png)

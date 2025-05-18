@@ -2,6 +2,12 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** KasparByrne, **Last updated on:** 23/09/2024
+
+
+**Last updated by:** KasparByrne, **Last updated on:** 23/09/2024
+
+
 # MQTT Client
 
 The Smartbike uses MQTT for external communication - between itself and applications. 

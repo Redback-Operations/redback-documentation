@@ -2,6 +2,12 @@
 sidebar_position: 4
 ---
 
+**Last updated by:** Lachlan, **Last updated on:** 12/01/2025
+
+
+**Last updated by:** Lachlan, **Last updated on:** 12/01/2025
+
+
 # Burning of the bootloader
 
 ## Background

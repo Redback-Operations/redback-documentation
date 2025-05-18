@@ -1,6 +1,12 @@
 --- 
 sidebar position: 3
---- 
+---
+
+**Last updated by:** Khushpreet Kaur Randhawa, **Last updated on:** 29/09/2024
+
+
+**Last updated by:** Khushpreet Kaur Randhawa, **Last updated on:** 29/09/2024
+
 
 # Report over Instant Feedback Mechanism in BugBox: Strategies to Foster Engagement and Accomplishment 
 

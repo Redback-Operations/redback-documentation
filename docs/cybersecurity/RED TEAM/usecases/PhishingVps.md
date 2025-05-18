@@ -1,6 +1,12 @@
 ---
 sidebar_position: 98
 ---
+
+**Last updated by:** buvan008, **Last updated on:** 26/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 26/09/2024
+
 # Evilginx2 and GoPhish Tool Usage Demonstration for Phishing
 
 ## About Tool

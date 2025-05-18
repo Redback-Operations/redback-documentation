@@ -2,6 +2,15 @@
 sidebar_position: 8
 ---
 
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
 # Improper Usage Incident  Response Playbook 
 Improper Usage Incident  Response Playbook For Purple Team 
 

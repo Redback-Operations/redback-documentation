@@ -3,6 +3,12 @@ sidebar_position: 1
 sidebar_label: Restic
 ---
 
+**Last updated by:** BeniDage, **Last updated on:** 16/05/2025
+
+
+**Last updated by:** BeniDage, **Last updated on:** 16/05/2025
+
+
 # Data Warehouse Restic-Docker Backup System
 
 :::info

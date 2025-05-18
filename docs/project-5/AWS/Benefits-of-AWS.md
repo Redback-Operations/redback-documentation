@@ -1,6 +1,12 @@
 ---
 sidebar_position: 2
 ---
+
+**Last updated by:** Adityan Balamuralidharan, **Last updated on:** 18/01/2025
+
+
+**Last updated by:** Adityan Balamuralidharan, **Last updated on:** 18/01/2025
+
 # The Benefits of Using AWS for Role-Based Access Control (RBAC) in Bugbox
 
 :::info

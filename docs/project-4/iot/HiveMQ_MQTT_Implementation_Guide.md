@@ -1,6 +1,12 @@
 ---
 sidebar_position: 13
 ---
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
 # Implementing HiveMQ and MQTT in Sensor Data Collection
 
 :::info

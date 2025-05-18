@@ -2,6 +2,12 @@
 sidebar_position: 22
 ---
 
+**Last updated by:** T_Apperley, **Last updated on:** 07/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 07/12/2024
+
+
 # OWASP TOP 10 review
 
 Redback Operations Cybersecurity User Awareness Training Content

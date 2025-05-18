@@ -1,6 +1,12 @@
 ---
 sidebar_position: 6
 ---
+
+**Last updated by:** Оргил-Эрдэнэ, **Last updated on:** 16/05/2025
+
+
+**Last updated by:** Оргил-Эрдэнэ, **Last updated on:** 16/05/2025
+
 # Outline Component
 
 The `Outline` component adds an animated, customizable outline effect to any GameObject with a Mesh.

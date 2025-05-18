@@ -2,6 +2,12 @@
 sidebar_position: 9
 ---
 
+**Last updated by:** Candice88, **Last updated on:** 12/01/2025
+
+
+**Last updated by:** Candice88, **Last updated on:** 12/01/2025
+
+
 # Comparative Analysis of Jira vs. Azure DevOps
 By Candice Smith
 

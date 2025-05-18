@@ -1,6 +1,12 @@
 ---
 sidebar_position: 5
 ---
+
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
 # Heart Attack Prediction
 
 This feature has been built with the intention of providing an early warning for Heart disease based on indicators collected by the wearable's sensor array. This feature seeks to provide users and their support network an alert to worrying decreases in cardiovascular health.

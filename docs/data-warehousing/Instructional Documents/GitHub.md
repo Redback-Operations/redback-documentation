@@ -3,6 +3,12 @@ sidebar_position: 7
 sidebar_label: GitHub
 ---
 
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
 # GitHub and the Virtual Machine
 
 :::info

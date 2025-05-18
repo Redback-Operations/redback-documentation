@@ -1,3 +1,7 @@
+**Last updated by:** brendankntb, **Last updated on:** 12/04/2024
+
+**Last updated by:** brendankntb, **Last updated on:** 12/04/2024
+
 # Strava Bulk Export Data Description
 
 This document explains the origin of the Strava data used in the Cycling analysis sub-project which was obtained through a bulk export of a team members workout data. The data contained details for multiple sports but the cycling data can be separated for analysis as part of this project.

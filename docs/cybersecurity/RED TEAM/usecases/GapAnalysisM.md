@@ -2,6 +2,15 @@
 sidebar_position: 4
 ---
 
+**Last updated by:** Manasa, **Last updated on:** 23/09/2024
+
+
+**Last updated by:** Manasa, **Last updated on:** 23/09/2024
+
+
+**Last updated by:** Manasa, **Last updated on:** 23/09/2024
+
+
 # Gap Analysis for Redback Operations Red Team
 
 ## Overview

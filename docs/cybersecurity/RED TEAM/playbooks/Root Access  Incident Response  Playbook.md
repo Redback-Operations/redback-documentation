@@ -2,6 +2,15 @@
 sidebar_position: 10
 ---
 
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
 # Root Access Incident Response Playbook 
 Root Access Incident Response Playbook For Purple Team 
 

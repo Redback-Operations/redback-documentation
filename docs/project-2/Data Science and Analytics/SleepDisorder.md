@@ -1,6 +1,12 @@
 ---
 sidebar_position: 7
 ---
+
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
 # Sleep Disorder Prediction
 
 This feature aims to quantify both sleep quality and quantity by measuring motion from sleeping wearers of the IoT device. Sleep quality and monitoring has proven to be significant in recent time for many preventative health care outcomes. For this reason Smartwatches boasting this capability have flooded the market. To capitalize on these capabilities and hopefully provide these benefits to our users, Redback has undertaken predictive modelling of sleep disorders. 

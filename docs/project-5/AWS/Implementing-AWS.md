@@ -1,6 +1,12 @@
 ---
 sidebar_position: 4
 ---
+
+**Last updated by:** Adityan Balamuralidharan, **Last updated on:** 18/01/2025
+
+
+**Last updated by:** Adityan Balamuralidharan, **Last updated on:** 18/01/2025
+
 # Implementing Role-Based Access Control (RBAC) with IAM and S3 in AWS
 
 :::info

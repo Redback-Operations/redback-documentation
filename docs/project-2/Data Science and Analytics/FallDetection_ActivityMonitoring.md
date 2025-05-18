@@ -2,6 +2,12 @@
 sidebar_position: 4
 ---
 
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
+
 # Fall detection feature for Elderly Care Wearable
 
 The aim of this feature is to implement functionality to detect and promptly alert care providers to falls. This feature also seeks to detect abnormal locomotion (i.e limping) to provide early warning to care providers for potential intervention.

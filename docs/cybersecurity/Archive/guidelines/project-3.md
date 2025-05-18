@@ -2,6 +2,18 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
 # Project 3 - Wearable Technologies for Elderly People
 
 Cyber Security Guidelines

@@ -3,6 +3,12 @@ sidebar_position: 1
 title: Redback Data Warehouse - Complete Guide
 ---
 
+**Last updated by:** daezel, **Last updated on:** 18/05/2025
+
+
+**Last updated by:** daezel, **Last updated on:** 18/05/2025
+
+
 # Welcome to the Redback Data Warehouse Complete Technical Guide
 
 This document serves as a **comprehensive and current overview** of the Redback Operations Data Warehouse ecosystem. Whether you're a new team member, a project contributor, or just exploring how our infrastructure works — this guide will help you understand what services we run, why we run them, and how to use them.

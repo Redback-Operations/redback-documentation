@@ -2,6 +2,12 @@
 sidebar_position: 10
 ---
 
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
 # Adjusting MAC address anonymization for the MQTT Manager
 Proposed changes for MQTT
 

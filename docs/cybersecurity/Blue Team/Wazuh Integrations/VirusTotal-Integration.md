@@ -2,6 +2,18 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** rspoerl1, **Last updated on:** 14/04/2025
+
+
+**Last updated by:** rspoerl1, **Last updated on:** 14/04/2025
+
+
+**Last updated by:** rspoerl1, **Last updated on:** 14/04/2025
+
+
+**Last updated by:** rspoerl1, **Last updated on:** 14/04/2025
+
+
 # Integrating VirusTotal into Wazuh
 
 :::info

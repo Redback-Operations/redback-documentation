@@ -2,6 +2,12 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** lukgvo, **Last updated on:** 10/12/2024
+
+
+**Last updated by:** lukgvo, **Last updated on:** 10/12/2024
+
+
 :::info
 Document Creation: [5/12/2024]. Last Edited: [10/12/2024]. Authors: [Luk Gvozdenac].
 

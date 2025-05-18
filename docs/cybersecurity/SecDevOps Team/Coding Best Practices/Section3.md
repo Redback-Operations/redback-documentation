@@ -2,6 +2,12 @@
 sidebar_position: 4
 ---
 
+**Last updated by:** lach-harro, **Last updated on:** 17/05/2025
+
+
+**Last updated by:** lach-harro, **Last updated on:** 17/05/2025
+
+
 # **Section 3 - Code Reviewing**
 
 This section looks into how we can manually review our own code to catch any potential errors before submisssion.

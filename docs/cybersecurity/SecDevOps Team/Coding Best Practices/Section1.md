@@ -2,6 +2,12 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** lach-harro, **Last updated on:** 17/05/2025
+
+
+**Last updated by:** lach-harro, **Last updated on:** 17/05/2025
+
+
 # **Section 1 - Code Smells**
 
 This section looks at various types of code smells that may arise when coding.

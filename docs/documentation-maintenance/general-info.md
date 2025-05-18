@@ -3,6 +3,12 @@ sidebar_position: 1
 description: All the info needed
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 29/09/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 29/09/2024
+
+
 # General Info For Maintainers
 
 Hello future maintainers! Thank you for taking the time to help out with this platform. Hopefully in this file and the others in the folder you will find everything

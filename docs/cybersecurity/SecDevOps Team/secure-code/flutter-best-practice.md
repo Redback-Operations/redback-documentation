@@ -2,6 +2,12 @@
 sidebar_position: 12
 ---
 
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
 # Best Practices for Security for Flutter Application
 
 Research Piece

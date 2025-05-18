@@ -2,6 +2,18 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
 # User Awareness Training - Gap Analysis
 
 Redback Operations Cybersecurity User Awareness Training

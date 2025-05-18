@@ -2,6 +2,12 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** KasparByrne, **Last updated on:** 23/09/2024
+
+
+**Last updated by:** KasparByrne, **Last updated on:** 23/09/2024
+
+
 # BLE Auto Connecting Script
 
 ![image](../img/architecture/bike-architecture.png)

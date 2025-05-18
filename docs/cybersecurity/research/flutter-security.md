@@ -2,6 +2,12 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** SassafrasAU, **Last updated on:** 10/03/2024
+
+
+**Last updated by:** SassafrasAU, **Last updated on:** 10/03/2024
+
+
 # Security for Flutter Applications
 
 Research piece

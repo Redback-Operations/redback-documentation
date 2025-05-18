@@ -2,6 +2,18 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** Elvis Ifeanyi Nwosu, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** Elvis Ifeanyi Nwosu, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** Elvis Ifeanyi Nwosu, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** Elvis Ifeanyi Nwosu, **Last updated on:** 09/05/2025
+
+
 # Graylog Setup and TLS Integration Report
 :::info
 Document Creation: 2025-04-9. Last Edited: 2025-05-08. Authors: Elvis Nwosu

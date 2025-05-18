@@ -2,6 +2,12 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 29/04/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 29/04/2024
+
+
 # Integration of Data and Models
 Into Web Development for Athlete Wearables Tech Sensors Project
 
