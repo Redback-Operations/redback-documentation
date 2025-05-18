@@ -90,3 +90,6 @@ Then, all anyone needs to do to get a working build of your code on their machin
 `conda create -n .venv --file requirements.txt`
 
 
+:::info
+**Document Creation:** 5 September 2024. **Last Edited:** 5 September 2024. **Authors:** Lachlan Costigan
+:::

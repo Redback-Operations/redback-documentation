@@ -1,0 +1,290 @@
+---
+sidebar_position: 4
+sidebar_label: Safe Code Guide
+title: Safe Code Guide
+description: Guide to secure code development for in-house pull request reviews.
+---
+---
+<div style={{ width: '100%' }}>
+  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+    <thead>
+      <tr>
+        <th style={{ width: '20%', textAlign: 'center' }}>Version</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Modified By</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Approver</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Date</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Changes made</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ textAlign: 'center' }}>V1.0</td>
+        <td style={{ textAlign: 'center' }}>Codey Funston</td>
+        <td style={{ textAlign: 'center' }}>Codey Funston</td>
+        <td style={{ textAlign: 'center' }}>01/01/2025</td>
+        <td style={{ textAlign: 'center' }}>Document Creation</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## BRIEF OVERVIEW
+
+This guide is based on the way that SecDevOps team members are advised to review pull requests from other projects. To reduce complexity for junior members and to ensure the most important security risks are looked out for, we check code against the OWASP top 10 web application critical security risks.
+
+OWASP stands for the Open Web Application Security Project. It is an open-source project that reaches out to key industry players every 4-5 years and collects data on the most critical cyber security issues pertaining to application development. Based on the data they compose the top 10 most important issues and release this is in their awareness document. The most recent one is OWASP Top 10:2021, with the next one coming soon around mid 2025.
+
+This source of security issues is well regarded in industry and is a perfect starting point for developers without much cyber security training. If you want to read more about it, the links below point to information from their website and good quality third parties.
+
+- [OWASP Top Ten Overview](https://owasp.org/www-project-to- 
+- [2021 Version – Extra Information](https://owasp.org/- 
+- [10 Minute Youtube Video – By Cyber Citadel](https://www.youtube.com/watch?v=hryt-rCLJUA&t=68s)
+- For those interested in LLM Security: [How the Top 10 Apply for LLM’s - IBM](https://www.youtube.com/watch?v=cYuesqIKf9A)
+- For those who want to experiment with live examples of insecure web applications: [OWASP Top 10 Examples - GitHub](https://github.com/lighthouse-labs/owasp-top-10-examples)
+
+In this guide I will be going through key things to look out for and examples from past semester’s pull requests in your project. Hopefully this will make it easier to understand and increase your ability to prevent un-safe code production from the start of the development life cycle.
+
+Note: A lot of the examples are like pseudo code and wouldn’t be used as is, however, they are helpful for understanding the principle so that you can apply/avoid the preventative measure or risk respectively.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 1. BROKEN ACCESS CONTROL
+
+### **_Gist_**
+
+Access to resources and functionality should be enforced based on who is accessing it. Everything should be denied by default with any access given with the least amount of privilege possible. This is referred to as _whitelisting_.
+
+### **_Look Out For_**
+
+- API’s having the same permissions for all methods. This isn’t just important for “setters” like POST, but “getters” like GET. For example, you may centre your concern around preventing any damage to data through malicious POST and DELETE operations. However, that is more of a concern for maintaining the state of a system, not protecting it from getting data stolen with a GET request.
+
+- Exposing sensitive data through complex manipulation in the back end. For example, as illustrated in the example, SQL queries could result columns being returned that hold sensitive information. In the case of your exercise data there may be location information. To prevent this there should be a good understanding of data fields and data manipulation effects.
+
+### **_Example_**
+
+  
+![](img/safe-code-guide/broken-access-control-eg.png)
+
+This example is quite basic and clearly not safe by using the wildcard (\*). However, it highlights the concept of a data query returning unwanted fields (latitude and longitude).
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 2. CRYPTOGRAPHIC FAILURES
+
+### **_Gist_**
+
+Are the correct protocols, tools, and standards being used to protect data at rest and in transit? If not, they should be updated to be as secure as “reasonably practicable” (it is a balancing act as too much security can slow down software or add more complexity). For example, it would be unnecessary to use multi factor authentication for a login that is only used for marketing purposes since this would slow down the user for no extra gain.
+
+### **_Look Out For_**
+
+- Try to use HTTPS over HTTP.
+
+- Encrypt sensitive data when moving it between stores.
+
+- Don’t place sensitive data in the public facing GitHub repository.
+
+- Regularly check the encryption versions used if manually encrypting data on servers. Use the latest ones once they have been tested.
+
+- Store passwords as their hashes.
+
+### **_Example_**
+
+  
+![](img/safe-code-guide/cryptographic-failures-eg.png)
+
+This is similar to a common issue that comes up in pull request reviews, where login credentials are hardcoded for request code. Similarly, even if the passwords are stored on a database on the server, no extra effort is required for attackers to work out passwords once stolen if they are plain text.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 3. INJECTION
+
+### **_Gist_**
+
+Input from the user should not be used directly without checks and changes if necessary. Even if the data is being stored or used somewhere that is not vital to the program, or consists of sensitive information, it can still be used maliciously with clever syntax tricks.
+
+### **_Look Out For_**
+
+- Escape characters which have logical meaning in the language that is working with the data.
+
+- Something mentioned on the OWASP website which I think is pretty cool is preventing users from entering data structure names that cannot be escaped. One way to get around this with SQL tables is to name them differently to their front-end display. This is what I used in the example instead of a standard SQL injection with special characters.
+
+- Parameterize database queries.
+
+### **_Example_**
+
+![](img/safe-code-guide/injection-eg.png)  
+
+Here the table name is “obfuscated” slightly by not using an obvious name like “users”.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 4. INSECURE DESIGN
+
+### **_Gist_**
+
+Insecure design's a funny one because it isn't a specific feature of a piece of software that you should avoid or implement to prevent security risks. Instead it is more about how to approach the development process to ensure that security flaws are not built in to your system. Essentially you should consider the security risks of each part of your design and included risk assessments as you go.
+
+### **_Look Out For_**
+
+- Think about how an attacker might take advantage of a process, data storage, or core piece of logic.
+
+- Perform security checks regularly, trying to adhere to a secure DevOps practice, or "SecDevOps".
+
+- Use industry proven designs if possible, or seek advice from others with security experience when creating designs in-house.
+
+- **IMPORTANT: Don't leave security to last in the development process!**
+
+### **_Example_**
+
+![](img/safe-code-guide/insecure-design-eg.png)  
+
+The example I have used here is from the project's web app code. This is definitely not poorly written or designed as the sign in function was not fully setup when I was writing this :) If this code was left as is it would be prone to a brute force attack. This is because there is no functionality to stop allowing the client to try their username and password combination after a certain amount of tries.
+­<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 5. SECURITY MISCONFIGURATION
+
+### **_Gist_**
+
+The software and environment settings should be planned, documented, reviewed and kept consistent. Make sure you check any 3rd party tools for default settings which add security risks to your system.
+
+### **_Look Out For_**
+
+- Use whitelist approach with permission configurations.
+
+- Keep configurations consistent across all environments and setups of the software.
+
+- Don't give global access to make configuration changes.
+
+- Consult other team members before making changes such as ports or user access.
+
+- Remove/change default credentials because these are very easy to find online with searches on forums.
+
+### **_Example_**
+
+![](img/safe-code-guide/security-misconfiguration-eg.png)  
+
+In this example an API token is hardcoded into the code for the request. As mentioned 
+above this is a common issue in pull request reviews. To use use tokens in code without including them in plain text you can store them with 3rd party services like cloud token hosting, or you can save them as environment variables on the server running the code.
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 6. VULNERABLE AND OUTDATED COMPONENTS
+
+### **_Gist_**
+
+Modern software is made up of a large number of inter-reliant parts that include in-house and 3rd party developers. Updates and patching are not automatic and require up to date knowledge of changes.
+
+### **_Look Out For_**
+
+- Document each component in the system as you build it to gain insight into dependency mappings.
+
+- Use automation tools to scan code repositories for outdated packages or ones with
+known security risks.
+
+- When adding dependencies make sure to subscribe to change alerts and newsletters.
+
+- **Always perform testing when updating or patching, not just when changing code.**
+
+### **_Example_**
+
+![](img/safe-code-guide/vulnerable-and-outdated-components-eg.png)  
+
+To illustrate how important it is to track your dependencies is, this single line includes the JavaScript Keras package. Within that package, 18 other packages are included, and within them who knows how many. It is impossible nowadays to write code from scratch or with just the standard libraries, and it is also impossible to directly verify every dependency relation within imported packages. That is why it is important to ensure all other areas of the system are secure, and that you use tools that can perform deep dependency scanning for you.
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 7. IDENTIFICATION AND AUTHENTICATION FAILURES
+
+### **_Gist_**
+
+Similar to broken access control (3). Have strong user authentication features and layering to prevent single points of entry. Don't allow bot-like actions to be used to bypass authentication with randomly generated user identification.
+
+### **_Look Out For_**
+
+- Set up multi-factor authentication when the resource or functionality being accessed has high value, data sensitivity, or power.
+
+- **Do not ever store passwords in plain text. If they are stolen there is no more protection.**
+
+- Prevent brute force attacks by stopping too many repeated attempts at login.
+
+- Test user accounts for weak passwords that would be included in most dictionaries.
+
+### **_Example_**
+
+![](img/safe-code-guide/identification-and-authentication-failures-eg.png)  
+
+This is a sneaky method to prevent bad actors from accessing your system's resources. It works by baiting port sniffing with unused ports that have no services listening on them. As soon as someone sniffs one of the bait ports their IP is blocked entirely from every port.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 8. SOFTWARE AND DATA INTEGRITY FAILURES
+
+### **_Gist_**
+
+Assume the worst of other pieces of software and data. Whenever possible verify that software and external data is from who it says it is through signatures. Don't trust anything outside of your own artifacts. 
+
+
+### **_Look Out For_**
+
+- Check digital signatures.
+
+- Perform file hashes against trusted values to ensure file integrity.
+
+- Use industry trusted repositories.
+
+### **_Example_**
+
+![](img/safe-code-guide/software-and-data-integrity-failures-eg.png)  
+
+When downloading any file from an external source, after verifying its identify you should check the hash. This only has meaning when the file provider gives the hash. In the example the script prevents any execution when the files do not match by using 444 with _chmod_ to set it to read only for all users.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 9. SECURITY LOGGING AND MONITORING FAILURES
+
+### **_Gist_**
+
+You can't do anything about a security issue if you don't know about it. Monitoring and proper logging is required to gain valuable insight into issues so that they can be resolved.
+
+### **_Look Out For_**
+
+- Only log useful error information to people within the company. Providing too much information can aid bad actors.
+
+- When setting up internal logging functions in code, give as much information as possible.
+
+- Monitor groups of events and try to collate information.
+
+- Send important logs off to remote data stores so that they cannot be deleted by bad actors.
+
+### **_Example_**
+
+![](img/safe-code-guide/security-logging-and-monitoring-failures-eg.png)  
+
+In this example when the error thrown by the system is HIGH or above it may have to be kept for legal reasons such as sensitive user data leaks. It uses two sample functions. One to log to the usual place so that it is picked up by team members (the event itself should trigger monitoring), and the other to send it to a remote data store so that it can't be deleted by the bad actor that may have access to the server's file system.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 10. SERVER-SIDE REQUEST FORGERY (SSRF)
+
+### **_Gist_**
+
+The server's file system contains data that attackers could use for malicious purposes. "Internal" file requests on the server can be injected by attackers.
+
+### **_Look Out For_**
+
+- Don't allow HTTP redirects from user controls.
+
+- Like (3) make sure any user input is checked and goes through sanitation before use.
+
+- Change file permissions for sensitive data to only allow access to users other than the one running the program.
+
+- Use whitelisting for internal network traffic so that even if an attacker passes other security measures they can't bypass the firewall/access control list.
+
+### **_Example_**
+
+![](img/safe-code-guide/SSRF-eg.png)  
+
+Here as soon as the server starts listening any outgoing HTTP request is denied.
+
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>

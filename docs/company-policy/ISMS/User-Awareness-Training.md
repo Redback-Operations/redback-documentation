@@ -7,13 +7,16 @@ sidebar_position: 9
 Redback Operations Cybersecurity User Awareness Training Policy
 
 :::info
-**Document Creation:** 10 May, 2024. **Last Edited:** 10 May, 2024. **Authors:** Jamison Begley.
-<br></br>**Effective Date:** 10 May 2024. **Expiry Date:** 10 May 2025.
+**Document Creation:** 10 May, 2024. **Last Edited:** 30 April, 2025 by Riley Collis. **Original Authors:** Jamison Begley.
+<br></br>**Effective Date:** 30 April 2025. **Expiry Date:** 30 April 2026.
 :::
+
+## Policy Statement
+Redback Operations is committed to maintaining the highest standards of cybersecurity. This policy outlines our approach to ensuring all personnel understand their role in safeguarding our systems, data, and infrastructure. We aim to foster a culture of security awareness and compliance through structured, role-appropriate, and regularly updated training.
 
 ## Purpose
 
-The purpose of this User Awareness Training document is to define the standards that must be in place and followed for the training and upskilling of our employees. The document will outline any training modules that must be completed to not only guarantee security compliance, but to ensure employee knowledge.
+The purpose of this User Awareness Training document is to define the standards that must be followed for the training and upskilling of our employees. The policy outlines mandatory training modules to guarantee compliance with internal policies and recognized cybersecurity frameworks, such as NIST, the Australian Government ISM, and the Essential Eight.
 
 ## Introduction
 
@@ -43,22 +46,71 @@ In the event of an attack, if employees haven’t conducted our user awareness t
 
 Not only this, but the compromise of our company systems, assets, and critical infrastructure may lead to a complete loss of access, to both, our data, and our recovery systems, causing us to lose everything we have.
 
-### Advantages of Training
+### Scope and Applicability
 
-Though contrary to the described risks, if employees have completed their awareness training, they will be able to respond to an attack accurately and effectively, or ultimately prevent the risk of a possible attack or data breach, securing our systems and critical infrastructure.
+This policy applies to:
+- All full-time and part-time employees.
+- New hires.
+- Contractors and third-party vendors.
+- Specific business units such as IT, HR, Compliance, and Marketing. 
+All individuals within scope must complete the training and any associated assessments within the required time frame. 
 
-As a result, we, as a company can remain completely transparent with our consumers, maintaining their trust in our ability to withhold their personal information securely.
+### Roles and Responsibilities
 
-## What Does This Training Cover?
+- IT Security Team: Develop and maintain training content, monitor compliance, and lead enforement measures.
+- HR Department: Track completion rates and initiate disciplinary actions if needed.
+- Compliance Officers: Ensure training aligns with regulations and review adherence.
+- All staff: Complete training and apply knowledge in daily operations.
 
-The user awareness training covers a range of topics relevant to our cybersecurity employees and their job functions,
+## Training Objectives
 
-To name a few, the training will cover an employee’s understanding and awareness of the core functions Redback Operations, our playbooks, ethics, data classification and protection procedures.
+User awareness training aims to:
+- Educate staff on data protection, security risks, and mitigation strategies.
+- Improve employee compliance with company polices.
+- Enhance cybersecurity hygiene and reduce organizational risk.
+- Encourage proactive threat reporting and behaviour.
 
-## How Often Should This Training Be Covered?
+## Training Content Overview
 
-Our Cybersecurity User Awareness Training should be completed upon employment, and a refresher training should be completed every 12 months within the timeframe allocated on a designated week.
+The training program includes but is not limited to:
+- Core operations of Redback Operations.
+- Data classification and protection protocols.
+- Ethics and conduct.
+- Social engineering, phising, and credential theft.
+- Safe browsing, password hygiene, and malware awareness.
+- insider threat identification.
+- role-based content: Customised modules for IT, development, marketing, and admin roles.
 
-## Where Can This Training Be Accessed?
+Note: Training is aligned with the Essential Eight Maturity Model and NIST Cybersecurity Framework.
+
+## Training Frequency and Access
+
+- Initial training upon hire.
+- Mandatory refresher training annually.
+- Additional training after major security incidents or policy updates.
+- Training resources and quizzes are accessible via the internal company repository.
+
+## Assessment and Certification 
+
+- Employees must achieve a 100% score on a follow-up quiz.
+- Certification is valid for 12 months.
+- Expired or failed certifications must be retaken within 10 business days.
+
+### Where Can This Training Be Accessed?
 
 Within the company repositories, a document can be found which describes the minimum amount of acquired knowledge that an employee must have, though it is followed by a quiz that employees must earn a perfect score on to be recognized for the completion of their training.
+
+### Monitoring and Enforcement
+
+Compliance is tracked through the HRIS and LMS systems. Failure to complete training or achieve a passing score may result in:
+- Restricted access to systems and data.
+- Formal warnings or other disciplinary actions.
+- Notifications to HR and departmental managers.
+
+## Policy Review and Update
+
+This policy will be reviewed:
+- Annually.
+- After any major cybersecurity incident.
+- Upon changes to legislation or best practices.
+The IT Security Team and Compliance Officers are responsible for reviewing and updating the policy content.
