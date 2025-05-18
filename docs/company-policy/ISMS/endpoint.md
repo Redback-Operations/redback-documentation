@@ -120,15 +120,15 @@ Endpoints must engage a lock-out of content through a shutdown or sign-out after
 - Devices must connect only to secure, password-protected Wi-Fi networks.
 - Public Wi-Fi requires a secure VPN (e.g. university VPN or approved equivalent).
 - Software firewalls must be enabled on all devices (default for most operating systems).
-
+  
 ### Data Storage and Access
 - Sensitive data must not be stored on unauthorized cloud platforms (e.g. personal Google Drive, Dropbox) unless pre-approved.
 - Local sensitive data must be minimized and encrypted.
 - Sensitive and business-critical data should be stored on shared cloud repositories with relevant users, not locally.
 - Offsite physical backups are recommended for added redundancy.
-
+  
 ### Authentication
-- Two-factor or multi-factor authentication (2FA/MFA) must be enabled wherever supported, using password and token generators (e.g., Authy, Google Authenticator) or physical tokens (e.g., Yubikey).
+- Two-factor or multi-factor authentication ('2FA/MFA') must be enabled wherever supported, using password and token generators (e.g., Authy, Google Authenticator) or physical tokens (e.g., Yubikey).
 - Users must use a password manager and maintain strong password practices (e.g., passphrases, complex passwords, regular breach checks).
 
 ### Redundancy and Backups
