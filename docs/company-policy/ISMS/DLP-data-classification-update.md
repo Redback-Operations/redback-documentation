@@ -1,4 +1,8 @@
-# DLP & Data Classification Policies - Update
+---
+sidebar_position: 4
+sidebar_label: DLP & Data Classification
+---
+# Update DLP & Data Classification Policies
 Redback Operations Policy
 
 **Document Creation:** 8 April, 2024. **Last Edited:** 15 May, 2025. **Authors:** Jamison Begley.  
