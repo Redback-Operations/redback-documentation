@@ -1,0 +1,92 @@
+# Recommended Security Safeguards and Policies for Redback Operations ISMS
+
+Redback Operations ISMS Supplementary Guidance
+
+:::info
+**Document Creation:** 18 May, 2025. **Last Edited:** 18 May, 2025. **Author:** Nathasha Liyanage.
+<br></br>**Document Code:** ISMS-SG-v1.0. **Effective Date:** 19 May 2025. **Expiry Date:** 19 May 2026. **Version:** 1.0. **Status:** Draft.
+:::
+
+## Version History
+
+| Version | Date       | Author             | Approver | Changes                          |
+|---------|------------|--------------------|----------|----------------------------------|
+| 1.0     | 18/05/2025 | Nathasha Liyanage  |          | Initial document creation        |
+
+## 1. Purpose
+
+This document outlines key security controls and policy measures recommended for the Redback Operations Information Security Management System (ISMS). It categorizes safeguards as partially addressed, missing-critical, or unnecessary, aligning with ISO/IEC 27001, NIST Cybersecurity Framework (CSF), GDPR/Australian Privacy Principles (APP), and Australia’s Essential Eight. Recommendations are tailored to Redback’s rotating team structure and decentralized operations, ensuring practical implementation for a student-led capstone project handling biometric data.
+
+## 2. Scope
+
+The recommendations apply to all Redback Operations IT and Operational Technology (OT) assets, data (e.g., biometric datasets, source code, documentation), and personnel (e.g., students, mentors). They complement the ISMS and related policies (e.g., Cryptography, Data Classification & DLP), focusing on governance, asset management, access control, data protection, secure development, and human factors.
+
+## 3. Governance and Risk Management
+
+Robust governance ensures accountability and compliance, per ISO 27001 Annex A.5 and NIST CSF Governance (GV).
+
+- **Information Security Policy (Missing-Critical)**: Redback lacks a high-level policy defining security objectives and rules. ISO 27001 (A.5.1.1) and NIST CSF (GV.PO) require a formal policy with roles and responsibilities. **Recommendation**: Draft a policy outlining security goals, compliance requirements, and expectations for contributors.
+- **Roles and Responsibilities (Missing-Critical)**: Clear security duties are essential despite no HR department. NIST CSF (GV.RM) emphasizes coordinating compliance and infosec activities. **Recommendation**: Assign roles (e.g., ISMS Manager, Policy Owners) in the ISMS, documented for rotating teams.
+- **Risk Assessment and Treatment (Missing-Critical)**: Redback has no risk register or assessment process. ISO 27001 (Clause 6.1) and NIST CSF (ID.RA) require periodic risk analysis. **Recommendation**: Develop a risk register by Q3 2025, identifying threats (e.g., data breaches) and mitigation plans.
+- **Legal/Regulatory Compliance (Partially Addressed)**: Biometric data handling is subject to GDPR/APP, with partial coverage via university ethics approvals. **Recommendation**: Create a privacy policy compliant with APP Principle 11 and GDPR Article 9, addressing biometric data protection.
+- **ISMS Maintenance and Auditing (Missing, Manageable)**: Formal ISO 27001 audits are unnecessary, but self-auditing is feasible. **Recommendation**: Implement bi-annual informal reviews to assess ISMS effectiveness, per ISO 27001 Clause 9.
+
+## 4. Asset Management and Data Classification
+
+Proper asset management ensures protection of critical resources, per ISO 27001 A.8 and NIST CSF Identify (ID.AM).
+
+- **Asset Inventory (Missing-Important)**: No centralized list of assets (e.g., code repositories, cloud services) exists. **Recommendation**: Create an inventory of assets (e.g., GitHub repos, Azure/GCP services, documentation portal) to prioritize protection.
+- **Data Classification and Handling (Missing-Critical)**: Biometric and project data lack classification. ISO 27001 (A.8.2.1) requires data categorization. **Recommendation**: Classify data as Public, Internal, Confidential, or Highly Confidential; store sensitive data in approved cloud folders with access controls (see Data Classification & DLP Policy).
+- **Asset Ownership and Responsibilities (Partially Addressed)**: Informal ownership exists due to dynamic structure. **Recommendation**: Document ownership for major assets (e.g., repos, datasets), reassigning during team rotations.
+
+## 5. Access Control
+
+Effective access control manages permissions for rotating contributors, per ISO 27001 A.9 and NIST CSF Protect (PR.AC).
+
+- **Account Lifecycle Management (Missing-Critical)**: No process exists for provisioning/de-provisioning accounts as students join/leave. **Recommendation**: Implement a formal process for account management, integrated with Deakin’s identity systems, per ISO 27001 A.9.2.
+- **Least Privilege and Role-Based Access (Partially Addressed)**: Minimal access is informally applied. **Recommendation**: Formalize an Access Control Policy (A.9.1.1) with role-based access controls (RBAC), reviewed quarterly.
+- **Multi-Factor Authentication (Missing-Critical)**: Simple credentials are used. **Recommendation**: Enable MFA for all cloud portals, code repositories, and sensitive systems, per NIST CSF PR.AC-7 and Essential Eight.
+- **Secure Authentication Practices (Partially Addressed)**: Strong passwords are encouraged but not enforced. **Recommendation**: Mandate personal accounts, strong passwords, and no credential sharing, per NIST CSF PR.AC.
+- **Session Management and Monitoring (Missing)**: No session controls or alerts for unusual sign-ins. **Recommendation**: Configure secure session settings (e.g., timeouts) and alerts for suspicious activity in shared portals.
+
+## 6. Data Protection and Privacy Compliance
+
+Biometric data requires stringent protection, per GDPR/APP and ISO 27001 A.18.
+
+- **Encryption of Data at Rest and In Transit (Missing)**: No consistent encryption beyond default cloud settings. **Recommendation**: Enable encryption for biometric datasets (e.g., AES-256 at rest, TLS 1.3 in transit) on cloud and local systems, per ISO 27001 A.10 (see Cryptography Policy).
+- **Data Minimization and Retention Policy (Missing-Critical)**: Data retention practices are unclear. **Recommendation**: Collect only necessary biometric data and destroy/anonymize unused data, per GDPR Article 5 and APP 11.2.
+- **Privacy Notice and Consent (Missing-Critical)**: No user notice or consent for biometric data collection. **Recommendation**: Develop a privacy notice and consent process, per GDPR Article 13 and APP 5, ensuring lawful data collection.
+
+## 7. Secure Development and Operational Security
+
+Security in development and operations reduces vulnerabilities, per ISO 27001 A.12/A.14 and NIST CSF Protect (PR.PT).
+
+- **Secure Coding Practice (Missing-Important)**: No secure coding standards exist. **Recommendation**: Adopt a checklist (e.g., input validation, no hardcoded secrets) referencing OWASP Top 10, tailored to Redback’s tech stack.
+- **Code Review and Peer Review Process (Partially Addressed)**: Informal reviews occur. **Recommendation**: Mandate peer reviews for security via GitHub pull requests with branch protection, per ISO 27001 A.14.2.2.
+
+## 8. Human Factors and Training
+
+Training and policies ensure contributors prioritize security, per ISO 27001 A.7 and NIST CSF Protect (PR.AT).
+
+- **Security Awareness & Onboarding (Missing-Critical)**: No project-specific security training. **Recommendation**: Develop an onboarding presentation covering policies, data handling, phishing, and incident reporting, with acknowledgement required.
+- **Acceptable Use & BYOD Policy (Missing-Essential)**: No BYOD guidelines exist. **Recommendation**: Create a policy requiring OS updates, disk encryption (e.g., BitLocker), updated antivirus, and VPN use on public Wi-Fi, prohibiting unapproved storage (e.g., personal Dropbox).
+- **Confidentiality Agreement (Missing-Important)**: No formal data protection agreements. **Recommendation**: Require contributors to sign a confidentiality agreement for biometric data access, per ISO 27001 A.7.2.1.
+
+## 9. Integration with ISMS
+
+These recommendations should be prioritized in the ISMS implementation plan (see ISMS Guide, Section 12):
+- **Phase 1 (Q3 2025)**: Draft critical policies (e.g., Information Security Policy, Data Classification, Privacy Notice).
+- **Phase 2 (Q4 2025)**: Implement MFA, encryption, and training; test controls via self-audits.
+- Track progress via Trello, with bi-annual reviews to assess compliance and effectiveness.
+
+## 10. References
+
+- [1] Netsurion. (n.d.). NIST Cybersecurity Framework. Available at: https://www.netsurion.com/regulatory-compliance/nist-csf
+- [2] ICO. (2024). How do we keep biometric data secure? Available at: https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/biometric-data-guidance-biometric-recognition/how-do-we-keep-biometric-data-secure/
+- [3] Mohan, V. (2022). ISO 27001 Annex A.8 - Asset Management. Available at: https://sprinto.com/blog/iso-27001-annex-a-8-asset-management/
+- [4] Irwin, L. (2019). What is information classification and how is it relevant to ISO 27001? Available at: https://www.itgovernance.co.uk/blog/what-is-information-classification-and-how-is-it-relevant-to-iso-27001
+- [5] OAIC. (2019). Chapter 11: APP 11 Security of personal information. Available at: https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-11-app-11-security-of-personal-information
+- [6] Edwards, M. (2018). Annex A.9 – Access control. Available at: https://www.isms.online/iso-27001/annex-a-9-access-control/
+- [7] Khan, A. (2024). NIST CSF PR.AC-7: Users, Devices, and Other Assets are Authenticated. Available at: https://grc-docs.com/blogs/nist-csf-framework-categories/nist-csf-pr-ac-7-users-devices-and-other-assets-are-authenticated
+- [8] Convesio. (2024). The Impact of GDPR on Biometric Data. Available at: https://convesio.com/knowledgebase/article/the-impact-of-gdpr-on-biometric-data-what-you-need-to-know/
+- Redback Operations ISMS Guide, Cryptography Policy, Data Classification & DLP Policy, Endpoint Security Policy
