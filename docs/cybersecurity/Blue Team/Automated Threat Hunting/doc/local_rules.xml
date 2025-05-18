@@ -1,0 +1,86 @@
+<!-- Local rules -->
+<!-- Modify it at your will. -->
+<!-- Copyright (C) 2015, Wazuh Inc. -->
+
+<group_list>
+
+  <group name="local,syslog,sshd">
+    <rule id="100001" level="5">
+      <if_sid>5716</if_sid>
+      <srcip>1.1.1.1</srcip>
+      <description>sshd: authentication failed from IP 1.1.1.1.</description>
+      <group>authentication_failed,pci_dss_10.2.4,pci_dss_10.2.5</group>
+    </rule>
+
+    <rule id="100101" level="10">
+      <if_sid>5760</if_sid> <!-- SSHD: Too Many Wrong Passwords Entered -->
+      <description>SSH Brute Force Attempt Detected (Custom Correlation)</description>
+      <group>ssh,authentication_failed,custom</group>
+    </rule>
+
+    <!-- Match test log and trigger MISP enrichment -->
+    <rule id="100102" level="10">
+      <match>Failed password for invalid user misptest from 8.8.8.8</match>
+      <description>Test SSH log for MISP enrichment</description>
+      <group>test_misp</group>
+    </rule>
+  </group>
+
+  <group name="misp">
+    <rule id="100620" level="10">
+      <field name="integration">misp</field>
+      <description>MISP Events</description>
+      <options>no_full_log</options>
+    </rule>
+
+    <rule id="100621" level="5">
+      <if_sid>100620</if_sid>
+      <field name="misp.error">\.+</field>
+      <description>MISP - Error connecting to API</description>
+      <options>no_full_log</options>
+      <group>misp_error</group>
+    </rule>
+
+    <rule id="100622" level="12">
+      <field name="misp.category">\.+</field>
+      <description>MISP - IoC found in Threat Intel - Category: $(misp.category), Attribute: $(misp.value)</description>
+      <options>no_full_log</options>
+      <group>misp_alert</group>
+    </rule>
+
+    <rule id="100623" level="10">
+      <decoded_as>json</decoded_as>
+      <field name="integration">misp</field>
+      <description>MISP - Indicator match detected</description>
+    </rule>
+
+    <rule id="100624" level="7">
+      <decoded_as>json</decoded_as>
+      <field name="integration">misp</field>
+      <description>DEBUG: MISP JSON alert captured</description>
+    </rule>
+  </group>
+
+  <group name="custom-misp">
+    <rule id="110000" level="10">
+      <if_sid>5716</if_sid>
+      <srcip>8.8.8.8</srcip>
+      <description>Trigger MISP Enrichment - SSH attempt from 8.8.8.8</description>
+      <group>misp_integration</group>
+    </rule>
+
+    <rule id="110001" level="10">
+      <if_sid>5710</if_sid> <!-- SSH authentication failure -->
+      <description>SSH brute-force attempt from known MISP-malicious IP</description>
+      <group>authentication_failed,sshd,bruteforce,threat_intel,high_confidence</group>
+    </rule>
+
+    <rule id="110005" level="15">
+      <if_sid>100100</if_sid> <!-- SSH Failed Login (from your custom rule) -->
+      <field name="data.srcip">8.8.8.8</field> <!-- Replace with the IP from MISP -->
+      <description>SSH failed login from known IOC (MISP hit)</description>
+      <group>bruteforce,threat_intel,custom_correlated</group>
+    </rule>
+  </group>
+
+</group_list>

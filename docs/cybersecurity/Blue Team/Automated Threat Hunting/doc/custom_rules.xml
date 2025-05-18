@@ -1,0 +1,10 @@
+<group name="custom_rules">
+
+    <!-- Basic detection of SSH failed login -->
+    <rule id="100100" level="7">
+        <if_sid>5710</if_sid>
+        <description>Detected an SSH failed login attempt</description>
+    </rule>
+
+</group>
+

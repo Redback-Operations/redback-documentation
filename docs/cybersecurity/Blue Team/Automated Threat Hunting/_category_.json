@@ -1,0 +1,8 @@
+{
+  "label": "Automated Threat Hunting",
+  "position": 90,
+  "link": {
+    "type": "generated-index",
+    "description": "Wazuh MISP Integration documentation: Automated Threat Hunting aims to proactively detect and respond to cyber threats by continuously monitoring system and network activity using integrated security tools. Instead of relying solely on manual investigations or passive alerts, this approach combines real-time data collection, threat intelligence enrichment, and behavioural rule correlation to identify indicators of compromise (IOCs) and suspicious patterns. The goal is to build a streamlined pipeline that not only detects attacks early but also automates analysis and response through tools like Wazuh, Suricata, MISP, TheHive, and Cortex, enabling faster, more accurate threat mitigation with minimal human intervention."
+  }
+}
