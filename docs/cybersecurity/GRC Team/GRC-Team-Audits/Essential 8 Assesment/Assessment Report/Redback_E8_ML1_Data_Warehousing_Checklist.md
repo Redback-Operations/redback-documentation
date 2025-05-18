@@ -1,3 +1,7 @@
+---
+sidebar_position : 1
+---
+
 ## Instructions
 
 | Redback E8 ML1 Assessment Checklist – Instructions                                                                                                                                                              |

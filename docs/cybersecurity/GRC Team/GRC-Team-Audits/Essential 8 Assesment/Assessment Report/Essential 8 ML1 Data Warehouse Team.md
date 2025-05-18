@@ -1,3 +1,7 @@
+---
+sidebar_position : 1
+---
+
 # Cybersecurity Assessment Report  
 **Essential Eight Maturity Model – Restrict Administrative Privileges (ML1-RA)**
 
