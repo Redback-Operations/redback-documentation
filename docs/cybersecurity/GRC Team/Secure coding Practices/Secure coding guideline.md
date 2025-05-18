@@ -7,7 +7,7 @@ This document outlines critical secure coding controls grouped under Input Valid
 ## Input Validation
 
 | Control Point | Description | Implementation | Risk | ISO 27001 Mapping |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Input Length Check | Ensure input length is within acceptable range. | `def is_valid_length(user_input, min_len=1, max_len=255): return min_len <= len(user_input) <= max_len` | Buffer overflow, DoS attacks | A.14.2.5 |
 | Type Check | Validate input data types before processing. | `def is_string(value): return isinstance(value, str)` | Type confusion, unexpected behavior | A.14.2.1 |
 | Whitelist Validation | Accept only known good inputs. | `import re`<br/>`def is_valid_username(username): return re.match("^[a-zA-Z0-9_]+$", username) is not None` | Injection attacks | A.14.2.5 |
@@ -18,7 +18,7 @@ This document outlines critical secure coding controls grouped under Input Valid
 ## Output Encoding
 
 | Control Point | Description | Implementation | Risk | ISO 27001 Mapping |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | HTML Encoding | Encode output before rendering to HTML. | `import html`<br/>`def encode_html(data): return html.escape(data)` | Cross-site scripting | A.14.2.5 |
 | JavaScript Encoding | Sanitize dynamic data before inserting into JavaScript. | `import json`<br/>`def safe_js_string(data): return json.dumps(data)` | DOM-based XSS | A.14.2.5 |
 | URL Encoding | Encode dynamic data in URLs. | `import urllib.parse`<br/>`def encode_url_component(value): return urllib.parse.quote_plus(value)` | Redirect manipulation | A.14.2.5 |
@@ -28,7 +28,7 @@ This document outlines critical secure coding controls grouped under Input Valid
 ## Session Management
 
 | Control Point | Description | Implementation | Risk | ISO 27001 Mapping |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Secure Session IDs | Use strong, unpredictable session identifiers. | `import secrets`<br/>`def generate_session_id(): return secrets.token_urlsafe(32)` | Session fixation | A.9.2.1 |
 | Session Timeout | Set appropriate session timeout. | `from datetime import datetime, timedelta`<br/>`session_expiry = datetime.now() + timedelta(minutes=15)` | Session hijacking | A.9.4.2 |
 | Regenerate Session ID | Change session ID on privilege change. | `def regenerate_session(session): session["id"] = generate_session_id()` | Fixation & impersonation | A.9.4.2 |
@@ -39,11 +39,10 @@ This document outlines critical secure coding controls grouped under Input Valid
 | No Session in URL | Avoid session IDs in URL. | Use cookies for session management. | Session leakage | A.9.4.2 |
 | Invalid Session Detection | Detect and reject expired sessions. | `def is_session_expired(session_timestamp, timeout_minutes=15): from datetime import datetime, timedelta; return datetime.now() > session_timestamp + timedelta(minutes=timeout_minutes)` | Privilege escalation | A.9.4.2 |
 | Secure Session Store | Encrypt session data on server. | Store encrypted sessions in database or memory. | Session tampering | A.10.1.1 |
-
 ## Access Control
 
 | Control Point | Description | Implementation | Risk | ISO 27001 Mapping |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Role-Based Access Control | Grant access based on user roles. | `def has_permission(user, required_role): return required_role in user.get("roles", [])` | Unauthorized access | A.9.1.2 |
 | Principle of Least Privilege | Grant minimum access required. | Regularly review user permissions. | Privilege abuse | A.9.1.2 |
 | Access Control Lists | Use ACLs to manage permissions. | `ACL = {"admin": ["read", "write"], "user": ["read"]}`<br/>`def can_access(role, action): return action in ACL.get(role, [])` | Improper resource access | A.9.1.2 |
@@ -63,18 +62,17 @@ This document outlines critical secure coding controls grouped under Input Valid
 ## Cryptography
 
 | Security Controls | Description | Implementation | Risk | ISO 27001 Mapping |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Trusted Systems Only | Avoid client-side encryption; use server-side. | `from cryptography.fernet import Fernet; key = Fernet.generate_key(); cipher = Fernet(key); encrypted = cipher.encrypt(b"secret")` | Exposure in browser tools | A.10.1.1 |
 | Protect Master Secrets | Restrict access to encryption keys. | Use vaults like AWS KMS, Azure Key Vault | Key exposure = total compromise | A.9.2.3 |
 | Fail Securely | Crypto failures should not leak data. | `try: encrypted = cipher.encrypt(b"data") except: abort_operation()` | Info leakage if unhandled | A.12.1.3 |
 | Use Approved PRNGs | Use secure RNGs. | `import secrets; token = secrets.token_bytes(32)` | Token forgery | A.10.1.1 |
 | FIPS-Compliant Modules | Use AES, SHA-2. | `from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes` | Weak crypto is breakable | A.10.1.1 / A.18.1.4 |
 | Key Management Process | Automate key lifecycle. | Use key rotation APIs | Key leaks, reuse | A.10.1.2 |
-
 ## Error Handling
 
 | Security Control | Description | Implementation | Risk | ISO 27001 Mapping |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Generic Error Pages | Avoid exposing system details. | `app.register_error_handler(500, lambda e: render_template('error.html'))` | Reconnaissance | A.13.1.1 |
 | No Sensitive Data in Errors | Don't leak credentials or stack traces. | `try: ... except Exception as e: log_error(str(e)); return "Something went wrong"` | Exploit facilitation | A.12.4.1 |
 | Log Sanitized Data Only | Prevent logs from becoming attack vectors. | `import html; safe_input = html.escape(user_input)` | XSS in log viewers | A.12.4.1 |
@@ -89,7 +87,7 @@ This document outlines critical secure coding controls grouped under Input Valid
 ## Data Protection
 
 | Security Control | Description | Implementation | Risk | ISO 27001 Mapping |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Least Privilege | Grant minimal necessary access. | `if user.role == 'admin': access_admin_panel()` | Escalation risk | 5.18 |
 | Protect Temp Data | Secure & delete temp files. | `with open('tmp.txt') as f: ...; os.remove('tmp.txt')` | Data leakage | 8.10 |
 | Encrypt Server Data | Use strong crypto for stored data. | `cipher.encrypt(b"password")` | Breach impact | 8.25 |
@@ -106,7 +104,7 @@ This document outlines critical secure coding controls grouped under Input Valid
 ## Database Security
 
 | Security Control | Description | Implementation | Risk | ISO 27001 Mapping |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Parameterized Queries | Prevent SQL Injection. | `cursor.execute("SELECT * FROM users WHERE username = %s", (username,))` | Data breach | 8.32 |
 | Input & Output Checks | Sanitize and validate all user data. | `re.match(...), html.escape(...)` | XSS/Injection | 8.32 |
 | Least Privileged DB Access | Avoid over-permissioned DB users. | `if user.role != 'admin': deny_access()` | Escalation | 5.18 |
