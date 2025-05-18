@@ -29,6 +29,7 @@ On top of mitigating the code smells, we also need to ensure that we are also im
 
 Within this section of the module, we will briefly go through some various methods in which we can implement to our own coding to achieve the above accomplishments.
 
+
 #### 1.	**Have security and privacy considerations:**
 With constant threats emerging, we want to mitigate any risk of any potential compromise. In saying this, having security considerations is of extreme importance and needs to always be implemented within our code. Some things we should not be doing at all, and this also comes with our code reviewing is:
 
