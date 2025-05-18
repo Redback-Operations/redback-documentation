@@ -2,6 +2,12 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** Gurveen Kaur, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** Gurveen Kaur, **Last updated on:** 09/05/2025
+
+
 # Smartbike Introduction
 
 ## Table of Contents

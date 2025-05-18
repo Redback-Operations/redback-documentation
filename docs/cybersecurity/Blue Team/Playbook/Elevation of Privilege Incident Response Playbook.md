@@ -2,6 +2,18 @@
 sidebar_position: 4
 ---
 
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
 # Elevation of Privilege Incident Response Playbook 
 
 Elevation of Privilege Incident Response Playbook for Blue Team

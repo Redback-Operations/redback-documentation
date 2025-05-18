@@ -3,6 +3,18 @@ sidebar_position: 6
 sidebar_label: EASM
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 15/05/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 15/05/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 15/05/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 15/05/2024
+
+
 # External Attack Surface Management
 
 Redback Operations Policy

@@ -2,6 +2,12 @@
 sidebar-position: 3
 ---
 
+**Last updated by:** Lachlan, **Last updated on:** 12/01/2025
+
+
+**Last updated by:** Lachlan, **Last updated on:** 12/01/2025
+
+
 # Board Validation Testing
 
 The Custom PCB was received from the factory at the end of Week 11 T2-24

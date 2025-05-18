@@ -2,6 +2,12 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** KasparByrne, **Last updated on:** 25/09/2024
+
+
+**Last updated by:** KasparByrne, **Last updated on:** 25/09/2024
+
+
 # KICKR Climb & Smart Trainer
 
 :::danger[Important!]

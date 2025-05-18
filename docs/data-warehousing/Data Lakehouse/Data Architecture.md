@@ -3,6 +3,12 @@ sidebar_position: 2
 sidebar_label: Data Warehouse Architecture
 ---
 
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
 #  Data Architecture
 
 :::info

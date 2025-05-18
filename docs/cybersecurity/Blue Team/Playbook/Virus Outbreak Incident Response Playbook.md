@@ -2,6 +2,18 @@
 sidebar_position: 10
 ---
 
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
 # Virus Outbreak Incident Response Playbook 
 
 Virus-Outbreak Incident Response Playbook for Blue Team

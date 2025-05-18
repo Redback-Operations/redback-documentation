@@ -3,6 +3,12 @@ sidebar_position: 7
 sidebar_title: Styled Components
 ---
 
+**Last updated by:** Leesa Ward, **Last updated on:** 08/08/2024
+
+
+**Last updated by:** Leesa Ward, **Last updated on:** 08/08/2024
+
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

@@ -4,6 +4,12 @@ description: What to expect!
 title: PR Approval guide
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 08/09/2024
+
+
 # Pull Request Approval Guide For Redback-Documentation
 
 :::info

@@ -3,6 +3,12 @@ sidebar_position: 2
 sidebar_label: Dremio API
 ---
 
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
 # How to access data stored in dremio datawarehouse (for data analysts)
 
 :::info

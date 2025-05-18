@@ -2,6 +2,12 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** jessmoogs, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** jessmoogs, **Last updated on:** 17/12/2024
+
+
 # 2-step Authentication
 
 Creating a extra step in secure login for kids

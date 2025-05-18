@@ -2,6 +2,12 @@
 sidebar_position: 80
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 20/09/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 20/09/2024
+
+
 :::danger[Important!]
 
 This PDF document is old and some of its contents may be wrong. You should not need to use this and instead rely on the newer `ble_auto_connect.sh` script.

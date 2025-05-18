@@ -2,6 +2,18 @@
 sidebar_position: 11
 ---
 
+**Last updated by:** Devika1010, **Last updated on:** 09/09/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 09/09/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 09/09/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 09/09/2024
+
+
 # Threat Hunting and  Incident Response Playbook 
 
 Threat-Hunting and Incident Response Playbook for Blue Team

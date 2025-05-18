@@ -2,6 +2,12 @@
 sidebar_position: 15
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 30/04/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 30/04/2024
+
+
 # Two Factor Authentication
 
 Research Piece

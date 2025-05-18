@@ -2,6 +2,18 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
+
 # Setup guide for Elasticsearch, Kibana and Filebeat (in ubuntu for localhost) 
 
 # Installing elastic search:

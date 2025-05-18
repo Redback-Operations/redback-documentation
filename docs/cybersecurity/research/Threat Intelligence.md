@@ -1,3 +1,7 @@
+**Last updated by:** Surekha1604, **Last updated on:** 24/09/2024
+
+**Last updated by:** Surekha1604, **Last updated on:** 24/09/2024
+
 # Threat Intelligence
 
 ## 1. Introduction

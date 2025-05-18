@@ -2,6 +2,18 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** rspoerl1, **Last updated on:** 14/04/2025
+
+
+**Last updated by:** rspoerl1, **Last updated on:** 14/04/2025
+
+
+**Last updated by:** rspoerl1, **Last updated on:** 14/04/2025
+
+
+**Last updated by:** rspoerl1, **Last updated on:** 14/04/2025
+
+
 # ClamAV and Wazuh Integration
 
 :::info

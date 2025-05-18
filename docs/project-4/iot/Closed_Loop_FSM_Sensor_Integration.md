@@ -1,6 +1,12 @@
 ---
 sidebar_position: 14
 ---
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
 # Research on Closed-Loop Systems and FSMs for Sensor Integration
 
 :::info

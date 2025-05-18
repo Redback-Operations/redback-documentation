@@ -1,6 +1,12 @@
 ---
 sidebar_position: 1
 ---
+
+**Last updated by:** KasparByrne, **Last updated on:** 25/09/2024
+
+
+**Last updated by:** KasparByrne, **Last updated on:** 25/09/2024
+
 # Interfacing with Wahoo Devices
 
 :::danger[Superduper Important!]

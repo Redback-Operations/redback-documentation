@@ -2,6 +2,12 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** lach-harro, **Last updated on:** 17/05/2025
+
+
+**Last updated by:** lach-harro, **Last updated on:** 17/05/2025
+
+
 # **Section 2 - Coding Best Practices**
 
 This section explains a variety of coding best practice methods that we can try and apply to our work to achieve a variety of goals.

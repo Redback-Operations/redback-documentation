@@ -2,6 +2,12 @@
 sidebar_position: 4
 ---
 
+**Last updated by:** Mayank52455, **Last updated on:** 19/05/2024
+
+
+**Last updated by:** Mayank52455, **Last updated on:** 19/05/2024
+
+
 # Heart rate initializing documentation
 
 Documentation Guide to Using Wahoo TICKR Heart Rate Sensor with Arduino Nano 33 IoT

@@ -1,6 +1,12 @@
 ---
 sidebar_position: 4
 ---
+
+**Last updated by:** jdlowden, **Last updated on:** 30/10/2024
+
+
+**Last updated by:** jdlowden, **Last updated on:** 30/10/2024
+
 # Using the Mission Activator
 
 ## How To Create Missions And Add Them Into The Board

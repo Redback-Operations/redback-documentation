@@ -1,3 +1,7 @@
+**Last updated by:** Adityan Balamuralidharan, **Last updated on:** 18/01/2025
+
+**Last updated by:** Adityan Balamuralidharan, **Last updated on:** 18/01/2025
+
 # S3 Policy and User Access Design
 
 :::info

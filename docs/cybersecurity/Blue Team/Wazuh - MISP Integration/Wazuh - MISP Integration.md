@@ -2,6 +2,18 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** Elvis Ifeanyi Nwosu, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** Elvis Ifeanyi Nwosu, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** Elvis Ifeanyi Nwosu, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** Elvis Ifeanyi Nwosu, **Last updated on:** 09/05/2025
+
+
 # Report on Integrating MISP with Wazuh and Graylog
 
 

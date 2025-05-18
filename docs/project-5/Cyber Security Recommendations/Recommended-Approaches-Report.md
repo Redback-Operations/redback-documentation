@@ -2,6 +2,12 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** veewd, **Last updated on:** 26/09/2024
+
+
+**Last updated by:** veewd, **Last updated on:** 26/09/2024
+
+
 # Recommended Cybersecurity Approach for Bugbox
 
 :::important

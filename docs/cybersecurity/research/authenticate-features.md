@@ -2,6 +2,12 @@
 sidebar_position: 4
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 14/03/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 14/03/2024
+
+
 # Authenticate features and encryption
 
 Research Piece

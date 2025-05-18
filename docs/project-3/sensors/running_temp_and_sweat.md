@@ -2,6 +2,12 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** Brendan Kay, **Last updated on:** 13/05/2024
+
+
+**Last updated by:** Brendan Kay, **Last updated on:** 13/05/2024
+
+
 # Core Temperature and Sweat Level Running Tracker Specifications
 
 ## Description:

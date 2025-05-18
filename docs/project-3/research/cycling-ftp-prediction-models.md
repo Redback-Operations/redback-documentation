@@ -1,3 +1,7 @@
+**Last updated by:** brendankntb, **Last updated on:** 31/03/2024
+
+**Last updated by:** brendankntb, **Last updated on:** 31/03/2024
+
 # Cycling FTP prediction models
 
 A number of experiments were performed to test prediction models for duration of a workout based upon previous workout details. These experiments can been seen in the [Python Notebook](https://github.com/redbackoperations/Projects/blob/main/Sports%20Performance%20Analysis/frontend/Cycling%20Analysis/FTP%20Prediction.ipynb) in the Project [GitHub repository](https://github.com/redbackoperations/Projects/blob/main/Sports%20Performance%20Analysis/frontend/). FTP is a critical performance metric in cycling, indicating the highest power a rider can sustain for an hour.

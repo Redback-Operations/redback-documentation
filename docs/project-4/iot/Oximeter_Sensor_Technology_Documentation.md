@@ -1,6 +1,12 @@
 ---
 sidebar_position: 11
 ---
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
 # Understanding Oximeter Sensor Technology
 
 :::info

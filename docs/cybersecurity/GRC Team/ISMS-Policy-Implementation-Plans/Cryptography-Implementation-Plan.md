@@ -3,6 +3,15 @@ sidebar_position: 4
 sidebar_label: Cryptography Implementation Plan 2024
 ---
 
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
 # Cryptography Implementation Plan - Redback Operations
 
 **Author:** Ali Demirovski

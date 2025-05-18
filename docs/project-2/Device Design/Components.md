@@ -1,6 +1,12 @@
 ---
 sidebar_position: 2
 ---
+
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
 # Components
 
 This page seeks to catalogue the components of the Smart Watch such that future developers can review and extend the boards capabilities. 

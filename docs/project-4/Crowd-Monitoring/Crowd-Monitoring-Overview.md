@@ -2,6 +2,12 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** SassafrasAU, **Last updated on:** 01/09/2024
+
+
+**Last updated by:** SassafrasAU, **Last updated on:** 01/09/2024
+
+
 # Crowd Monitoring Overview 
 
 The Project Orion aims to apply cutting-edge AI technology to enhance crowd monitoring at various levels. In this semester, we are building on previous efforts to develop an intelligent tracking system, moving from IoT approach to application approach. Our main goal is create a **cloud-based** computer vision pipeline for improved efficiency and faster processing. Later, the application can connect to a database platform and fetching real-time data.

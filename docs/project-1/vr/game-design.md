@@ -1,6 +1,12 @@
 ---
 sidebar_position: 1
 ---
+
+**Last updated by:** jdlowden, **Last updated on:** 23/09/2024
+
+
+**Last updated by:** jdlowden, **Last updated on:** 23/09/2024
+
 # Game Design Document
 
 ## 1. Game Overview

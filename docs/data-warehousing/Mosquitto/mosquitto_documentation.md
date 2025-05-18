@@ -3,6 +3,12 @@ sidebar_position: 2
 sidebar_label: Mosquitto MQTT Broker
 ---
 
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
 # Mosquitto MQTT Broker
 
 :::info

@@ -2,6 +2,12 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 28/09/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 28/09/2024
+
+
 # Crowd Monitoring & Player Tracking Project Plan: Apache Kafka
 
 ## Introduction

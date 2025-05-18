@@ -3,6 +3,12 @@ sidebar_position: 1
 sidebar_label: MinIO Proof of Concept
 ---
 
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
 # Proof of Concept: Data Preprocessing Pipeline with MinIO
 
 :::info

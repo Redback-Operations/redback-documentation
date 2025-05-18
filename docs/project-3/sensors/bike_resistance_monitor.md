@@ -2,6 +2,12 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** Brendan Kay, **Last updated on:** 13/05/2024
+
+
+**Last updated by:** Brendan Kay, **Last updated on:** 13/05/2024
+
+
 # Aerodynamic Bike Resistance Monitor Specifications
 
 ## Description

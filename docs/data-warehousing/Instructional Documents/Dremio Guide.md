@@ -3,6 +3,12 @@ sidebar_position: 4
 sidebar_label: Dremio Guide
 ---
 
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
+**Last updated by:** RichardWhellum, **Last updated on:** 09/05/2025
+
+
 # How to Use Dremio
 
 :::info

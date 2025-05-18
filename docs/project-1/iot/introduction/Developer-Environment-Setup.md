@@ -2,6 +2,12 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** gurveenkaur574, **Last updated on:** 26/03/2025
+
+
+**Last updated by:** gurveenkaur574, **Last updated on:** 26/03/2025
+
+
 # Developer Environment Setup
 
 Working with the Smartbike requires a few extra tools compared to working on applications like the VR game.

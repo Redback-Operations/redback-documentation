@@ -2,6 +2,12 @@
 sidebar_position: 9
 ---
 
+**Last updated by:** SassafrasAU, **Last updated on:** 15/03/2024
+
+
+**Last updated by:** SassafrasAU, **Last updated on:** 15/03/2024
+
+
 # Two Factor Authentication Bypass
 Progress of 2FA in Redback
 

@@ -1,6 +1,12 @@
 ---
 sidebar_position: 3
 ---
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
 # Elevation Of Pivilage Red Team Usecase
 
 Elevation Of Pivilage Red Team Usecase

@@ -1,6 +1,18 @@
 ---
 sidebar_position: 4
 ---
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 17/12/2024
+
 # setup guide for pi hole in Debian 12
 
 **Step 1:**

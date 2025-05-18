@@ -2,6 +2,12 @@
 sidebar_position: 4
 ---
 
+**Last updated by:** KasparByrne, **Last updated on:** 23/09/2024
+
+
+**Last updated by:** KasparByrne, **Last updated on:** 23/09/2024
+
+
 # MQTT Topics
 
 The Smartbike relies on MQTT for external communication with applications like the VR game and mobile app. All topics follow the following naming convention:

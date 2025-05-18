@@ -2,6 +2,12 @@
 sidebar_position: 7
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 14/03/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 14/03/2024
+
+
 # Virtual Private Cloud
 
 Research Piece

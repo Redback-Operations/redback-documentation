@@ -2,6 +2,12 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 26/09/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 26/09/2024
+
+
 # Competitors Research Report 
 
 Identify competitors to BugBox

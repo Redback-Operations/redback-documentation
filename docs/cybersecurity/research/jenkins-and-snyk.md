@@ -2,6 +2,12 @@
 sidebar_position: 5
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 14/03/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 14/03/2024
+
+
 # Jenkins and Snyk – a SAST plugin
 
 Research Piece

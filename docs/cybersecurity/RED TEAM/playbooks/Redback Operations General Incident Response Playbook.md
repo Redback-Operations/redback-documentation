@@ -2,6 +2,15 @@
 sidebar_position: 9
 ---
 
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
 # Redback Operations General Incident Response Playbook 
 Redback Operations General Incident Response Playbook For Purple Team 
 

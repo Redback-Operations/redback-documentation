@@ -2,6 +2,12 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** samin, **Last updated on:** 28/09/2024
+
+
+**Last updated by:** samin, **Last updated on:** 28/09/2024
+
+
 # Smartbike mobile app readme
 
 ## Redback SmartBike Mobile App Frontend Setup

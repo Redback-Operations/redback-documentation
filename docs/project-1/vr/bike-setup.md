@@ -2,6 +2,12 @@
 sidebar_position: 7
 ---
 
+**Last updated by:** Оргил-Эрдэнэ, **Last updated on:** 16/05/2025
+
+
+**Last updated by:** Оргил-Эрдэнэ, **Last updated on:** 16/05/2025
+
+
 ![bike data setup](./img/bike_data_setup.png)
 
 

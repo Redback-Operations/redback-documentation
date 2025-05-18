@@ -2,6 +2,18 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** cyber-Elvis, **Last updated on:** 12/01/2025
+
+
+**Last updated by:** cyber-Elvis, **Last updated on:** 12/01/2025
+
+
+**Last updated by:** cyber-Elvis, **Last updated on:** 12/01/2025
+
+
+**Last updated by:** cyber-Elvis, **Last updated on:** 12/01/2025
+
+
 # MISP Setup Guide for Ubuntu Desktop
 
 ## 

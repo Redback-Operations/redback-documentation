@@ -2,6 +2,18 @@
 sidebar_position: 6
 ---
 
+**Last updated by:** bg-11, **Last updated on:** 16/05/2025
+
+
+**Last updated by:** bg-11, **Last updated on:** 16/05/2025
+
+
+**Last updated by:** bg-11, **Last updated on:** 16/05/2025
+
+
+**Last updated by:** bg-11, **Last updated on:** 16/05/2025
+
+
 # Wazuh Documentation
 
 Documentation of the Wazuh open-source security platform:

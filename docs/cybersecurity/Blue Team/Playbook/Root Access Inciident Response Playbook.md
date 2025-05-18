@@ -2,6 +2,18 @@
 sidebar_position: 9
 ---
 
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
 # Root Access Incident Response Playbook 
 Root Access Incident Response Playbook For Blue  Team 
 

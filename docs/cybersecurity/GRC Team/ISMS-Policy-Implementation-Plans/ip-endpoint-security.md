@@ -3,6 +3,15 @@ sidebar_position: 6
 sidebar_label: Endpoint Security Implementation Plan
 ---
 
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
 # Endpoint Security Implementation Plan
 
 Endpoint Security Policy Implementation Plan

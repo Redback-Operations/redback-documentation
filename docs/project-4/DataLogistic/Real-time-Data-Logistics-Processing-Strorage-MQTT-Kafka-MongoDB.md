@@ -2,6 +2,12 @@
 sidebar_position: 1
 ---
 
+**Last updated by:** D940465942, **Last updated on:** 11/09/2024
+
+
+**Last updated by:** D940465942, **Last updated on:** 11/09/2024
+
+
 # Pipeline for Real-time Data Logistics Handling and Storage
 
 

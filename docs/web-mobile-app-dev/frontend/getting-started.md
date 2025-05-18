@@ -3,6 +3,12 @@ sidebar_position: 2
 sidebar_label: Getting started
 ---
 
+**Last updated by:** Leesa Ward, **Last updated on:** 11/07/2024
+
+
+**Last updated by:** Leesa Ward, **Last updated on:** 11/07/2024
+
+
 # Getting started with a project
 
 > **Document Creation:** 23 March, 2024. **Last Edited:** 10 July, 2024. **Authors:** Leesa Ward.

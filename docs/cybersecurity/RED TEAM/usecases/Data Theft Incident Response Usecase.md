@@ -2,6 +2,15 @@
 sidebar_position: 8
 ---
 
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
+**Last updated by:** buvan008, **Last updated on:** 08/09/2024
+
+
 # Data-Theft Red Team Usecase 
 
 Data-Theft Red Team Usecase

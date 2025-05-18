@@ -2,6 +2,12 @@
 sidebar_position: 5
 ---
 
+**Last updated by:** Kaleb, **Last updated on:** 28/07/2024
+
+
+**Last updated by:** Kaleb, **Last updated on:** 28/07/2024
+
+
 # Important Research (Tutorial Video)
 
 Tutorial for Redback Operations

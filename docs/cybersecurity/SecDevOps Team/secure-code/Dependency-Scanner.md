@@ -2,6 +2,12 @@
 sidebar_position: 3
 ---
 
+**Last updated by:** RichardWhellum, **Last updated on:** 12/01/2025
+
+
+**Last updated by:** RichardWhellum, **Last updated on:** 12/01/2025
+
+
 # Trivy Dependency Scan
 
 :::info

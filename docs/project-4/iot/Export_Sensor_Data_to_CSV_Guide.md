@@ -1,6 +1,12 @@
 ---
 sidebar_position: 12
 ---
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
 # Guide to Exporting Sensor Data from Serial Monitor to CSV
 
 :::info

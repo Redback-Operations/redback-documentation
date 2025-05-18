@@ -1,6 +1,12 @@
 ---
 sidebar_position: 8
 ---
+
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
+
+**Last updated by:** Lachlan, **Last updated on:** 17/12/2024
+
 # Voice Assistant feature for Elderly Care Wearable.
 
 The goal of this sub-project is to develop and integrate voice assistant functionality into the Elderly care wearable device. 

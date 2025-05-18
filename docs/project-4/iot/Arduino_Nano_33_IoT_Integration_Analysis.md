@@ -1,6 +1,12 @@
 ---
 sidebar_position: 9
 ---
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
+
+**Last updated by:** Sohil Nagpal, **Last updated on:** 19/05/2024
+
 # Integration of Arduino Nano 33 IoT in Our Project: An Analysis
 
 :::info

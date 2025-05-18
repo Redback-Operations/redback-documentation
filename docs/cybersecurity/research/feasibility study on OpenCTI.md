@@ -2,6 +2,12 @@
 sidebar_position: 12
 ---
 
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
+**Last updated by:** Devika1010, **Last updated on:** 11/08/2024
+
+
 # Feasibility Study on Implementing OpenCTI 
 
 Feasibility Study on Implementing OpenCTI

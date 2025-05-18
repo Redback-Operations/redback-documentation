@@ -2,6 +2,12 @@
 sidebar_position: 16
 ---
 
+**Last updated by:** SassafrasAU, **Last updated on:** 11/05/2024
+
+
+**Last updated by:** SassafrasAU, **Last updated on:** 11/05/2024
+
+
 # TPM Research
 
 Trusted Platform Module

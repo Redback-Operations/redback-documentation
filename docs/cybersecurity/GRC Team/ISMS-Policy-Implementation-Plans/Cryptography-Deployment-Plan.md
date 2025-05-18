@@ -3,6 +3,15 @@ sidebar_position: 5
 sidebar_label: Deployment Plan - Cryptography 2024
 ---
 
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
+**Last updated by:** T_Apperley, **Last updated on:** 03/12/2024
+
+
 # Deployment Plan for Cryptography - Redback Operations
 
 **Author:** Ali Demirovski

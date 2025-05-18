@@ -2,6 +2,12 @@
 sidebar_position: 2
 ---
 
+**Last updated by:** jessmoogs, **Last updated on:** 16/09/2024
+
+
+**Last updated by:** jessmoogs, **Last updated on:** 16/09/2024
+
+
 # Classroom Activities
 
 This section outlines the two classroom activities developed to teach robotics to students aged 8 to 14. These activities are designed to engage students through hands-on learning experiences while fostering an understanding of robotics in fun and interactive ways.
