@@ -5,6 +5,11 @@ sidebar_position: 5
 # Endpoint Security
 
 Redback Operations Policy
+
+:::info
+**Document Creation:** 27 April, 2024.  **Authors:** Kaleb Bowen
+:::
+
 ## Version History
 
 | Version | Modified By | Approver | Edited On | Changes Made |
@@ -103,7 +108,7 @@ Endpoints must engage a lock-out of content through a shutdown or sign-out after
 
 ### Application Control
 - Only necessary and authorized software may be installed on Redback devices.
-- Scripting environments (e.g., Python, PowerShell) must be used responsibly and only with permission to access sensitive systems.
+- Scripting environments (e.g. Python, PowerShell) must be used responsibly and only with permission to access sensitive systems.
 - Unauthorized software installation is prohibited.
 
 ### Administrator Privileges
@@ -113,11 +118,11 @@ Endpoints must engage a lock-out of content through a shutdown or sign-out after
 
 ### Network Access
 - Devices must connect only to secure, password-protected Wi-Fi networks.
-- Public Wi-Fi requires a secure VPN (e.g., university VPN or approved equivalent).
+- Public Wi-Fi requires a secure VPN (e.g. university VPN or approved equivalent).
 - Software firewalls must be enabled on all devices (default for most operating systems).
 
 ### Data Storage and Access
-- Sensitive data must not be stored on unauthorized cloud platforms (e.g., personal Google Drive, Dropbox) unless pre-approved.
+- Sensitive data must not be stored on unauthorized cloud platforms (e.g. personal Google Drive, Dropbox) unless pre-approved.
 - Local sensitive data must be minimized and encrypted.
 - Sensitive and business-critical data should be stored on shared cloud repositories with relevant users, not locally.
 - Offsite physical backups are recommended for added redundancy.
