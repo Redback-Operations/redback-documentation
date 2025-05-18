@@ -1,8 +1,12 @@
+---
+sidebar_position : 1
+---
+
 # Secure Coding Best Practices - ISO 27001 Mapping
 
 Author - Dhruv Waghela
 
-This document outlines critical secure coding controls grouped under Input Validation, Output Encoding, Session Management, and Access Control. Each control is mapped to relevant ISO 27001 clauses.
+This document outlines critical secure coding controls grouped under Input Validation, Output Encoding, Session Management, and Access Control, Cryptography, Error Handling, Data Protection, Database Security  . Each control is mapped to relevant ISO 27001 clauses.
 
 # Input Validation
 
