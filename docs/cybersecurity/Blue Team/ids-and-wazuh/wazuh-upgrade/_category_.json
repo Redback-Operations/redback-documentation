@@ -1,0 +1,8 @@
+{
+  "label": "Wazuh Upgrade",
+  "position": 111,
+  "link": {
+    "type": "generated-index",
+    "description": "The Wazuh upgrade involves two key steps: (1) Wazuh Docker Upgrade – to safely upgrade the Docker stack (Dashboard, Indexer, and Manager) while preserving existing configurations and data; and (2) Wazuh Agent Upgrade – to safely upgrade the agent, ensuring compatibility with the upgraded core components."
+  }
+}
