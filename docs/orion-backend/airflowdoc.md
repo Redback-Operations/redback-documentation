@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 ## Apache Airflow Documentation for Face Detection and Feature Extraction Pipelines
 ## Table of Contents
 - [1. Introduction](#1-introduction)
