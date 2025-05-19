@@ -60,9 +60,9 @@ The aim of this project was to build a fully integrated Automated Threat Hunting
 - Validated the full pipeline:  
   - Wazuh triggers alert  
   - MISP enriches alert  
-  - Alert forwarded to TheHive (T.B.D) 
-  - Cortex enriches observables (T.B.D)  
-  - Analyst triages case  (T.B.D) 
+  - Alert forwarded to TheHive (Future Work) 
+  - Cortex enriches observables (Future Work)  
+  - Analyst triages case  (Future Work) 
 
 ### Phase 6: Behavioural Detection and Automated Threat Hunting
 

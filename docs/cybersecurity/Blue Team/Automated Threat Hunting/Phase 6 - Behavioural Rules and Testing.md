@@ -109,7 +109,7 @@ Replace `<API_KEY>` with your MISP user’s API key, and `<misp_ip>` with the ad
 
 You can now run this script manually whenever you want to perform an on-demand threat intelligence sweep from MISP. This enables you to fetch current indicators without depending solely on real-time alert triggers. The output can be parsed, logged, or integrated with local detection rules based on your workflow.
 
-### Step 7: Step 3: Suppress Known Benign Noise
+### Step 7 - Suppress Known Benign Noise
 
 To avoid alert fatigue and false positives, Wazuh allows you to suppress alerts from known, trusted sources. This is especially useful in lab or internal environments where systems like monitoring agents, load balancers, or patch managers may repeatedly trigger low-priority events.
 
