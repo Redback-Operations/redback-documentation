@@ -2,8 +2,9 @@
 sidebar_position: 5
 ---
 
-> **📌 Author:** Syed Mahmood Aleem Huzaifa  
-> **📅 Date:** 17 May 2025
+> **Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.
+
+> **Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
 
 ### Overview 
 Building on the successful integration and testing completed in Phase 3, this phase focuses on operationalising the **MISP enrichment pipeline within Wazuh**. The objective here is to fully automate the threat intelligence lookup process so that when an alert is generated on the Wazuh Manager, it is immediately enriched with contextual data from MISP, such as the threat category, attribute type, and IOC value—if a match is found. This enrichment process transforms basic security alerts into actionable intelligence, allowing analysts to better assess the severity and relevance of incidents in real time.
@@ -26,7 +27,7 @@ The alert output will now include a `data.misp` section if a match was found, an
   "value": "8.8.8.8"
 }
 ```
-![screenshot of misp alert](img\pic37.png)
+![screenshot of misp alert](img\screenshotofmispalert.png)
 
 Looking at the same screenshot as at the end of phase 3,  which confirmed that the `custom-misp.py` script successfully triggered a lookup and returned a positive response from the MISP threat intelligence platform, we now move into the automated correlation and alert enrichment process that marks the beginning of Phase 4.
 
@@ -34,8 +35,5 @@ At this point, Wazuh has received a structured response from MISP identifying th
 
 As a result, the enriched alert is no longer simply a record of a local system event; it now contains actionable threat intelligence validated against an external authoritative source. Wazuh evaluates this enriched alert using custom detection rules defined in the local configuration. In this case, rule ID 100622 is specifically written to match alerts that include MISP enrichment fields. When the condition is met, the rule assigns a high severity level to the alert and categorises it under a specific group, such as misp_alert or threat_intel.
 
-This transition marks the start of true automation. From here onward, the system is capable of continuously scanning inbound events, correlating them with live threat data from MISP, and escalating alerts based on confirmed intelligence—all without requiring manual review or scripting. This establishes a real-time feedback loop where Wazuh becomes both a detection engine and a context-aware analyst, capable of filtering out noise and highlighting meaningful threats with high confidence.
-
-This transition marks the start of true automation. From this point onward, the system is capable of continuously monitoring inbound events, automatically correlating them with real-time threat intelligence from MISP, and escalating alerts based on confirmed matches - all without the need for manual review or scripting. This creates a continuous feedback loop in which Wazuh functions not just as a detection engine, but as an intelligence-aware analyst capable of filtering noise and surfacing high-confidence threats. The successful enrichment demonstrated in the previous screenshot confirms that this process is now occurring 
-automatically. Users can validate this visually by accessing the Wazuh Dashboard and searching for rule IDs such as 100622, or by filtering alerts using tags like misp_alert, threat_intel, or custom_correlated. Selecting any of these alerts reveals a detailed JSON view, where the embedded MISP context, including the event ID, category, type, and value, can be reviewed in full, verifying the seamless integration of external intelligence with local detection.
+This transition marks the start of true automation. From this point onward, the system is capable of continuously monitoring inbound events, automatically correlating them with real-time threat intelligence from MISP, and escalating alerts based on confirmed matches - all without the need for manual review or scripting. This creates a continuous feedback loop in which Wazuh functions not just as a detection engine, but as an intelligence-aware analyst capable of filtering noise and surfacing high-confidence threats. The successful enrichment demonstrated in the previous screenshot confirms that this process is now occurring  automatically. Users can validate this visually by accessing the Wazuh Dashboard and searching for rule IDs such as 100622, or by filtering alerts using tags like misp_alert, threat_intel, or custom_correlated. Selecting any of these alerts reveals a detailed JSON view, where the embedded MISP context, including the event ID, category, type, and value, can be reviewed in full, verifying the seamless integration of external intelligence with local detection.
 

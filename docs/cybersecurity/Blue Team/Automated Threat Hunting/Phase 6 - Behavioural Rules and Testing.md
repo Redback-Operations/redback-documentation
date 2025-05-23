@@ -2,8 +2,9 @@
 sidebar_position: 7
 ---
 
-> **📌 Author:** Syed Mahmood Aleem Huzaifa  
-> **📅 Date:** 17 May 2025
+> **Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.
+
+> **Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
 
 **Overview**
 

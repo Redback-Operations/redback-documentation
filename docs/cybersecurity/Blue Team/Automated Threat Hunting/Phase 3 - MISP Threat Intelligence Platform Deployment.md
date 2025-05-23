@@ -2,8 +2,9 @@
 sidebar_position: 4
 ---
 
-> **📌 Author:** Syed Mahmood Aleem Huzaifa  
-> **📅 Date:** 17 May 2025
+> **Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.
+
+> **Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
 
 ### Overview and Initial Setup
 
@@ -135,7 +136,7 @@ The script reads the alert JSON file passed as an argument line by line (each li
 A GET request is then issued to MISP with this query. If MISP responds successfully and contains a match (Attribute found in response), the script extracts key details from the first matching attribute, such as event_id, category, value, and type, and constructs an enriched response.
 
 This enriched output is then pushed back to the Wazuh engine through the Unix domain socket. This allows the matched IOC to be logged or acted upon by Wazuh. If no match is found, it simply logs that and skips enrichment. If an error occurs (e.g., MISP not reachable), an error message is created and also sent back via the socket.
-![custom-misp screeshot](img\pic35.png)
+![custom-misp screeshot](img\custom-mispscreenshot.png)
 
 **Changes to be done in the script**:
 
@@ -242,7 +243,7 @@ This enriched alert can also be visually verified using the Wazuh web interface 
 2.	Navigate to the *Security Events* or *Alerts* module.
 3.	In the search bar or filters, search for the matching rule.id (e.g., 100100) or the source IP 1.2.3.4.
 4.	Click on the alert entry to open the expanded JSON view.
-![json screenshot of an alert](img\pic36.png)
+![json screenshot of an alert](img\screenshotofananlert.png)
 
 A similar output would be visible on Wazuh dashboard.
 This confirms that the enrichment was parsed back into the alert and stored with it, making it available for future correlation, visualisation, or escalation workflows. This enriched field can also be used to build custom dashboards or detection visualisations that highlight threat intelligence matches.

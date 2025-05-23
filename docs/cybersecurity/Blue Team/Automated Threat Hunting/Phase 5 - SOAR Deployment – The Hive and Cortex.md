@@ -2,8 +2,9 @@
 sidebar_position: 6
 ---
 
-> **📌 Author:** Syed Mahmood Aleem Huzaifa  
-> **📅 Date:** 17 May 2025
+> **Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.
+
+> **Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
 
 ### Objective
 
@@ -61,7 +62,7 @@ services:
       - STORAGE_TYPE=elasticsearch
       - ES_HOST=http://elasticsearch:9200
       - CASSANDRA_CONTACT_POINT=cassandra
-      - APP_SECRET=cEbtUTaB0FJ/HitqmikikskteGFvX4+wi2k6DjbKimk=
+      - APP_SECRET=<EnterParamterValue>=
     volumes:
       - thehivedata:/opt/thehive/data
     depends_on:
@@ -114,7 +115,7 @@ Finally, the `Compose` file defines three named volumes—’elasticsearchdata�
 Save and exit the file. We then start the containers by running: ```docker compose up -d```
 
 Docker now pulls the required images and initialises the services. Once that completes, we verify the containers are running: ``docker ps``
-![output of docker ps command](img\pic38.png)
+![output of docker ps command](img\docker-ps-commadnoutput.png)
 
 With all core services—TheHive, Cortex, and Cassandra—up and running in containers (and TheHive internally using Lucene for storage), we can confirm that our SOAR platform is operational. TheHive is accessible at http://localhost:9000 and Cortex at http://localhost:9001. 
 
@@ -126,7 +127,7 @@ If this is the first time accessing TheHive, we are prompted to create an admin 
 ```git clone https://github.com/TheHive-Project/Cortex-Analyzers.git```
 
 Once the analyzer are downloaded, you will see all of them as shown in the screenshot below.
-![cortex analyzers](img\pic39.png)
+![cortex analyzers](img\cortexanalysers.png)
 
 ### Step 3
 
@@ -145,15 +146,15 @@ This installs all packages across different analyser folders. Once complete, we 
 Open your web browser and go to: http://localhost:9001
 
 *First time users would be asked to create an account which is straight forward.*
-![cortex login screen](img\pic40.png)
+![cortex login screen](img\cortexloginscreen.png)
 
 Once logged in you should see all the organisations
-![cortex organsation](img\pic41.png)
+![cortex organsation](img\cortexorgansiation.png)
 
 Create a new organisation and a user with admin rights for the newly created organisation, and log in with that user. 
 
 Once logged in, click on organisation on the top right
-![cortex organsation-internal](img\pic42.png)
+![cortex organsation-internal](img\cortexorgansiation-internal.png)
 
 Under the Analyzers tab within the Cortex web interface, we begin by clicking on the **"Refresh Analyzers"** button. This action scans the mounted analyzer directory inside the Cortex container and loads the available analyzers into the Cortex system. These analyzers are essentially individual scripts or modules that allow Cortex to interact with various external data sources and services, such as MISP, VirusTotal, Shodan, or AbuseIPDB. By refreshing, we ensure that Cortex is aware of all the analyzers currently present on disk and ready to be configured or used.
 
@@ -164,7 +165,7 @@ During this installation or configuration step, some analyzers will prompt for a
 In the example below, we have configured the MISP analyzer. This means we have already provided the Cortex system with the necessary URL to our MISP instance (e.g., https://192.168.0.211) and an API key generated from the MISP web interface. As a result, this analyzer is now enabled and ready to be used for automatic enrichment of observables. When a case or alert contains indicators such as IP addresses, domain names, or hashes, this analyzer can be triggered to check MISP’s threat intelligence database and return any matching information or threat context.
 
 Once configured, these analyzers can be invoked manually by analysts or automatically through Cortex’s integration with TheHive, enabling seamless enrichment of cases during triage and investigation.
-![misp analyzer configuration](img\pic43.png)
+![misp analyzer configuration](img\misp-analyserconfig.png)
 
 
 :::note Future Work
