@@ -2,9 +2,11 @@
 sidebar_position: 5
 ---
 
-> **Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.
+:::info
+**Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.  
+**Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
+:::
 
-> **Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
 
 ### Overview 
 Building on the successful integration and testing completed in Phase 3, this phase focuses on operationalising the **MISP enrichment pipeline within Wazuh**. The objective here is to fully automate the threat intelligence lookup process so that when an alert is generated on the Wazuh Manager, it is immediately enriched with contextual data from MISP, such as the threat category, attribute type, and IOC value—if a match is found. This enrichment process transforms basic security alerts into actionable intelligence, allowing analysts to better assess the severity and relevance of incidents in real time.

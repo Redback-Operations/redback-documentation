@@ -2,11 +2,13 @@
 sidebar_position: 3
 ---
 
-> **Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.
+:::info
+**Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.  
+**Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
+:::
 
-> **Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
 
-**Overview**
+### Overview 
 
 Phase 2 covers the integration of **Suricata** with the Wazuh Manager to enable network threat detection capabilities. It begins with the installation of Suricata on the Ubuntu-based manager system using the official OISF repository to ensure up-to-date packages. **Suricata** is then configured to output logs in EVE JSON format, specifying relevant event types such as alerts, DNS, HTTP, TLS, and SSH to optimize log relevance and reduce noise. The HOME_NET variable is defined to accurately classify internal traffic, which is essential for proper rule application and threat identification.
 

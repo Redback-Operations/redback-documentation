@@ -2,11 +2,13 @@
 sidebar_position: 2
 ---
 
-> **Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.
+:::info
+**Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.  
+**Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
+:::
 
-> **Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
 
-**Overview**
+### Overview 
 
 Phase 1 covers the foundational setup of the Wazuh security monitoring system by deploying a manager on an Ubuntu virtual machine and an agent on a Debian virtual machine. It includes preparing the network, updating system packages, setting hostnames, and installing the Wazuh Manager and Agent using official repositories. The phase ensures secure communication between the manager and agent through key-based registration and custom configuration using ossec.conf. It also addresses logging limitations by installing rsyslog on Debian to enable proper authentication event logging. The phase concludes with the installation of the Wazuh Indexer and Dashboard to complete the all-in-one platform. This provides a web interface for managing alerts and agent activity, ensuring a fully functional and integrated Wazuh environment ready for threat detection and analysis.
 

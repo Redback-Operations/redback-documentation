@@ -2,11 +2,12 @@
 sidebar_position: 7
 ---
 
-> **Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.
+:::info
+**Document Creation:** 17 May 2025. **Last Edited:** 23 May 2025. **Authors:** Syed Mahmood Aleem Huzaifa.  
+**Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
+:::
 
-> **Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
-
-**Overview**
+### Overview 
 
 Phase 6 introduces behavioural threat detection by leveraging custom Wazuh rules to identify suspicious activity based on system behaviour rather than static indicators. This phase covers the creation and testing of rules for detecting SSH brute-force attempts, suspicious PowerShell executions, and communication with known malicious IPs using Suricata and MISP integration. It also implements correlation logic that links behavioural events with threat intelligence to highlight high-confidence threats. Additionally, it introduces a MISP IOC hunting script for proactive threat detection and outlines techniques to suppress known benign noise to maintain alert quality and reduce false positives.
 
