@@ -80,8 +80,6 @@ We define a high-severity correlation rule that detects when a failed login (a b
 ```
 
 Before this works, ensure you have the base detection rule:
-
-[custom rules](doc/custom_rules.xml):
 ```
 <rule id="100100" level="7">
   <if_sid>5710</if_sid>
@@ -91,7 +89,7 @@ Before this works, ensure you have the base detection rule:
 
 This creates a chain: Rule 100100 fires for login failures, and 110005 correlates that event with the known malicious IP (provided by MISP). Replace the IP 8.8.8.8 with one from your actual MISP indicators.
 
-The [local rules](doc/local_rules.xml)  file contains a structured collection of custom Wazuh rules tailored to enhance the detection, correlation, and enrichment capabilities of the threat monitoring setup used in this project. The rules are organized into logical groups, each serving a specific detection purpose.
+Local rules would contains a structured collection of custom Wazuh rules tailored to enhance the detection, correlation, and enrichment capabilities of the threat monitoring setup used in this project. The rules are organized into logical groups, each serving a specific detection purpose.
 
 The local,syslog,sshd group defines rules that identify SSH login failures, brute-force attacks, and test patterns. These rules are crucial for detecting suspicious authentication behavior on monitored systems. The misp group includes rules that process and respond to events generated from MISP threat intelligence, such as matching IoCs, API errors, and debug events. These ensure that threat intelligence enrichment is actively monitored and operational. The custom-misp group implements advanced correlation logic by combining behavioral detections, like failed SSH logins, with confirmed threat data from MISP. It also includes rules that simulate or respond to test cases used during validation.
 
