@@ -1,10 +1,14 @@
-# CVE Threat Automation - Full Documentation
+### CVE Threat Automation - Full Documentation
+
+:::info
+**Document Creation:** 23 May 2025. **Last Edited:** 23 May 2025. **Authors:** Muhammad Arsalan Khan 
+
+**Effective Date:** 23 May 2025. **Expiry Date:** 23 May 2026.
+:::
 
 This document presents each phase of the CVE Threat Automation project in a structured and easy-to-understand format. It is designed to guide cybersecurity teams through the full process from planning to continuous improvement. Cybersecurity teams today face an ever-growing challenge of monitoring and responding to Common Vulnerabilities and Exposures (CVEs). Manually correlating logs, updating threat feeds, and writing detection rules is time-consuming and error-prone.
 
 ##  Introduction
-
-# Introduction to CVE Threat Automation
 
 Cybersecurity teams today face an ever-growing challenge of monitoring and responding to Common Vulnerabilities and Exposures (CVEs). Manually correlating logs, updating threat feeds, and writing detection rules is time-consuming and error-prone.
 
@@ -17,8 +21,6 @@ Cybersecurity teams today face an ever-growing challenge of monitoring and respo
 This documentation outlines each phase of the CVE Threat Automation process from planning to continuous enhancement.
 
 ##  Phase 1: Planning
-
-# Phase 1: Planning
 
 The planning phase defines the overall scope and goals of CVE Threat Automation.
 
@@ -85,8 +87,6 @@ This phase translates planning into technical design and architecture.
 
 ##  Phase 3: Implementation
 
-# Phase 3: Implementation
-
 In this stage, the designed components are developed and tested in a local environment.
 
 ### Key Activities:
@@ -106,7 +106,6 @@ A working prototype that runs inside a Docker container and maps logs to CVEs.
 
 ##  Phase 4: Integration
 
-# Phase 4: Integration
 
 This phase integrates individual components to work as a cohesive automated system.
 
@@ -125,7 +124,6 @@ This phase integrates individual components to work as a cohesive automated syst
 
 ##  Phase 5: Testing
 
-# Phase 5: Testing
 
 Testing is essential to verify the correctness and reliability of CVE-based detections.
 
@@ -152,8 +150,6 @@ Testing is essential to verify the correctness and reliability of CVE-based dete
 
 ##  Phase 6: Monitoring
 
-# Phase 6: Monitoring
-
 Monitoring focuses on ensuring the system remains operational and accurate over time.
 
 ### Metrics Tracked:
@@ -169,8 +165,6 @@ Monitoring focuses on ensuring the system remains operational and accurate over 
 
 ## Phase 7: Enhancement
 
-# Phase 7: Enhancement
-
 Enhancement involves continuous improvement and scalability.
 
 ### Future Additions:
@@ -184,8 +178,6 @@ Encourage open-source contributions to extend capabilities and threat coverage.
 
 ##  Conclusion
 
-# Conclusion
-
 CVE Threat Automation transforms manual threat detection into a scalable, reliable, and real-time process.
 
 By integrating MISP, Python automation, and Wazuh, we:
@@ -196,7 +188,3 @@ By integrating MISP, Python automation, and Wazuh, we:
 The framework serves as a blueprint for scalable cybersecurity operations and continues to evolve with advanced threat intelligence integrations.
 
 ---
-
-**Contributors:**  
-- Muhammad Arsalan Khan  
-- Redback Blue Team
