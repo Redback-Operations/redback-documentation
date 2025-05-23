@@ -5,9 +5,8 @@ sidebar_position: 3
 # Trivy Dependency Scan
 
 :::info
-
-**Document Creation:** 8 January, 2025. **Author:** Richard Whellum.
-<br></br> **Effective Date:** 13 January 2025. **Expiry Date:** 13 January 2026.
+**Document Creation:** 8 January, 2025. **Last Edited:** 14 May, 2025. **Authors:** Richard Whellum. 
+<br></br> **Document Code:** TRV1. **Effective Date:** 8 January, 2025. **Expiry Date:** 8 January, 2026.
 :::
 
 ## Overview
@@ -40,7 +39,7 @@ This job scans the entire repository for vulnerable dependencies, and uploads th
 
 1. **Run Trivy Vulnerability Scanner**: Trivy scans the entire repository. Unfixed vulnerabilities are ignored in the results.
 
-2. **Upload Trivy Scan Results**: The results are uploaded to GitHub’s Security tab, allowing maintainers to view and manage vulnerabilities directly within the repository's settings.
+2. **Upload Trivy Scan Results**: The results are uploaded to GitHub’s Security tab, allowing maintainers to view and manage vulnerabilities directly within the repository's settings. Ensure that the repository has GitHub’s Code Scanning features enabled to view results in the Security tab.
 
 ### 2. Trivy PR Check
 
@@ -52,7 +51,7 @@ This job scans only the files changed in the pull request for vulnerabilities an
 
 1. **Get Changed Files**: The job fetches the latest changes from the main branch and compares them with the current state of the PR.
 
-2. **Run Trivy on Changed Files**: Trivy scans only the changed files for vulnerabilities. The scan focuses on high and critical vulnerabilities. If any vulnerabilities are detected, they will be saved for each affected file.
+2. **Run Trivy on Changed Files**: Trivy scans only the changed files for vulnerabilities. The scan targets only HIGH and CRITICAL severity vulnerabilities. Results are saved per affected file for further processing by Reviewdog.
 
 3. **Run Reviewdog**: Reviewdog parses the Trivy scan results and posts comments on the PR. If any vulnerabilities are found with "HIGH" or "CRITICAL" severity, they will be reported as errors.
 
@@ -80,4 +79,4 @@ This job scans only the files changed in the pull request for vulnerabilities an
 ### Trivy PR Check Results
 
 - Vulnerabilities found in the files changed in the PR will trigger a review comment on the PR. The comment will include information about the severity of each vulnerability.
-- HIGH and CRITICAL vulnerabilities will be marked as errors, blocking the PR from being merged until addressed.
+- HIGH and CRITICAL vulnerabilities will be marked as errors by Reviewdog. This can be configured to block the PR from being merged if desired, however that functionality has been disabled in this initial implementation.
