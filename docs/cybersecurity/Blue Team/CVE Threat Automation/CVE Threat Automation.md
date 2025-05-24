@@ -109,6 +109,44 @@ In this stage, the designed components are developed and tested in a local envir
 ### Output:
 A working prototype that runs inside a Docker container and maps logs to CVEs.
 
+```python title="hunter_with_log_correlation.py"
+import os
+
+cve_signatures = {
+    "CVE-2021-3156": ["sudoedit", "heap overflow", "segfault"],
+    "CVE-2023-38408": ["ForwardAgent", "OpenSSH", "remote execution"],
+    "CVE-2021-4034": ["pkexec", "polkit", "privilege escalation"],
+    "CVE-2024-8376": ["mosquitto", "MQTT", "denial of service"]
+}
+
+log_files = ["/var/log/syslog", "/var/log/auth.log"]
+
+def search_logs_for_cve(cve_id, keywords):
+    print(f"[🔍] Searching logs for {cve_id}...")
+    found_any = False
+    for log_path in log_files:
+        if os.path.exists(log_path):
+            with open(log_path, 'r', errors='ignore') as log:
+                for line_num, line in enumerate(log, 1):
+                    for keyword in keywords:
+                        if keyword.lower() in line.lower():
+                            print(f"[!] Match in {log_path} (line {line_num}): {line.strip()}")
+                            found_any = True
+    if not found_any:
+        print("[✓] No matching CVE patterns found in logs.")
+    print("-" * 50)
+
+def run_log_correlation():
+    print("[*] Starting CVE log correlation engine...\n")
+    for cve_id, keywords in cve_signatures.items():
+        search_logs_for_cve(cve_id, keywords)
+
+if __name__ == "__main__":
+    run_log_correlation()
+  ```
+
+![Log Correlation Output](./img/log_output.png)
+
 ##  Phase 4: Integration
 
 
