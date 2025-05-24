@@ -1,0 +1,8 @@
+{
+  "label": "Semester Updates",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Overview of planned, ongoing, and implemented services."
+  }
+}
