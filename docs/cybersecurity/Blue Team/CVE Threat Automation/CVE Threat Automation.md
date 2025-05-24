@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: CVE Threat Automation
+---
+
 ### CVE Threat Automation - Full Documentation
 
 :::info
