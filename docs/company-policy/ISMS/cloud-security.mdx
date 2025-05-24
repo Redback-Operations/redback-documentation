@@ -1,0 +1,198 @@
+---
+sidebar_position: 11
+---
+# Cloud Security Policy for Redback Operations
+
+:::info
+**Document Creation:** 19 May 2025. **Last Edited:** 19 May 2025. **Authors:** Nathasha Liyanage.
+<br></br> **Version:** 1.0. **Status:** Draft.
+:::
+
+## 1. Purpose
+
+Redback Operations hosts its business-based workloads on Google Cloud Platform (GCP) and Microsoft Azure. This policy addresses gaps identified in recent Gap Analysis by implementing controls to secure the provisioning, configuration, and operation of cloud-based resources. It aligns with the [NIST Cybersecurity Framework](https://csf.tools) and [ASD Essential Eight](https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/essential-eight) and provides actionable guidance for internal teams to protect data, maintain compliance, and respond effectively to threats.
+
+## 2. Scope
+
+This policy applies to all Azure and GCP resources controlled by Redback Operations, including:
+
+- **Compute**: Virtual Machines (VMs), Kubernetes, Functions
+- **Storage**: Object buckets, databases
+- **Networking**: VNETs/VPCs, subnets, firewalls
+- **Identity**: Users, service accounts
+- **Platform Services**: Managed databases, analytics
+- **CI/CD Pipelines**
+
+## 3. Roles & Responsibilities
+
+### 3.1 Cloud Providers
+- Secure primary infrastructure (physical, network, hypervisor).
+- Provide built-in security tools and alerts.
+
+### 3.2 IT Cloud Engineering
+- Implement and enforce cloud controls.
+- Provision resources using approved Infrastructure-as-Code (IaC) templates.
+- Configure network, IAM, encryption, and backups.
+
+### 3.3 GRC/Security Team
+- Establish policy, audit, monitor compliance, review designs, manage incidents, and update policy.
+
+### 3.4 Application/Data Owners
+- Classify data, approve controls, and manage user access to data and applications.
+- Participate in security reviews.
+
+### 3.5 All Users
+- Comply with Multi-Factor Authentication (MFA), least-privilege access, and report anomalies.
+- Complete mandatory security training.
+
+### 3.6 Third-Party Vendors
+- Adhere to Redback controls when using cloud resources, use time-limited least-privilege accounts, and report incidents to Redback.
+
+## 4. Policy Statements
+
+1. **Secure Deployment**
+   - Deploy all resources via audited IaC templates and approved configurations.
+2. **Strong IAM**
+   - Consolidate identities, mandate MFA, and use least-privilege Role-Based Access Control (RBAC).
+3. **Data Protection**
+   - Protect data at rest (AES-256) and in transit (TLS 1.2+). Store keys in vault services and maintain daily backups.
+4. **Visibility and Response**
+   - Enable fine-grained logging, aggregate logs, enable real-time alerts, and integrate with incident response.
+5. **Secure DevOps**
+   - Enforce secure coding, automated security scanning, and version-controlled releases.
+6. **Patching and Vulnerability Management**
+   - Install critical patches within 48 hours; perform periodic vulnerability scanning.
+7. **Third-Party Management**
+   - Vet and limit vendor access, enforce contractual security provisions, and audit transactions.
+8. **Continuous Compliance**
+   - Comply with NIST CSF and ASD Essential Eight, perform automated testing and scheduled audits, and address exceptions formally.
+
+## 5. Security Controls
+
+### 5.1 Secure Architecture and Development
+
+1. **Environment Isolation**
+   - Use separate Azure subscriptions/resource groups and GCP projects for Production, Test, and Development. Segregate networks into tiered subnets.
+2. **Network Controls**
+   - Use Azure Network Security Groups (NSGs) and GCP VPC firewall rules to whitelist necessary traffic. Protect public endpoints with Azure Application Gateway (WAF) or GCP Cloud Armor.
+3. **Hardened Configurations**
+   - Use CIS-benchmarked VM images (Azure) or Shielded VMs (GCP). Enforce baseline settings with Azure Policy and GCP Organization Policies.
+4. **Infrastructure-as-Code**
+   - Provision all resources via ARM/Bicep (Azure) or Terraform/Deployment Manager (GCP). Include policy-as-code checks in CI pipelines.
+5. **Design Reviews**
+   - Require Security Team approval for significant architecture changes, with formal threat models and mitigations documented.
+
+### 5.2 Identity and Access Management
+
+1. **Centralized Identities**
+   - Federate GCP IAM and Azure AD with corporate IdP (SAML/SCIM). Automate account lifecycle management.
+2. **MFA Enforcement**
+   - Mandate MFA for all user access to portals and CLIs. Configure Azure Conditional Access and Google 2-Step Verification.
+3. **Least-Privilege RBAC**
+   - Grant narrowly defined roles (e.g., Storage Blob Data Reader) at the most restrictive scope. Avoid Owner/Editor roles.
+4. **Privileged Access**
+   - Onboard high-privilege users into Azure Privileged Identity Management (PIM) for just-in-time access; manage GCP Org admins with groups and approval workflows.
+5. **Account Hygiene**
+   - Enforce strong passwords, terminate accounts within 24 hours of departure, and prohibit shared accounts.
+6. **IAM Monitoring**
+   - Enable and monitor Azure AD sign-in/audit logs and GCP Admin Activity logs. Alert on changes to principal roles.
+
+### 5.3 Data Protection
+
+1. **Classification and Labeling**
+   - Tag all cloud data storage by sensitivity tier.
+2. **Encryption at Rest**
+   - Use platform default encryption; for sensitive data, use Customer-Managed Keys in Azure Key Vault or GCP Cloud KMS (AES-256).
+3. **Encryption in Transit**
+   - Use Azure Front Door/Load Balancer or GCP HTTPS Load Balancer to enforce TLS 1.2+. Secure internal traffic with mTLS or service mesh.
+4. **Key and Secret Management**
+   - Store keys/secrets in vault services. Implement segregation of duties, monitor usage, and rotate keys regularly.
+5. **Data Loss Prevention**
+   - Use DLP tools (Azure Information Protection, GCP DLP) to scan for sensitive data. Restrict public access; use signed URLs/SAS tokens that expire.
+6. **Backups and Recovery**
+   - Configure daily backups using Azure Backup and GCP snapshots; store in isolated environments. Encrypt backups and enable immutability/soft delete.
+7. **Backup Testing and Retention**
+   - Test restores every three months. Retain backups for at least 90 days; archive as per compliance needs.
+
+### 5.4 Logging, Monitoring, and Incident Response
+
+1. **Enable Logging**
+   - Enable Azure Activity Logs, NSG flow logs, resource diagnostic logs; for GCP, enable Cloud Audit Logs and VPC Flow Logs.
+2. **Centralized Repository**
+   - Aggregate logs into Azure Monitor/Log Analytics or GCP Cloud Logging; retain 90 days online, 1 year archived.
+3. **Real-Time Alerts**
+   - Use Azure Defender for Cloud, Azure Sentinel, GCP Security Command Centre, or Cloud Monitoring for policy violation and anomaly alerts.
+4. **Continuous Compliance Checks**
+   - Enforce via Azure Policy initiatives and GCP Organization Policies; report compliance weekly.
+5. **Incident Response Integration**
+   - Route notifications to Redback’s IR process; maintain runbooks for common cloud incidents (e.g., exposed storage, compromised credentials).
+6. **Metrics and Reporting**
+   - Track misconfigurations, remediation times, incidents, and backup success rates. Report monthly dashboards to leadership.
+
+### 5.5 Vulnerability Management & Patching
+
+1. **OS and Host Patching**
+   - Schedule monthly patching using Azure Update Management and GCP OS Config. Apply critical patches within 48 hours.
+2. **Application and Dependency Updates**
+   - Use managed PaaS services for automated patching. Scan containers and libraries for CVEs; redeploy/rebuild when patched.
+3. **Service Versioning**
+   - Track versions of managed services (AKS, GKE) and upgrade before end-of-support. Automate updates where possible.
+4. **Emergency Patch Process**
+   - Maintain out-of-band processes for zero-day exploits; use compensating controls as needed.
+5. **Verification and Audits**
+   - Implement automated reporting and quarterly manual checks for patch compliance.
+
+### 5.6 Third-Party Integrations
+
+1. **Vendor Assessment**
+   - Conduct security questionnaires and verify certifications (SOC 2, ISO 27001) before integration.
+2. **Access Control**
+   - Grant time-limited, least-privilege access via service principals or guest accounts with MFA.
+3. **API Security**
+   - Store credentials in vaults; enforce OAuth 2.0 or signed request patterns. Limit scopes to required API operations.
+4. **Marketplace and Open-Source Software**
+   - Use validated Azure Marketplace and GCP Marketplace solutions. Scan and validate open-source software.
+5. **Shared Responsibility**
+   - Document security responsibilities between Redback and vendors. Include obligations in contracts and SLAs.
+6. **Compliance Requirements**
+   - Require vendors to meet encryption and logging standards; reserve the right to audit their controls.
+
+## 6. Compliance and Governance
+
+### 6.1 Framework Alignment
+Controls map to NIST CSF functions—Identify (asset inventory, roles), Protect (IAM, encryption, patching), Detect (logging, monitoring), Respond (incident management), Recover (backups)—and cover all eight ASD Essential Eight mitigations.
+
+### 6.2 Monitoring and Audits
+- **Automated Checks**: Enforce significant controls via Azure Policy and GCP Organization Policies.
+- **Quarterly Audits**: Security/GRC team audits IAM, encryption, network, and backup settings; record findings in the risk register with remediation plans.
+
+### 6.3 Exceptions
+- **Formal Exception Process**: Document business justification, compensating controls, and duration. Obtain Security/GRC approval.
+- **Periodic Review**: Revisit exceptions every six months to assess ongoing need.
+
+### 6.4 Training and Awareness
+- **Onboarding and Annual Refreshers**: Mandatory training on cloud security and controls.
+- **Ongoing Updates**: Share lessons learned, new functionality, and threat advisories.
+
+### 6.5 Reporting and Metrics
+- **Monthly Dashboards**: Report vulnerabilities found, remediation times, incident counts, and backup success rates to IT management.
+- **Quarterly Reviews**: Present cloud security posture to the Risk Committee.
+
+### 6.6 Policy Maintenance
+- **Annual Review**: Revise policy for significant cloud architecture changes or new threats.
+- **Version Control**: Track changes in history and communicate updates to stakeholders.
+
+### 6.7 Enforcement
+- **Mandatory Compliance**: Non-compliance may lead to revocation of privileges, disciplinary action, or termination per HR policy.
+- **Remediation Focus**: Honest errors are addressed through coaching; deliberate violations face strict action.
+
+## References
+
+- [NIST CSF ID.AM-1: Physical devices and systems inventory](https://csf.tools/reference/nist-cybersecurity-framework/v1-1/id/id-am/id-am-1/)
+- [NIST CSF PR.AC-1: Identity and credential management](https://csf.tools/reference/nist-cybersecurity-framework/v1-1/pr/pr-ac/pr-ac-1/)
+- [NIST CSF PR.DS-5: Data leak protection](https://csf.tools/reference/nist-cybersecurity-framework/v1-1/pr/pr-ds/pr-ds-5/)
+- [ASD: Restricting Administrative Privileges](https://www.cyber.gov.au/resources-business-and-government/maintaining-devices-and-systems/system-hardening-and-administration/system-administration/restricting-administrative-privileges)
+- [ASD: Patching Applications and Operating Systems](https://www.cyber.gov.au/resources-business-and-government/maintaining-devices-and-systems/system-hardening-and-administration/system-administration/patching-applications-and-operating-systems)
+- [Azure Security Documentation](https://learn.microsoft.com/en-us/azure/security/)
+- [Google Cloud Security Best Practices](https://cloud.google.com/security/best-practices)
+- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
