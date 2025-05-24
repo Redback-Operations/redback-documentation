@@ -10,7 +10,7 @@ By **Parami Liyanage**
 
 The Planet Match Game challenges players to drag and drop planet names onto the correct planet in the 3D solar system. When a planet is labeled to the right planet, the label disappears, and the planet name appears on the planet. Once all labels are correctly matched, a success message is displayed and the planets begin orbiting the Sun.
 
-![3d-solar-system](img\3d-solar-system.PNG) 
+![3d-solar-system](img\3d-solar-system.png) 
 
 --- 
 
@@ -72,7 +72,7 @@ Game can be accessed through `/planet-match-game` as mini login game is set as d
 
 | Incorrect Match | Correct Match | Game complete |
 | ---- | ---- | ---- |
-| ![error_message](img\error_message.PNG)  | ![game_complete_message](img\game_complete_message.PNG)  | ![complete](img\complete.PNG) |
+| ![error_message](img\error_message.png)  | ![game_complete_message](img\game_complete_message.png)  | ![complete](img\complete.png) |
 
 
 ## Notes

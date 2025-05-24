@@ -48,7 +48,7 @@ The purpose of the game is to match draggable images with their corresponding dr
         - Positioned on the right side of the screen.
         - Each drop zone has a placeholder image that hints at the correct draggable image it accepts.
 
-![gamestart](img\gamestart.PNG) 
+![gamestart](img\gamestart.png) 
 **2.Dragging and Dropping Items**
  - Hover over a draggable image to highlight it.
  - Click and hold the image to grab it.
@@ -63,7 +63,7 @@ The purpose of the game is to match draggable images with their corresponding dr
         - An error modal will appear, notifying you that the image cannot be dropped in that zone.
         - The image will return to its original position in the draggable area.
 
-![loginerror](img\loginerror.PNG) 
+![loginerror](img\loginerror.png) 
 
 
 **4. Completing the Game**
@@ -73,8 +73,8 @@ The purpose of the game is to match draggable images with their corresponding dr
         - A message will display: "Click on Go Play when you are ready!"
      - Click the "Go Play" button to proceed to the next activity.
 
-![logingamecomplete](img\logingamecomplete.PNG) 
-![playgroundscreen](img\playgroundscreen.PNG) 
+![logingamecomplete](img\logingamecomplete.png) 
+![playgroundscreen](img\playgroundscreen.png) 
 
 
 
