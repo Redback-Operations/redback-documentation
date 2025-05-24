@@ -1,76 +1,106 @@
-# redback-documentation
+# Baseball Injury Risk Analysis — Project Documentation
 
-Docusaurus instance for the consolidation of company research and documentation
+## Table of Contents
+- [Introduction](#introduction)
+- [Problem Statement](#problem-statement)
+- [Project Objectives](#project-objectives)
+- [Technology Stack and Rationale](#technology-stack-and-rationale)
+- [System Architecture](#system-architecture)
+- [Dataset Development](#dataset-development)
+- [Model Training](#model-training)
+- [Challenges and Limitations](#challenges-and-limitations)
+- [Key Features](#key-features)
+- [Future Work](#future-work)
+- [Conclusion](#conclusion)
 
-[View site here](https://redback-operations.github.io/redback-documentation/)
+---
 
-[Approvers guide here](https://redback-operations.github.io/redback-documentation/docs/documentation-maintenance/approval-guide)
+## Introduction
 
+The **Baseball Injury Risk Assessment** project provides an intelligent system to analyze baseball player movements from video footage and assess injury risk. Using computer vision and machine learning, it detects risk-prone joint movements and outputs visual feedback with pose overlays and injury predictions.
 
-## Prerequisites 
+## Problem Statement
 
-- Git 
-- Node.js
-- docusaurus npm package
-- yarn npm package
-- Run `npm i` to get all other packages
-- IDE, browser, and terminal of your choice
-- Git credentials configured on your machine
+Athletes in baseball face frequent injury risks due to repetitive motions. Traditional analysis methods are manual, subjective, and slow. This project introduces an automated, objective tool to classify movement risk levels from video data.
 
-## Section creation
+## Project Objectives
 
-To create a new doc section, duplicate [`example-nested`](https://redback-operations.github.io/redback-documentation/docs/category/example-nested). This folder contains an example for the top level folder, as well as individual pages. The `lorem.md` file demonstrates appropriate heading style.
+- Extract pose landmarks using MediaPipe.
+- Compute key joint angles (shoulder, elbow, knee).
+- Train a model to classify movement risk.
+- Overlay risk labels and visual feedback on video.
+- Build a Streamlit-based web interface for users.
 
-- Ensure all main folders under `docs` contains a `_category_.json` file as this is what stylises the section. 
+## Technology Stack and Rationale
 
-## Page creation
+- **Pose Estimation**: MediaPipe — fast, efficient, and real-time.
+- **Model Training**: TensorFlow (Keras) — flexible and browser-friendly.
+- **Frontend**: Streamlit — lightweight, Python-native UI framework.
+- **Backend**: OpenCV — handles video processing and frame annotations.
 
-[Tutorial video here](https://youtu.be/AbDBXuXaJ_s), [tutorial pages here (view the source code for a "template")](https://redback-operations.github.io/redback-documentation/docs/category/examples--tutorials)
+## System Architecture
 
-This site uses markdown (.md or .mdx) for the files. Please do not upload word documents or PDFs directly. [See here for embedded PDF uploads](https://redback-operations.github.io/redback-documentation/docs/example/pdf-tutorial)
+### Main Scripts
+- `main.py`: End-to-end processing (video → prediction → overlay).
+- `streamlit_app.py`: Web interface, handles upload and display.
 
-- Each individual page must begin with:
+### Utility Scripts
+- `utils/angles.py`: Calculates joint angles via cosine rule.
+- `utils/draw_overlay.py`: Draws skeletons, angles, and risk labels.
+- `model/predictor.py`: Loads the trained model and makes predictions.
+- `model/trainer.py`: Trains a classifier using joint angle data.
+- `config.py`: Central settings for paths, constants, and configs.
+- `dataset/label_mapper.py`: Converts string labels to numeric and vice versa.
 
-    ```
-    ---
-    sidebar_position: x
-    ---
-    ```
+## Dataset Development
 
-    with `x` being the position (in a positive integer) that you want this document to appear within its section.
+The dataset consists of joint angle data extracted from 4 baseball videos:
 
-- Do not add a contents list, this is automatically generated
+- **High-risk pitchers**: Drew Storen, Max Scherzer (shoulder/elbow risk).
+- **Low-risk batters**: George Springer, Luis Arraez (safe movement).
 
-- Each individual page is simply a markdown page, **[examples here, view the source code of these pages for guidance](https://redback-operations.github.io/redback-documentation/docs/category/examples--tutorials)**
+Landmarks → Joint angles → CSV format:  
+`[left_elbow, right_elbow, left_shoulder, right_shoulder, left_knee, right_knee, label]`
 
-- Keep relevant images, videos, and other documents within appropriate files in each *section* (each respective folder within `docs`) to avoid bloat in the main site folder.
+## Model Training
 
-## General things
+- **Model type**: Feedforward Neural Network
+- **Input**: 6 joint angles
+- **Output**: Risk class (`safe`, `shoulder risk`, `elbow risk`)
+- **Architecture**:
+  - Input layer: 6 units
+  - Hidden layer: 64 units, ReLU
+  - Output layer: softmax over 3 classes
 
-- Unless neccessary, please do not change the code to the overall site itself, once stable the only changes should be to sections and pages.
+Trained using Adam optimizer and categorical crossentropy. Saved as `.h5` for runtime prediction.
 
--  More advanced documentation for creating markdown files can be found [here](https://docusaurus.io/docs/next)
+## Challenges and Limitations
 
-- The search uses a third party tool (Algolia) which uses web scraping to determine the way it searches, as such, it takes up to a day for changes to reflect in this search. A local search will be considered in the future should time permit. **Search is currently broken, priority after migration.**
+- **Pose Estimation Errors**: MediaPipe struggles with blur/occlusion.
+- **Small Dataset**: Only 4 videos — potential overfitting.
+- **Deployment Constraints**: Memory and time limits in hosting platforms.
+- **Label Noise**: Labels applied at video level, not frame-specific.
 
-## Attributions
+## Key Features
 
-Please attribute inputed documentation to the appropriate author(s) along with the date, formatted as:
+- **Video-Based Risk Assessment**: Annotated pose + risk feedback
+- **Web Interface**:
+  - Upload videos
+  - View progress with spinner
+  - Download risk-annotated output
 
-```
-:::info
+- **Modular Design**:
+  - Replaceable pose or classification modules
+  - Easily extendable to other sports
 
-**Document Creation:** 1 April, 2023. **Last Edited:** 31 August, 2023. **Authors:** John Doe.
-<br></br> **Document Code:** DOC1. **Effective Date:** 15 September 2023. **Expiry Date:** 5 September 2024.
-:::
-```
+## Future Work
 
-This will create a banner displaying the appropriate information. The last line is neccessary to comply with the document standards introduced for the company. Versioning as per the document standards should be used with [appropriate versioning](https://docusaurus.io/docs/versioning).
+- Real-time webcam-based risk detection.
+- Larger, diverse datasets for robust training.
+- Frame-level joint-specific risk localization.
+- Expand to other sports like cricket, tennis, football.
 
-## Pushing updates
+## Conclusion
 
-Please test locally, as a file with broken links or markdown can stop the whole site from working, `npm run start` to do so.
+This capstone delivers a complete ML pipeline for video-based injury risk assessment in baseball. It demonstrates practical integration of computer vision, web development, and machine learning to solve real-world biomechanical problems in sports.
 
-There are basic checks in place on GitHub within pull requests, please make sure as a reviewer the code is checked to ensure complete compliancy with the Docusuarus platform. Test locally as needed.
-
-Upon approving pull requests, the GH Pages will build itself assuming nothing is wrong.
