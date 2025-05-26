@@ -63,9 +63,8 @@ The goal of this documentation is to:
 You can access the Airflow UI using:
 
 - **URL**: http://redback.it.deakin.edu.au:8888  
-- **Username**: `project_4`  
-- **Password**: `TYojTPXO14gtRoFbkNVYUQ9y2cBagSwsCWyvbqs_REA`  
-
+- **username** = input("Enter your username: ")
+- **password** = input("Enter your password: ")
 The FastAPI service has these credentials configured as environment variables and handles authentication with the Airflow API automatically.
 
 ## 5. Project Structure
