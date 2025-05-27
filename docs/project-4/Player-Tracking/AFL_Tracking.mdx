@@ -1,0 +1,89 @@
+---
+sidebar_position: 2
+---
+
+# AFL Player Tracking 
+***Last updated by:*** Jarrod Gillingham
+***Last updated:*** 27/05/2025
+
+## Overview
+This project explores player tracking in the Australian Football League (AFL), with a strong focus on data governance and ethical considerations in sports analytics. It reviews existing AFL tracking methods and introduces a computer vision-based alternative using YOLOv8 for object detection.
+A custom dataset was created using Roboflow, enabling the model to detect and track players based on distinct uniform features (guernsey, shorts, and socks colors). The model was developed and tested on footage from a Hawthorn Hawks vs. Carlton Blues match and is capable of identifying both players and umpires. The system can be extended further to include ball tracking and advanced analytics.
+
+## AFL Player Tracking Investigation
+This report explores the current landscape of player tracking in the AFL, examining the technologies used, such as GPS and software-based systems, and the ways in which they collect and process player data. It aims to evaluate the benefits these systems offer in performance analysis and fan engagement, while also critically addressing the privacy, ethical, and cybersecurity concerns they raise. The purpose of this report is to identify the potential risks associated with player data collection and to provide recommendations for improving data protection, ensuring compliance with legal standards, and safeguarding player wellbeing.
+
+<embed
+      src="https://redback-operations.github.io/redback-documentation/pdf/AFL_PT_Report.pdf"
+      type="application/pdf"
+      width="100%"
+      height="800px"
+/>
+
+## Player Tracking with AI
+
+### Features
+-**Player Detection** Uses YOLOv8 to detect AFL players in match footage based on distinctive uniform colors such as guernseys, shorts, and socks.
+
+-**Umpire Recognition** Includes detection of umpires as a separate class to differentiate them from players.
+
+-**Custom Dataset Creation** A labeled dataset was built using Roboflow, with annotations based on real AFL game footage to support model training.
+
+-**Video Analysis Pipeline** Processes MP4 match footage and overlays detection results on each frame for visualization and review.
+
+-**Model Training and Optimization** Trained with YOLOv8 and fine-tuned to improve detection accuracy and minimize issues like flickering or misclassification.
+
+-**Ethical and Governance Considerations** Developed with a focus on responsible data usage, privacy, and ethical application of computer vision in sports.
+
+-**Extendable to Ball Tracking** The existing pipeline supports future enhancements to include football detection and additional gameplay elements
+
+## Resources
+- [Watch sample footage output here](https://deakin.au.panopto.com/Panopto/Pages/Viewer.aspx?id=1285d2c1-4084-45a8-91aa-b2e10035cab2)
+- [Access the dataset here](https://app.roboflow.com/playertrackingjg/custom-workflow-object-detection-d5flf/7)
+
+## Code
+
+**1. Installation of required packages**
+    ```python
+    !pip install ultralytics==8.0.196
+
+    from IPython import display
+    display.clear_output()
+
+    import ultralytics
+    ultralytics.checks()
+    from ultralytics import YOLO
+**2. Import dataset from Roboflow for YOLO**
+    ```python
+    !pip install roboflow
+
+    from roboflow import Roboflow
+    rf = Roboflow(api_key="API KEY FROM ROBOFLOW")
+    project = rf.workspace("playertrackingjg").project("custom-workflow-object-detection-d5flf")
+    version = project.version(7) #Most recent version
+    dataset = version.download("yolov8")
+**3. Training YOLOv8 Model on Custom Dataset**
+    ```python
+    from ultralytics import YOLO
+
+    model = YOLO('yolov8n.pt')
+
+    model.train(
+        data=r"PATH TO BEST/MOST RECENT YAML FILE", 
+        epochs=100, #Can be reduced for testing new dataset
+        imgsz=640,
+        plots=True
+    )
+**4. Running Inference on Video Using Trained YOLOv8 Model**
+    ```python
+    model = YOLO(r"runs\detect\train23\weights\best.pt")
+
+    #Predict on game footage (mp4)
+    results = model.predict(
+        source=r"PATH TO MP4 FILE", 
+        conf=0.25,          # confidence threshold
+        save=True,          # saves output with boxes drawn
+        imgsz=640           # same size as trained at
+    )
+
+    print("Prediction complete")
