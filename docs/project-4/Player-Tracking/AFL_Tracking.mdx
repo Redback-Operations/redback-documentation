@@ -14,7 +14,7 @@ A custom dataset was created using Roboflow, enabling the model to detect and tr
 This report explores the current landscape of player tracking in the AFL, examining the technologies used, such as GPS and software-based systems, and the ways in which they collect and process player data. It aims to evaluate the benefits these systems offer in performance analysis and fan engagement, while also critically addressing the privacy, ethical, and cybersecurity concerns they raise. The purpose of this report is to identify the potential risks associated with player data collection and to provide recommendations for improving data protection, ensuring compliance with legal standards, and safeguarding player wellbeing.
 
 <embed
-      src="https://redback-operations.github.io/redback-documentation/pdf/AFL_PT_Report.pdf"
+      src="https://redback-operations.github.io/redback-documentation/pdf/AFL_PT_Report.pdf" 
       type="application/pdf"
       width="100%"
       height="800px"
@@ -43,7 +43,7 @@ This report explores the current landscape of player tracking in the AFL, examin
 
 ## Code
 
-**1. Installation of required packages**
+1. **Installation of required packages**
     ```python
     !pip install ultralytics==8.0.196
 
@@ -53,7 +53,7 @@ This report explores the current landscape of player tracking in the AFL, examin
     import ultralytics
     ultralytics.checks()
     from ultralytics import YOLO
-**2. Import dataset from Roboflow for YOLO**
+2. **Import dataset from Roboflow for YOLO**
     ```python
     !pip install roboflow
 
@@ -62,7 +62,7 @@ This report explores the current landscape of player tracking in the AFL, examin
     project = rf.workspace("playertrackingjg").project("custom-workflow-object-detection-d5flf")
     version = project.version(7) #Most recent version
     dataset = version.download("yolov8")
-**3. Training YOLOv8 Model on Custom Dataset**
+3. **Training YOLOv8 Model on Custom Dataset**
     ```python
     from ultralytics import YOLO
 
@@ -74,7 +74,7 @@ This report explores the current landscape of player tracking in the AFL, examin
         imgsz=640,
         plots=True
     )
-**4. Running Inference on Video Using Trained YOLOv8 Model**
+4. **Running Inference on Video Using Trained YOLOv8 Model**
     ```python
     model = YOLO(r"runs\detect\train23\weights\best.pt")
 
