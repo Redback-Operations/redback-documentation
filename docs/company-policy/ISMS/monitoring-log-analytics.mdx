@@ -25,11 +25,11 @@ description: Monitoring & Log Analytics High-Level Guidelines for Redback Operat
         <td style={{ textAlign: 'center' }}>Document Creation</td>
       </tr>
       <tr>
+        <td style={{ textAlign: 'center' }}>V0.3</td>
+        <td style={{ textAlign: 'center' }}>Riley Collis</td>
         <td style={{ textAlign: 'center' }}></td>
-        <td style={{ textAlign: 'center' }}></td>
-        <td style={{ textAlign: 'center' }}></td>
-        <td style={{ textAlign: 'center' }}></td>
-        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}>01/05/2025</td>
+        <td style={{ textAlign: 'center' }}>Review/Update</td>
       </tr>
       <tr>
         <td style={{ textAlign: 'center' }}></td>
@@ -71,6 +71,9 @@ It involves the real-time scanning and analysis of data to detect, alert, and re
 Log analytics supports the identification of trends, unexpected occurrences, and potential security breaches by analysing the historical data provided by logs.
 
 **Note: This policy is a high-level policy that refers to a theoretical future deployment of a SIEM/SOC solution for Redback Operations.**
+
+### Current State Vs Target State
+**Note: The current layout and infrastructure of Redback Operations do not yet support the full implementation of this policy. The practices outlined herein reflect a future state goal. As of now, the company is in the process of maturing its monitoring and log analytics capabilities. Where applicable, sections in this policy will specify whether a feature or standard is currently in use or part of a target implementation roadmap. **
 
 ### Purpose
 
@@ -131,8 +134,6 @@ Here’s a table that details the guiding principles relevant to the Monitoring 
 | Efficiency        | Encourages the design of logging and monitoring processes that maximize resource use and operational performance. |
 | Scalability       | Ensures that log management systems can scale with organizational growth or an increase in data volume.           |
 | Resilience        | Aims to maintain continuous operation of logging and monitoring systems, even in the face of failures.            |
-| Comprehensiveness | Ensures all relevant data is captured, providing a detailed and complete view of system and user activities.      |
-| Security          | Mandates that logs and their management processes adhere to the highest standards of data protection.             |
 
 #### General Obligations:
 
@@ -147,8 +148,6 @@ Here’s a table that details the obligations that Redback Operations adheres to
 | Efficiency        | Encourages the design of logging and monitoring processes that maximize resource use and operational performance. |
 | Scalability       | Ensures that log management systems can scale with organizational growth or an increase in data volume.           |
 | Resilience        | Aims to maintain continuous operation of logging and monitoring systems, even in the face of failures.            |
-| Comprehensiveness | Ensures all relevant data is captured, providing a detailed and complete view of system and user activities.      |
-| Security          | Mandates that logs and their management processes adhere to the highest standards of data protection.             |
 
 ### Key Assets and Data Categories
 
@@ -168,6 +167,25 @@ For Redback Operations, identifying the critical systems, applications, and data
     -   Operational data (logs, configuration files)
 
 These assets and data types require robust monitoring to ensure they are protected from unauthorized access, modifications, or any other cyber threats.
+
+### Risk-Based Log Prioritisation
+
+To ensure resources are directed efficiently, Redback Operations classifies assets into risk tiers based on impact and likelihood:
+
+**High-Risk Assets:**
+- Customer PII systems, Financial databases, Core business apps.
+- Must be logged in real-time, retained for a minimum of 24 months
+- Lower alert thresholds, more frequent audits.
+
+**Medium-Risk Assets:**
+- Internal comms platforms, endpoint systems.
+- Logged in near real-time, retained for 12–18 months.
+
+**Low-Risk Assets:**
+- Non-sensitive operational systems.
+- Logged daily or hourly based on activity, retained for 6–12 months.
+
+This risk classification guides monitoring granularity, frequency, retention, and alert tuning.
 
 ### Framework References
 
@@ -388,6 +406,13 @@ The following rules apply to Incident Response & Forensics:
 -   In the event of security incidents, logs must be used to perform root cause analysis, identify indicators of compromise (IoC) and to aid in remediation efforts.
 -   Logs related to any identified incident must be preserved beyond the standard retention period until the incident is fully resolved and closed.
 
+Logs must contribute directly to the triage and escalation of incidents. Alerts generated from log activity must be assigned thresholds that, when triggered, route events to appropriate Incident Response (IR) playbooks. Suppression and tuning mechanisms must be documented and reviewed regularly to avoid alert fatigue and ensure timely response.
+
+Threshold examples include:
+- Multiple failed authentication attempts within a 10-minute window.
+- Unusual data exfiltration patterns.
+- Configuration changes to critical systems outside business hours.
+
 **Refer to the Incident Response Policy & relevant playbooks for further information.**
 <div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
 ### Log Collection Frequency & Retention
@@ -434,6 +459,8 @@ Compliance audits of log management practices must be conducted **annually** to 
 All procedures related to log management must be fully documented and updated annually or following significant changes to the IT environment. Staff involved in log management must receive regular training on their responsibilities under this policy and on the secure handling of log data.
 
 ### SIEM/SOC Logging Protection
+
+The current SIEM/SOC platform is not yet fully deployed. As such, implementation is ongoing and being developed as part of the company’s security roadmap. A “Target State” objective is to fully integrate alert triage, threshold tuning, and automated incident handling workflows within the future SIEM solution.
 
 To ensure the confidentiality, integrity, and availability of log data at Redback Operations, it is critical to implement security measures. Here are the minimum high-level requirements for protecting the integrity of the Redback Operations SIEM/SOC platform:
 
@@ -494,5 +521,22 @@ Once changes are approved, the updated policy is communicated to all stakeholder
 
 Detailed records of all review meetings, discussions, decisions made, and the reasoning behind changes are maintained meticulously. The version history of the policy is documented to track changes over time and provide context for future amendments.
 
+### Audit & Review Procedures
+
+#### Audit Roles and Responsibilities
+
+- The **CISO** is responsible for initiating and overseeing audits.
+- An internal **audit team** (may include Compliance Officer and Security Analyst) will be responsible for the execution.
+
+#### Audit Scope and Tools
+
+- Audits must verify adherence to log collection, retention, and monitoring protocols.
+- Use of log integrity verification tools (e.g., hash comparisons).
+- Cross-checking logs against retention policies and role-based access controls (RBAC).
+
+#### Audit Outcomes and Follow-up
+
+ - A post-audit report must be created with success/failure results, identified gaps, and remediation dealines.
+ - Audit records must be maintained for a minimum of 24 months.
 
 [def]: #
