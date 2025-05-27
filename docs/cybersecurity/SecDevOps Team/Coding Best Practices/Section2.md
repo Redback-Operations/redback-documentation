@@ -30,8 +30,20 @@ On top of mitigating the code smells, we also need to ensure that we are also im
 Within this section of the module, we will briefly go through some various methods in which we can implement to our own coding to achieve the above accomplishments.
 
 
-#### 1.	**Choose Industry-specific coding standards:**
-When utilizing coding standards, we can suit the needs of what we are developing. In other words, developing a video game may typically utilize C++ for example whereas HTML, CSS and JavaScript are typically utilized for Web Development. Understanding the requirements of our objectives assists us in determining what standards we should utilize. If we are constructing a visual representation of a dataset, R or even Python may be our solution to the development process. Although, keep in mind when selecting a language that some may have various security issues in which you also need to consider and be prepared to mitigate. For example, the C++ and C languages don’t have any bound checks in which buffer overflows may occur. Always make sure that the coding language and standards you are utilising are appropriate for the solution you are developing but always consider these security considerations as well.
+#### 1.	**Have security and privacy considerations:**
+With constant threats emerging, we want to mitigate any risk of any potential compromise. In saying this, having security considerations is of extreme importance and needs to always be implemented within our code. Some things we should not be doing at all, and this also comes with our code reviewing is:
+
+- **NO** Hardcoded passwords
+- **NO** Hardcoded usernames
+- **NO** Sensitive data coded or listed
+
+These three main points are a definite ‘no-go’ within coding as these can be easily leveraged against us and can often lead to attacks against our systems and unauthorised access. After all, most cyber security incidents are often caused by human error, so mitigating this risk can drastically reduce the likelihood of a compromise leading to an incident. These also come from secure coding practices including studying and analysing the OWASP Top 10, MITRE ATT&CK Framework, Cryptography Measures (Encryption/Decryption) and Security by design. Some resources will be provided for further information:
+
+- **OWASP Top 10:** https://owasp.org/www-project-top-ten/
+- **MITRE:** https://attack.mitre.org/
+
+The main priority with this coding standard is that we should always be thinking about security considerations while completing our work, not have it as an afterthought. 
+Always keep a tight security posture and always question to yourself, “Am I giving away any sensitive information in this file?”
 
 
 #### 2.	**Focus on Code readability:**
@@ -181,20 +193,8 @@ catch(ArgumentNullException)
 ```
 
 
-#### 9.	**Have security and privacy considerations:**
-With constant threats emerging, we want to mitigate any risk of any potential compromise. In saying this, having security considerations is of extreme importance and needs to always be implemented within our code. Some things we should not be doing at all, and this also comes with our code reviewing is:
-
-- **NO** Hardcoded passwords
-- **NO** Hardcoded usernames
-- **NO** Sensitive data coded or listed
-
-These three main points are a definite ‘no-go’ within coding as these can be easily leveraged against us and can often lead to attacks against our systems and unauthorised access. After all, most cyber security incidents are often caused by human error, so mitigating this risk can drastically reduce the likelihood of a compromise leading to an incident. These also come from secure coding practices including studying and analysing the OWASP Top 10, MITRE ATT&CK Framework, Cryptography Measures (Encryption/Decryption) and Security by design. Some resources will be provided for further information:
-
-- **OWASP Top 10:** https://owasp.org/www-project-top-ten/
-- **MITRE:** https://attack.mitre.org/
-
-The main priority with this coding standard is that we should always be thinking about security considerations while completing our work, not have it as an afterthought. 
-Always keep a tight security posture and always question to yourself, “Am I giving away any sensitive information in this file?”
+#### 9.	**Choose Industry-specific coding standards:**
+When utilizing coding standards, we can suit the needs of what we are developing. In other words, developing a video game may typically utilize C++ for example whereas HTML, CSS and JavaScript are typically utilized for Web Development. Understanding the requirements of our objectives assists us in determining what standards we should utilize. If we are constructing a visual representation of a dataset, R or even Python may be our solution to the development process. Although, keep in mind when selecting a language that some may have various security issues in which you also need to consider and be prepared to mitigate. For example, the C++ and C languages don’t have any bound checks in which buffer overflows may occur. Always make sure that the coding language and standards you are utilising are appropriate for the solution you are developing but always consider these security considerations as well.
 
 
 #### 10.	**Standardise headers for different files:**
