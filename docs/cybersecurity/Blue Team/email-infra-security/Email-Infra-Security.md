@@ -149,37 +149,23 @@ Description: Set up an on-premises email server within Redback Operations’ on-
 9.3.	Perform a spoofing test using online tools such as https://www.dmarctester.com/ .  
 
 ### Phase 4 – Additional security controls based on the CIS Foundations Benchmark guidelines  
-10. Implement additional security controls based on **CIS Foundations Benchmark** guidelines:  
+#### 10. Implement additional security controls based on **CIS Foundations Benchmark** guidelines:  
 10.1. Anti-phishing Policy  
 10.2. Anti-spam Policy  
 10.3. Anti-malware Policy  
 10.4. Safe Attachments Policy  
-10.5. Safe Links Policy  
-10.6. Content Filtering Policy  
-10.7. Common Attachment Types Filtering Policy  
-10.8. Connection Filtering Policy  
-10.9. Alert Policies  
+10.5. Safe Links Policy   
+10.6. Common Attachment Types Filtering Policy  
+10.7. Connection Filtering Policy
 
-11. Validate using the recommended audit guidelines per the **CIS Foundations Benchmark**.  
+#### 11. Validate using the recommended audit guidelines per the **CIS Foundations Benchmark**.  
 
-## Phase 5 – Additional Security Controls
-12. Implement the use of mail transport rules to maintain a list of IoC and blocked senders list and reject emails from those IoC and blocked sender sources.  
-13. Validate by adding a test sender address and IP address to the blocked senders list and confirming that the emails are blocked when sent from the listed sender address and IP address.  
-
-14. Enforce **Strict TLS encryption** instead of Opportunistic TLS for all email transmissions to ensure data confidentiality and integrity during transport.  
-15. Validate **Strict TLS encryption** by checking email headers and ensuring TLS is enforced.  
-
-16. Enforce **Multi-Factor Authentication (MFA)** for email accounts.  
-17. Validate MFA is enabled by attempting to log in and verifying that the second authentication step is prompted.  
-
-18. Implement geofencing for email access.  
-19. Validate by attempting email access from an unauthorized location and ensuring access is blocked.  
-
-20. Implement email activity logging and auditing.  
-21. Validate by reviewing logs and ensuring that email activities are captured.  
-
-22. Implement email retention and **DLP (Data Loss Protection)** policies.  
-23. Validate by attempting to delete sensitive emails and confirming that the policies prevent unauthorized deletion or sharing.
+### Phase 5 – Additional Security Controls
+12. Implement and validate **Mail Transport Rules** to block emails from malicious senders and/or sender domains.
+13. Configure and alidate **Connection Filter Policy** to block emails from malicious IP addresses. 
+14. Enable and validate **Email Activity Auditing and Logging** for all mailboxes.
+15. Enforce **Multi-Factor Authentication (MFA)** for user accounts (except for Breakglass accounts).
+16. Implement and validate **Strict TLS encryption via MTA-STS policy** instead of Opportunistic TLS for all email transmissions to ensure data confidentiality and integrity during transport.
 
 ---
 
@@ -201,12 +187,11 @@ The acceptance criteria for the project are outlined below:
 
 5. **Advanced Security Controls**:  
      Successful implementation and validation of advanced security controls:
-     - Mail transport rules to block IoCs and unauthorized senders.
-     - Strict TLS encryption for email transmissions.
-     - Multi-Factor Authentication (MFA) for email accounts.
-     - Geofencing to restrict email access by location.
-     - Email activity logging and auditing.
-     - Email retention and Data Loss Protection (DLP) policies.
+     - Mail Transport Rules to block malicious senders and sender domains.
+     - Connection Filter Policy to block malicious IP addresses.
+     - Auditing and logging for all mailboxes.
+     - Multi-Factor Authentication (MFA) for all accounts.
+     - Strict TLS encryption for email transmissions (using MTA-STS policy).
 
 ---
 
