@@ -1,8 +1,0 @@
-{
-  "label": "Chat Bot",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "The generative AI interface for Lachesis"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "label": "Mosquitto",
-  "position": 8,
-  "link": {
-    "type": "generated-index",
-    "description": "General documentation for Mosquitto"
-  }
-}

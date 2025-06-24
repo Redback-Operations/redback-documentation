@@ -1,8 +1,0 @@
-{
-  "label": "MISP",
-  "position": 104,
-  "link": {
-    "type": "generated-index",
-    "description": "MISP deployment documentations"
-  }
-}

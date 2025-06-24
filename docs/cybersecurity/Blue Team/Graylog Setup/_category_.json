@@ -1,8 +1,0 @@
-{
-  "label": "Graylog - Wazuh Integration",
-  "position": 11,
-  "link": {
-    "type": "generated-index",
-    "description": "Graylog documentations"
-  }
-}
