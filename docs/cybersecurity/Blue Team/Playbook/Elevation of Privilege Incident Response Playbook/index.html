@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cybersecurity/Blue Team/Playbook/Elevation of Privilege Incident Response Playbook" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.6.3">
+<title data-rh="true">Elevation of Privilege Incident Response Playbook | Redback Operations</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://github.com/redback-documentation/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://github.com/redback-documentation/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://github.com/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Elevation of Privilege Incident Response Playbook"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Elevation of Privilege Incident Response Playbook | Redback Operations"><meta data-rh="true" name="description" content="Last updated by &#x27;11/08/2024&#x27;"><meta data-rh="true" property="og:description" content="Last updated by &#x27;11/08/2024&#x27;"><link data-rh="true" rel="icon" href="/redback-documentation/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://github.com/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Elevation of Privilege Incident Response Playbook"><link data-rh="true" rel="alternate" href="https://github.com/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Elevation of Privilege Incident Response Playbook" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Elevation of Privilege Incident Response Playbook" hreflang="x-default"><link rel="stylesheet" href="/redback-documentation/assets/css/styles.24ac416b.css">
+<script src="/redback-documentation/assets/js/runtime~main.ad9ebb00.js" defer="defer"></script>
+<script src="/redback-documentation/assets/js/main.a5c79969.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/redback-documentation/"><div class="navbar__logo"><img src="/redback-documentation/img/logo.svg" alt="Redback" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/redback-documentation/img/logo.svg" alt="Redback" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Redback</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/redback-documentation/docs/category/onboarding">Docs</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/Redback-Operations" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/onboarding">Onboarding</a><button aria-label="Expand sidebar category &#x27;Onboarding&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/company-policies">Company Policies</a><button aria-label="Expand sidebar category &#x27;Company Policies&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/project-1">Project 1</a><button aria-label="Expand sidebar category &#x27;Project 1&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/project-2">Project 2</a><button aria-label="Expand sidebar category &#x27;Project 2&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/project-3">Project 3</a><button aria-label="Expand sidebar category &#x27;Project 3&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/project-4">Project 4</a><button aria-label="Expand sidebar category &#x27;Project 4&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/project-5">Project 5</a><button aria-label="Expand sidebar category &#x27;Project 5&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/redback-documentation/docs/category/cyber-security-team">Cyber Security Team</a><button aria-label="Collapse sidebar category &#x27;Cyber Security Team&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" tabindex="0" href="/redback-documentation/docs/category/blue-team">Blue Team</a><button aria-label="Collapse sidebar category &#x27;Blue Team&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/QEMU-RaspberryPi-Simulation-Pi-hole">QEMU-RaspberryPi-Simulation-Pi-hole</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/wazuh">Wazuh</a><button aria-label="Expand sidebar category &#x27;Wazuh&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Cowrie-Honeypot-Implementation-Guide">Cowrie-Honeypot-Implementation-Guide</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/elf-stack-geoip">elf-stack-geoip</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/pihole-setup">pihole-setup</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/pi-research">pi-research</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/graylog---wazuh-integration">Graylog - Wazuh Integration</a><button aria-label="Expand sidebar category &#x27;Graylog - Wazuh Integration&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/wazuh---misp-integration">Wazuh - MISP Integration</a><button aria-label="Expand sidebar category &#x27;Wazuh - MISP Integration&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/cyber-secuirty-awareness-training">Cyber Secuirty Awareness Training</a><button aria-label="Expand sidebar category &#x27;Cyber Secuirty Awareness Training&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/email-infrastructure--security">Email Infrastructure &amp; Security</a><button aria-label="Expand sidebar category &#x27;Email Infrastructure &amp; Security&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/misp">MISP</a><button aria-label="Expand sidebar category &#x27;MISP&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/incident-documents">Incident Documents</a><button aria-label="Expand sidebar category &#x27;Incident Documents&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Data Theft Incident Response Playbook">Playbook</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Data Theft Incident Response Playbook">Data Theft Incident Response Playbook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Denial of Service Incident Response Playbook">Denial of Service Incident Response Playbook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Elevation of Privilege Incident Response Playbook">Elevation of Privilege Incident Response Playbook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Phishing Incident Response Playbook">Phishing Incident Response Playbook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Improper Usage Incident Response Playbook">Improper Usage Incident Response Playbook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Malware Outbreak Incident Response Playbook">Malware Outbreak Incident Response Playbook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Redback Incident Response Playbook">Redback Incident Response Playbook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Root Access Inciident Response Playbook">Root Access Inciident Response Playbook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Virus Outbreak Incident Response Playbook">Virus Outbreak Incident Response Playbook</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Threat hunting and incidnet response playbook">Threat hunting and incidnet response playbook</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/redback-documentation/docs/cybersecurity/Blue Team/Wazuh Integrations/VirusTotal-Integration">Wazuh Integrations</a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/red-team">Red Team</a><button aria-label="Expand sidebar category &#x27;Red Team&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/secdevops-team">SecDevOps Team</a><button aria-label="Expand sidebar category &#x27;SecDevOps Team&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/grc-team">GRC Team</a><button aria-label="Expand sidebar category &#x27;GRC Team&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/infrastrcture-team">Infrastrcture Team</a><button aria-label="Expand sidebar category &#x27;Infrastrcture Team&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" tabindex="0" href="/redback-documentation/docs/category/cyber-security-research">Cyber Security Research</a><button aria-label="Expand sidebar category &#x27;Cyber Security Research&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/redback-documentation/docs/category/cyber-security-guidelines">Archive</a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/data-warehousing-team">Data Warehousing Team</a><button aria-label="Expand sidebar category &#x27;Data Warehousing Team&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/web--mobile-app-dev">Web &amp; Mobile App Dev</a><button aria-label="Expand sidebar category &#x27;Web &amp; Mobile App Dev&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/examples--tutorials">Examples / Tutorials</a><button aria-label="Expand sidebar category &#x27;Examples / Tutorials&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/redback-documentation/docs/category/documentation-maintenance">Documentation Maintenance</a><button aria-label="Expand sidebar category &#x27;Documentation Maintenance&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/redback-documentation/docs/orion-backend/kafkadocs/">orion-backend</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/redback-documentation/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/redback-documentation/docs/category/cyber-security-team"><span itemprop="name">Cyber Security Team</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/redback-documentation/docs/category/blue-team"><span itemprop="name">Blue Team</span></a><meta itemprop="position" content="2"></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Playbook</span><meta itemprop="position" content="3"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Elevation of Privilege Incident Response Playbook</span><meta itemprop="position" content="4"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><p><strong>Last updated by:</strong> Devika1010, <strong>Last updated on:</strong> &#x27;11/08/2024&#x27;</p>
+<p><strong>Last updated by:</strong> Devika1010, <strong>Last updated on:</strong> &#x27;11/08/2024&#x27;</p>
+<header><h1>Elevation of Privilege Incident Response Playbook</h1></header>
+<p>Elevation of Privilege Incident Response Playbook for Blue Team</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p><strong>Effective Date:</strong> 3 August 2024. <strong>Last Edited:</strong> 3 August 2024. <strong>Author:</strong> Devika Sivakumar <strong>Document Reference:</strong> EPIRP-2. <strong>Expiry Date:</strong> 3 March 2025. <strong>Version:</strong> 2.0.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-introduction">1 Introduction<a href="#1-introduction" class="hash-link" aria-label="Direct link to 1 Introduction" title="Direct link to 1 Introduction">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-overview">1.1 Overview<a href="#11-overview" class="hash-link" aria-label="Direct link to 1.1 Overview" title="Direct link to 1.1 Overview">​</a></h3>
+<p>In today’s digitally interconnected landscape, organizations face an ever-growing array of cyber threats, with elevation of privilege attacks standing out as particularly insidious. The Elevation of Privilege Incident Response Playbook serves as a vital tool to equip organizations with the means to effectively counter such threats. By offering a structured approach to incident response, this playbook is designed to fortify organizational resilience against security breaches and safeguard critical assets. Through proactive measures and clear response protocols, it empowers security teams to swiftly detect, contain, and remediate incidents, thereby minimizing potential damage and disruption. Moreover, the playbook serves as a proactive strategy to bolster the organization’s overall security posture and readiness in the face of evolving cyber threats.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12-purpose">1.2 Purpose<a href="#12-purpose" class="hash-link" aria-label="Direct link to 1.2 Purpose" title="Direct link to 1.2 Purpose">​</a></h3>
+<p>The primary purpose of the Elevation of Privilege Incident Response Playbook is to empower organizations to respond swiftly and decisively to elevation of privilege attacks. By providing clear guidelines and procedures, the playbook enables security teams to detect, contain, and remediate incidents in a timely manner, thereby minimizing the potential damage and disruption caused. Additionally, the playbook serves as a proactive measure to enhance the organization’s overall security posture and readiness to combat evolving cyber threats.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="13-attack-definition">1.3 Attack Definition<a href="#13-attack-definition" class="hash-link" aria-label="Direct link to 1.3 Attack Definition" title="Direct link to 1.3 Attack Definition">​</a></h3>
+<p>An elevation of privilege attack occurs when a malicious actor gains unauthorized access to privileged accounts, systems, or resources within an organization&#x27;s network. This type of attack typically involves exploiting vulnerabilities in software, misconfigurations, or weaknesses in authentication mechanisms to escalate their level of access beyond what is intended. Examples of elevation of privilege attacks include privilege escalation exploits, credential theft, and lateral movement within the network. By clearly defining these attack vectors, the playbook equips responders with the knowledge to identify and mitigate such threats effectively.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="14-scope">1.4 Scope<a href="#14-scope" class="hash-link" aria-label="Direct link to 1.4 Scope" title="Direct link to 1.4 Scope">​</a></h3>
+<p>The Elevation of Privilege Incident Response Playbook covers a wide range of elevation of privilege incidents that may occur within the organization&#x27;s infrastructure. This includes attacks targeting servers, workstations, cloud environments, and other critical assets. The playbook applies to incidents involving both internal and external threats, encompassing malicious activities perpetrated by insiders, external adversaries, or third-party actors. Clarifying the scope ensures that responders understand the playbook&#x27;s applicability and can effectively execute response procedures within their designated domain of responsibility.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-attack-types">2 Attack Types<a href="#2-attack-types" class="hash-link" aria-label="Direct link to 2 Attack Types" title="Direct link to 2 Attack Types">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-vertical-privilege-escalation">2.1 Vertical Privilege Escalation<a href="#21-vertical-privilege-escalation" class="hash-link" aria-label="Direct link to 2.1 Vertical Privilege Escalation" title="Direct link to 2.1 Vertical Privilege Escalation">​</a></h3>
+<p>In this, an attacker seeks to elevate their privileges within the same system or application. This typically involves escalating from a lower privilege level (e.g., a standard user) to a higher privilege level (e.g., an administrator or root user) on the same system. Attackers often exploit vulnerabilities in the operating system, applications, or configuration settings to gain elevated privileges.</p>
+<p>Common techniques for vertical privilege escalation include:</p>
+<ul>
+<li>Exploiting Software Vulnerabilities: Attackers exploit vulnerabilities in operating systems, applications, or services to gain unauthorized access to higher privilege levels. This can include buffer overflow attacks, input validation vulnerabilities, or insecure configurations that allow attackers to execute arbitrary code with elevated privileges.</li>
+<li>Kernel Exploitation: Exploiting vulnerabilities in the operating system kernel to gain root/administrator privileges on the same system. This typically involves exploiting vulnerabilities in kernel-level components such as device drivers or system calls to escalate privileges within the same system.</li>
+<li>DLL Hijacking (Windows): Exploiting insecure DLL loading mechanisms in Windows applications running on the same system to execute arbitrary code with elevated privileges. This involves planting malicious DLLs in directories searched by vulnerable applications on the same system.</li>
+<li>File System Manipulation: Manipulating file system permissions, symbolic links, or file attributes within the same system to gain higher privilege levels. This includes modifying file permissions or creating symbolic links to gain unauthorized access to sensitive files or directories within the same system.</li>
+</ul>
+<p><strong>Case Study: Microsoft Exchange Server Exploit (2021)</strong></p>
+<ul>
+<li>Overview: Attackers exploited vulnerabilities in Microsoft Exchange Server, allowing them to elevate privileges and gain access to email accounts and install additional malware.</li>
+<li>Impact: Hundreds of thousands of servers were compromised worldwide, affecting both private and public sector organizations.</li>
+<li>Response: Microsoft released patches to address the vulnerabilities, and organizations were urged to apply these patches immediately and review their systems for signs of compromise.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-horizontal-privilege-escalation">2.2 Horizontal Privilege Escalation<a href="#22-horizontal-privilege-escalation" class="hash-link" aria-label="Direct link to 2.2 Horizontal Privilege Escalation" title="Direct link to 2.2 Horizontal Privilege Escalation">​</a></h3>
+<p>Horizontal privilege escalation involves gaining access to the same level of privileges but on a different system or application within the same network environment. This is often referred to as an account takeover. Instead of escalating to a higher privilege level, attackers aim to access resources or data that they are not authorized to access within their current privilege level. This type of attack is often associated with lateral movement within a network, where attackers exploit vulnerabilities or weaknesses in interconnected systems to move laterally and gain access to additional resources.</p>
+<p>Common techniques for horizontal privilege escalation include:</p>
+<ul>
+<li>Exploiting Weak Authentication: Leveraging weak or default credentials or authentication bypass vulnerabilities to gain unauthorized access to accounts or systems on other systems within the same network. For example, using compromised credentials to gain unauthorized access to accounts on other systems.</li>
+<li>Abusing Misconfigured Permissions: Exploiting misconfigured file system permissions or access control settings to gain unauthorized access to resources or data on other systems within the same network. This involves manipulating file permissions or access control settings to access sensitive resources on other systems.</li>
+<li>Privilege Escalation via Services: Exploiting vulnerabilities or misconfigurations in network services running on other systems within the same network to gain higher privilege levels. For instance, exploiting vulnerabilities in network services to gain administrative access to other systems.</li>
+</ul>
+<p>Understanding the nuances between vertical and horizontal privilege escalation empowers organizations to customize the security defences and response strategies, effectively mitigating the distinct risks posed by each type of attack.</p>
+<p><strong>Case Study: SolarWinds Cyberattack (2020)</strong></p>
+<ul>
+<li>Overview: Attackers inserted malicious code into the SolarWinds Orion platform, enabling them to move laterally within networks and gain access to sensitive information.</li>
+<li>Impact: The breach affected numerous organizations, including government agencies and private companies, leading to significant data breaches and security concerns.</li>
+<li>Response: SolarWinds released updates to secure their platform, and affected organizations conducted thorough investigations and applied security measures to prevent further unauthorized access.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="23-credential-theft">2.3 Credential Theft<a href="#23-credential-theft" class="hash-link" aria-label="Direct link to 2.3 Credential Theft" title="Direct link to 2.3 Credential Theft">​</a></h3>
+<p>Attackers steal user credentials such as usernames and passwords, often using techniques like phishing, keylogging, or exploiting weak password policies. These stolen credentials are then used to access systems and escalate privileges.</p>
+<p>Common Techniques:</p>
+<ul>
+<li>Phishing: Deceptive emails or messages trick users into disclosing their credentials.</li>
+<li>Keylogging: Malicious software records keystrokes to capture login information.</li>
+<li>Brute Force Attacks: Automated attempts to guess passwords by trying numerous combinations.</li>
+</ul>
+<p><strong>Case Study: Uber Data Breach (2016)</strong></p>
+<ul>
+<li>Overview: Attackers used stolen credentials to access Uber&#x27;s GitHub repository and obtain sensitive data, including personal information of drivers and riders.</li>
+<li>Impact: Personal information of 57 million drivers and riders was exposed.</li>
+<li>Response: Uber implemented stronger access controls, enhanced monitoring, and improved security practices to prevent future breaches.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="24-lateral-movement">2.4 Lateral Movement<a href="#24-lateral-movement" class="hash-link" aria-label="Direct link to 2.4 Lateral Movement" title="Direct link to 2.4 Lateral Movement">​</a></h3>
+<p>After gaining initial access, attackers move laterally within the network to access additional systems and data. This is often done to maintain persistence and escalate privileges further.</p>
+<p>Common Techniques:</p>
+<ul>
+<li>Pass-the-Hash: Using hashed credentials to authenticate without knowing the actual password.</li>
+<li>Exploiting Trust Relationships: Leveraging legitimate network connections to move between systems.</li>
+<li>Using Exploited Accounts: Compromising additional user accounts to access more resources.</li>
+</ul>
+<p><strong>Case Study: NotPetya Ransomware Attack (2017)</strong></p>
+<ul>
+<li>Overview: The NotPetya ransomware spread laterally within networks, encrypting data and disrupting operations.</li>
+<li>Impact: The attack caused extensive damage to various organizations, including Maersk and Merck, leading to billions of dollars in losses.</li>
+<li>Response: Organizations improved their network segmentation, applied patches, and enhanced their incident response capabilities to mitigate the effects of similar attacks in the future.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="25-insecure-api-usage">2.5 Insecure API Usage<a href="#25-insecure-api-usage" class="hash-link" aria-label="Direct link to 2.5 Insecure API Usage" title="Direct link to 2.5 Insecure API Usage">​</a></h3>
+<p>Attackers exploit vulnerabilities or misconfigurations in application programming interfaces (APIs) to gain elevated privileges. APIs that are not properly secured can be used to access sensitive data or perform unauthorized actions.</p>
+<p>Common Techniques:</p>
+<ul>
+<li>Parameter Tampering: Manipulating parameters sent to APIs to bypass authentication or authorization controls.</li>
+<li>Injection Attacks: Exploiting injection vulnerabilities in API endpoints to execute malicious code.</li>
+<li>Excessive Data Exposure: Accessing sensitive data that is inadvertently exposed through poorly designed APIs.</li>
+</ul>
+<p><strong>Case Study: Facebook API Exploit (2018)</strong></p>
+<ul>
+<li>Overview: Attackers exploited vulnerabilities in Facebook&#x27;s APIs, allowing them to gain access to user accounts and steal personal data.</li>
+<li>Impact: The breach affected millions of users, exposing their personal information.</li>
+<li>Response: Facebook patched the vulnerabilities, conducted a thorough security review, and improved their API security practices.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-stakeholders">3 Stakeholders<a href="#3-stakeholders" class="hash-link" aria-label="Direct link to 3 Stakeholders" title="Direct link to 3 Stakeholders">​</a></h2>
+<p>Effective elevation of privilege incident response requires collaboration among key stakeholders within and outside Redback Operations.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-it-security-team">3.1 IT Security Team<a href="#31-it-security-team" class="hash-link" aria-label="Direct link to 3.1 IT Security Team" title="Direct link to 3.1 IT Security Team">​</a></h3>
+<p>Lead: Daniel McAulay (Senior Project Leader)</p>
+<p>Responsibilities:</p>
+<ul>
+<li>Identifying, researching, and preventing elevation of privilege attacks.</li>
+<li>Leading technical response tasks such as privilege escalation analysis and vulnerability patching.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="32-incident-response-team">3.2 Incident Response Team<a href="#32-incident-response-team" class="hash-link" aria-label="Direct link to 3.2 Incident Response Team" title="Direct link to 3.2 Incident Response Team">​</a></h3>
+<p>Lead: Devika Sivakumar (Blue Team Leader)</p>
+<p>Responsibilities:</p>
+<ul>
+<li>Coordinating response efforts and communicating with relevant parties.</li>
+<li>Implementing incident response protocols and conducting post-incident analysis.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="33-communication-team">3.3 Communication Team<a href="#33-communication-team" class="hash-link" aria-label="Direct link to 3.3 Communication Team" title="Direct link to 3.3 Communication Team">​</a></h3>
+<p>Lead: Kaleb Bowen (Company Lead)</p>
+<p>Responsibilities:</p>
+<ul>
+<li>Managing internal and external communications regarding the incident.</li>
+<li>Informing staff, clients, and other relevant parties about the response activities.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="34-customers">3.4 Customers<a href="#34-customers" class="hash-link" aria-label="Direct link to 3.4 Customers" title="Direct link to 3.4 Customers">  ​</a></h3>
+<p>Responsibilities:</p>
+<ul>
+<li>Reporting suspicious activity.</li>
+<li>Following organizational guidelines to protect personal information.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="35-third-party-vendors-and-partners">3.5 Third-Party Vendors and Partners<a href="#35-third-party-vendors-and-partners" class="hash-link" aria-label="Direct link to 3.5 Third-Party Vendors and Partners" title="Direct link to 3.5 Third-Party Vendors and Partners">​</a></h3>
+<p>Responsibilities:</p>
+<ul>
+<li>Providing specialized knowledge and assistance during the response process.</li>
+<li>Complying with data security and privacy requirements.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="raci-chart-for-elevation-of-privilege-incident-response">RACI Chart for Elevation of Privilege Incident Response<a href="#raci-chart-for-elevation-of-privilege-incident-response" class="hash-link" aria-label="Direct link to RACI Chart for Elevation of Privilege Incident Response" title="Direct link to RACI Chart for Elevation of Privilege Incident Response">​</a></h3>
+<table><thead><tr><th><strong>Task/Activity</strong></th><th><strong>IT Security Team</strong></th><th><strong>Incident Response Team</strong></th><th><strong>Communication Team</strong></th><th><strong>Customers</strong></th><th><strong>Third-Party Vendors</strong></th></tr></thead><tbody><tr><td><strong>Preparation</strong></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Establish incident response team</td><td>R, C</td><td>A, R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Develop response procedures</td><td>A, R</td><td>R, C</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Conduct training sessions</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Implement surveillance systems</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td><strong>Detection</strong></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Monitor system logs and traffic</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Use IDS and SIEM tools</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Analyse alerts</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td><strong>Analysis</strong></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Collect forensic data</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Identify attack methods</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Determine impact</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td><strong>Containment</strong></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Isolate compromised systems</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Implement access restrictions</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Block malicious traffic</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td><strong>Eradication</strong></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Remove malicious software</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Patch vulnerabilities</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Update security policies</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td><strong>Recovery</strong></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Restore backups</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Rebuild systems</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Conduct user training</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td><strong>Post-Incident Review</strong></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Review incident response</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Document lessons learned</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td>Update response procedures</td><td>A, R</td><td>R</td><td>I</td><td>I</td><td>I</td></tr><tr><td><strong>Communication</strong></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Create communication plans</td><td>C</td><td>C</td><td>A, R</td><td>I</td><td>I</td></tr><tr><td>Draft communication materials</td><td>C</td><td>C</td><td>A, R</td><td>I</td><td>I</td></tr><tr><td>Manage media relations</td><td>C</td><td>C</td><td>A, R</td><td>I</td><td>I</td></tr><tr><td>Provide updates</td><td>C</td><td>C</td><td>A, R</td><td>I</td><td>I</td></tr></tbody></table>
+<p><strong>Key:</strong></p>
+<ul>
+<li><strong>R</strong>: Responsible (those who do the work)</li>
+<li><strong>A</strong>: Accountable (those who are ultimately answerable)</li>
+<li><strong>C</strong>: Consulted (those who provide input)</li>
+<li><strong>I</strong>: Informed (those who are kept up to date)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-flow-diagram">4 Flow Diagram<a href="#4-flow-diagram" class="hash-link" aria-label="Direct link to 4 Flow Diagram" title="Direct link to 4 Flow Diagram">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Elevation of Privilege Incident Response Flowchart" src="/redback-documentation/assets/images/epirp-1-adf2e5c1ec758df8a39ff78120a0f344.jpg" width="621" height="713" class="img_ev3q"></p>
+<ol>
+<li><strong>Preparation (Pink)</strong>
+<ul>
+<li>Creating an incident response plan that outlines procedures, communication channels, and escalation paths.</li>
+<li>Train incident response teams and employees.</li>
+<li>Identifying critical assets and their associated risks.</li>
+<li>Ensuring that necessary tools and resources are available.</li>
+</ul>
+</li>
+<li><strong>Detection (Orange)</strong>
+<ul>
+<li>Implementing intrusion detection systems (IDS) and security monitoring tools -  Analysing logs, alerts, and anomalies.</li>
+<li>Notifying the IRT when suspicious activity is detected.</li>
+</ul>
+</li>
+<li><strong>Analysis (Yellow)</strong>
+<ul>
+<li>Gathering information about affected systems, users, and potential attack vectors.</li>
+<li>Conducting forensics analysis.</li>
+<li>Assessing the severity and potential consequences.</li>
+</ul>
+</li>
+<li><strong>Containment (Green)</strong>
+<ul>
+<li>Blocking malicious traffic or isolating compromised hosts.</li>
+<li>Changing credentials and access controls.</li>
+<li>Implementing temporary workarounds.</li>
+</ul>
+</li>
+<li><strong>Eradication (Blue)</strong>
+<ul>
+<li>Identifying vulnerabilities or misconfigurations.</li>
+<li>Patching or updating affected systems.</li>
+<li>Removing malware or unauthorized accounts.</li>
+</ul>
+</li>
+<li><strong>Recovery (Red)</strong>
+<ul>
+<li>Verifying system integrity.</li>
+<li>Restoring data from backups.</li>
+</ul>
+</li>
+<li><strong>Post-Incident Review (Brown)</strong>
+<ul>
+<li>Conduct a thorough review.</li>
+<li>Learn from the incident.</li>
+<li>Update the CIRP.</li>
+</ul>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-incident-response-stages">5 Incident Response Stages<a href="#5-incident-response-stages" class="hash-link" aria-label="Direct link to 5 Incident Response Stages" title="Direct link to 5 Incident Response Stages">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="51-preparation">5.1 Preparation<a href="#51-preparation" class="hash-link" aria-label="Direct link to 5.1 Preparation" title="Direct link to 5.1 Preparation">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Establish the foundation for an effective elevation of privilege incident response.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Developing and maintaining an incident response plan specifically tailored for elevation of privilege incidents, outlining roles, responsibilities, and escalation procedures.</li>
+<li>Conducting regular training and awareness programs to educate employees about elevation of privilege risks and response procedures, emphasizing the importance of privilege management.</li>
+<li>Implementing security controls and measures to prevent, detect, and mitigate elevation of privilege attacks.</li>
+<li>Reviewing and updating access control policies, privilege management practices, and security configurations to minimize the risk of privilege escalation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: A fully prepared organization capable of responding quickly and effectively to elevation of privilege incidents.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="52-detection">5.2 Detection<a href="#52-detection" class="hash-link" aria-label="Direct link to 5.2 Detection" title="Direct link to 5.2 Detection">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>:Identify<!-- --> indications of elevation of privilege attacks or unauthorized access.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>mplementing monitoring and detection mechanisms to identify suspicious activities, anomalies, or indicators of privilege escalation.</li>
+<li>Utilizing IDS, IPS, EDR solutions, and other security tools to monitor for signs of unauthorized access attempts, privilege escalation exploits, or abnormal behavior.</li>
+<li>Establishing thresholds and alerting mechanisms to notify incident responders of potential elevation of privilege incidents in real-time.</li>
+<li>Conducting regular security assessments, vulnerability scans, and penetration tests to identify weaknesses and vulnerabilities that could be exploited for privilege escalation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Early identification of elevation of privilege threats enables rapid response.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="53-analysis">5.3 Analysis<a href="#53-analysis" class="hash-link" aria-label="Direct link to 5.3 Analysis" title="Direct link to 5.3 Analysis">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Determine the nature and scope of the elevation of privilege incident.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Collecting and analysing evidence, logs, and artifacts related to the incident.</li>
+<li>Correlating and contextualizing security events and alerts to reconstruct the attack chain.</li>
+<li>Assessing the impact of the incident on affected systems, data, and users.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Comprehensive understanding of the elevation of privilege incident, including causes and effects.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="54-containment">5.4 Containment<a href="#54-containment" class="hash-link" aria-label="Direct link to 5.4 Containment" title="Direct link to 5.4 Containment">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Stop further unauthorized access or damage caused by the elevation of privilege incident.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Isolating affected systems, networks, or resources to prevent the spread of malware or unauthorized access.</li>
+<li>Disabling compromised accounts, revoking unnecessary privileges, and resetting compromised credentials.</li>
+<li>Implementing temporary security controls or mitigations to contain the incident while investigations are ongoing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Effective handling of the elevation of privilege incident, minimizing damage.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="55-eradication">5.5 Eradication<a href="#55-eradication" class="hash-link" aria-label="Direct link to 5.5 Eradication" title="Direct link to 5.5 Eradication">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Remove malicious elements and restore system integrity.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Patching or remediating vulnerabilities exploited by attackers to gain unauthorized access or escalate privileges.</li>
+<li>Removing malware, backdoors, or other malicious artifacts from compromised systems and networks.</li>
+<li>Conducting thorough security hygiene checks and implementing security best practices to prevent similar incidents in the future.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Complete removal of elevation of privilege threats and reduction of vulnerabilities.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="56-recovery">5.6 Recovery<a href="#56-recovery" class="hash-link" aria-label="Direct link to 5.6 Recovery" title="Direct link to 5.6 Recovery">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Restore normal operations while maintaining security.</p>
+</li>
+<li>
+<p><strong>Activities</strong></p>
+<ul>
+<li>Restoring from backups or snapshots to recover data and configurations compromised during the incident.</li>
+<li>Rebuilding or re-imaging compromised systems to ensure they are free from malware or unauthorized access.</li>
+<li>Conducting system and network hardening activities to strengthen security posture and minimize the risk of recurrence.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Full recovery of services with enhanced security measures.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="57-post-incident-review">5.7 Post-Incident Review<a href="#57-post-incident-review" class="hash-link" aria-label="Direct link to 5.7 Post-Incident Review" title="Direct link to 5.7 Post-Incident Review">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Evaluate the effectiveness of the response and identify improvements.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Documenting the incident response process, including timelines, actions taken, and outcomes.</li>
+<li>Reviewing the effectiveness of response activities and identifying gaps or deficiencies in protocols.</li>
+<li>Conducting a lesson learned meeting with the incident response team and relevant parties.</li>
+<li>Updating incident response documentation based on post-event evaluation findings.</li>
+<li>Sharing insights and recommendations with upper management to strengthen overall security posture.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Enhanced incident response capabilities and preparedness for future elevation of privilege incidents.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-steps-for-monitoring-threats">6. Steps for Monitoring Threats<a href="#6-steps-for-monitoring-threats" class="hash-link" aria-label="Direct link to 6. Steps for Monitoring Threats" title="Direct link to 6. Steps for Monitoring Threats">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="61-establish-a-monitoring-strategy">6.1 Establish a Monitoring Strategy<a href="#61-establish-a-monitoring-strategy" class="hash-link" aria-label="Direct link to 6.1 Establish a Monitoring Strategy" title="Direct link to 6.1 Establish a Monitoring Strategy">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Establish and implement a comprehensive strategy for continuous threat monitoring specifically targeting elevation of privilege incidents.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Objectives: Clearly define the objectives for threat monitoring, such as detecting unauthorized access attempts, identifying privilege escalation activities, and monitoring unusual network traffic indicative of elevation of privilege incidents.</li>
+<li>Tools: Select appropriate security tools such as IDS/IPS (Intrusion Detection/Prevention Systems), SIEM (Security Information and Event Management) systems, EDR (Endpoint Detection and Response) solutions, and user behavior analytics software.</li>
+<li>Baselines: Establish baselines for normal user activity, system behavior, and network traffic patterns to identify deviations that may indicate elevation of privilege activities.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: A well-defined monitoring strategy aligned with Redback Operations&#x27; goals, enhancing the ability to detect and respond to elevation of privilege threats effectively.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="62-deploy-monitoring-solutions">6.2 Deploy Monitoring Solutions<a href="#62-deploy-monitoring-solutions" class="hash-link" aria-label="Direct link to 6.2 Deploy Monitoring Solutions" title="Direct link to 6.2 Deploy Monitoring Solutions">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Deploy and configure monitoring tools across the organization’s infrastructure to detect elevation of privilege threats.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Install and Configure Tools: Deploy the selected monitoring tools across networks, systems, and endpoints. Ensure they are configured to detect elevation of privilege-related activities and collect relevant data.</li>
+<li>Integrate with Threat Intelligence: Integrate monitoring tools with threat intelligence feeds to enhance the detection of known and emerging elevation of privilege threats.</li>
+<li>Enable Logging: Ensure logging is enabled on critical systems, networks, and applications. Centralize log collection for efficient analysis and correlation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Comprehensive deployment and integration of monitoring solutions providing detailed insights into potential elevation of privilege threats.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="63-continuous-monitoring-and-analysis">6.3 Continuous Monitoring and Analysis<a href="#63-continuous-monitoring-and-analysis" class="hash-link" aria-label="Direct link to 6.3 Continuous Monitoring and Analysis" title="Direct link to 6.3 Continuous Monitoring and Analysis">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Maintain continuous monitoring and analysis to promptly detect and respond to elevation of privilege threats.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Real-Time Monitoring: Implement real-time monitoring to continuously observe user activities, system behavior, and network traffic, facilitating the immediate detection of elevation of privilege activities.</li>
+<li>Anomaly Detection: Utilize behavioral analytics and machine learning to identify anomalies and deviations from established baselines that may indicate elevation of privilege activities.</li>
+<li>Correlate Events: Correlate events from various sources to identify patterns that may indicate coordinated elevation of privilege attacks or persistent threats.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Enhanced capability to detect elevation of privilege threats promptly, enabling swift response to mitigate potential impacts.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="64-alerting-and-notification">6.4 Alerting and Notification<a href="#64-alerting-and-notification" class="hash-link" aria-label="Direct link to 6.4 Alerting and Notification" title="Direct link to 6.4 Alerting and Notification">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Ensure timely and effective response to detected threats through a robust alerting system.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Set Alert Thresholds: Establish thresholds for different types of alerts based on severity and potential impact.</li>
+<li>Automated Alerts: Configure automated alerts to notify the security team of detected elevation of privilege threats. Ensure alerts provide sufficient context for prompt assessment and action.</li>
+<li>Prioritize Alerts: Implement a system to prioritize alerts based on their severity and potential impact, focusing on the most critical threats first.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Timely and effective response to detected elevation of privilege threats, reducing the risk of significant damage.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="65-investigate-and-respond">6.5 Investigate and Respond<a href="#65-investigate-and-respond" class="hash-link" aria-label="Direct link to 6.5 Investigate and Respond" title="Direct link to 6.5 Investigate and Respond">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Conduct thorough investigations and implement appropriate actions to mitigate identified elevation of privilege threats.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Initial Triage: Perform initial triage to verify the validity and potential impact of alerts. Determine the severity of the threat and whether the alert is a false positive.</li>
+<li>Detailed Analysis: Conduct in-depth analysis of confirmed alerts to understand the nature and extent of the elevation of privilege threat. Use forensic tools and techniques to gather information and trace the source of the threat.</li>
+<li>Containment and Eradication: Initiate containment measures to prevent further damage if a threat is confirmed. Execute necessary eradication procedures to remove the elevation of privilege threat from the environment.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Effective investigation and mitigation of elevation of privilege threats, ensuring minimal impact on the organization.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="66-post-incident-review">6.6 Post-Incident Review<a href="#66-post-incident-review" class="hash-link" aria-label="Direct link to 6.6 Post-Incident Review" title="Direct link to 6.6 Post-Incident Review">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Assess the effectiveness of the response and identify areas for improvement.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Document Findings: Record all details of the incident, including detection, analysis, and response actions taken.</li>
+<li>Review and Improve: Conduct a review of the monitoring and response processes post-incident to identify strengths, weaknesses, and lessons learned.</li>
+<li>Update Monitoring Tools: Update monitoring tools, configurations, and thresholds based on the findings to enhance future threat detection and response capabilities.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: Continuous improvement of incident response and threat monitoring processes, ensuring better preparedness for future elevation of privilege incidents.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="67-continuous-improvement">6.7 Continuous Improvement<a href="#67-continuous-improvement" class="hash-link" aria-label="Direct link to 6.7 Continuous Improvement" title="Direct link to 6.7 Continuous Improvement">​</a></h3>
+<ul>
+<li>
+<p><strong>Objective</strong>: Maintain and enhance the organization’s threat monitoring strategy and tools.</p>
+</li>
+<li>
+<p><strong>Activities</strong>:</p>
+<ul>
+<li>Regular Audits: Conduct regular audits to ensure monitoring tools and strategies remain effective and up to date with the latest threats.</li>
+<li>Training and Awareness: Provide ongoing training to security personnel on the latest threats and best practices for monitoring and response.</li>
+<li>Adapt to New Threats: Continuously adapt the monitoring strategy to address emerging threats. Stay informed about the latest threat intelligence and incorporate it into monitoring processes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Outcome</strong>: A proactive and adaptive threat monitoring strategy that evolves with the changing threat landscape.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-terminology">7 Terminology<a href="#7-terminology" class="hash-link" aria-label="Direct link to 7 Terminology" title="Direct link to 7 Terminology">​</a></h2>
+<ul>
+<li>
+<p><strong>Privilege Escalation</strong>: The act of increasing the level of access or permissions granted to a user or application, typically to gain unauthorized control over system resources or sensitive data.</p>
+</li>
+<li>
+<p><strong>Least Privilege Principle</strong>: The security principle that users, processes, and systems should be granted only the minimum level of access or permissions necessary to perform their intended tasks, reducing the risk of privilege escalation and unauthorized access.</p>
+</li>
+<li>
+<p><strong>Exploitation</strong>: The process of taking advantage of vulnerabilities, misconfigurations, or weaknesses in software, systems, or networks to carry out malicious actions.</p>
+</li>
+<li>
+<p><strong>Security Controls</strong>: Measures, mechanisms, or safeguards implemented to protect systems, networks, and data from security threats, such as access controls, authentication mechanisms, encryption, and monitoring solutions.</p>
+</li>
+<li>
+<p><strong>Root Cause Analysis (RCA)</strong>: A methodical investigation process used to determine the underlying cause or causes of a security incident, to address systemic issues, vulnerabilities, or weaknesses that contributed to the incident.</p>
+</li>
+<li>
+<p><strong>Post-Incident Review</strong>: A structured review and analysis of the response to a security incident, including elevation of privilege incidents, to identify lessons learned, areas for improvement, and corrective actions to strengthen incident response capabilities and prevent future incidents.</p>
+</li>
+<li>
+<p><strong>Incident Response Team (IRT)</strong>: A dedicated team of professionals responsible for responding to security incidents, following the procedures outlined in the incident response plan to mitigate the impact and prevent further damage.</p>
+</li>
+<li>
+<p><strong>Vertical Privilege Escalation</strong>: The process of gaining higher levels of access within the same system or application, such as moving from user to administrator.</p>
+</li>
+<li>
+<p><strong>Horizontal Privilege Escalation</strong>: The process of gaining access to the same level of privileges but on a different system or application within the same network environment.</p>
+</li>
+<li>
+<p><strong>Credential Theft</strong>: The unauthorized acquisition of user credentials, such as usernames and passwords, often used to facilitate further attacks or unauthorized access.</p>
+</li>
+<li>
+<p><strong>Lateral Movement</strong>: The process of moving within a network to access additional systems and data after gaining initial access.</p>
+</li>
+<li>
+<p><strong>Insecure API Usage</strong>: Exploiting vulnerabilities or misconfigurations in APIs to gain unauthorized access or perform unauthorized actions.</p>
+</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Redback-Operations/redback-documentation/blob/main/docs/cybersecurity/Blue Team/Playbook/Elevation of Privilege Incident Response Playbook.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Denial of Service Incident Response Playbook"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Denial of Service Incident Response Playbook</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/redback-documentation/docs/cybersecurity/Blue Team/Playbook/Phishing Incident Response Playbook"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Phishing Incident Response Playbook</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-introduction" class="table-of-contents__link toc-highlight">1 Introduction</a><ul><li><a href="#11-overview" class="table-of-contents__link toc-highlight">1.1 Overview</a></li><li><a href="#12-purpose" class="table-of-contents__link toc-highlight">1.2 Purpose</a></li><li><a href="#13-attack-definition" class="table-of-contents__link toc-highlight">1.3 Attack Definition</a></li><li><a href="#14-scope" class="table-of-contents__link toc-highlight">1.4 Scope</a></li></ul></li><li><a href="#2-attack-types" class="table-of-contents__link toc-highlight">2 Attack Types</a><ul><li><a href="#21-vertical-privilege-escalation" class="table-of-contents__link toc-highlight">2.1 Vertical Privilege Escalation</a></li><li><a href="#22-horizontal-privilege-escalation" class="table-of-contents__link toc-highlight">2.2 Horizontal Privilege Escalation</a></li><li><a href="#23-credential-theft" class="table-of-contents__link toc-highlight">2.3 Credential Theft</a></li><li><a href="#24-lateral-movement" class="table-of-contents__link toc-highlight">2.4 Lateral Movement</a></li><li><a href="#25-insecure-api-usage" class="table-of-contents__link toc-highlight">2.5 Insecure API Usage</a></li></ul></li><li><a href="#3-stakeholders" class="table-of-contents__link toc-highlight">3 Stakeholders</a><ul><li><a href="#31-it-security-team" class="table-of-contents__link toc-highlight">3.1 IT Security Team</a></li><li><a href="#32-incident-response-team" class="table-of-contents__link toc-highlight">3.2 Incident Response Team</a></li><li><a href="#33-communication-team" class="table-of-contents__link toc-highlight">3.3 Communication Team</a></li><li><a href="#34-customers" class="table-of-contents__link toc-highlight">3.4 Customers</a></li><li><a href="#35-third-party-vendors-and-partners" class="table-of-contents__link toc-highlight">3.5 Third-Party Vendors and Partners</a></li><li><a href="#raci-chart-for-elevation-of-privilege-incident-response" class="table-of-contents__link toc-highlight">RACI Chart for Elevation of Privilege Incident Response</a></li></ul></li><li><a href="#4-flow-diagram" class="table-of-contents__link toc-highlight">4 Flow Diagram</a></li><li><a href="#5-incident-response-stages" class="table-of-contents__link toc-highlight">5 Incident Response Stages</a><ul><li><a href="#51-preparation" class="table-of-contents__link toc-highlight">5.1 Preparation</a></li><li><a href="#52-detection" class="table-of-contents__link toc-highlight">5.2 Detection</a></li><li><a href="#53-analysis" class="table-of-contents__link toc-highlight">5.3 Analysis</a></li><li><a href="#54-containment" class="table-of-contents__link toc-highlight">5.4 Containment</a></li><li><a href="#55-eradication" class="table-of-contents__link toc-highlight">5.5 Eradication</a></li><li><a href="#56-recovery" class="table-of-contents__link toc-highlight">5.6 Recovery</a></li><li><a href="#57-post-incident-review" class="table-of-contents__link toc-highlight">5.7 Post-Incident Review</a></li></ul></li><li><a href="#6-steps-for-monitoring-threats" class="table-of-contents__link toc-highlight">6. Steps for Monitoring Threats</a><ul><li><a href="#61-establish-a-monitoring-strategy" class="table-of-contents__link toc-highlight">6.1 Establish a Monitoring Strategy</a></li><li><a href="#62-deploy-monitoring-solutions" class="table-of-contents__link toc-highlight">6.2 Deploy Monitoring Solutions</a></li><li><a href="#63-continuous-monitoring-and-analysis" class="table-of-contents__link toc-highlight">6.3 Continuous Monitoring and Analysis</a></li><li><a href="#64-alerting-and-notification" class="table-of-contents__link toc-highlight">6.4 Alerting and Notification</a></li><li><a href="#65-investigate-and-respond" class="table-of-contents__link toc-highlight">6.5 Investigate and Respond</a></li><li><a href="#66-post-incident-review" class="table-of-contents__link toc-highlight">6.6 Post-Incident Review</a></li><li><a href="#67-continuous-improvement" class="table-of-contents__link toc-highlight">6.7 Continuous Improvement</a></li></ul></li><li><a href="#7-terminology" class="table-of-contents__link toc-highlight">7 Terminology</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Info</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/redback-documentation/docs/category/onboarding">Docs</a></li><li class="footer__item"><a href="https://github.com/Redback-Operations" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Redback Operations</div></div></div></footer></div>
+</body>
+</html>
