@@ -11,20 +11,26 @@ Redback Operations Cryptography Policy
 <br></br>**Effective Date:** 8 April 2024. **Expiry Date:** 8 April 2025.
 :::
 
+## Version History
+
+| Version | Modified By | Approver | Edited On | Changes Made |
+|---------|-------------|----------|-----------|--------------|
+| V0.1    | Daniel McAulay |  | 08/04/2024 | Initial document creation |
+| V1.0    | Nathasha Liyanage |  | 17/05/2025 | Review/Update |
+
 ## Purpose
 
 The primary purpose of this Encryption/Cryptography Cybersecurity Policy (hereafter referred to as "the policy") is to ensure the confidentiality, integrity, and availability of the organization's digital assets. 
 
 Encryption and cryptography are vital components of our information security strategy, protecting sensitive data against unauthorized access, disclosure, alteration, and destruction. This policy outlines the requirements for the use of cryptographic measures to safeguard data in transit, at rest, and during processing.
 
+The policy ensures compliance with ISO/IEC 27001, NIST Cybersecurity Framework, Essential Eight, and APP/GDPR, safeguarding data in transit, at rest, and during processing. It supports Redback’s academic and research activities, including the protection of data on smart wearables, exercise bikes, and other research devices.
 
 ## Scope
 
-This policy applies to all employees, contractors, and third-party partners of Redback Operations who have access to I.T. systems and data owned, controlled, or managed by the organization. 
+This policy applies to all employees, contractors, third-party partners, and affiliated contributors (e.g., Deakin University SIT capstone students) who access IT systems and data owned, controlled, or managed by Redback Operations. It covers all forms of sensitive information processed, stored, or transmitted, including personally identifiable information (PII), financial records, intellectual property, research datasets, and data classified as confidential. This includes data on research devices (e.g., smart wearables, exercise bikes, VR headsets) and cloud-based systems (e.g., MS Teams, code repositories).
 
-The scope covers all forms of sensitive information that the organization processes, stores, or transmits, including but not limited to personally identifiable information (PII), financial records, intellectual property, and any other data classified as confidential by the organization. For further details regarding sensitive information types & relevant classifications, refer to the Data Classification & Data Loss Prevention Policies outlined in the ISMS.
-
-Compliance with this policy is mandatory for all applicable entities within the scope. Failure to adhere to the policy's guidelines may result in disciplinary action, up to and including termination of employment or contracts and legal action.
+For details on sensitive information types and classifications, refer to the Data Classification & Data Loss Prevention Policies in the ISMS. Compliance is mandatory, and non-compliance may result in suspension of access to Redback resources, referral to Deakin University IT, disciplinary action, or legal action.
  
 
 ### Framework References:
@@ -51,7 +57,11 @@ The Cryptography Policy references the following framework controls:
 - Control 10: Data Recovery
 - Control 12: Network Infrastructure Management 
 
-
+#### Additional Frameworks
+- NIST Cybersecurity Framework
+- Essential Eight
+- Australian Privacy Principles (APP) / GDPR
+  
 ## Roles and Responsibilities
 
 The purpose of the Roles and Responsibilities section of this policy is to clearly define the duties & accountabilities of various stakeholders in implementing and upholding Redback Operations' encryption practices. 
@@ -78,8 +88,8 @@ Implements encryption technologies, maintains security infrastructure, and provi
 
 Identifies encryption needs through risk assessments, oversees encryption compliance, and conducts security training.
 
-- Identifies data needing encryption through risk assessments.
-- Oversees the effectiveness and compliance of encryption measures.
+- Conducts risk assessments to identify encryption needs.
+- Monitors effectiveness and compliance of encryption measures.
 - Delivers encryption best practices training.
  
 ### Developers
@@ -94,9 +104,9 @@ Incorporates encryption into applications, adheres to encryption standards, and 
 
 Follows encryption protocols for data handling, engages in security training, and reports encryption security incidents.
 
-- Follows encryption guidelines for handling sensitive information.
-- Participates in encryption training and awareness initiatives.
-- Reports security incidents involving encrypted data.
+- Adhere to encryption guidelines for sensitive information.
+- Complete cryptography awareness training.
+- Report encryption-related security incidents.
 
 ### Data Owners
 
@@ -151,13 +161,10 @@ To ensure the effective application of encryption controls and to safeguard sens
 
 ### Classification Levels
 
-- Public: Data intended for public disclosure. Encryption is not required for public data, but best practices for integrity should still be applied.
-
-- Internal Use Only: Data that is not sensitive but is intended for use within the organization. Basic encryption controls are recommended to prevent unauthorized disclosure.
-
-- Confidential: Sensitive data that could cause harm to the organization or individuals if disclosed. Encryption in transit and at rest, using industry-standard algorithms and key strengths, is required.
-
-- Restricted: Highly sensitive data that if disclosed could result in significant harm or legal/regulatory non-compliance. Strong encryption, both in transit and at rest, with strict access controls and key management procedures, is mandatory.
+- **Public**: Data for public disclosure (e.g., marketing materials). Encryption not required, but integrity measures recommended.
+- **Internal Use Only**: Non-sensitive internal data (e.g., internal memos). Basic encryption recommended.
+- **Confidential**: Sensitive data that could cause harm if disclosed (e.g., research datasets, financial records). Encryption in transit and at rest required using industry-standard algorithms.
+- **Restricted**: Highly sensitive data with significant harm or legal risks if compromised (e.g., student PII, intellectual property). Strong encryption and strict access controls mandatory.
  
 ### Implementation Guidelines
 
@@ -165,16 +172,11 @@ Implementation Guidelines provide a practical roadmap for applying Redback Opera
 
 This section ensures consistent and effective encryption practices are followed, enhancing the security of sensitive information throughout the organization.
 
-- Risk-Based Approach: The application of encryption must be based on a risk assessment, considering the nature of the data, the context in which it is used, and the potential impact of its compromise.
-
-- Default Encryption: Unless classified as Public, all data stored on mobile devices, transmitted over public or untrusted networks, or stored in the cloud must be encrypted by default.
-
-- Data at Rest: All Confidential and Restricted data stored on servers, workstations, laptops, or removable media must be encrypted.
-
-- Data in Transit: Encryption must be applied to all Confidential and Restricted data being transmitted over any network, including internal networks, using secure protocols such as TLS, SSH, or VPN.
-
-- End-to-End Encryption: For highly sensitive communications, end-to-end encryption must be used to prevent interception or man in the middle attacks by unauthorized parties.
- 
+- **Risk-Based Approach**: Encryption is applied based on risk assessments considering data nature, context, and impact of compromise.
+- **Default Encryption**: All non-Public data stored on mobile devices, transmitted over public/untrusted networks, or stored in cloud platforms (e.g., Deakin-approved platforms) must be encrypted.
+- **Data at Rest**: Confidential and Restricted data on servers, workstations, laptops, removable media, or research devices must be encrypted.
+- **Data in Transit**: Confidential and Restricted data transmitted over any network must use secure protocols (e.g., TLS, SSH, VPN).
+- **End-to-End Encryption**: Required for highly sensitive communications to prevent interception.
 
 ## Data Stewardship
 
@@ -193,6 +195,8 @@ Redback Operations is committed to using secure encryption standards to protect 
 - TLS (Transport Layer Security) 1.2 or higher must be used for all data transmitted over public networks. This includes the use of secure versions of protocols for email, file transfer, and other communications.
 
 - Insecure protocols such as SSL2, SSL3, TLS 1.0 & TLS 1.1 are forbidden to be utilized without an existing security exemption. These protocols contain known vulnerabilities and should not be utilized.
+  
+- Post-quantum cryptography (e.g., CRYSTALS-Kyber) recommended where supported, pending infrastructure updates.
 
 ##### Data at Rest
 
