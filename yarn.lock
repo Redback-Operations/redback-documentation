@@ -2653,9 +2653,9 @@
     "@types/react" "*"
 
 "@types/react@*":
-  version "18.3.20"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.3.20.tgz"
-  integrity sha512-IPaCZN7PShZK/3t6Q87pfTkRm6oLTd4vztyoj+cbHUF1g3FfVb2tFIL79uCRKEfv16AhqDMBywP2VW3KIZUvcg==
+  version "18.3.18"
+  resolved "https://registry.npmjs.org/@types/react/-/react-18.3.18.tgz"
+  integrity sha512-t4yC+vtgnkYjNSKlFx1jkAhH8LgTo2N/7Qvi83kdEaUtMDiwpbLAktKDaAMlRcJ5eSxZkH74eEGt1ky31d7kfQ==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
@@ -11650,7 +11650,7 @@ recursive-readdir@2.2.2, recursive-readdir@^2.2.2:
     prism-react-renderer "^2.3.1"
     react "^18.0.0"
     react-dom "^18.0.0"
-    redback-documentation "file:../../../AppData/Local/Yarn/Cache/v6/npm-redback-documentation-0.0.0-83fe5640-8530-4b8d-9202-608512fc5da2-1746700720200/node_modules/redback-documentation"
+    redback-documentation "file:../../../../../../AppData/Local/Yarn/Cache/v6/npm-redback-documentation-0.0.0-5507a765-79bf-4b4d-aa8d-16386356020d-1737180440113/node_modules/redback-documentation"
     rehype-katex "^7.0.1"
     remark-math "^6.0.0"
     yarn "^1.22.22"
