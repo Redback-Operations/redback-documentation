@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
  Redback Dummy Data Generator – Implementation Guide
 
 A Python-based tool designed to generate realistic dummy data across multiple file formats for testing the Redback Asset Assessment Tool (AAT). The generated files include a mixture of public and synthetic sensitive information to simulate real-world data repositories.
