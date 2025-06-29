@@ -104,7 +104,7 @@ Endpoints must engage a lock-out of content through a shutdown or sign-out after
 ### Operating System and Software Updates
 - Operating systems and applications must enable automatic updates where possible.
 - Critical security patches must be applied within 48 hours of notification, and non-critical updates at the earliest reasonable time.
-- Disconnected or obsolete operating systems (e.g., Windows 7, macOS <10.15) are prohibited, and end-of-life software must be removed with alternatives identified.
+- Disconnected or obsolete operating systems (e.g., Windows 7, macOS less than 10.15) are prohibited, and end-of-life software must be removed with alternatives identified.
 
 ### Application Control
 - Only necessary and authorized software may be installed on Redback devices.
