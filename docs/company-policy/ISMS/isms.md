@@ -11,48 +11,51 @@ Redback Operations ISMS Guide
 **Document Creation:** 5 April, 2024. **Last Edited:** 4 September, 2024. **Author:** Kaleb Bowen.
 <br></br>**Document Code:** ISMS. **Effective Date:** 1 May 2024. **Expiry Date:** 1 May 2025. **Version:** 2.0
 :::
+## Version History
 
-| Version | Date | Author | Changes |
-| ---- | ---- | ---- | ---- |
-| 1.0 | 05/04/24 | Kaleb Bowen | Document Creation |
-| 2.0 | 04/09/24 | Tom Mirarchi | Fixed numbering for compliance, Added Links to other policies, added sections not present in policy for future changes |
+| Version | Date       | Author            | Approver | Changes                                                                 |
+|---------|------------|-------------------|----------|-------------------------------------------------------------------------|
+| 1.0     | 05/04/2024 | Kaleb Bowen       |          | Document Creation                                                      |
+| 2.0     | 04/09/2024 | Tom Mirarchi      |          | Fixed numbering for compliance, added links to policies, added sections |
+| 3.0     | 18/05/2025 | Nathasha Liyanage |          | Unified ISMS with NIST CSF, Essential 8, APA/APPs; added objectives, phased implementation, team roles, 6-month review cycle |
 
-## 1. Scope
+## 1. Purpose
+
+The Information Security Management System (ISMS) provides a unified framework for managing Redback Operations’ information security risks and ensuring compliance with ISO/IEC 27001, NIST Cybersecurity Framework (CSF), Essential Eight, and Australian Privacy Principles (APP). It consolidates policies to protect information assets during Redback’s transitional stage across Google Cloud Platform (GCP), Azure, on-premises systems, and research activities.
+
+The ISMS aims to:
+- Achieve Essential 8 Maturity Level 1 to mitigate common cyber threats.
+- Ensure full compliance with the Australian Privacy Act and APPs.
+- Reduce technical debt-fuelled security risks by 50% within 12 months.
+- Establish a defence-in-depth posture aligned with NIST CSF functions: Identify, Protect, Detect, Respond, Recover.
+  
+## 2. Scope
 
 The Information Security Management System (ISMS) establishes the guiding principles and policies for Redback Operations, being the comprehensive and overarching system complying with ISO/IEC 27001.  This document is intended to provide a framework for Redback Operations and affiliated contributors to implement and continuously manage the security of its information assets.
 
 The scope of this ISMS includes all information assets, including but not limited to:
 
 -	Data Classification & Data Loss Prevention (DLP)
+- Cloud Security (GCP, Azure)
+- Server Security & Hardening
+- Endpoint Security (e.g., laptops, smart wearables, exercise bikes)
+- Encryption / Cryptography
+- Monitoring & Log Analysis
+- User Awareness Training
+- External Attack Surface Management (EASM)
+- Bring Your Own Device (BYOD) & Mobile Device Management (MDM)
 
--	Cloud Security
+## 3. Normative References
 
--	Server Security & Hardening
+The ISMS aligns with:
+- **ISO/IEC 27001:2013**: Information Security Management
+- **NIST Cybersecurity Framework (CSF)**: Version 1.1, 2018. Available at: https://doi.org/10.6028/nist.cswp.04162018
+- **Essential Eight**: Maturity Model, ACSC, 2017. Available at: https://www.cyber.gov.au/resources-business-and-government/essential-cybersecurity/essential-eight/essential-eight-maturity-model
+- **Australian Privacy Principles (APP)**: Privacy Act, OAIC, 2024. Available at: https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act
 
--	Endpoint Security
-
--	Encryption / Cryptography 
-
--	Monitoring & Log Analysis
-
--	User Awareness Training
-
--	External Attack Surface Management
-
--	BYOD & MDM
-
-## 2. Normative References
-
-This section is not applicable with Redback Operations but is kept in to ensure further section numbering is compliant with ISO/IEC 27001.
-
-## 3. Terms and Definitions 
-
-For the purpose of this document, ISO/IEC 27001 apply unless specified otherwise.
-
-ISO and IEC maintain terminology databases for use in standardisation at the following addresses:
-
-- ISO Online browsing platform: available at https://www.iso.org/obp        
-- IEC Electropedia: available at https://www.electropedia.org/
+Terminology is sourced from:
+- ISO Online Browsing Platform: https://www.iso.org/obp
+- IEC Electropedia: https://www.electropedia.org/
 
 ## 4. Context of the Organisation 
 
@@ -64,17 +67,18 @@ Redback Operations is a student-led, open-source project (referred to as Redback
 
 Interested parties relevant to the project include Deakin University and its affiliated tutors and staff connected to the Redback Operations project, and students enrolled in SIT374/SIT764 and SIT378/SIT768. Tutors and students are split into individual projects within the company, as such students and tutors may have different needs and expectations depending on their role. 
 
-| Stakeholders | Internal / External | Issues |
-|--------------|---------------------|--------|
-| Tutors, Staff | Internal | Organisation structure, roles and accountabilities, top-level delegations. |
-| Project Leads, Team Leads, Students | Internal | Delegation of tasks, fulfilment of commitments, compliance to policy and guidelines. |
-| Government | External | Fulfilling the legal and regulatory requirements. |
+| Stakeholders              | Internal/External | Issues                                              |
+|---------------------------|-------------------|----------------------------------------------------|
+| Tutors, Staff, Mentors    | Internal          | Organisation structure, roles, academic compliance |
+| Project Leads, Students   | Internal          | Task delegation, policy adherence, data security   |
+| Deakin University         | Internal          | Alignment with IT policies, resource constraints   |
+| Government (e.g., OAIC)   | External          | Privacy Act, APPs, cybersecurity regulations       |
 
 All issues listed in the above table will hope to be addressed throughout this ISMS policy. Whether it be through inquiries into each stakeholder to determine what the best course of action will be to mitigate these issues or company-wide reforms to eliminate all issues
 
 ### 4.3. Determining the Scope of the Information Security Management System
 
-The ISMS encompasses all digital and physical items owned by or in direct affiliation with Redback Operations. Redback Operations does not have a physical headquarters, and has contributors in many different legal jurisdictions, so this must be taken into consideration when legislation or government policies are discussed.
+The ISMS encompasses all digital and physical items owned by or in direct affiliation with Redback Operations including cloud platforms, research devices, and collaboration tools (e.g., MS Teams, code repositories). Redback Operations does not have a physical headquarters, and has contributors in many different legal jurisdictions, so this must be taken into consideration when legislation or government policies are discussed.
 
 ### 4.4. Information Security Management System
 
@@ -84,7 +88,7 @@ As per the requirements of ISO/IEC 27001, Redback Operations has implemented thi
 
 ### 5.1. Leadership and Commitment
 
-Deakin University, staff, tutors, and student leaders affiliated with the Redback Operations company must be committed to continue high-level information security and thus ensuring that the overall organisation is taking sufficient steps in ensuring the organisation’s security policies and objectives are in line with modern practices and the general strategic direction.
+Deakin University staff, project mentors, and student leaders commit to high-level information security, aligning policies with NIST CSF, Essential 8, and APPs. Mentors act as company leaders, ensuring strategic direction and resource allocation.
 
 ### 5.2. Policy
 
@@ -92,7 +96,11 @@ Protection of Redback Operations is regulated across several policies relating t
 
 ### 5.3. Organisational Roles, Responsibilities, and Authorities
 
-Presently, responsibility of this ISMS and other policies falls within the Cyber Security team of Redback Operations. As such, it is their responsibility to ensure compliance with ISO/IEC 27001 and all relevant legislation and governance on which Redback Operations falls within. Company leaders have the right to request review of the ISMS and affiliated policies, which again falls within the Cyber Security team. The Cyber Security team may request assistance from other teams to ensure complete understanding of their projects and what that entails in relation to the company policies; additionally, they may ask to delegate new / updated policies from a team should they have someone willing and able to complete it.
+- **ISMS Manager (GRC Team Lead)**: Oversees policy development, compliance, and audits.
+- **Policy Owners**: Maintain and update domain-specific policies.
+- **Technical Leads (IT Team)**: Implement controls, monitor risks, report incidents.
+- **All Staff/Contributors**: Comply with policies, complete training, report incidents.
+The Cyber Security team coordinates ISMS implementation, with authority to request reviews or delegate tasks.
 
 ## 6. Planning
 
@@ -100,13 +108,11 @@ Presently, responsibility of this ISMS and other policies falls within the Cyber
 
 #### 6.1.1.	General
 
-Following the issues and requirements outlined in sections 4.1 and 4.2, the following items should be addressed:
-
-- Assurance that this ISMS can achieve its intended outcomes.
-
-- Preventing avoidable IT-related incidents.
-
-- Achieving continual improvement.
+The ISMS addresses:
+- Achieving Essential 8 Maturity Level 1 and APP compliance.
+- Reducing technical debt by 50% within 12 months.
+- Preventing IT incidents via defence-in-depth controls.
+- Ensuring continual improvement with NIST CSF functions.
 
 Following supplementary policy should sufficiently address the above mentioned in a way that also covers potential data breaches and their impact on Redback Operations, data protection, managing risks, and proactive remediation. 
 
@@ -116,21 +122,20 @@ In accordance with ISO/IEC 27001, a Risk Analysis and Treatment Plan, along with
 
 #### 6.1.3.	Information Security Risk Treatment
 
-As stated in 6.1.2. This should also be done in the near future to ensure this policy's compilance with ISO/IEC 27001
+Risk treatments prioritize Essential 8 controls (e.g., patch applications, restrict admin privileges) and NIST CSF recommendations.
 
 ### 6.2. Information Security Objectives and Planning
 
 To manage the company’s information security posture effectively and efficiently, it is essential to develop objectives, measurements, and reporting tools, compiled within an Information Security Metrics Repository (ISMP). The ISMP will ensure consistent information security measurement across all aspects of the company.
 
-There are 7 metrics we will aim to follow:
-1.	Level of Preparedness – How prepared are we in the event of a breach
-2.	Intrusion attempts – What is the process for detecting and mitigating intrusion attempts and how can it be more efficient?
-3.	Security Incidents – What do we do in the event of an attack in terms of data recovery, root cause, average down time, preventative maintenance etc.
-4.	Mean Time to Detect (MTTD) – What is the efficiency of our threat detection system?
-5.	Mean Time to Resolve (MTTR) – How quickly can we resolve a threat?
-6.	Mean Time to Contain (MTTC) – How long does it take to contain an attack and minimise its effectiveness?
-7.	Access Management – How is access to sensitive data and systems controlled and monitored?
-
+Objectives are tracked in the Information Security Metrics Repository (ISMP):
+- **Level of Preparedness**: Breach response readiness.
+- **Intrusion Attempts**: Detection and mitigation efficiency.
+- **Security Incidents**: Recovery, root cause, prevention.
+- **Mean Time to Detect (MTTD)**: Threat detection speed.
+- **Mean Time to Resolve (MTTR)**: Threat resolution time.
+- **Mean Time to Contain (MTTC)**: Attack containment time.
+- **Access Management**: Sensitive data access control.
 
 Using these metrics will allow us to stay ahead of any possible risks that may occur. These metrics will need to be reviewed on an ad-hoc basis
 
@@ -174,15 +179,21 @@ Given the size and nature of Redback Operations, at present the use of a Documen
 
 ### 8.1. Operational Planning and Control
 
-The Redback Operations Information Security Management System, under the direction of the Cyber Security team and company leaders, outlines the processes necessary to secure company information from threats. As with 7.5.3, the size of Redback Operations does not deem it necessary to have internal audit procedure or management review procedures, and these should be conducted on an ad-hoc schedule. Future growth or needs of the company may determine formal policy to cover these audits.
+The Cyber Security team oversees controls aligned with NIST CSF:
+- **Identify**: Asset inventory, risk assessments.
+- **Protect**: Access controls, encryption, patching.
+- **Detect**: Monitoring, log analysis.
+- **Respond**: Incident response plans.
+- **Recover**: Data recovery, post-incident reviews.
+Controls are platform-agnostic for GCP, Azure, and on-premises assets.
 
 ### 8.2. Information Security Risk Assessment
 
-As stated in 6.1.2. This will need to be reviewed on an ad-hoc basis
+Bi-annual risk assessments are documented in the Risk Analysis and Treatment Plan
 
 ### 8.3. Information Security Risk Treatment
 
-As stated in 6.1.2. This will need to be reviewed on an ad-hoc basis
+Treatments prioritize Essential 8 and NIST CSF controls, tracked via Trello.
 
 ## 9. Performance Evaluation
 
@@ -194,25 +205,25 @@ Performance of policies should be reviewed on a regular basis, no less than once
 
 #### 9.2.1. General
 
-As stated in 9.1. This will need to be reviewed on an ad-hoc basis
+Bi-annual audits by the Cyber Security team assess ISO/IEC 27001 and Essential 8 compliance.
 
 #### 9.2.2. Internal audit programme
 
-As stated in 9.1. This will need to be reviewed on an ad-hoc basis
+Audits use an ISO/IEC 27001 checklist, with results reported to mentors.
 
 ### 9.3. Management Review
 
 #### 9.3.1. General
 
-Redback Operations does not operate with a typical management structure and as such quarterly meetings, as outlined in ISO/IEC 27001 are not reasonable. Company goals and policy reviews should be done on an ad-hoc basis.
+Mentors and student leaders review ISMS performance bi-annually.
 
 #### 9.3.2. Management Review Inputs
 
-As stated in 9.3.1. May not be applicable to Redback Operations. This will need to be reviewed on an ad-hoc basis
+Inputs include audit results, ISMP metrics, and incident reports.
 
 #### 9.3.3. Management Review Results
 
-As stated in 9.3.1. May not be applicable to Redback Operations. This will need to be reviewed on an ad-hoc basis
+Results drive policy updates and corrective actions, documented on the Redback Documentation site.
 
 ## 10. Improvement
 
@@ -224,7 +235,11 @@ If a review of the current ISMS policy is undertaken it must adhere to the [chec
 
 ### 10.2. Nonconformity and Corrective Action
 
-When an instance of nonconformity is identified within the jurisdiction of the ISMS and affiliated policies, team and / or company leaders may act on it by implementing corrective actions. This should begin with identifying the issue itself and the ramifications it may bring, developing a fix for the issue and implementing it, and developing or fixing current solutions to ensure the nonconformity is unlikely to happen again.
+Nonconformities trigger:
+- Issue identification and impact assessment.
+- Corrective action implementation.
+- Policy updates to prevent recurrence.
+Actions are tracked via Trello and reported to mentors.
 
 ## 11. Supplementary Policies
 
