@@ -1,0 +1,8 @@
+{
+  "label": "Nginx and ModSecurity",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Maintenance guide for Blue Team"
+  }
+}
