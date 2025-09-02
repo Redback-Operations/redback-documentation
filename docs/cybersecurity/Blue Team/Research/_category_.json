@@ -1,0 +1,8 @@
+{
+  "label": "Research",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Documents of research and local testing done by the Blue Team. Local testing refers to tools set up on local VMs, not in the production environment. "
+  }
+}
