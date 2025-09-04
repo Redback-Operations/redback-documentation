@@ -54,6 +54,7 @@ For example, Wazuh alone might miss a DDoS attempt on the network, and Suricata 
 1. Connect to the Deakin VPN using Cisco AnyConnect.  
    - Connect to `vpn.deakin.edu.au` and log in with your Deakin credentials (plus Duo Push).  
    - **Screenshot: Cisco AnyConnect login**  
+![Cisco AnyConnect login](/img/wazuh-onboarding/VPN.png)
 
 2. Open the Wazuh dashboard in a web browser:  
    [https://redback.it.deakin.edu.au/wazuh](https://redback.it.deakin.edu.au/wazuh)  
@@ -70,6 +71,7 @@ Once logged in, you’ll see:
 - Vulnerability information  
 
 **Screenshot: Wazuh dashboard after login**
+![Wazuh dashboard](/img/wazuh-onboarding/wazuh-dashboard.png)
 
 ---
 
