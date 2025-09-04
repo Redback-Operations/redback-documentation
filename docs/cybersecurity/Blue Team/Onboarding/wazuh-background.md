@@ -80,7 +80,7 @@ If you need to connect to the Redback VM directly (for system admin or troublesh
 Credentials will be provided by the Blue Team leads.  
 
 For example:
-ssh <username>@redback.it.deakin.edu.au
+`ssh <username>@redback.it.deakin.edu.au`
 
 
 This is not required for Wazuh access but may be needed for backend tasks.
