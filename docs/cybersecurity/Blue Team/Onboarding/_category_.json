@@ -1,8 +1,8 @@
 {
-  "label": "Onboarding",
+  "label": "Blue Team Onboarding",
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "Understanding Our Services"
+    "description": "Onboarding section for new Blue Team members"
   }
 }

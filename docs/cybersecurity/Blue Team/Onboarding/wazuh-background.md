@@ -1,6 +1,6 @@
 ---
 id: wazuh-background
-title: Wazuh Background & Onboarding
+title: Wazuh Background
 sidebar_position: 1
 tags: [blue team, wazuh, onboarding]
 ---
