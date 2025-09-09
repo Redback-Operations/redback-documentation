@@ -34,6 +34,6 @@ Select the observable and click *“Run analyzers.” TheHive displays available
 
 ### Step 6 – Review the Reports
 After analyzer jobs complete, click the observable to view detailed reports. Reports reveal findings such as malicious IP status, malware hash matches, or URL blocklist presence. These results are attached to the observable in TheHive, enabling efficient investigation continuation.
-![Report View](img\Viewing_report.png)
+![Report View](img\Viewing_Report.png)
 Analysis_of_a_report.png
 ![Report Analysis View](img\Analysis_of_a_report.png)
