@@ -12,7 +12,7 @@ sidebar_position: 2
 
 This document will explain the current Nginx + ModSecurity setup on the production VM. It will also explain some of the testing that has been done so far on the various web apps. 
 
-## 1.1 The Setup
+## 2. The Setup
 
 Currently, Nginx and ModSecurity run in a single container, based off the official OWASP CRS Docker image, available at https://hub.docker.com/r/owasp/modsecurity-crs. The exact image used is **owasp/modsecurity-crs:4.16-nginx-202506301206**, but this will probably change in the future. This container combines the features of Nginx while also allowing us to modify configuration settings for ModSecurity easily via environment variables.
 
@@ -20,7 +20,7 @@ On the VM, the key files for the container are located under **/home/codey/infra
 
 ![Proxy location](img-proxy/dir.png)
 
-### 1.1.1 The Docker Compose File ###
+### 2.1. The Docker Compose File ##
 
 Of these files, the **docker-compose.yaml** file holds the key environment variable and network configurations for the container. As you can see, the container is mapped both externally and internally to port 443. This is because the Nginx container is designed to offload the TLS encryption from the web apps; it sits on port 443 and interacts with the other web apps via the internal ports.
 
@@ -33,7 +33,7 @@ If you want to change any port mappings or volumes, you'd do it through this fil
 ![Proxy location](img-proxy/compose_1.png)
 ![Proxy location](img-proxy/compose_2.png)
 
-### 1.1.2 The nginx.conf File ##
+### 2.2. The nginx.conf File ###
 
 This is the main file for Nginx. It is where the routing happens for the reverse proxy. Inside the file you'll see a **http** block. This is where the SSL certificate locations are specified for the HTTPS connections; at this stage, they're just self-signed certificates. If you have these lines in, Nginx will handle the TLS creation and termination, so you can use ModSecurity to analyse the decrypted traffic.
 
@@ -65,7 +65,7 @@ As an example, let's say the external port number is 555, and the internal one i
 
 The way to fix this, intuitively, is to ensure that both internal and external ports match. So, when Nginx receives the redirect actually intended for the internal port, since both ports match, that can also be handled by the external port. Since we're using HTTPS, that means both ports need to be 443. It might be possible to explicitly handle the redirects so that they work without the same ports, but this isn't something that has been looked into so far. 
 
-### 1.1.3 ModSecurity Setup ###
+### 2.3. ModSecurity Setup ###
 
 So far, we've covered the Nginx setup. Now, let's focus on the ModSecurity integration. The key things to focus on are in both the Docker compose and nginx.conf files. In particular, the environment variables, the logging variables, and the access log config. 
 
@@ -110,7 +110,7 @@ Note that the header includes a timestamp and unique ID, while the H component s
 
 With these logs set up, we can integrate them with other security solutions, such as Wazuh. That means they need to first be sent outside of the container's standard output. For this, we are using the **journald** logging driver, and tagging all logs from the container with "modsecurity" in a syslog-like format (see the Docker compose file).
 
-### 1.1.4 Syncing with Wazuh ###
+### 2.4. Syncing with Wazuh ###
 
 As mentioned earlier, all the audit logs from the ModSecurity container are sent to the journald service on the host VM. The good thing is that Wazuh by default monitors the journald logging service. 
 
@@ -134,7 +134,7 @@ Under **/var/ossec/etc/rules/local_rules.xml**, we can find the corresponding ru
 
 ![ModSecurity rule](img-proxy/modsecurity_rule.png)
 
-## 2. Attack Examples ##
+## 3. Attack Examples ##
 
 With the logging setup, let's have a look at a few example attacks.
 
@@ -164,7 +164,7 @@ On the Wazuh dashboard, we can see the corresponding alert.
 
 Feel free to experiment with other attacks as well. 
 
-## Further Reading
+## 4. Further Reading ##
 
 This guide only briefly covered the current setup. To further understand all the Nginx environment variables and other settings, read the official ModSecurity Docker guide: https://github.com/coreruleset/modsecurity-crs-docker/blob/main/README.md
 
