@@ -5,7 +5,7 @@ sidebar_position: 1
 # About the Blue Team
 
 :::info
-**Document Creation:** 08 Apr., 2025. **Last Edited:** 14 Apr., 2025. **Authors:** Robin Spoerl.
+**Document Creation:** 10 Sept., 2025. **Last Edited:** 10 Sept., 2025. **Authors:** Robin Spoerl.
 :::
 
 ## 1. Introduction 

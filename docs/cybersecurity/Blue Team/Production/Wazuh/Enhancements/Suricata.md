@@ -82,7 +82,7 @@ Additionally, the Wazuh Manager needs to have its decoder order size updated to 
 
 In this case, you need to modify the **local_internal_options.conf** file on the Manager by adding in **analysisd.decoder_order_size=600**. By default this value is at 256, which isn't enough for Suricata logs. Restart the container to apply your changes. 
 
-![Wazuh agent](./img-suricata/manager-options.png)
+![Wazuh manager](./img-suricata/manager-options.png)
 
 Once set up, you should see alerts on the dashboard for network-related activity. Note that if you restarted the agent, it can take up to 15 mins for logs to appear on the dashboard. This is because the logcollector module takes a while to read all the log sources. 
 
