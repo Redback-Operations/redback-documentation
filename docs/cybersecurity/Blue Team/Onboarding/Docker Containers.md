@@ -5,26 +5,26 @@ sidebar_position: 3
 # Docker Containers
 
 :::info
-**Document Creation:** 14 Apr., 2025. **Last Edited:** 14 Apr., 2025. **Authors:** Robin Spoerl.
+**Document Creation:** 10 Sept., 2025. **Last Edited:** 10 Sept., 2025. **Authors:** Robin Spoerl.
 :::
 
-## Introduction 
+## 1. Introduction 
 
 This guide provides an overview of containers and Docker, with their use in the company VM, and a quick recap on some essential concepts. Moreover, it will describe how you can access the Blue Team's Wazuh containers. Note that these skills can be applied to all other containers too. 
 
-### What Is a Container?
+### 1.1. What Is a Container?
 
 A container is a virtualised environment where you can run applications. In contrast to virtual machines, which run their own operating systems, a container is a lightweight, self-contained item that only contains the files and dependencies that an application needs to run. So, a container is like a box. 
 
 In the VM, we use Docker as a way of creating and deploying containers. 
 
-### Why Do We Use Containers?
+### 1.2. Why Do We Use Containers?
 
 There's three examples: simplicity, dependencies, and security. It's generally a lot easier to build a container using a pre-generated image than setting it up manually on the host. Moreover, containers solve the issue of having conflicting software dependencies on a host, which can happen as the VM contains over a dozen running applications. Finally, containers are isolated environments, which provide an additional level of security. The next section will show a practical example of a container. 
 
-## Interacting with a Container - Blue Team Example
+## 2. Interacting with a Container - Blue Team Example
 
-### Finding, Accessing and Inspecting a Container
+### 2.1. Finding, Accessing and Inspecting a Container
 
 To see all the running Docker containers on the VM, use `docker ps`. 
 ![Containers](img-docker/containers.png) 
@@ -49,7 +49,7 @@ To see which files are mounted outside of the **single-node-wazuh.manager-1** co
 
 After you've made any changes to the Manager container, you need to restart it. You can do this via `docker restart single-node-wazuh.manager-1`. 
 
-### Managing Container Settings ###
+### 2.2. Managing Container Settings ###
 
 From the previous docker inspect command, if you have a look, you'll see a lot more interesting information. 
 
@@ -73,7 +73,7 @@ The file is currently available at **/root/wazuh-docker/single-node** on the VM.
 
 When you make any changes to this compose file, the process for restarting the container is slightly different. If you just used `docker restart`, the container would restart, but the changes inside the .yml file wouldn't apply. Instead, you need to use `docker compose up -d` **inside the directory of the .yml file**. This command checks the compose file for any changes, and if so, recreates the containers. Meanwhile the -d flag ensures that the Docker command runs in the background (so you can still use your existing terminal). This command ensures that the mounted files/volumes are preserved, so you don't have to worry about your files getting deleted. 
 
-## Further Reading
+## 3. Further Reading
 
 - [Docker](https://docs.docker.com/)
 - [Data Warehouse Docker Guide](https://redback-operations.github.io/redback-documentation/docs/data-warehousing/Instructional%20Documents/VM%20Guide/#the-vm-and-docker)

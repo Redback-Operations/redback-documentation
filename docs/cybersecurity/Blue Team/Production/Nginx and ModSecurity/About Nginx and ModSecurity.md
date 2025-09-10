@@ -5,28 +5,28 @@ sidebar_position: 1
 # About Nginx and ModSecurity
 
 :::info
-**Document Creation:** 14 Apr., 2025. **Last Edited:** 14 Apr., 2025. **Authors:** Robin Spoerl.
+**Document Creation:** 10 Sept., 2025. **Last Edited:** 10 Sept., 2025. **Authors:** Robin Spoerl.
 :::
 
-## Introduction
+## 1. Introduction
 
 This document will explain the background of the VM and the justification behind installing a reverse proxy architecture. It will also describe limitations and future work. It builds on a previous collaboration between the Blue Team and Infra Team in T1 2025. 
 
-## Background
+## 2. Background
 
-Currently, the company VM hosts a multitude of containerised web applications, used for machine learning preprocessing (e.g. Streamlit), data storage (MinIO), and so on. These web apps are accessible either by the VM's DNS entry (redback.it.deakin.edu.au) or the respective IP address (10.137.0.149/). There's a few issues with this design, however:
+Currently, the company VM hosts a multitude of containerised web applications, used for machine learning preprocessing (e.g. Streamlit), data storage (MinIO), and so on. These web apps are accessible either by the VM's DNS entry (redback.it.deakin.edu.au) or the respective IP address (10.137.0.149). There's a few issues with this design, however:
 
 - **Unprofessional hosting**: All of the web apps are hosted on arbitrary port number combinations. For example, MinIO is available on http://10.137.0.149:9001/ (or http://redback.it.deakin.edu.au:9001). This is unprofessional and makes it hard to memorise which services belong to which host. At the same time, if the container ports change, these web apps can essentially become lost until someone checks the port mappings. 
 - **Lack of HTTPS and future scalaility**: A huge majority of the web apps have no HTTPS implemented. If each web app were configured to run with HTTPS, there is another issue: port collisions. HTTPS is on port 443, and this is what browsers expect. With the current architecture, only one web app could run on port 443. The rest would need to run on an arbitrary port, e.g. 9443. This is once again unprofessional.
 - **Lack of monitoring**: Wazuh's in-built rules for container monitoring are limited. They only detect GET-based web attacks, not POST. Therefore, there is a huge gap in detecting web-based attacks. 
 
-## The Proposal
+## 3. The Proposal
 
 The solution to the previously mentioned issues is implementing a reverse proxy architecture in tandem with a web application firewall (WAF). For more context, a reverse proxy captures requests going **to** web applications; it essentially acts like a middleman that handles the traffic. Meanwhile, a WAF is a security tool specifically designed to analyse web traffic for threats. 
 
-Through research, two suitable open-source options were identified: Nginx and ModSecurity. Nginx is a popular software tool used to create reverse proxies, while ModSecurity is a WAF with a highly detailed ruleset developed by OWASP. Nginx can capture traffic going to the company's web apps, via a HTTPS-hosted domain, while ModSecurity can analyse that traffic. If any threats are detected, ModSecurity can send those logs to Wazuh. The next section covers this in more detail. 
+Through research, two suitable open-source options were identified: Nginx and ModSecurity. Nginx is a popular software tool used to create reverse proxies, while ModSecurity is a WAF with a highly detailed ruleset developed by OWASP. Nginx can capture traffic going to the company's web apps, via a HTTPS-hosted interface, while ModSecurity can analyse that traffic. If any threats are detected, ModSecurity can send those logs to Wazuh. The next section covers this in more detail. 
 
-## Architectural Overview 
+## 4. Architectural Overview 
 
 Instead of the current solution, where web apps are accessible via port numbers, Nginx will listen on a domain subpath for that specific interface, while handling the TLS handshake and termination process. For example, MinIO is currently hosted on http://redback.it.deakin.edu.au:9001. Instead, we set up Nginx to listen on port 443 with a subpath for MinIO. So, MinIO will be accessible via https://redback.it.deakin.edu.au/minio. For each project's web app, we can add a subpath under that specific 443 port. This works as the Redback VM has a DNS entry. Therefore, we are essentially "piggybacking" off this DNS entry to create well-defined interfaces. 
 
@@ -43,7 +43,7 @@ There are several key benefits to this proposal:
 - **Scalability**: Only Nginx will be hosted on port 443, and it will communicate with other web apps via internal ports. This means that Nginx will offload the HTTPS off all web apps, ensuring that there are no port collisions.
 - **Security**: Nginx enforces HTTPS, while ModSecurity ensures that all web attacks are properly detected.  
 
-## Logistical Considerations
+## 5. Logistical Considerations
 
 To implement this reverse proxy, there are a few things to keep in mind. 
 
@@ -54,7 +54,7 @@ need to be configured to ensure compatibility with Nginx. If this proxy is to be
 
 Finally, once the reverse proxy has been deployed and tested, ideally people shouldn't be able to bypass it. For example, instead of accessing https://redback.it.deakin.edu.au/minio for MinIO, they go through the web app's native interface http://redback.it.deakin.edu.au:9001, thereby bypassing the monitoring set up on Nginx. To stop this, firewall rules were explored, but they are unnecessary; instead, since Nginx will communicate with the web apps via internal ports, their external ports can be disabled. As long as access to the containers themselves is limited, this will make it impossible for someone to bypass Nginx. That said, however, some web apps still communicate with each other via external ports. So, full audits need to be done before disabling external access. 
 
-## Next Steps
+## 6. Next Steps
 
 In T2 2025, given the scope of this project, efforts were directed towards installing Nginx and ModSecurity, enabling logging, and testing web apps used across the Cyber Security and Data Warehouse teams. Please refer to the next document for more information. 
 

@@ -5,18 +5,18 @@ sidebar_position: 2
 # Wazuh Architecture
 
 :::info
-**Document Creation:** 14 Apr., 2025. **Last Edited:** 14 Apr., 2025. **Authors:** Robin Spoerl.
+**Document Creation:** 10 Sept., 2025. **Last Edited:** 10 Sept., 2025. **Authors:** Robin Spoerl.
 :::
 
-## Introduction 
+## 1. Introduction 
 
 This guide provides an overview of Wazuh's current setup, including its key components, broader architecture and log capturing mechanisms. 
 
-## Architectural Overview
+## 2. Architectural Overview
 
 Currently, Wazuh is installed on the company VM. It is in fact a combination of different services: an agent, and a server. The agent is what captures all the activity on the VM, and it sends this information to the server. The server includes the dashboard you can view. 
 
-### The Agent
+### 2.1. The Agent
 
 The agent, called wazuh-agent, is a service running on the VM. This is what captures all the activity on the VM.
 
@@ -28,7 +28,7 @@ The agent's directory on the VM is available at **/var/ossec/etc/**. This is whe
 
 The agent is already configured to send basic information to the server. After making any changes to the agent, you need to restart the agent service with systemctl restart wazuh-agent. 
 
-### The Server
+### 2.2. The Server
 
 The Wazuh server is what receives the logs from the agent, parses them, and then generates alerts. The Wazuh server is also installed on the company VM, as we only have a single VM to work with (and not a separate VM for the server to run on). Its architecture, however, is a bit different to the agent. Also, when we say server, we are abstracting a bit.
 
@@ -49,7 +49,7 @@ When you read any guides on Wazuh, especially on how to implement things, they s
 
 There's quite a lot of different folders used by the Manager, so they won't be listed here. 
 
-### Understanding Decoders and Rules
+### 2.3. Understanding Decoders and Rules
 
 As described earlier, the agent collects and sends logs to the Manager, which tries to generate alerts out of them. There's two main steps involved in generating alerts: decoders and rules.
 
@@ -71,11 +71,11 @@ This is an example of how an alert would look like on the dashboard.
 
 ![Wazuh rule](img-wazuh/wazuh-alert.png) 
 
-## Further Reading
+## 3. References
 
 Visit https://documentation.wazuh.com/ for more information on Wazuh. 
 
-
+- [More information on Wazuh](https://documentation.wazuh.com/)
 
 
 
