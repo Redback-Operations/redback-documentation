@@ -1,8 +1,8 @@
 {
-  "label": "Wazuh Maintenance",
+  "label": "Wazuh",
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "Maintenance guide for Wazuh"
+    "description": "Production guide for Wazuh"
   }
 }
