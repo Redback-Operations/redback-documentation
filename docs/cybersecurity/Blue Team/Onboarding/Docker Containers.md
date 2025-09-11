@@ -67,7 +67,7 @@ If you went the first route, you would have to use `docker run` alongside parame
 
 The second approach involves creating a file to specify all these parameters in. This file is called **docker-compose.yml**. On the VM, we use this file to manage any changes to the containers. 
 
-The file is currently available at **/root/wazuh-docker/single-node** on the VM. 
+The file is currently available at **/root/wazuh-docker/single-node** on the VM. Note that other containers will have their own compose files. This example is just for the Wazuh deployment. 
 
 ![Compose location](img-docker/docker_compose.png) 
 

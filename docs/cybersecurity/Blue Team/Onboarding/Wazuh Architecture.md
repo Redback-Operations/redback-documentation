@@ -73,8 +73,6 @@ This is an example of how an alert would look like on the dashboard.
 
 ## 3. References
 
-Visit https://documentation.wazuh.com/ for more information on Wazuh. 
-
 - [More information on Wazuh](https://documentation.wazuh.com/)
 
 
