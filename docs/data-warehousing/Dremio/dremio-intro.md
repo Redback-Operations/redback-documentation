@@ -6,7 +6,7 @@ sidebar_label: Dremio Introduction
 # Introduction to Dremio
 ## What is Dremio?
 Dremio is like a **smart data browser** for all your data. Instead of copying data into one place, Dremio lets you **connect directly to where your data already lives** — in databases (like PostgreSQL), NoSQL stores (like MongoDB), or object storage (like MinIO or AWS S3).
-![](https://beta.appflowy.cloud/api/file_storage/efa01a3a-37f9-4405-8e02-34cb5fa15791/v1/blob/8b31656d%2Dd972%2D405e%2Dbc35%2D50834b755a80/gIYwdXkYy7RSu_PnoRcrjD_qS5dtFVx7nPUPZzN-pi0=.png)
+![PHOTO OF DREMIO](img/dremio-intro-landing.PNG) 
 Once connected, you can:
 * Search and explore data with **SQL** (the same language used in databases).
 * Combine data from different places (e.g., sales data in PostgreSQL + customer data in MongoDB).
@@ -35,7 +35,7 @@ Before running Dremio Community Edition, make sure your system meets the followi
 ## 2. Software Requirements
 * **Docker** (required to run Dremio CE):
 	* Docker Engine **v20+** recommended
-	![](https://beta.appflowy.cloud/api/file_storage/efa01a3a-37f9-4405-8e02-34cb5fa15791/v1/blob/8b31656d%2Dd972%2D405e%2Dbc35%2D50834b755a80/niUkMCLl8Az6zG_yNL6p0l2Z1R_y96fCYfOuseBQEu0=.png)
+	![DOCKER VERSION CHECK](img/docker-version-check.png)
 * Docker Compose (if you want to run other services like PostgreSQL, MongoDB, MinIO alongside Dremio)
 ## 3. Docker Resources to Expose
 When starting Dremio CE with Docker, you should expose these ports:
@@ -84,11 +84,11 @@ docker ps
 ```
 ## 4. Access the Dremio UI
 * Open your browser → [http://localhost:9047](http://localhost:9047)
-![](https://beta.appflowy.cloud/api/file_storage/efa01a3a-37f9-4405-8e02-34cb5fa15791/v1/blob/8b31656d%2Dd972%2D405e%2Dbc35%2D50834b755a80/adjIhNa0ZjrhxVH88bFzcRzzAp8OwxR3Fau1A3hmyV8=.png)
+![ACCESS THE DREMIO UI](img/dremio-login.png)
 * You’ll be asked to **create an admin account** (username, email, password).
-![](https://beta.appflowy.cloud/api/file_storage/efa01a3a-37f9-4405-8e02-34cb5fa15791/v1/blob/8b31656d%2Dd972%2D405e%2Dbc35%2D50834b755a80/3buGkF3tLTnmKmZk842zVbPTrNs3uNPk-koYhrv5tLs=.png)
+![WELCOME TO DREMIO](img/dremio-register.png)
 * After setup, you’ll land on the **Dremio home page**.
-![](https://beta.appflowy.cloud/api/file_storage/efa01a3a-37f9-4405-8e02-34cb5fa15791/v1/blob/8b31656d%2Dd972%2D405e%2Dbc35%2D50834b755a80/tcgI7k0wV6BSQ-tlONAJEfZEB2kDxP-iR7SaclvW9_Y=.png)
+![Dremio Home page](img/dremio-intro-landing.png)
 ## 5. Use Docker Compose for Multi-Service Setup
 If you’re also running **PostgreSQL, MongoDB, and MinIO** alongside Dremio, create a `docker-compose.yml`:
 ```yaml

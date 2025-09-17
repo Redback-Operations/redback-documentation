@@ -23,7 +23,7 @@ Dremio is a **data lakehouse platform** that enables you to query **data where i
 *   Parses your SQL.
 *   Pushes operations **down to sources** (PostgreSQL, S3, etc.) where possible.
 *   Executes distributed queries for large datasets.
-![](https://beta.appflowy.cloud/api/file_storage/efa01a3a-37f9-4405-8e02-34cb5fa15791/v1/blob/7527f86b%2D88fe%2D495d%2D8140%2Dd222cbb2670c/H250-AOIfLII6qd-WTVzCUYPcc6TuBKv0bh_SdHFYtw=.png)
+![DREMIO ANALYTICS](img/dremio-analytics.png)
 This guide provides the AFL tutorial using the **Medallion** architecture in Dremio. We’ll model the three layers directly in Dremio Virtual Datasets (VDS) over your PostgreSQL tables:
 * **Bronze** = raw access, column naming alignment, no semantic changes
 * **Silver** = cleaned & conformed (types, dates, standardised text, light business rules)
@@ -170,11 +170,11 @@ Goal: represent the **raw shape** of data as close to source as possible in Drem
 In Dremio, the Postgres physical tables already serve as Bronze. The optional VDS below gives you stable column names for downstream layers, without changing data types/values.
 ### 3.1.1 `Analytics.bronze_afl_games`
 ```sql
-CREATE VDS "Analytics"."bronze_afl_games" AS
+`CREATE VDS "Analytics"."bronze_afl_games"` AS
 SELECT
   "GameId"            AS game_id,
   "Year"              AS game_year,
-  "Round"             AS round,
+  "Round"             AS game_round,
   "Date"              AS date_raw,
   "MaxTemp"           AS max_temp_raw,
   "MinTemp"           AS min_temp_raw,
@@ -203,8 +203,8 @@ CREATE VDS "Analytics"."bronze_afl_stats" AS
 SELECT
   gameid                AS game_id,
   team,
-  "Year"               AS year,
-  round,
+  "Year"               AS game_year,
+  round                 AS game_round,
   playerid              AS player_id,
   displayname           AS player_name_raw,
   gamenumber            AS game_number,
@@ -244,7 +244,7 @@ SELECT
   "Height"     AS height_raw,
   "Weight"     AS weight_raw,
   "Dob"        AS dob_raw,
-  "Position"   AS position,
+  "Position"   AS player_position,
   "Origin"     AS origin
 FROM "postgresql_provenance"."public"."afl_players";
 ```
@@ -256,20 +256,16 @@ Goal: standardise types, parse dates/times, normalise text and identifiers so do
 CREATE VDS "Analytics"."silver_afl_games" AS
 SELECT
   CAST(game_id AS VARCHAR)                           AS game_id,
-  CAST(year AS INT)                                  AS year,
-  TRIM(CAST(round AS VARCHAR))                       AS round,
-  -- Date & Timestamp
-  TRY_CAST(date_raw AS DATE)                         AS game_date,
-  TRY_CAST(CONCAT(date_raw, ' ', COALESCE(start_time_raw,'00:00')) AS TIMESTAMP) AS game_ts,
-  -- Weather
+  CAST(game_year AS INT)                             AS game_year,
+  TRIM(CAST(game_round AS VARCHAR))                  AS game_round,
+  CAST(date_raw AS DATE)                             AS game_date,
+  TO_TIMESTAMP(CONCAT(CAST(date_raw AS VARCHAR), ' ', COALESCE(start_time_raw,'00:00 AM')), 'YYYY-MM-DD HH:MI AM') AS game_ts,
   CAST(max_temp_raw AS FLOAT)                        AS max_temp_c,
   CAST(min_temp_raw AS FLOAT)                        AS min_temp_c,
   CAST(rainfall_raw AS FLOAT)                        AS rainfall_mm,
   TRIM(CAST(venue AS VARCHAR))                       AS venue,
   TRIM(CAST(start_time_raw AS VARCHAR))              AS start_time_str,
-  -- Attendance (strip non-digits)
   CAST(REGEXP_REPLACE(COALESCE(attendance_raw,''), '[^0-9]', '') AS INT) AS attendance,
-  -- Teams & scores (keep raw quarter splits as floats)
   TRIM(CAST(home_team AS VARCHAR))                   AS home_team,
   CAST(home_qt_raw AS FLOAT)                         AS home_qt,
   CAST(home_ht_raw AS FLOAT)                         AS home_ht,
@@ -290,8 +286,8 @@ CREATE VDS "Analytics"."silver_afl_stats" AS
 SELECT
   CAST(game_id AS VARCHAR)                 AS game_id,
   UPPER(TRIM(CAST(team AS VARCHAR)))       AS team,
-  CAST(year AS INT)                        AS year,
-  TRIM(CAST(round AS VARCHAR))             AS round,
+  CAST(game_year AS INT)                        AS game_year,
+  TRIM(CAST(game_round AS VARCHAR))             AS game_round,
   CAST(player_id AS INT)                   AS player_id,
   TRIM(CAST(player_name_raw AS VARCHAR))   AS player_name,
   CAST(game_number AS INT)                 AS game_number,
@@ -329,9 +325,9 @@ SELECT
   TRIM(CAST(player_name_raw AS VARCHAR))    AS player_name,
   CAST(height_raw AS INT)                   AS height_cm,
   CAST(weight_raw AS INT)                   AS weight_kg,
-  TRY_CAST(dob_raw AS DATE)                 AS dob,
+  CAST(dob_raw AS DATE)                 AS dob,
   TRIM(CAST(dob_raw AS VARCHAR))            AS dob_text,
-  UPPER(TRIM(CAST(position AS VARCHAR)))    AS position,
+  UPPER(TRIM(CAST(player_position AS VARCHAR)))    AS player_position,
   TRIM(CAST(origin AS VARCHAR))             AS origin
 FROM "Analytics"."bronze_afl_players";
 ```
