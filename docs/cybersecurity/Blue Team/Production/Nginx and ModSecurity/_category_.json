@@ -1,8 +1,8 @@
 {
-  "label": "Nginx and ModSecurity",
-  "position": 1,
+  "label": "Reverse Proxy",
+  "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Maintenance guide for Blue Team"
+    "description": "Activities related to the reverse proxy architecture"
   }
 }
