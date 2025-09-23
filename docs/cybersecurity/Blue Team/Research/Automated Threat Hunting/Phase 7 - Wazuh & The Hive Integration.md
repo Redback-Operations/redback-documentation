@@ -3,8 +3,8 @@ sidebar_position: 8
 ---
 
 :::info
-**Document Creation:** 3 September 2025. **Last Edited:** 3 September 2025. **Authors:** Syed Mahmood Aleem Huzaifa.  
-**Effective Date:** 3 September 2025. **Expiry Date:** 3 September2026.
+**Document Creation:** 3 September 2025. **Last Edited:** 9 September 2025. **Authors:** Syed Mahmood Aleem Huzaifa.  
+**Effective Date:** 9 September 2025. **Expiry Date:** 9 September 2026.
 :::
 
 ### Overview 
@@ -26,7 +26,7 @@ Before Wazuh can send alerts to TheHive, we need to set up an organisation and c
 3. Generate the API Key
     1.	Edit the new user profile.
     2.	Click **"Reveal"** under API Key.
-    3.	Copy the key somewhere safe — you’ll need it in the Wazuh configuration.
+    3.	Copy the key somewhere safe - you’ll need it in the Wazuh configuration.
 
 ### Step 2: Install TheHive Python Module on Wazuh
 TheHive integration uses a Python library called thehive4py to send alerts. We need to install it inside Wazuh’s built-in Python environment.
@@ -285,7 +285,7 @@ echo "test" | sudo tee -a /etc/wazuh_test.txt
 Example: Trigger an authentication failure alert:
 ```ssh nouser@localhost
 ```
-(Type any password — it will fail and create an alert.)
+(Type any password - it will fail and create an alert.)
 
 If everything works, you’ll see messages in: 
 ```
@@ -296,9 +296,38 @@ sudo tail -n 50 /var/ossec/logs/integrations.log
 Automatically, the cases are created as shown below
 ![Wazuh Hive Alerts](img\wazuh-hivealerts.png)
 
+### Highlights of The Hive
+1. Integration ensures Wazuh alerts are automatically forwarded to TheHive as cases.
+
+2. Removes manual work of copying alerts, giving analysts a single central platform.
+
+3. Alerts are enriched with artifacts (IPs, URLs, domains) for immediate investigation.
+
+4. Permissions and API keys ensure secure communication between Wazuh and TheHive.
+
+5. Logging confirms whether alerts are created successfully, helping with troubleshooting.
+
+6. Sets the foundation for advanced automation in future phases (e.g., Cortex enrichment).
+
 ### Conclusion
 This phase represents a major milestone in building an automated security operations pipeline, as it bridges the gap between detection and investigation. With the Wazuh ↔ TheHive integration in place, alerts no longer remain siloed within Wazuh but are automatically forwarded into TheHive, where they are transformed into actionable cases. This ensures that analysts can immediately work on verified incidents within a centralized platform rather than wasting time manually transferring data. In practice, this reduces friction, accelerates the response process, and makes sure that no critical alerts are overlooked due to human error or delays.
 
 Beyond convenience, the integration adds structure and scalability to incident management. By feeding enriched alerts into TheHive, security teams can leverage case workflows, collaborative features, and task assignments that are built into TheHive’s design. This allows multiple analysts to coordinate effectively on the same incident, track progress, and document findings in one place. It also improves accountability, since every case in TheHive is linked to its originating Wazuh alert, creating an auditable chain of events.
 
-From a strategic perspective, this integration lays the groundwork for more advanced automation in later phases, such as linking with Cortex for automated analysis, enriching cases with external threat intelligence, or triggering response actions directly from TheHive. What begins here as a simple alert forwarding mechanism evolves into the foundation of a full Security Orchestration, Automation, and Response (SOAR) pipeline. In other words, Phase 7 does not just close the loop between detection and investigation — it transforms the security workflow into a proactive, scalable, and collaborative system that strengthens the organization’s overall security posture.
+From a strategic perspective, this integration lays the groundwork for more advanced automation in later phases, such as linking with Cortex for automated analysis, enriching cases with external threat intelligence, or triggering response actions directly from TheHive. What begins here as a simple alert forwarding mechanism evolves into the foundation of a full Security Orchestration, Automation, and Response (SOAR) pipeline. In other words, Phase 7 does not just close the loop between detection and investigation - it transforms the security workflow into a proactive, scalable, and collaborative system that strengthens the organization’s overall security posture.
+
+### What Else Can Be Done in TheHive
+
+1. **Case Management**: Create, assign, and track incident cases with built-in workflows.
+
+2. **Collaboration**: Multiple analysts can work together on the same case with shared notes and tasks.
+
+3. **Observables & Enrichment**: Add observables (IP, domain, hash) and run Cortex analyzers for automated enrichment.
+
+4. **Dashboards & Metrics**: Visualize incident trends, case distribution, and response times.
+
+5. **Custom Workflows**: Define templates, tags, and response playbooks for consistency.
+
+6. **API & Automation**: Extend TheHive with scripts, connectors, and integrations with other tools.
+
+7. **Audit & Accountability**: Maintain a clear record of who did what and when for compliance.
