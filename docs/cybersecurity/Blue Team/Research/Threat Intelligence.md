@@ -44,7 +44,7 @@ Considering them to be the threats to **Redback Organization**, and being the th
 
 ![](img\ti-2.png)
 
-![](img\ti-3.png.jpg)
+![](img\ti-3.png)
 
 ![](img\ti-4.png.jpg)
 
