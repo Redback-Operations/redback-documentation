@@ -48,7 +48,7 @@ Considering them to be the threats to **Redback Organization**, and being the th
 
 ![](img\ti-4.png)
 
-![](img\ti-5.png.jpg)
+![](img\ti-5.png)
 
 After getting some latest search results, I will begin with collecting **IOCs** and share them afterward with the team to block them. 
 
