@@ -7,7 +7,7 @@ sidebar_position: 20
 :::info
  **Last Edited:** 15 September 2024. **Authors:** Devika Sivakumar  **Version:** 1.0.
 
-[PDF template here](docs\Feasibility-Study-Hayabusa.pdf)
+> **Note:** PDF removed during cleanup.
 :::
 
 ## 1. Objectives
@@ -80,3 +80,4 @@ For Redback’s Cybersecurity Team, having Hayabusa integrated into Wazuh’s wo
 Overall, integrating Hayabusa into the cybersecurity infrastructure is a feasible and beneficial step toward strengthening the company's ability to respond to and investigate security incidents, ensuring the integrity and security of Redback Operations' projects.
 
 **Appendix:** Playbook Maintenance and Review The integration of Hayabusa into Wazuh should be reviewed bi-annually. This review will ensure that all configurations are optimized, and that the tool remains aligned with Redback’s growing infrastructure. Training should also be updated annually, ensuring all Cybersecurity Team members can leverage Hayabusa effectively in incident response and forensic workflows.
+
