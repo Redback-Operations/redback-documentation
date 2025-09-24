@@ -149,3 +149,4 @@ Given the solid baseline knowledge of all employees, it is recommended to create
 - Watch out for threats
 
 These topics should form six modules, with each ASD/ACSC topic providing the core content for a module. Additional, more specific content (likely from other ACSC webpages) will also need to be included in each module to ensure the Security Awareness Training is current and applicable to Redback Operations. 
+

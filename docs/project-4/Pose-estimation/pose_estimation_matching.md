@@ -76,3 +76,4 @@ The similarity between poses in two images is calculated and displayed.
 
 ## Conclusion
 This project provides a comprehensive solution for pose estimation and matching using deep learning techniques. It can be applied to various domains such as sports analytics, fitness applications, and human-computer interaction.
+

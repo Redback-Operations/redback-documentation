@@ -215,3 +215,4 @@ This is a simple measure that we can implement although it still can sometimes s
 
 We should save our code daily for large projects but even for smaller files, something as simple as ***‘Ctrl+S’*** (on Windows) to save our file always ensures we are keeping our progress so that if one of these unprecedented scenarios occur, we can be confident that when we return, we can pick up our work where we left it off without fear of losing what we have worked on. Autosave can be viable but don’t always rely on it also. Manual saving after all is the key to achieving this best practice method. Always remember to keep saving your work throughout the duration of modification, don't leave it until the end of your session to save and exit!!
 
+

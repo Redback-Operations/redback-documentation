@@ -218,3 +218,4 @@ go to “Manage nodes and clouds”->”Configure Clouds”->”Advanced…”, 
 [3] Jagrat, “Jenkins build jobs - how to create and trigger build jobs in Jenkins?,” TOOLSQA, 11-Dec-2022. [Online]. Available: https://www.toolsqa.com/jenkins/jenkins-build-jobs/. [Accessed: 11-Dec-2022]. 
 
 [4] “Using Jenkins for distributed builds on Compute engine  |  cloud architecture center  |  google cloud,” Google. [Online]. Available: https://cloud.google.com/architecture/using-jenkins-for-distributed-builds-on-compute-engine. [Accessed: 11-Dec-2022]. 
+

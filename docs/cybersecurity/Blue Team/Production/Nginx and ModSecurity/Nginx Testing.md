@@ -82,3 +82,4 @@ One thing that has been tested is manually replacing the locations of resources 
 
 ![Dremio config](img-proxy/dremio.png)
 
+

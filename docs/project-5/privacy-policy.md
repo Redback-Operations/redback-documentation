@@ -43,3 +43,4 @@ This Privacy Policy may be updated periodically to reflect changes in laws or pl
 
 ### 10. Contact Information
 For questions or concerns about these terms, please contact us at info@bugbox.com.
+

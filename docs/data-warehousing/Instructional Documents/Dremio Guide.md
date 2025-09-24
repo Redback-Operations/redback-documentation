@@ -72,3 +72,4 @@ Alternatively, Dremio offers a SQL endpoint that through code you can query the 
 See the documentation of [Dremio API ](https://redback-operations.github.io/redback-documentation/docs/data-warehousing/Data%20Lakehouse/Dremio-API(For%20data%20analysts)) also located in the Data warehouse documentation for a detailed explanation.
 
 
+

@@ -102,3 +102,4 @@ The aim of this project was to build a fully integrated Automated Threat Hunting
 - End-to-end SOAR capabilities with TheHive and Cortex for automated case handling.  
 - Custom behavioural detection rules tailored to common attack techniques.  
 - Full automation of threat detection, enrichment, and triage.
+

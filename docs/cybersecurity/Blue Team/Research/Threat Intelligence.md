@@ -79,18 +79,18 @@ The IOC `mxuconlinegame[.]com` is used to collect more IOCs relevant to it.
 ![](img\ti-7.png)
 
 3. Create a query of the common patterns to search for more relevant IOCs. The goal is to filter out until the most prominent results are acquired.
-![](img\ti-8.png.jpg)
+![](img\ti-8.png)
 
 4. Collect the results and analyze them further on **VirusTotal** and **Qianxin**. The following are the newly hunted IOCs:  
    - `patch-manger[.]com`  
    - `ferrinonlinemuseum[.]com`  
    - `82.221.136.1`  
    - `82.221.136.47`
-![](img\ti-9.png.jpg)
+![](img\ti-9.png)
 
 5. Search further about the identified IOCs.
-![](img\ti-10.png.jpg)
-![](img\ti-11.png.jpg)
+![](img\ti-10.png)
+![](img\ti-11.png)
 
 After analyzing further, it was concluded that these IPs and domains belong to **APT Bitter**, and they are acting as **C2 Servers**. 
 
@@ -116,3 +116,4 @@ There are further tools and platforms that are collectively used for threat inte
 - [FOFA](https://en.fofa.info)
 
 - [VirusTotal](https://www.virustotal.com)
+

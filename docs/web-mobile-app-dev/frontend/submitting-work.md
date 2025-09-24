@@ -63,3 +63,4 @@ Before raising a pull request, please ensure the below checks pass.
 - [Project structure linter docs](https://github.com/Igorkowalski94/eslint-plugin-project-structure)
 - [ESLint in WebStorm](https://www.jetbrains.com/help/webstorm/eslint.html) - How to configure ESLint in WebStorm and fix formatting on save
 - [ESLint VS Code extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - can be figured to fix formatting on save
+

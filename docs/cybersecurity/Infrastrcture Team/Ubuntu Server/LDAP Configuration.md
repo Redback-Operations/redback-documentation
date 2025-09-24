@@ -107,3 +107,4 @@ sudo ldapadd -x -D cn=admin,dc=redbackops,dc=org,dc=au -W -f add_entries.ldif
 ```bash
 ldapsearch -x -LLL -b dc=redbackops,dc=org,dc=au `uid=jdoe`
 ```
+

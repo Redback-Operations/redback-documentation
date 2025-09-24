@@ -68,3 +68,4 @@ The deployment of Wazuh as a Security Information and Event Management (SIEM) so
 [2] 	M. Stromann, “Suricata vs Wazuh,” LiveEnterprise, 06 August 2023. [Online]. Available: https://www.liventerprise.org/compare/Suricata_vs_Wazuh/.
 
 
+

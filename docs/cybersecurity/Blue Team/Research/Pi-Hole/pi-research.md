@@ -55,3 +55,4 @@ Pi-hole offers several advantages to enhance your online experience by blocking 
 here you can see pihole has already started blocking some of the domains that are blacklisted.
 
 In conclusion, Pi-hole is a cost-effective, efficient, and easy-to-manage solution that provides comprehensive ad-blocking, privacy protection, and faster internet browsing for all devices on your network.
+

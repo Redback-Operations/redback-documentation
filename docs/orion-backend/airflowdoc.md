@@ -568,3 +568,4 @@ curl -X POST http://your-fastapi-service-url/trigger-test-kafka-dag/
 - Implement timeouts and retries in client applications
 - Handle potential delays between DAG triggering and result availability
 - Monitor the API service logs for debugging issues# Apache Airflow Documentation for Face Detection and Feature Extraction Pipelines
+

@@ -84,3 +84,4 @@ Feasibility Study on Implementing OpenCTI Template (Guide)
 
  
 This outline provides a structured approach to conducting a feasibility study on implementing OpenCTI within an organization. Each section can be further elaborated with detailed analysis and findings based on the specific context and requirements of the organization.
+

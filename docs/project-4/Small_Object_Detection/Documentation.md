@@ -172,3 +172,4 @@ if uploaded_file is not None:
 
 st.write("Powered by YOLOv8 and SAHI.")
 ```
+

@@ -208,3 +208,4 @@ Handling serial port changes dynamically involves:
 ·   	Continuous Monitoring and Error Handling: Implementing error handling in the main loop to detect and recover from serial communication errors, such as disconnections.
 
 This approach ensures that your system remains flexible and resilient to changes in the serial port configuration, providing a seamless user experience.
+

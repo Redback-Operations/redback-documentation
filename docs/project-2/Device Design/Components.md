@@ -59,3 +59,4 @@ As a hacked together solution, we will be using an off the shelf [USB-C - LiPO C
 :::info
 **Document Creation:** 5 September 2024. **Last Edited:** 5 September 2024. **Authors:** Lachlan Costigan
 :::
+

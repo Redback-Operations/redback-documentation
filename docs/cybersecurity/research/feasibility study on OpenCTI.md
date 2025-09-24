@@ -135,3 +135,4 @@ To determine whether OpenCTI can effectively support and enhance the threat inte
  - Summary of Findings: The conclusion will reflect the suitability of OpenCTI for deployment within the existing VM environment. Emphasize that this approach maximizes the use of current resources while still providing the desired enhancements to threat intelligence capabilities.
  - Recommendations: Recommend moving forward with OpenCTI, with an implementation plan that includes careful testing and optimization within the VM environment.
   - Next Steps: The next steps will include working with the university’s IT team to ensure the VMs are properly configured for OpenCTI and planning for a pilot phase to test the deployment in this environment.
+

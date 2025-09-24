@@ -197,3 +197,4 @@ By implementing these targeted Essential 8 strategies and moving towards Maturit
 - Increased cyber-awareness and disciplined security practices across the team  
 
 Cybersecurity doesn’t have to be complicated to make a big impact. By building these simple, practical habits into our day-to-day work, Redback is setting itself up for a safer, more resilient future.
+

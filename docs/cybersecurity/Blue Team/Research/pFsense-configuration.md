@@ -140,3 +140,4 @@ As shown in the **Blocked** tab we have blocked pings by snort after using ping:
 6. Once the settings have been applied, scroll down and click save. If done correctly, there should not be any errors preventing you from saving.
 7. Now check for connectivity with your LDAP, to do that stay in the user manager tab and navigate to **settings**
 8. Select your LDAP server in the **Authentication Server** drop down box. scroll down and select **Save & Test**, if successful, you should see you have made connection to your LDAP.
+

@@ -80,3 +80,4 @@ In conclusion, SIEMs can be extremely beneficial to safeguard and monitor the se
 [6] Google Cloud (n.d.). Log in to Chronicle [Website]. Available: URL https://cloud.google.com/chronicle/docs/log-in-to-ui 
 
 [7] LOGPOINT (n.d.). What is SIEM? A complete guide to Security Information and Event Management [Website]. Available: URL https://www.logpoint.com/en/understand/what-is-siem/ 
+

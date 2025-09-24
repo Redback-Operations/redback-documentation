@@ -103,3 +103,4 @@ Finally, the Public API is forbidden to be used in a commercial setting. Hence, 
 ## 4. References
 - [VirusTotal Integration Wazuh Guide](https://documentation.wazuh.com/current/user-manual/capabilities/malware-detection/virus-total-integration.html)
 - [EICAR](https://www.eicar.org/download-anti-malware-testfile/)
+

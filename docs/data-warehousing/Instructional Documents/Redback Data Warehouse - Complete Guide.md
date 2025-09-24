@@ -704,3 +704,4 @@ As the platform evolves, so will this guide. If you notice missing pieces or hav
 *version 1 - Document prepared by Daezel Goyal, Data Warehouse Leader – Redback Operations, May 2025*
 
 
+

@@ -182,3 +182,4 @@ Verifying the pipeline execution ensures that the CI/CD process is functioning a
 ### References
 
 - Docker 2024. Docker Documentation. Available at: [https://docs.docker.com/](https://docs.docker.com/).
+

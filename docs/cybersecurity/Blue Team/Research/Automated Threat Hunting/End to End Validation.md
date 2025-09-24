@@ -270,3 +270,4 @@ This project demonstrates the feasibility of building a SOAR pipeline entirely w
 The project successfully validated an end-to-end SOAR workflow across detection, enrichment, orchestration, automation, and response. Despite using only free/community editions, the stack demonstrated the capabilities required for modern SOCs.
 
 This marks the closure of the project - proving that a functioning SOAR pipeline can be achieved with open-source tools, and providing a foundation for future enhancements (e.g., scaling, machine learning-based correlation, or additional analyzers).
+

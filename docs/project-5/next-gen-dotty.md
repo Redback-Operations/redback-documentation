@@ -72,3 +72,4 @@ The current board, an Arduino Nano, is likely not able to power or handle the da
 So considering this, the Arduino Mega may be the best option going forward. It offers significantly more memory (30kB vs 248kB when removing bootloader usage) which is likely needed for the display and sound modules, nearly three times as many pins, and four serial ports which could be used for the modules. 
 
 The Mega does come with a substantial price increase over the Nano, however for the longevity of the device, this price could be justified. The older Nano and PCBs could still be used in basic classes to avoid waste. 
+

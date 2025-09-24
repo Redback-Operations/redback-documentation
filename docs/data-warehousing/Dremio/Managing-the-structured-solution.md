@@ -43,3 +43,4 @@ The flask api is a level of security and convenience on top of the dremio rest a
 The code for the app and docker container running it can be found [here](https://github.com/Jesse-Rees/redback-data-warehouse/tree/Structured-Solution/Structured%20Dremio%20Solution/Flask-api), that link is the same fork as the script and should be added to the main branch soon in the same directory.
 
 The guide on how to use the api as a data analyst will be uploaded alongside this one and should be found in the same folder labeled structured solution.
+

@@ -321,3 +321,4 @@ These features combine to create a dynamic system that appeals to fitness enthus
 - RPi = Raspberry pi
 - API = Application Programming Interface
 - VR = Virtual Reality
+

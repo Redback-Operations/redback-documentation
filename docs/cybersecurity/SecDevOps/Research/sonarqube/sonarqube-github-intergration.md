@@ -140,3 +140,4 @@ This guide provides detailed steps to integrate SonarQube with GitHub. It assume
 ---
 
 By following these steps, you can successfully integrate SonarQube with GitHub to enhance your code quality and maintainability practices.
+

@@ -115,3 +115,4 @@ client.loop_forever()
 ## Conclusion
 
 The integration of HiveMQ and MQTT into our sensor data collection project allows for robust, scalable, and efficient data communication. This setup ensures real-time data monitoring across different platforms, enhancing the capabilities of IoT applications in health monitoring.
+

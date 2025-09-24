@@ -6,3 +6,4 @@ sidebar_position: 5
 
 ![Accelerometer IoT Diagram](img/Accelerometer_Iot_4.png)
 
+

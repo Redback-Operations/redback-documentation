@@ -38,3 +38,4 @@ Oximeter sensors are widely used in clinical settings, home health care, and wea
 Oximeter sensor technology provides a non-invasive, accurate, and invaluable means of monitoring oxygen saturation and heart rate. Its integration into wearable technology and health monitoring systems has revolutionized patient care, allowing for continuous, real-time health tracking. As technology advances, further enhancements in oximeter sensors are expected, expanding their applications and improving health outcomes.
 
 This report has outlined the operational principles and significance of oximeter sensor technology, emphasizing its critical role in modern health monitoring practices.
+

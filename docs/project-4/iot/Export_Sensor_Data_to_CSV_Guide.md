@@ -93,3 +93,4 @@ finally:
 ## Conclusion
 
 This guide provides a comprehensive method to capture sensor data from the MAX30102 and export it to a CSV file using Arduino and Python. This setup is ideal for those who need to collect and analyze physiological data for health monitoring or research purposes.
+

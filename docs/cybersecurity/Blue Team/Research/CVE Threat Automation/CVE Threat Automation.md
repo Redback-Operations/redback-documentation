@@ -231,3 +231,4 @@ By integrating MISP, Python automation, and Wazuh, we:
 The framework serves as a blueprint for scalable cybersecurity operations and continues to evolve with advanced threat intelligence integrations.
 
 ---
+

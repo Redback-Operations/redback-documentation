@@ -176,3 +176,4 @@ This vulnerability occurs when a web application fetches a remote resource witho
 OWASP (Open Worldwide Application Security Project) 2024, OWASP Top Ten Project, viewed 7 December 2024, https://owasp.org/www-project-top-ten/.
 
 
+

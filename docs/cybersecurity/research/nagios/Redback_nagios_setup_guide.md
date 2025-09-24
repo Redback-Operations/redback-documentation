@@ -233,3 +233,4 @@ Since there is another service running on port 80, change that to port 443 in or
 ![Apache 2 setup](img\apache2.png)
 
 **Figure 2: Apache 2 setup**
+

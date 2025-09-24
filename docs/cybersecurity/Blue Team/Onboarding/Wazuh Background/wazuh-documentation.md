@@ -79,3 +79,4 @@ From easy implementation, low requirements and plenty of concepts that can be le
 - Security Awareness Training Modules: https://classroom.google.com/c/NzAzMjgwOTI3MDIw?cjc=ppfbboc 
 - Link to Wazuh Video Documentation: https://youtu.be/g82PwIFLYYc?si=4pZzpdajIvHrIKlg
 - Also check out the Wazuh PowerPoint documentation below for a more visual approach!
+

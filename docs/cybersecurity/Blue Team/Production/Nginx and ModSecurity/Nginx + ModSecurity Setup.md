@@ -171,3 +171,4 @@ This guide only briefly covered the current setup. To further understand all the
 Also, to get a better understanding of Nginx, refer to the official documentation: http://nginx.org/en/docs/
 
 Additionally, to get an understanding of what's been tested so far, review the next doc in this series.
+

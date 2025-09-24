@@ -32,3 +32,4 @@ Please note, that I will create a presentation to elaborate further, and I will 
 [3] appmire.be (n.d). flutter_jailbreak_detection 1.8.0 [Website]. Available: flutter_jailbreak_detection: https://pub.dev/packages/flutter_jailbreak_detection
  
 [4] Codeplayon (2021, December. 2). How to secure flutter application code [Website]. Available: https://www.codeplayon.com/2021/12/how-to-secure-flutter-application-code/ 
+

@@ -96,3 +96,4 @@ The Proof of Concept successfully demonstrates that the data preprocessing pipel
 implemented in MinIO using Python. CSV files can be downloaded, cleaned, and moved 
 between buckets efficiently, with clear logging and error handling in place. The pipeline is ready 
 for scaling, automation, and integration into broader data workflows at Redback Operations.
+

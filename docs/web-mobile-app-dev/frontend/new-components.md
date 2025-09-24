@@ -37,3 +37,4 @@ If you are creating your component in Redback UI, this will also generate:
 ### Further reading
 - [What are components in the front-end and why do we need them?](https://dev.to/xavortm/what-are-components-in-the-front-end-and-why-do-we-need-them-2o2p) - Alex Dimitrov 
 - [Dos and Don'ts - Tech Stack](http://localhost:3000/redback-documentation/docs/web-mobile-app-dev/frontend/dos-donts#tech-stack) - Redback docs
+

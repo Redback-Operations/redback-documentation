@@ -233,3 +233,4 @@ To mitigate these few known issues, we have made some recommendations for Redbac
 [39] "LUKS on Raspberry Pi", LUKS-on-Raspberry-Pi, 2021. [Online]. Available: https://rr-developer.github.io/LUKS-on-Raspberry-Pi/. [Accessed: 20- Aug- 2022]
 
 [40] "Raspbian Stretch Luks Encrypt [solved] - Raspberry Pi Forums", Forums.raspberrypi.com, 2018. [Online]. Available: https://forums.raspberrypi.com/viewtopic.php?t=219867. [Accessed: 20- Aug- 2022]
+

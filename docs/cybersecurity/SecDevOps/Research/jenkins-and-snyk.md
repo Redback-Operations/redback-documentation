@@ -71,3 +71,4 @@ The Jenkins integrated with Snyk is very convenient for developers to discover s
 [3] Saurabh, “What is Jenkins?: Jenkins for continuous integration,” Edureka, 15-Nov-2022. [Online]. Available: https://www.edureka.co/blog/what-is-jenkins/. [Accessed: 22-Nov-2022].
 
 [4] “SNYK code - supported languages and Frameworks,” Snyk Code - Supported languages and frameworks - Snyk User Docs. [Online]. Available: https://docs.snyk.io/products/snyk-code/snyk-code-language-and-framework-support. [Accessed: 22-Nov-2022]. 
+

@@ -157,3 +157,4 @@ This entire process, from adapting AI-based designs to implementing them into a 
 ![Frame *](img/Frame_6.png) 
 
 This structure ensures that the game is played first, adding an interactive layer to the login process, as suggested by Dylan.
+

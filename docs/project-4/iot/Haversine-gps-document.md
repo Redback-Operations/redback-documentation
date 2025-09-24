@@ -57,3 +57,4 @@ The Haversine formula is used to calculate the shortest distance between two poi
 
 ## Summary
 The Haversine formula is a fundamental tool for calculating distances between two points on the Earth's surface using latitude and longitude. This detailed explanation and the provided Arduino code illustrate how to implement the formula in a practical project, enhancing navigation and GIS applications. By understanding the formula and the code, you can accurately compute distances between geographic locations using Arduino.
+

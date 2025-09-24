@@ -199,3 +199,4 @@ VZFit links to bikes via a physical device that is purchased separately and only
 
 ![VZFit, played by OtterWorldly, 2022](img/vzfit.png)
 > [VZFit, OtterWorldly screenshot, 2022](https://www.youtube.com/watch?v=7Nn9adpeo-M)
+

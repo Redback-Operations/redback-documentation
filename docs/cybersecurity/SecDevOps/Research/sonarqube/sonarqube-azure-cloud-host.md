@@ -137,3 +137,4 @@ Now to go to browser --> http://SonarQube_public_dns_name:9000/
 
 
 By following these steps, you can successfully integrate SonarQube with GitHub to enhance your code quality and maintainability practices.
+

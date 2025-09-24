@@ -103,3 +103,4 @@ To properly implement RBAC, administrators need to create IAM users for each ind
 ## Conclusion
 
 By implementing RBAC with IAM and S3, Bugbox ensures that access to platform resources is secure, roles are clearly defined, and users only have access to what is necessary for their responsibilities. Tags enhance resource management and access control, while the IAM policy system ensures that permissions are correctly assigned, ensuring a compliant and secure environment for all users.
+

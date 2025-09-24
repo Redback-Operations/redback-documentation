@@ -37,3 +37,4 @@ After analyzer jobs complete, click the observable to view detailed reports. Rep
 ![Report View](img\Viewing_Report.png)
 Analysis_of_a_report.png
 ![Report Analysis View](img\Analysis_of_a_report.png)
+

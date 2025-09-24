@@ -59,3 +59,4 @@ The following IAM policy provides write access to a Student role, specifically a
     }
   ]
 }
+

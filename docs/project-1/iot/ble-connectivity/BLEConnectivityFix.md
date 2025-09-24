@@ -33,3 +33,4 @@ Here are the steps to follow:
 7) Run your script and the Bluetooth connectivity will stay on throughout the script being ran.
 
 \*Check the constants.py file in the lib file from the [redback-smartbike-iot](https://github.com/Redback-Operations/redback-smartbike-iot) repository.
+

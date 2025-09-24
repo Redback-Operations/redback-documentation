@@ -123,3 +123,4 @@ sudo tail -f /var/log/mosquitto/mosquitto.log
 | `/etc/mosquitto/conf.d/`           | Directory for additional configs |
 | `/var/log/mosquitto/mosquitto.log` | Primary log file                 |
 | `/var/lib/mosquitto/`              | Persistence data location        |
+
