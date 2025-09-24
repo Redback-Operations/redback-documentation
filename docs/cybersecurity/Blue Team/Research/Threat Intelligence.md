@@ -76,7 +76,7 @@ The IOC `mxuconlinegame[.]com` is used to collect more IOCs relevant to it.
 ![](img\ti-6.png)
 
 2. Analyze the information that can be used to hunt more IOCs as shown in Figure 7.
-![](img\ti-7.png.jpg)
+![](img\ti-7.png)
 
 3. Create a query of the common patterns to search for more relevant IOCs. The goal is to filter out until the most prominent results are acquired.
 ![](img\ti-8.png.jpg)
