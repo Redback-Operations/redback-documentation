@@ -73,7 +73,7 @@ Let's begin hunting some IOCs using **FOFA**, **Validin**, and **VirusTotal**:
 The IOC `mxuconlinegame[.]com` is used to collect more IOCs relevant to it.
 
 1. Search IOC on **FOFA**.
-![](img\ti-6.png.jpg)
+![](img\ti-6.png)
 
 2. Analyze the information that can be used to hunt more IOCs as shown in Figure 7.
 ![](img\ti-7.png.jpg)
