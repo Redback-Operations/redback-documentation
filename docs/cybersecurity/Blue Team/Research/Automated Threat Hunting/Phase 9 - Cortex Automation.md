@@ -3,8 +3,8 @@ sidebar_position: 10
 ---
 
 :::info
-**Document Creation:** 3 September 2025. **Last Edited:** 3 September 2025. **Authors:** Syed Mahmood Aleem Huzaifa.  
-**Effective Date:** 3 September 2025. **Expiry Date:** 3 September2026.
+**Document Creation:** 3 September 2025. **Last Edited:** 9 September 2025. **Authors:** Syed Mahmood Aleem Huzaifa.  
+**Effective Date:** 9 September 2025. **Expiry Date:** 9 September 2026.
 :::
 
 ### Objective and context
@@ -193,7 +193,8 @@ Compact Test Sequence:
 
 For multiple tests, use a loop to create artifacts, initiate jobs, poll status, and print per-artifact summaries including analyzer report keys.
 
-Current State
+**Current State**
+
 This flow enables both manual Cortex analyzer execution and autorun for IP observables as soon as created, all through backend API calls. Reliability is achieved by authenticating once and reusing cookies paired with the organisation header, discovering analyzers using the intended Cortex server name, restricting job creation to POST /api/connector/cortex/job with mandatory cortexId, polling job status via /api/connector/cortex/job/JOB_ID, reading artifact reports, and configuring the organisation-level notification path with a valid ArtifactCreated → RunAnalyzer rule containing connectorName, cortexId, the "ip" selector, and explicit analyzer list such as ["AbuseIPDB_1_0"].
 ![Automating Multiple run-1](img\automating_multiple_run_1.png)
 ![Automating Multiple run-2](img\automating_multiple_run_2.png)
