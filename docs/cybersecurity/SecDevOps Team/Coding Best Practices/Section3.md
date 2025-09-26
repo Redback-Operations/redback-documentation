@@ -18,3 +18,4 @@ We will then point out what needed to be refactored and why for the coding examp
 *A few bonus points of addition in which we can also add from the video in which was not initially discussed includes the implementation of a Try-Catch exception handling. And also the header for the file to assist in indentifying the creator of the file along with its modifications.*
 
 The ability to review your own work saves a lot of time for everyone as it is essentially like the first line of defence. You are trying to catch anything that you can see before it is then processed for another individual to also review. You may not always be able to find everything although, finding something is better than nothing. (Sometimes there may also just be genuinely nothing to find!)
+

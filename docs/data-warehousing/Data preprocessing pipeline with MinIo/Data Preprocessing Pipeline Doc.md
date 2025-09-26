@@ -47,3 +47,4 @@ Once processed, the data is moved to 'Silver' buckets, categorized as cleaned an
 ## Conclusion
 The data preprocessing pipeline serves as a critical component in the data management ecosystem, bridging the gap between raw data collection and advanced data analysis. Its integration with MinIO highlights a commitment to leveraging advanced storage solutions to enhance data processing workflows. This theoretical approach not only supports current data needs but also anticipates future expansions, ensuring the pipeline remains a valuable asset in managing and utilizing data effectively.
 
+

@@ -34,3 +34,4 @@ Cause: Image docs/cybersecurity/research/ids-and-wazuh/img/wazuh1.png used in do
 ```
 
 This can be multiple things. Either the image is simply not present; the casing is wrong "image.png" vs "Image.pmg" vs "image.PNG" are all different, it needs to match in both the file and reference. Otherwise, check that the path is correct.
+

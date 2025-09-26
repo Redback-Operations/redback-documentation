@@ -172,3 +172,4 @@ There are some common patterns or coding practices that often lead to security v
 [2] 	The Cloud Native Experts, “What Is Secure Code Review? Process, Tools, and Best Practices,” 5 November 2023. [Online]. Available: https://www.aquasec.com/cloud-native-academy/devsecops/secure-code-review/.
 [3] 	J. Mlakar, “InfoSec Design Principles – 8 Security Principles To Implement,” MlakarTechTalk, 16 April 2019. [Online]. Available: https://www.mlakartechtalk.com/infosec-design-principles-8-security-principles-to-implement/.
 
+

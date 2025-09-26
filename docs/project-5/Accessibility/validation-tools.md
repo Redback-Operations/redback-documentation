@@ -107,3 +107,4 @@ Let’s do a quick run down of how Accessibility Validation tools can be used, u
 ## Conclusion 
 
     Ensuring the accessibility of a digital platform, such as Bugbox, is essential for providing an inclusive and empowering learning experience for all users. By using a combination of automated testing tools, manual checks, and user testing, developers can identify and fix accessibility issues to create a more inclusive product. Regular testing and continuous improvements are necessary to maintain accessibility and ensure that all users, including those with disabilities, can fully engage with the platform. 
+

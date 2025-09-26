@@ -252,3 +252,4 @@ Kafka depends on Zookeeper for distributed coordination and management of topics
 
   [10] https://github.com/sergio11/iot_event_streaming_architecture
 
+

@@ -47,3 +47,4 @@ Below are the 7 metrics listed in the ISMS in more detail
 -	How is access to sensitive data and systems controlled and monitored, and how is privilege escalation prevented?
 -	Are all accounts secured with Muli-Factor Authentication (MFA)?
 -	Do we have a password policy addressing common malpractices, such as password recycling and weak passwords?
+

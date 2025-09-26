@@ -142,3 +142,4 @@ For the landing page, click "Import Site" on the top and enter the link address 
 ![gp10](img/gp10.png)
 
 Unfortunately, the email phishing attempt using GoPhish was unsuccessful. Despite testing the campaign with three students' email addresses, the emails were consistently flagged, and the domain was marked as a phishing site. As a result, the phishing emails never reached the intended recipients, failing to bypass security filters.
+

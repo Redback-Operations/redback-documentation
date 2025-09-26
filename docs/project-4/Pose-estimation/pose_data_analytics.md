@@ -73,3 +73,4 @@ The similarity between poses in two images is calculated and displayed.
 
 ## Conclusion
 This project focuses on pose estimation Data Analytics and its usecase and application in improving accuracy and keyframe detection. This file is used to visualise data from the pose_estimation_matching.ipynb model and detect weakpoints in the algorithm.
+

@@ -171,3 +171,4 @@ Here are some items you may want to consider moving into Azure DevOps in T1 2025
 - Ensure your board is updated and items are moved through the swim lanes accurately reflecting progress.
 - Update Welcome Wiki with any knew information that may be required following your own contribution to Azure DevOps.
 - You may even want to update this quick start guide for the next cohort to get started quickly in the platform.
+

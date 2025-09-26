@@ -84,3 +84,4 @@ For example:
 
 
 This is not required for Wazuh access but may be needed for backend tasks.
+

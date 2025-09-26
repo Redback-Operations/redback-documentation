@@ -56,3 +56,4 @@ Choosing between Streamlit and Gradio depends on specific project requirements a
 ![streamlit vs gradio](images/image-5.png)
 
 Reference: [Gradio vs. Streamlit Comparison on StackShare](https://stackshare.io/stackups/gradio-vs-streamlit#:~:text=In%20summary%2C%20Gradio%20and%20Streamlit%20have%20some%20key,community%20and%20documentation%20support%2C%20and%20ease%20of%20use.)
+

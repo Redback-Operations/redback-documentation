@@ -135,3 +135,4 @@ After the upgrade, disable the Wazuh repository to avoid undesired upgrades and 
 ## Reference
 
 - https://documentation.wazuh.com/current/upgrade-guide/wazuh-agent/linux.html
+

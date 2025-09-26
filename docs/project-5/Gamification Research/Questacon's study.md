@@ -33,3 +33,4 @@ The games that are offered by Questacon are mentioned below:
 **Technological Integration:** The Exhibit Design and Development team at Questacon uses advanced computer graphics systems, like the Apple Macintosh, to create detailed and precise exhibit designs. This technological integration allows for more sophisticated and interactive displays.
 
 **Collaborative and Cultural Elements:** Questacon collaborates with organizations like Geoscience Australia to develop graphic exhibitions that use visual imagery, such as satellite data, to educate visitors. Additionally, Questacon incorporates cultural elements into its exhibits, such as a mural themed around the United Nations Sustainable Development Goals, created by local graffiti artists, and collaborations with Indigenous communities to blend traditional knowledge with modern technology.
+

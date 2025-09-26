@@ -14,3 +14,4 @@ To access the quiz for this module, a link will be provided. Test what you have 
 **Quiz Link:** https://forms.gle/aLqL6Y2oxEvkMM7Z8
 
 After completing the quiz you have successfully completed this module about Coding Best Practices, thank you for your time and hopefully you have learnt a few new skills to apply when developing future programs!
+

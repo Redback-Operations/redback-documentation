@@ -103,3 +103,4 @@ Trained using Adam optimizer and categorical crossentropy. Saved as `.h5` for ru
 ## Conclusion
 
 This capstone delivers a complete ML pipeline for video-based injury risk assessment in baseball. It demonstrates practical integration of computer vision, web development, and machine learning to solve real-world biomechanical problems in sports.
+

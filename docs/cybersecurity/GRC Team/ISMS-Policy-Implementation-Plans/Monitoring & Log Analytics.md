@@ -62,3 +62,4 @@ To develop an easy way to implement a cost-effective deployment plan for our Mon
 - Leanne Mitton, L.M. (2023). Regulatory Compliance 101: What You Need To Know. Splunk Blogs. [Splunk Blog](https://www.splunk.com/en_us/blog/learn/regulatory-compliance.html)  
 - Mezmo. (2024). MONITORING AND LOGGING REQUIREMENTS FOR COMPLIANCE. Regulatory Compliance. [Mezmo](https://www.mezmo.com/learn-observability/monitoring-and-logging-requirements-for-compliance)  
 - Rafal Kuc, R.K. (2023). 15 Best Log Analysis Tools & Log Analyzers of 2024 (Paid, Free & Open Source). Sematext. [Sematext Blog](https://sematext.com/blog/log-analysis-tools/)
+

@@ -282,3 +282,4 @@ sidebar_position: 8
    docker ps
    ```
    ![Wazuh Backup Redeploy](./img-backup-redeploy/18_wazuh_bkup_redeploy.jpg)  
+

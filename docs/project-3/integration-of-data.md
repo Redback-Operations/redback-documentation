@@ -96,3 +96,4 @@ The Python scripts and Jupyter notebooks contain logic for analyzing the cycling
 ## Conclusion
 
 By integrating enhanced features focused on customization, simulation, and community, alongside adopting best practices from platforms like TrainerRoad, we can significantly improve user engagement and satisfaction. These strategies aim not only to enhance the individual training experience but also to build a vibrant, supportive community around our platform. The next steps involve detailed planning and development phases to bring these features to life, ensuring we maintain a user-centric approach throughout the process.
+

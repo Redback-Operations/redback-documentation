@@ -97,3 +97,4 @@ Also, the Minecraft: Education Edition has collaborative features where students
 •	**Parental Controls and Monitoring:** UX design should integrate easy-to-sue parental controls, allowing parents to monitor usage and restrict certain features. Clear communication of what data being collected and how it’s used fosters trust from both parents and schools.
 
 **For Example:** YouTube Kids offers a child-friendly navigation system where access to content is carefully curated, and parental controls are robust. Bugbox can incorporate simple, secure sign-ins with parental dashboards that allow parents to track their child's progress and restrict certain activities.
+

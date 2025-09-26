@@ -54,3 +54,4 @@ As more data is collected by each team, the bigger encryption software the compa
 ---
 
 This deployment plan provides a structured approach to introducing cryptographic tools into Redback Operations, ensuring secure data handling and compliance with industry standards.
+

@@ -184,3 +184,4 @@ Creating a Sending Profile in GoPhish
 
 After completing the setup above. Now click on campaign and start a new one. Use the profiles already created and launch a campaign. After launching, the profiles should receive the email with phishing link:
 ![picture13](img/Picture13.jpg)
+

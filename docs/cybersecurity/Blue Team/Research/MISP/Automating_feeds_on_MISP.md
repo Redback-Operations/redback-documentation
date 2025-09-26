@@ -81,3 +81,4 @@ _sudo usermod -aG docker $USER_
 ## 1.4 Conclusion
 
 MISP is a powerful platform for managing and sharing threat intelligence. By automating feed updates and leveraging its API, you can integrate it into your security operations for enriched threat detection and response.
+

@@ -98,3 +98,4 @@ The technical implementation of Data-at-Rest Encryption involves the following s
 ## Conclusion
 
 Implementing RBAC and Data-at-Rest management through encryption is crucial for Bugbox to secure its platform and maintain compliance with data protection regulations. RBAC limits access based on user roles, reducing the risk of unauthorized access, while encryption ensures that even if data is accessed, it remains protected. Together, these security measures provide a comprehensive approach to securing Bugbox’s educational platform.
+

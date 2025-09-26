@@ -66,3 +66,4 @@ This extra layer of control helps manage and monitor access easily.
 ## Conclusion
 
 By using AWS IAM for Role-Based Access Control (RBAC), Bugbox has created a secure and flexible system for managing who can access different parts of the platform. With IAM, Bugbox can give users the right amount of access, scale as the platform grows, and integrate with other AWS services. This approach ensures security, reduces risk, and provides a safe learning environment for both educators and students. As the platform continues to expand, Bugbox will be able to adjust access controls easily and efficiently.
+

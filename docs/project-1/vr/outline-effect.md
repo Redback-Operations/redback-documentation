@@ -55,3 +55,4 @@ For improved performance:
 - Smooth normals will be baked in the editor
 
 If disabled, smooth normals are calculated at runtime on `Awake()` (may cause lag on large meshes).
+

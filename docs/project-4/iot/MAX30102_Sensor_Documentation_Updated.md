@@ -98,3 +98,4 @@ Analyzes health trends within large gatherings, aiding in the preemptive managem
 ## Conclusion
 
 The MAX30102 sensor is a pivotal component of our player tracking and crowd monitoring project. Its capabilities ensure that our system exceeds the necessary standards for effective real-time health monitoring in sports and event management.
+

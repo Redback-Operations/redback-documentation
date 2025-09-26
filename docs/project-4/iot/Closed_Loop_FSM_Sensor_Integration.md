@@ -99,3 +99,4 @@ void handleSensorError() {
 ## Conclusion
 
 Integrating closed-loop systems and FSMs with multiple sensors in our project allows for more dynamic and responsive management of sensor data. This approach not only improves the accuracy and reliability of the data collected but also enhances the system's ability to adapt to different conditions and detect anomalies more effectively.
+

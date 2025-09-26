@@ -63,3 +63,4 @@ sidebar_label: Getting started
 - [TypeScript docs](https://www.typescriptlang.org/docs/)
 - [React Router docs](https://reactrouter.com/)
 - [Styled Components docs](https://styled-components.com/)
+

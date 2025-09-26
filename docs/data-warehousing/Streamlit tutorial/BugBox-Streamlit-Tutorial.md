@@ -224,3 +224,4 @@ By following these instructions, you can set up, modify, and manage the SQLite d
   - Staff members have access to student data which are in the database and can also download all the student data as csv if needed. This will enable them to find the unique id/other details of students and recover QR Codes(in case they loose them)
 
 
+

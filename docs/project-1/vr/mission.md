@@ -54,3 +54,4 @@ public class Mission1 : Mission
     public override string MissionName => "Collect the Star";
     public override int MissionNumber => 1;
 ```
+

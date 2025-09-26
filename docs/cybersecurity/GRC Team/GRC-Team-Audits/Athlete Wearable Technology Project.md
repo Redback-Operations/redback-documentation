@@ -95,3 +95,4 @@ The audit gave significant insights into the Athlete Wearable Technology project
 - **User Awareness Training:** While initial training was implemented, the team did not review the Cybersecurity Awareness Training document. It will be vital for team members to be trained on the policies and procedures.
 
 Overall, the project displays compliance in some areas, but the existing lack of data collecting has slowed down the development of more complete security standards. As the project progresses, resolving the identified gaps and recommendations will be critical to improving the integrity and security of the Athlete Wearable Technology Project.
+

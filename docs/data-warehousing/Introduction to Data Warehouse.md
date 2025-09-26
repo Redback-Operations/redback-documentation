@@ -70,3 +70,4 @@ Our data flows through a standardized pipeline that ensures quality and consiste
 ---
 
 Understanding the structure and purpose of a data warehouse is a fundamental step toward contributing effectively to data-centric projects. Whether you're interested in development, analysis, or operations, the Data Warehouse offers a solid foundation for impactful work at Redback.
+

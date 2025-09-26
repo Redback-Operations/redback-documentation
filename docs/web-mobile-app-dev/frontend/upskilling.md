@@ -49,3 +49,4 @@ There are many ways to achieve the same thing in web development, but it is impo
 
 When finding further resources yourself, always ensure they are up-to-date and relevant to the version of the technology we are using. For example, if you are learning React, the current version is 18 and function components are generally preferred over class components. Older resources may go into detail about class components and lifecycle methods which are no longer considered best practice.
 :::
+

@@ -22,3 +22,4 @@ The module is constructed with a number of sections including:
 - **Section 2:** CODING BEST PRACTICES
 - **Section 3:** CODE REVIEWING
 - **Section 4:** QUIZ
+

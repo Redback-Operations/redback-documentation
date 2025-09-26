@@ -454,3 +454,4 @@ The encryption policy will be reviewed at least bi-annually to assess its effect
 - Update training and awareness programs to reflect changes in the policy and emerging threats.
 
 The commitment to continuous improvement through training, awareness, and regular policy reviews is essential for maintaining the security and integrity of sensitive information within Redback Operations.
+

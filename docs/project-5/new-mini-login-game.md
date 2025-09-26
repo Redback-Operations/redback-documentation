@@ -79,3 +79,4 @@ This game helps users practice math skills in a fun and engaging way.
 - Visual Studio Code (VS Code) for code editing
 - Browser for testing (Chrome)
 - Terminal for running npm commands
+

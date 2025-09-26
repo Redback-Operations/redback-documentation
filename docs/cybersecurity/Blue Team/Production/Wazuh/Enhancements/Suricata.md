@@ -90,3 +90,4 @@ Once set up, you should see alerts on the dashboard for network-related activity
 
 - [Suricata docs](https://docs.suricata.io/en/latest/)
 - [Logrotate guide](https://betterstack.com/community/guides/logging/how-to-manage-log-files-with-logrotate-on-ubuntu-20-04/)
+

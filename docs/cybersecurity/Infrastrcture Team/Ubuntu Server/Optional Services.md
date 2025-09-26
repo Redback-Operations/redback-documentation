@@ -81,3 +81,4 @@ The **`netstat`** command displays active connections, routing tables, interface
 sudo netstat -tuln | grep :389
 ```
 This output confirms that **port 389** is open and listening for both IPv4 and IPv6 traffic, validating that the LDAP service is available and functional.
+

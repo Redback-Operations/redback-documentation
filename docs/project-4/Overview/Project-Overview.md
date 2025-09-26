@@ -25,3 +25,4 @@ This knowledge will amplify performance standards in various sports.
 
 ## Conclusion
 In essence, Project Orion seeks to mirror the guiding brilliance of its celestial counterpart, aspiring to illuminate the sports technology landscape with innovative strategies focused on athlete safety and performance enhancement. This venture is poised to redefine the frontiers of technological applications in sports, positioning Project Orion as a pioneer and a source of inspiration in its field.
+

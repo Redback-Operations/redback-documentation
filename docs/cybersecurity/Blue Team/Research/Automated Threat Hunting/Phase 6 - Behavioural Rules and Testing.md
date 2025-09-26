@@ -129,3 +129,4 @@ This configuration raises the threshold for triggering the rule and lowers its a
 
 With noise suppression and enrichment functioning, your Wazuh-based threat detection pipeline becomes significantly more efficient, contextual, and actionable.
 
+

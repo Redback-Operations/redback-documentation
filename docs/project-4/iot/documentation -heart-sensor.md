@@ -294,3 +294,4 @@ Restart both the Wahoo TICKR and Arduino Nano 33 IoT to reset connections.
 
 ## Video Tutorial
 For a video tutorial, watch [this YouTube video](https://youtu.be/X6fjwMR9INM).
+

@@ -69,3 +69,4 @@ Displays the best and worst exercise forms with corresponding strain graphs.
 
 ## Conclusion
 This project provides a comprehensive solution for pose estimation and strain analysis in fitness applications. It can be applied to sports analytics, personal training, and rehabilitation.
+

@@ -184,3 +184,4 @@ Finally, referring to the general governance points, there should be regular ris
 After the audit, a few more questions were asked to gain a better understanding of the direction that the Data Warehousing team aims to take.
 
 Kaylin ended by saying that he and his team “want to have governance and the correct security in place to be an elite team, and an elite project”. He wants their service to be a “self-service for employees”, and to have cloud storage and access to make it easier to “provide a service to the rest of the projects as somewhere that they can store and access their data”.
+

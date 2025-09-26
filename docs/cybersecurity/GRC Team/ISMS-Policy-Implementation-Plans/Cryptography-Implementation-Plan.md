@@ -82,3 +82,4 @@ sidebar_label: Cryptography Implementation Plan 2024
     - [VeraCrypt](https://sourceforge.net/projects/veracrypt/)
     - [AxCrypt Pricing](https://axcrypt.net/pricing/)
     - [NordLocker](https://nordlocker.com)
+

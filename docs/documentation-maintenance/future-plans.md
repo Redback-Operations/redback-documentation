@@ -30,3 +30,4 @@ Create more sophisticated, easier to understand tutorials. As well as more advan
 ### Homepage Revamp
 
 Currently the homepage is using the default Docusaurus template, Redback should utilise the skills on offer to make this more appealing.
+

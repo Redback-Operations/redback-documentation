@@ -29,3 +29,4 @@ The full report and vulnerability spreadsheet can be found in the Redback Sharep
 - Consider configuring the scanner to block pull requests if **critical or high severity vulnerabilities** are detected.
 - Future reviews should incorporate both dependency and container scanning.
 - Project teams should be supported with remediation guidance and patching strategies.
+

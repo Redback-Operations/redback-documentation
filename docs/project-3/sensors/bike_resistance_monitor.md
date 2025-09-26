@@ -43,3 +43,4 @@ This device is designed to attach to the front of a bicycle, aimed at estimating
 
 - Ideal for road cyclists, triathletes, and cycling teams focused on performance optimization.
 - Useful in both training and competitive environments, particularly in time trials and triathlons where aerodynamics play a crucial role.
+

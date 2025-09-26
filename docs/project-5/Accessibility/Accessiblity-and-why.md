@@ -55,3 +55,4 @@ To ensure accessibility is part of the design, Bugbox can take several steps:
 
 Accessibility is an essential part of Bugbox’s goal to make STEM education engaging and open to all students. By ensuring the platform is easy to use for everyone, Bugbox helps students develop the skills they need to succeed in a technology-driven world. Accessibility doesn’t just benefit students with disabilities; it improves the overall experience for everyone, making Bugbox a more inclusive and innovative place to learn. In the end, accessibility is a core value that supports Bugbox’s mission to inspire the next generation of creators. 
 
+

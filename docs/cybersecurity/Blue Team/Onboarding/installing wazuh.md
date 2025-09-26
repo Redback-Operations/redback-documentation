@@ -106,3 +106,4 @@ You should see Wazuh Manager, Wazuh Indexer, and Wazuh Dashboard all showing as 
    ## Reference
    https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html#single-node-stack
    
+

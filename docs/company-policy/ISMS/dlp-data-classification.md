@@ -111,3 +111,4 @@ Moreover, regular audits can take place to assess how effective the policies reg
 ## Conclusion
 To conclude, if all DLP and Data Classification policies that are listed in this document are always adhered to, the safety and integrity of data collected and stored by Redback Operations is guaranteed.
 Though regular audits should take place to actively review all policies being followed, to counteract emerging technologies and potential risks that may threaten our data.
+

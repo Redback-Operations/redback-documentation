@@ -129,3 +129,4 @@ This completes the setup of the MQTT temperature monitoring plugin in Nagios. Yo
 
 
 
+

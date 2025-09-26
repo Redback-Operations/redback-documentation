@@ -39,3 +39,4 @@ The device is designed for runners, providing actionable insights into core body
 
 8. **Water Resistance:**
    - Water-resistant up to 50 meters, suitable for training in various weather conditions and cross-training activities.
+

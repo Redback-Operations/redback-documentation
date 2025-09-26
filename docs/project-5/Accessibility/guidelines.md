@@ -224,3 +224,4 @@ Regular testing with real users and tools ensures your app remains accessible an
 ## Conclusion
 
 By following these accessibility guidelines, you can make your application more inclusive and usable for users with various disabilities. Consistently testing, incorporating feedback, and adhering to WCAG 2.1 standards will ensure your app is accessible, user-friendly, and compliant with legal requirements.
+

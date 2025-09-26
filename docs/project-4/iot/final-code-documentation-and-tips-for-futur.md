@@ -125,3 +125,4 @@ Here are some crucial aspects to consider when integrating various sensors into 
 ![Data Flow Diagram](img/Data-Flow_diagram.png)
 
 Integrating multiple sensors into a single system offers both challenges and rewards. By addressing specific issues such as overlapping time intervals, BLE disconnections, and power supply management, the final system provides a robust platform for collecting and processing sensor data. This project serves as a valuable lesson in hardware integration, software optimization, and practical application of sensor technology.
+
