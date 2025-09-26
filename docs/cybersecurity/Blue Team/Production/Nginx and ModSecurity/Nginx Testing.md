@@ -5,7 +5,7 @@ sidebar_position: 3
 # Nginx Testing - Trimester 2 2025
 
 :::info
-**Document Creation:** 10 Sept., 2025. **Last Edited:** 10 Sept., 2025. **Authors:** Robin Spoerl.
+**Document Creation:** 10 Sept., 2025. **Last Edited:** 15 Sept., 2025. **Authors:** Robin Spoerl., Susmitha Gogireddy.
 :::
 
 ## 1. Introduction
@@ -13,6 +13,8 @@ sidebar_position: 3
 This document covers which web apps are proxied in the VM, and which were tested locally. This document is designed as a guide for other teams to refer to in the future. 
 
 As ModSecurity is currently set to passively monitor traffic, it will not impact the testing of any web apps. The main focus of this document is, therefore, on Nginx. 
+
+Kafka has been integrated into the VM by adding a proxy location block within the nginx.conf file. This redirection maps requests from the /kafka/ path to the underlying Kafka service running on its port.
 
 ## 2. Scope
 
@@ -22,6 +24,8 @@ Given the large number of web interfaces across the VM, the initial scope of thi
 - Wazuh dashboard
 - MinIO object storage
 - Dremio interface
+- Kafka endpoint
+- Grafana endpoint
 
 ## 3. Tested Web Apps
 
@@ -82,3 +86,38 @@ One thing that has been tested is manually replacing the locations of resources 
 
 ![Dremio config](img-proxy/dremio.png)
 
+### 3.5 Kafka endpoint
+
+This is the nginx.conf location block for Kafka. The block proxies requests from the /kafka/ subpath to the Kafka REST Proxy (via the kafka-ui container), which runs internally on port 8081. To ensure compatibility, modsecurity has been disabled for this block, as the Kafka UI makes REST calls that would otherwise trigger unnecessary alerts.
+
+![Kafka config](img-proxy/kafka.png)
+
+Kafka is now accessible via the reverse proxy at https://redback.it.deakin.edu.au/kafka/
+instead of connecting directly over its internal port. The configuration also includes headers for forwarding client information and supports WebSocket upgrades, which are required for the UI to function correctly.
+
+### 3.6 Grafana endpoint
+
+Grafana has been placed behind the reverse proxy on a /grafana/ subpath. The relevant nginx.conf location block ensures that both standard HTTP requests and WebSocket upgrades are supported, as Grafana relies heavily on persistent connections for its dashboards. To avoid excessive false positives from frequent API calls, ModSecurity has been disabled for this block.
+
+A common point of confusion is the difference between images and containers:
+
+Running docker images shows images (blueprints).
+
+Running docker ps shows containers (actual running instances).
+
+docker exec only works on containers, not images. That’s why using an image ID such as 5c42a1c2e40b fails — you must use the container ID or container name from docker ps.
+
+Inside the running Grafana container, the grafana.ini file was updated to work correctly behind the reverse proxy:
+
+[Grafana ini](img-proxy/grafanaini.png)
+
+root_url ensures that Grafana generates all resource links with the /grafana/ base path.
+
+serve_from_sub_path tells Grafana to expect incoming requests under this path, aligning with the Nginx reverse proxy setup.
+
+[Grafana](img-proxy/grafana.png)
+
+Grafana is now accessible via:
+https://redback.it.deakin.edu.au/monitor/
+
+This configuration means Grafana is only usable via the reverse proxy. Direct access to the container’s internal port will result in broken links and missing resources, since all requests must include the /grafana/ subpath.
