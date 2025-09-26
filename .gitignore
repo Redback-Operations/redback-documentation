@@ -22,3 +22,8 @@ package-lock.json
 package.json
 yarn.lock
 package-lock.json
+
+__pycache__/
+*.pyc
+*.pyo
+
