@@ -1,9 +1,3 @@
-```
----
-sidebar_position: 5
----
-```
-
 # AFL Player Tracking & Crowd Monitoring System
 ## Complete Technical Documentation
 
@@ -42,8 +36,8 @@ sidebar_position: 5
 
 The **AFL Player Tracking and Crowd Monitoring System** is an advanced AI-powered platform designed to enhance safety, analytics, and performance insights during Australian Football League (AFL) matches. The system leverages state-of-the-art computer vision, deep learning, and real-time analytics through **two independent AI processing pipelines**:
 
-1. **Player Tracking Logic**: GPU-accelerated YOLOv11 and ByteTrack algorithms for multi-player detection, tracking, and performance analytics
-2. **Crowd Monitoring Logic**: Automated crowd density analysis and safety monitoring through person detection and heatmap generation
+1. ** Player Tracking Logic**: GPU-accelerated YOLOv11 and ByteTrack algorithms for multi-player detection, tracking, and performance analytics
+2. ** Crowd Monitoring Logic**: Automated crowd density analysis and safety monitoring through person detection and heatmap generation usign LISA
 
 Both pipelines integrate seamlessly through a unified dashboard, providing comprehensive monitoring capabilities for coaches, analysts, and stadium safety teams.
 
@@ -73,10 +67,10 @@ Both pipelines integrate seamlessly through a unified dashboard, providing compr
 
 **Player Tracking Benefits:**
 - **Performance Optimization**: Data-driven training regimens based on distance, speed, and movement patterns
-- ** Injury Prevention**: Workload monitoring to prevent player fatigue and overexertion
+- **Injury Prevention**: Workload monitoring to prevent player fatigue and overexertion
 - **Competitive Analysis**: Detailed movement analytics for tactical advantage
 - **Coaching Efficiency**: Automated statistics reduce manual video analysis time by 80%
-- ** Player Development**: Track individual progress over time with historical data
+- **Player Development**: Track individual progress over time with historical data
 
 **Crowd Monitoring Benefits:**
 - **Enhanced Stadium Safety**: Real-time crowd density alerts prevent overcrowding incidents
@@ -126,7 +120,7 @@ The system follows a **microservices architecture** with three primary tiers and
 │  │ Tracking Microservice (FastAPI)  │  │ External Crowd API (ngrok)       ││
 │  │ Port 8001 | GPU-Accelerated      │  │ External Service Integration     ││
 │  ├──────────────────────────────────┤  ├──────────────────────────────────┤│
-│  │  YOLOv11 Object Detection       │  │    Person Detection               ││
+│  │  YOLOv11 Object Detection       │  │  Person Detection               ││
 │  │  ByteTrack Multi-Object Tracking│  │  Crowd Density Analysis         ││
 │  │  Player Speed & Distance Calc   │  │  Density Heatmap Generation     ││
 │  │  Movement Heatmap Generation    │  │  People Count Per Frame         ││
@@ -195,7 +189,7 @@ Zone Analysis (Back 50, Midfield, Forward 50)
 Analytics JSON + CSV Export
 ```
 
-**Pipeline 2: Crowd Monitoring Logic** 
+**Pipeline 2: Crowd Monitoring Logic** 👥
 ```
 Video Input
     ↓
@@ -596,69 +590,7 @@ The main backend acts as an API gateway:
 
 ## 6. Database Design
 
-### 6.1 Database Schema
-
-#### Entity-Relationship Diagram
-
-```
-┌─────────────┐
-│   Users     │
-├─────────────┤
-│ id (PK)     │
-│ email       │
-│ hashed_pwd  │
-│ is_active   │
-│ created_at  │
-└─────────────┘
-      │
-      │ 1:N
-      ▼
-┌──────────────┐
-│  Uploads     │
-├──────────────┤
-│ id (PK)      │◄──────────┐
-│ user_id (FK) │           │
-│ path         │           │ 1:N
-│ media_type   │           │
-│ size_bytes   │           │
-│ filename     │           │
-│ created_at   │           │
-└──────────────┘           │
-      │                    │
-      │ 1:N                │
-      ▼                    │
-┌─────────────────┐        │
-│  Inferences     │        │
-├─────────────────┤        │
-│ id (PK)         │        │
-│ user_id (FK)    │        │
-│ upload_id (FK)  │────────┘
-│ task            │  (CASCADE DELETE)
-│ status          │
-│ payload (JSONB) │
-│ created_at      │
-└─────────────────┘
-      │
-      │ upload_id
-      ▼
-┌─────────────────────┐   ┌──────────────────────┐
-│  PlayerAnalysis     │   │  CrowdAnalysis       │
-├─────────────────────┤   ├──────────────────────┤
-│ id (PK)             │   │ id (PK)              │
-│ upload_id (FK)      │   │ upload_id (FK)       │
-│ player_id           │   │ frame_number         │
-│ json_path           │   │ people_count         │
-│ heatmap_path        │   │ frame_image_path     │
-│ team_heatmap_path   │   │ heatmap_image_path   │
-│ zone_back_50_path   │   │ created_at           │
-│ zone_midfield_path  │   └──────────────────────┘
-│ zone_forward_50_path│
-│ stats (JSONB)       │
-│ created_at          │
-└─────────────────────┘
-```
-
-### 6.2 Table Definitions
+### 6.1 Table Definitions
 
 #### Users Table
 ```sql
@@ -760,7 +692,7 @@ CREATE INDEX idx_crowd_analysis_upload_id ON crowd_analysis(upload_id);
 **Purpose**: Store crowd density analysis per frame
 **Sampling**: Every 30th frame for performance
 
-### 6.3 Data Access Patterns
+### 6.2 Data Access Patterns
 
 #### Storage Helper Functions
 
@@ -1265,21 +1197,30 @@ file: <video.mp4>
 
 ### 9.2 Password Security
 
+
 **Hashing Algorithm**: bcrypt with PassLib
 - **Rounds**: 12 (default)
 - **Salt**: Automatically generated per password
 - **Verification**: Constant-time comparison
 
 ```python
+# ⚠️ EXAMPLE CODE ONLY - NOT PRODUCTION CODE
 from passlib.context import CryptContext
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-# Registration
-hashed = pwd_context.hash(plain_password)
+# Registration - hash user's password before storing
+hashed = pwd_context.hash(plain_password)  # Variable from user input
 
-# Login
-is_valid = pwd_context.verify(plain_password, hashed_password)
+# Login - verify against stored hash
+is_valid = pwd_context.verify(plain_password, hashed_password)  # Variables, not hardcoded
 ```
+
+**Security Best Practices**:
+- Never store plain-text passwords
+- Always use bcrypt or Argon2 for password hashing
+-  Use minimum 12 rounds (current default)
+-  Implement rate limiting on login attempts
+-  Enforce strong password policies (8+ chars, mixed case, numbers)
 
 ### 9.3 OAuth Integration
 
@@ -1310,13 +1251,21 @@ is_valid = pwd_context.verify(plain_password, hashed_password)
 
 **Environment Variables**:
 ```bash
-GOOGLE_CLIENT_ID=your-client-id
-GOOGLE_CLIENT_SECRET=your-client-secret
-APPLE_CLIENT_ID=your-services-id
-APPLE_TEAM_ID=your-team-id
-APPLE_KEY_ID=your-key-id
-APPLE_PRIVATE_KEY=your-private-key
+#  PLACEHOLDER VALUES - REPLACE WITH ACTUAL CREDENTIALS
+# DO NOT COMMIT THESE TO VERSION CONTROL
+GOOGLE_CLIENT_ID=your-client-id                    # Replace with actual Google Client ID
+GOOGLE_CLIENT_SECRET=your-client-secret            # Replace with actual secret from Google Console
+APPLE_CLIENT_ID=your-services-id                   # Replace with actual Apple Services ID
+APPLE_TEAM_ID=your-team-id                         # Replace with actual Apple Team ID
+APPLE_KEY_ID=your-key-id                           # Replace with actual Apple Key ID
+APPLE_PRIVATE_KEY=your-private-key                 # Replace with actual private key content
 ```
+
+** SECURITY CRITICAL**:
+- Never commit OAuth secrets to Git repositories
+- Use environment variables or secret managers (AWS Secrets Manager, Azure Key Vault)
+-  Rotate credentials regularly (every 90 days recommended)
+-  Use different credentials for dev/staging/production environments
 
 ### 9.4 Authorization
 
@@ -1327,18 +1276,27 @@ APPLE_PRIVATE_KEY=your-private-key
 
 **Authorization Check**:
 ```python
+# ⚠️ SIMPLIFIED EXAMPLE - Production code includes error handling
 def get_current_user(token: str = Depends(oauth2_scheme)) -> int:
-    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+    # token parameter comes from Authorization header, not hardcoded
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])  # SECRET_KEY from environment
     user_id = payload.get("sub")
     return int(user_id)
 
-# In endpoint
+# In endpoint - demonstrates authorization pattern
 @router.post("/inference/player/track")
 async def run_player_track(req: Request, user_id: int = Depends(get_current_user)):
     rec = get_upload(req.id)
+    # Verify user owns the resource
     if rec["user_id"] != user_id:
         raise HTTPException(status_code=403, detail="Not authorized")
 ```
+
+**Authorization Best Practices**:
+-  Validate user ownership on every protected endpoint
+-  Use dependency injection (Depends) for clean code
+-  Return 403 Forbidden (not 404) to prevent information leakage
+-  Log authorization failures for security monitoring
 
 ### 9.5 Security Best Practices
 
@@ -1623,6 +1581,17 @@ pnpm dev  # Runs on port 8080
 ```
 
 
+**Components**:
+- **CDN**: Cloudflare/AWS CloudFront for static assets
+- **Load Balancer**: NGINX or AWS ALB
+- **Frontend Containers**: Docker with NGINX serving built SPA
+- **Backend Containers**: Docker with Uvicorn + Gunicorn workers
+- **Tracking Service**: GPU-enabled instance (AWS P3/P4, GCP A100)
+- **Database**: Managed PostgreSQL (AWS RDS, GCP Cloud SQL)
+- **Object Storage**: S3/GCS for videos and heatmaps
+- **Monitoring**: Prometheus + Grafana
+- **Logging**: ELK Stack (Elasticsearch, Logstash, Kibana)
+
 ### 12.2 Docker Configuration
 
 **Backend Dockerfile**:
@@ -1745,18 +1714,26 @@ cd afl-player-tracking/Player_Tracking/afl_player_tracking_and_crowd_monitoring
 
 #### Step 2: Database Setup
 ```bash
-# Option A: Docker (Recommended)
+# ⚠️ DEVELOPMENT ONLY - Use strong passwords in production!
+# Option A: Docker (Recommended for Development)
 docker run --name afl-postgres \
   -e POSTGRES_USER=postgres \
-  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_PASSWORD=postgres \        # ⚠️ CHANGE IN PRODUCTION!
   -e POSTGRES_DB=aflvision \
   -p 5432:5432 \
   -d postgres:15
 
-# Option B: Local PostgreSQL
+# Option B: Local PostgreSQL Installation
 # Install PostgreSQL 15 and create database
 createdb aflvision
 ```
+
+** PRODUCTION SECURITY**:
+-  Never use default passwords like 'postgres' in production
+-  Generate strong passwords: `openssl rand -base64 32`
+-  Use secret management tools (Docker secrets, Kubernetes secrets)
+-  Restrict PostgreSQL network access (localhost only or VPC)
+-  Enable SSL/TLS for database connections
 
 #### Step 3: Backend Setup
 ```bash
@@ -1778,12 +1755,22 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 
 # Create .env file
+# ⚠️ IMPORTANT: Replace placeholder values with actual secure credentials!
 echo DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5432/aflvision > .env
-echo JWT_SECRET=your-super-secret-key-change-in-production >> .env
+echo JWT_SECRET=your-super-secret-key-change-in-production >> .env  # ⚠️ GENERATE SECURE KEY!
+
+# 🔒 GENERATE SECURE JWT SECRET:
+# python -c "import secrets; print(secrets.token_urlsafe(32))"
 
 # Run backend
 uvicorn main:app --reload --port 8000
 ```
+
+**SECURITY CHECKLIST**:
+- [ ] Replace JWT_SECRET with cryptographically secure random string (32+ bytes)
+- [ ] Update database password if not using default
+- [ ] Ensure .env is in .gitignore (never commit secrets!)
+- [ ] Use different secrets for dev/staging/production
 
 **Verify Backend**:
 - Open http://127.0.0.1:8000 → Should see welcome message
@@ -1849,24 +1836,42 @@ Contact the crowd monitoring team for the current API endpoint.
 
 ### 13.3 Environment Variables Reference
 
+** CRITICAL SECURITY NOTE**: 
+- All values below are **PLACEHOLDERS** - replace with actual credentials
+- **NEVER** commit .env files to version control
+- Use `.gitignore` to exclude .env files
+- Rotate secrets regularly (every 90 days)
+
 **Backend (.env)**:
 ```bash
-# Database
-DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5432/aflvision
+# Database -  Use strong password in production!
+DATABASE_URL=postgresql+psycopg2://postgres:STRONG_PASSWORD_HERE@localhost:5432/aflvision
 
-# Authentication
-JWT_SECRET=change-this-to-a-secure-random-string
+# Authentication -  MUST be changed! Generate with: python -c "import secrets; print(secrets.token_urlsafe(32))"
+JWT_SECRET=REPLACE_WITH_CRYPTOGRAPHICALLY_SECURE_RANDOM_STRING_32_BYTES_MINIMUM
 
-# OAuth (Optional)
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-APPLE_CLIENT_ID=your-apple-client-id
-APPLE_TEAM_ID=your-apple-team-id
-APPLE_KEY_ID=your-apple-key-id
-APPLE_PRIVATE_KEY=your-apple-private-key
+# OAuth (Optional) -  Obtain from Google Cloud Console and Apple Developer Portal
+GOOGLE_CLIENT_ID=your-actual-google-client-id-from-console
+GOOGLE_CLIENT_SECRET=your-actual-google-client-secret-from-console
+APPLE_CLIENT_ID=your-actual-apple-services-id
+APPLE_TEAM_ID=your-actual-apple-team-id
+APPLE_KEY_ID=your-actual-apple-key-id
+APPLE_PRIVATE_KEY=your-actual-apple-private-key-content
 
-# Services
+# Services (Development URLs shown)
 PLAYER_SVC_URL=http://127.0.0.1:8001
+```
+
+**How to Generate Secure Secrets**:
+```bash
+# JWT Secret (Python)
+python -c "import secrets; print(secrets.token_urlsafe(32))"
+
+# JWT Secret (OpenSSL)
+openssl rand -base64 32
+
+# Database Password
+openssl rand -base64 24
 ```
 
 **Tracking Service**:
@@ -1881,21 +1886,25 @@ VITE_API_URL=http://127.0.0.1:8000
 
 ### 13.4 Testing the Installation
 
+** TESTING ONLY**: The credentials below are for local testing. Never use these in production!
+
 ```bash
 # 1. Test backend health
 curl http://127.0.0.1:8000/
 
-# 2. Register a user
+# 2. Register a test user ( Use test credentials only!)
 curl -X POST http://127.0.0.1:8000/api/v1/auth/register \
   -H "Content-Type: application/json" \
   -d '{"email":"test@example.com","password":"testpass123"}'
+  #  Example credentials - replace with your test account
 
-# 3. Login
+# 3. Login with test credentials
 curl -X POST http://127.0.0.1:8000/api/v1/auth/login \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "username=test@example.com&password=testpass123"
+  #  Example credentials - replace with your test account
 
-# 4. Upload a video (use token from step 3)
+# 4. Upload a video (replace YOUR_TOKEN with actual JWT from step 3)
 curl -X POST http://127.0.0.1:8000/api/v1/uploads/video \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -F "file=@path/to/video.mp4"
@@ -1903,6 +1912,12 @@ curl -X POST http://127.0.0.1:8000/api/v1/uploads/video \
 # 5. Test tracking service
 curl http://127.0.0.1:8001/
 ```
+
+**Testing Best Practices**:
+-  Use separate test accounts (don't test with production credentials)
+- Create a test database for development
+-  Clear test data regularly
+-  Never test payment or sensitive operations with real data
 
 ---
 
@@ -2099,7 +2114,7 @@ pnpm typecheck
 
 **Test Cases**:
 ```python
-# Example: Authentication test
+# ⚠️ TEST CODE EXAMPLE - Uses mock/test data only
 import pytest
 from fastapi.testclient import TestClient
 from main import app
@@ -2107,20 +2122,29 @@ from main import app
 client = TestClient(app)
 
 def test_register_user():
+    # ⚠️ Test credentials - not real accounts
     response = client.post(
         "/api/v1/auth/register",
-        json={"email": "test@example.com", "password": "testpass123"}
+        json={"email": "test@example.com", "password": "testpass123"}  # Test data
     )
     assert response.status_code == 200
     assert "access_token" in response.json()
 
 def test_login_invalid_credentials():
+    # Testing failure case with intentionally wrong credentials
     response = client.post(
         "/api/v1/auth/login",
-        data={"username": "wrong@example.com", "password": "wrongpass"}
+        data={"username": "wrong@example.com", "password": "wrongpass"}  # Invalid test data
     )
     assert response.status_code == 401
 ```
+
+**Testing Security Best Practices**:
+- ✅ Use test database (not production database)
+- ✅ Mock external API calls (don't hit real services)
+- ✅ Clean up test data after tests complete
+- ✅ Use fixtures for consistent test data
+- ✅ Never commit test credentials to repositories
 
 **Run Tests**:
 ```bash
@@ -2276,7 +2300,259 @@ pytest --cov=. --cov-report=html
 
 ---
 
-## Appendix A: Glossary
+## Appendix A: Security Guidelines & OWASP Compliance
+
+### A.1 OWASP Top 10 Mitigation Strategies
+
+This section addresses how the system mitigates OWASP Top 10 security risks:
+
+#### A01: Broken Access Control
+**Mitigation**:
+-  JWT token validation on every protected endpoint
+-  User ownership verification (user can only access own uploads)
+-  Foreign key constraints enforce data ownership
+-  HTTP 403 responses prevent information leakage
+- Dependency injection pattern for clean authorization
+
+#### A02: Cryptographic Failures
+**Mitigation**:
+-  bcrypt password hashing (12 rounds minimum)
+-  JWT tokens with HS256 algorithm
+-  Automatic salt generation per password
+-  No plain-text password storage
+- HTTPS required in production
+-  Environment variables for secrets (never hardcoded)
+
+#### A03: Injection
+**Mitigation**:
+-  SQLAlchemy ORM prevents SQL injection
+-  Parameterized queries (never string concatenation)
+-  Pydantic validation on all API inputs
+-  Type checking with TypeScript (frontend)
+-  FastAPI automatic input validation
+
+#### A04: Insecure Design
+**Mitigation**:
+-  Authentication required for all sensitive operations
+- Separation of concerns (microservices)
+-  Rate limiting recommended for production
+-  Cascade delete rules prevent orphaned data
+- Comprehensive error handling
+
+#### A05: Security Misconfiguration
+**Production Requirements**:
+-  Change all default passwords
+- Generate secure JWT_SECRET (32+ bytes)
+-  Enable HTTPS/TLS
+-  Configure CORS with specific origins
+-  Disable debug mode in production
+-  Set secure cookie flags
+-  Regular dependency updates
+
+#### A06: Vulnerable and Outdated Components
+**Mitigation Strategy**:
+-  Pinned dependency versions (requirements.txt, package.json)
+-  Regular security audits (`npm audit`, `pip-audit`)
+-  Automated dependency updates (Dependabot recommended)
+- LTS versions of core technologies
+
+#### A07: Identification and Authentication Failures
+**Mitigation**:
+- JWT tokens with 60-minute expiration
+- bcrypt password hashing
+-  OAuth integration (Google, Apple)
+-  Email uniqueness constraint
+-  Implement MFA for production (recommended)
+-  Account lockout after failed attempts (recommended)
+
+#### A08: Software and Data Integrity Failures
+**Mitigation**:
+-  JWT signature verification
+- Foreign key constraints
+- Transaction support (ACID)
+-  Input validation with Pydantic
+-  Implement checksums for uploaded files (recommended)
+
+#### A09: Security Logging and Monitoring Failures
+**Recommendations**:
+-  Implement centralized logging (ELK stack)
+-  Log authentication failures
+-  Monitor authorization denials
+-  Alert on suspicious patterns
+- Regular security audit reviews
+
+#### A10: Server-Side Request Forgery (SSRF)
+**Mitigation**:
+- Whitelist for external API URLs
+-  No user-controlled URLs in requests
+-  Network isolation for microservices
+-  Implement URL validation (recommended)
+
+### A.2 Secret Management Best Practices
+
+#### Development Environment
+```bash
+# Use .env files (NEVER commit to Git)
+# .env
+DATABASE_URL=postgresql://user:SECURE_PASSWORD@localhost:5432/db
+JWT_SECRET=CRYPTOGRAPHICALLY_RANDOM_STRING_32_BYTES_MINIMUM
+```
+
+#### Production Environment
+**DO NOT use .env files in production!**
+
+**Option 1: AWS Secrets Manager**
+```python
+import boto3
+import json
+
+def get_secret(secret_name):
+    client = boto3.client('secretsmanager', region_name='us-east-1')
+    response = client.get_secret_value(SecretId=secret_name)
+    return json.loads(response['SecretString'])
+
+# Usage
+secrets = get_secret('afl-vision/production')
+JWT_SECRET = secrets['JWT_SECRET']
+```
+
+**Option 2: Azure Key Vault**
+```python
+from azure.identity import DefaultAzureCredential
+from azure.keyvault.secrets import SecretClient
+
+credential = DefaultAzureCredential()
+client = SecretClient(vault_url="https://afl-vision.vault.azure.net", credential=credential)
+JWT_SECRET = client.get_secret("JWT-SECRET").value
+```
+
+**Option 3: Kubernetes Secrets**
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: afl-vision-secrets
+type: Opaque
+stringData:
+  JWT_SECRET: <base64-encoded-secret>
+  DATABASE_PASSWORD: <base64-encoded-password>
+```
+
+### A.3 Password Security Policy
+
+**Minimum Requirements** (Recommended for Production):
+- Minimum length: 12 characters
+- At least one uppercase letter
+- At least one lowercase letter
+- At least one number
+- At least one special character
+- Not in common password dictionary
+- Not similar to username/email
+
+**Implementation Example**:
+```python
+import re
+from passlib.context import CryptContext
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+def validate_password_strength(password: str) -> tuple[bool, str]:
+    """Validate password meets security requirements."""
+    if len(password) < 12:
+        return False, "Password must be at least 12 characters"
+    if not re.search(r"[A-Z]", password):
+        return False, "Password must contain uppercase letter"
+    if not re.search(r"[a-z]", password):
+        return False, "Password must contain lowercase letter"
+    if not re.search(r"\d", password):
+        return False, "Password must contain number"
+    if not re.search(r"[!@#$%^&*(),.?\":{}|<>]", password):
+        return False, "Password must contain special character"
+    return True, "Password is strong"
+```
+
+### A.4 API Security Checklist
+
+**Before Production Deployment**:
+- [ ] All API endpoints require authentication (except /register, /login)
+- [ ] Rate limiting configured (recommended: 100 requests/minute per IP)
+- [ ] CORS restricted to specific origins
+- [ ] Input validation on all endpoints (Pydantic models)
+- [ ] Output sanitization prevents XSS
+- [ ] File upload size limits enforced (max 100MB)
+- [ ] File type validation (only mp4, avi, mov allowed)
+- [ ] SQL injection prevented (ORM only)
+- [ ] HTTPS/TLS enabled
+- [ ] Security headers configured:
+  - `X-Content-Type-Options: nosniff`
+  - `X-Frame-Options: DENY`
+  - `X-XSS-Protection: 1; mode=block`
+  - `Strict-Transport-Security: max-age=31536000`
+  - `Content-Security-Policy` defined
+
+### A.5 Penetration Testing Recommendations
+
+**Before Production Launch**:
+1. **Automated Scanning**:
+   - OWASP ZAP scan
+   - Burp Suite Professional
+   - Nessus vulnerability scan
+
+2. **Manual Testing**:
+   - Authentication bypass attempts
+   - Authorization escalation attempts
+   - SQL injection testing
+   - XSS testing
+   - CSRF testing
+   - File upload attacks
+   - API fuzzing
+
+3. **Third-Party Audit**:
+   - Professional penetration testing firm
+   - OWASP ASVS Level 2 compliance
+   - Annual security audits
+
+### A.6 Incident Response Plan
+
+**Security Incident Detected**:
+1. **Immediate Actions**:
+   - Isolate affected systems
+   - Preserve logs and evidence
+   - Notify security team
+   - Document timeline
+
+2. **Investigation**:
+   - Identify attack vector
+   - Assess data exposure
+   - Determine scope of compromise
+
+3. **Remediation**:
+   - Patch vulnerabilities
+   - Rotate all secrets
+   - Reset compromised passwords
+   - Update security controls
+
+4. **Communication**:
+   - Notify affected users
+   - Report to regulatory bodies (if required)
+   - Document lessons learned
+
+### A.7 Security Contact Information
+
+**Reporting Security Issues**:
+- Email: security@your-organization.com
+- Encrypted: PGP Key ID: [Your Key ID]
+- Bug Bounty: [Program URL if applicable]
+
+**Response Time**:
+- Critical: 4 hours
+- High: 24 hours
+- Medium: 72 hours
+- Low: 1 week
+
+---
+
+## Appendix B: Glossary
 
 **AFL**: Australian Football League
 
@@ -2328,7 +2604,7 @@ pytest --cov=. --cov-report=html
 
 ---
 
-## Appendix B: Troubleshooting
+## Appendix C: Troubleshooting
 
 ### Common Issues
 
@@ -2372,7 +2648,7 @@ Solution:
 
 ---
 
-## Appendix C: API Quick Reference
+## Appendix D: API Quick Reference
 
 | Endpoint | Method | Auth | Description |
 |----------|--------|------|-------------|
@@ -2387,9 +2663,11 @@ Solution:
 | `/api/v1/analysis/crowd/{upload_id}` | GET | Yes | Get crowd data |
 
 ---
-
-
-
 **End of Technical Documentation**
+
 *For updates and corrections, please submit a pull request to the documentation repository.*
+
+
+---
+
 
