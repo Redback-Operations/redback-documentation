@@ -1,3 +1,9 @@
+```
+---
+sidebar_position: 5
+---
+```
+
 # AFL Player Tracking & Crowd Monitoring System
 ## Complete Technical Documentation
 
