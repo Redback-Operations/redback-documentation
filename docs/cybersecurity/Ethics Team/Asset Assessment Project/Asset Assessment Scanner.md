@@ -1,6 +1,6 @@
 # Asset Assessment Scanner – Stakeholder Handover Document
 **Ethics Team – Asset Assessment Scanner**  
-Prepared by: Belle Mattioli (September 2025)
+Prepared by: Belle Mattioli & Olivia Nugara (September- October 2025)
 
 ---
 
