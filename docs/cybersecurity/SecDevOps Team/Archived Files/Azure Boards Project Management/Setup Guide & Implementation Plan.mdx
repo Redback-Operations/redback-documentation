@@ -1,0 +1,300 @@
+---
+sidebar_position: 5
+sidebar_label: Setup Guide & Implementation Plan
+title: Setup Guide & Implementation Plan
+description: Azure Boards Design & Usage Guidelines for Redback Operations
+---
+<div style={{ width: '100%' }}>
+  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+    <thead>
+      <tr>
+        <th style={{ width: '20%', textAlign: 'center' }}>Version</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Modified By</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Approver</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Date</th>
+        <th style={{ width: '20%', textAlign: 'center' }}>Changes made</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style={{ textAlign: 'center' }}>V1.0</td>
+        <td style={{ textAlign: 'center' }}>Daniel McAulay</td>
+        <td style={{ textAlign: 'center' }}>Daniel McAulay</td>
+        <td style={{ textAlign: 'center' }}>17/09/2024</td>
+        <td style={{ textAlign: 'center' }}>Document Creation</td>
+      </tr>
+      <tr>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+      </tr>
+      <tr>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+      </tr>
+      <tr>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+      </tr>
+      <tr>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+        <td style={{ textAlign: 'center' }}></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+## 7. Implementation Plan
+
+The Implementation Plan outlines the step-by-step process for setting up Azure Boards for future Redback Operations project teams. This plan is designed as a blueprint for designing/creating your own project team, sub-teams, boards and integrations etc.
+
+While this implementation plan is designed for the Redback Cyber Security team, other project teams can follow these instructions and modify the relevant steps for their own purposes.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### Step 1: Initial Setup and Project Creation
+
+1.  **Create the Azure Boards Project:**
+
+    -   Set up the project named **Redback Operations Cyber Security Team**.
+
+    -   Choose **Git** for version control and **Agile** for the work item process.
+
+    -   Keep the project visibility **Private** until the structure and permissions are fully configured.
+
+2.  **Define Area Paths for Sub-Teams:**
+
+    -   Create area paths under **Project Settings** \> **Areas** for:
+
+        -   SecDevOps
+
+        -   Blue Team
+
+        -   Infrastructure Team
+
+        -   Red Team
+
+        -   GRC Team
+
+    -   This ensures tasks are organized and aligned with each team's specific responsibilities.
+
+3.  **Assign Teams to Area Paths:**
+
+    -   Create separate teams for each sub-group in **Project Settings** \> **Teams**.
+
+    -   Assign each team to the corresponding area path to give them autonomy in managing their tasks, while maintaining visibility across the organization.
+
+4.  **Permissions and Access Control:**
+
+    -   Grant access based on the role and team assignment, ensuring only authorized team members can access their specific areas.
+
+    -   Review **role-based access control (RBAC)** policies to maintain data security and ensure proper task visibility within and across teams.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### Step 2: Configure Boards for Each Sub-Team
+
+1.  **Create Custom Boards for Each Team:**
+
+    -   Configure custom boards for each team to reflect their workflows.
+
+    -   Columns to include: **To Do**, **In Progress**, **Review**, and **Done**.
+
+    -   Adjust columns based on team workflows, adding categories like \"Testing\" or \"Waiting for Approval\" as needed.
+
+2.  **Use Swimlanes to Categorize Work Items:**
+
+    -   SecDevOps: Separate tasks by security testing, code reviews, and pipeline automation.
+
+    -   Blue Team: Categorize by incident response priority and threat-hunting activities.
+
+    -   Infrastructure: Differentiate between network management, server patching, and user management.
+
+    -   Red Team: Split tasks for internal/external pentesting and vulnerability assessments.
+
+    -   GRC Team: Organize tasks by compliance audits, risk assessments, and policy development.
+
+3.  **Visual Workflow Tracking:**
+
+    -   Ensure each team\'s board provides a clear visual representation of their work items moving through stages.
+
+    -   Use **work item rules** to automatically transition tasks to the next stage based on completion criteria (e.g., after a code review or security test).
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### Step 3: Set Up Work Items and Task Templates
+
+1.  **Define Work Item Types:**
+
+    -   For each team, define custom **Epics**, **Features**, **User Stories**, **Tasks**, and **Bugs**.
+
+    -   Create work item templates for recurring tasks such as penetration testing, security audits, code reviews, and infrastructure patching.
+
+2.  **Create Task Templates:**
+
+    -   Standardize task creation with predefined templates for:
+
+        -   SecDevOps: CI/CD pipeline setup, automated code scanning, and deployment validation.
+
+        -   Blue Team: Incident response, security alerts, and monitoring.
+
+        -   Infrastructure: Firewall configuration, patch deployment, and system monitoring with Nagios.
+
+        -   Red Team: Penetration test scheduling, vulnerability documentation, and follow-up tasks for mitigation.
+
+        -   GRC Team: Policy drafting, compliance audits, and risk reporting.
+
+3.  **Assign Priorities and Dependencies:**
+
+    -   Assign priority levels to tasks based on urgency, with **critical tasks** marked for immediate attention.
+
+    -   Link related work items to reflect dependencies (e.g., a vulnerability task that depends on a successful pentest).
+
+4.  **Use Automation for Recurring Tasks:**
+
+    -   Set up automation to create recurring tasks at the start of each sprint, ensuring workflows like security audits or patch cycles are consistently executed.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### Step 4: Sprint Setup and Backlog Management
+
+1.  **Configure Iterations (Sprints) for Each Team:**
+
+    -   Create sprints under Project Settings \> Iterations with a typical two-week cycle (e.g., Sprint 1, Sprint 2).
+
+    -   Assign these sprints to each sub-team to provide clear timelines and deliverable tracking.
+
+2.  **Backlog Setup and Prioritization:**
+
+    -   Organize each team's backlog into Epics, Features, and Tasks.
+
+    -   During sprint planning, the team leads will prioritize tasks and move them into the sprint backlog, ensuring alignment with sprint goals.
+
+    -   Large tasks (Epics) should be broken into smaller tasks to fit within the sprint timeframe.
+
+3.  **Track Sprint Progress:**
+
+    -   Monitor team progress via the sprint board, ensuring that work items move fluidly across stages.
+
+    -   Use burndown charts to visualize task completion and remaining workload, adjusting workloads as necessary to avoid sprint overrun.
+
+4.  **Automated Notifications for Sprint Deadlines:**
+
+    -   Set up alerts for nearing sprint deadlines or overdue tasks to ensure team members complete work on time and adjust as necessary.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### Step 5: Integration with External Tools
+
+1.  **Integrate GitHub with Azure Boards:**
+
+    -   For SecDevOps and Red Team, integrate GitHub with Azure Boards to track commits, pull requests, and code reviews directly from the board.
+
+    -   Link work items to specific code branches and ensure that pull requests undergo automated security testing.
+
+2.  **SonarQube Integration (SecDevOps Team):**
+
+    -   Automate security checks by integrating SonarQube with Azure Boards, allowing results from security scans to be captured as work items for review and remediation.
+
+    -   Set up alerts and notifications to track code quality issues automatically.
+
+3.  **Nagios Integration (Infrastructure Team):**
+
+    -   Integrate Nagios alerts with Azure Boards so that system incidents (e.g., server downtime or network issues) are automatically created as tasks for the Infrastructure team.
+
+4.  **SIEM Tool Integration (Blue Team):**
+
+    -   Integrate SIEM tools with Azure Boards to automate incident creation when security threats are detected. This allows the team to manage and respond to threats in real-time from a central location.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### Step 6: Onboarding Process for New Students
+
+1.  **Create Onboarding Tasks for New Students:**
+
+    -   Set up an onboarding task list for each new student joining the team. Tasks will include company registration, GitHub access, and reviewing the Azure Boards project.
+
+    -   Use the WorkItem Clone tool to replicate these tasks each trimester for new student onboarding.
+
+2.  **Assign Sub-Team Responsibilities:**
+
+    -   Based on the team they are joining (SecDevOps, Blue Team, etc.), students will be assigned relevant onboarding tasks and introduced to project documentation.
+
+    -   Each student should also review previous sprint goals and completed tasks to familiarize themselves with ongoing work.
+
+3.  **Onboarding Materials:**
+
+    -   Provide access to user guides, video tutorials, and team-specific documentation to help new students understand how to use Azure Boards.
+
+    -   Mentorship assignments for each student will provide additional guidance during the onboarding period.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### Step 7: Monitoring, Queries, and Reports
+
+1.  **Custom Queries for Each Team:**
+
+    -   Set up queries to track important work items, such as open tasks, high-priority bugs, or tasks nearing deadlines.
+
+    -   For example:
+
+        -   Blue Team: Track security incidents by severity.
+
+        -   Infrastructure Team: Query open patch management tasks.
+
+        -   SecDevOps: View code reviews pending approval or sitting in backlog.
+
+2.  **Build Dashboards:**
+
+    -   Create real-time dashboards for each team, displaying metrics such as task completion rates, sprint progress, and backlog health.
+
+    -   Customize dashboards to meet the needs of different stakeholders, providing insights into ongoing projects and team performance.
+
+3.  **Automate Reports:**
+
+    -   Set up automated reports in Azure Boards to provide weekly or sprint-end summaries for stakeholders. Reports should cover metrics such as:
+
+        -   Sprint completion percentages
+
+        -   Outstanding incidents or vulnerabilities
+
+        -   Security testing results (SecDevOps)
+
+        -   Audit and compliance status (GRC Team)
+
+4.  **Review and Optimize Workflows:**
+
+    -   Conduct post-sprint retrospectives with each team to review successes and areas for improvement.
+
+    -   Document feedback in Azure Boards as actionable items for future sprints.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
+
+### Step 8: Final Testing and Support
+
+1.  **Pilot Testing with Teams:**
+
+    -   Before fully rolling out Azure Boards to all sub-teams, conduct a pilot test with one team (e.g., SecDevOps). Gather feedback on the workflow, task tracking, and integrations.
+
+    -   Use the results to refine the setup for other teams and make any necessary adjustments to the board configurations, sprint structures, or task templates.
+
+2.  **Continuous Monitoring:**
+
+    -   Use Analytics Views to monitor team performance and workload distribution across all sprints.
+
+    -   Regularly evaluate the use of Azure Boards to identify areas for improvement, such as optimizing task prioritization or enhancing dashboard functionality.
+
+<div style={{height: '4px', width: '100%', background: '#FFA500', margin: '20px 0'}}></div>
