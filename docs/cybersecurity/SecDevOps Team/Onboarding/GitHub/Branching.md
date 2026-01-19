@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Branching:
 
 In Git, branching refers to creating a separate working directory that allows members Redback to work on changes independently from the main codebase. This allows for users to create changes that won't directly affect the main branch of the repository. 

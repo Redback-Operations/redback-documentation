@@ -1,4 +1,8 @@
-# The GitHub UI:
+---
+sidebar_position: 3
+---
+
+## The GitHub UI
 
 This section provides guidance on how to work with the GitHub user interface. It’s intended to help new members understand how the code review process works by describing the key tabs and actions within a pull request.
 Finding pull requests
@@ -12,14 +16,14 @@ Once you have a repo opened, you can start the review process by opening any of 
 After opening a pull request, you can see all details of the chosen request. This includes the authors name, any comments left, checks made via GitHub Actions, and what the exact changes to the files were.
  
 
-## Reading Comments:
+## Reading Comments
 
 To start the review process, it’s recommended you read and understand any comments made by the requesting user, as this will help you understand what the changed being made are.
 
 As seen in the example above, comments can be found in the conversations tab and show the full workflow of the pull request once it reaches this stage of development.
 In some cases, there will be output in the comments from the GitHub-actions bot, which outputs information based on what type of file you’re reviewing. For python files, the Bandit Scanner is used to check for Common Vulnerabilities and Exposures (CVEs) that can leave the code vulnerable. This will be touched on in a later step, as it isn’t fully relevant to all code files in the redback repository.
 
-## Commits:
+## Commits
 
 To get an overview of what’s been changed over time, you can view the commits tab in a pull request. In here you can see all changes made in the pull request in chronological order.
 
@@ -32,7 +36,7 @@ While the commits tab isn’t a necessary feature for completing code reviews, s
 Seeing how the commits have changed over a period can provide useful context when trying to understand what issues have already been addressed during earlier iterations of the code.
  
 
-## Checks:
+## Checks
 
 The checks tab is used to show the status of various integrated, automated checks, test and other verifications that run against the chosen pull request. These checks include continuous integration builds, automated tests and verification processes, security scans and other automated checks that may be included in the organisation’s development pipeline.
 
@@ -41,7 +45,7 @@ The results show whether each of the automated checks is in progress, successful
 When a check is successful, it simply displays a tick and moves on to the next part of the process. However, when a check fails, it will post logs as to what’s happened and will give details that can be expanded to identify what went wrong, and what must be fixed.
  
 
-## Files Changed:
+## Files Changed
 
 The files changed tab is one of the most important tools used in a code review by the SecDevOps team. It shows a detailed comparison between the base branch of the repository and the proposed changes in the pull request. As a result, this is where most of the work for code reviews happen, as it’s where we view changes made, and manually review the code to find potential security or compliance issues.
 

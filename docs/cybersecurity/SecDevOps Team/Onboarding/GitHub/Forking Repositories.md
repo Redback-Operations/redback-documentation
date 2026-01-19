@@ -1,4 +1,8 @@
-# Creating Forks: 
+---
+sidebar_position: 2
+---
+
+## Creating Forks 
 
 A fork is a personal copy of a repository. Forks are used if you need to make changes to a project without modifying the original repository directly. Most users in Redback Operations will need to rely on forks to add files and propose changes to the existing files on the repositories.
  

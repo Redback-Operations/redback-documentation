@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 ## What is GitHub? 
 
 GitHub is a cloud-based web platform used to host Git repositories. Through it, members of Redback Operations can store, manage and collaborate on their companies’ repositories. 
@@ -22,7 +26,7 @@ GitHub is used across Redback Operations to store, manage and collaborate on pro
 
 For SecDevOps GitHub is the main tool used by the team, allowing members to carry out code reviews, manage pull requests and ensure secure development practices are being followed. The team uses it to track code changes on all repositories, review pull requests, verify security scan results from bandit, and ensure any changes to code are compliant with security standards before changes are accepted and the code is moved further along the development pipeline. 
  
-## How to access the redback GitHub repo:
+## How to access the Redback GitHub repo
 
 To access the Redback GitHub repo use the following link: 
 

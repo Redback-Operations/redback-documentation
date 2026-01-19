@@ -1,4 +1,8 @@
-# Pull Requests:
+---
+sidebar_position: 5
+---
+
+# Pull Requests
 
 Pull requests or PRs are requests to merge the changes made in your fork into the original repository. In Redback Operations all changes to the repository must go through pull requests and be reviewed by a member of the SecDevOps team.
 
@@ -14,7 +18,7 @@ When working on multiple tasks within a project, it’s good practice to submit 
 
 When updating files or performing maintenance for SecDevOps tools, it’s important to ensure those changes are being updated via pull requests and reviewed by another member of the team.
 
-## Creating Pull Requests:
+## Creating Pull Requests
 
 Creating a pull request can easily be done from the GitHub website. Navigating to your forked repository, simply click the contribute button on the header.
  

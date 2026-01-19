@@ -1,4 +1,8 @@
-# Performing a Code Review:
+---
+sidebar_position: 4
+---
+
+## Performing a Code Review:
  
 This section describes in detail how to perform a code review. To help ease new members into the process of reviewing code on company repositories, it will attempt to break things down in a simple, easy to follow set of steps. 
 

@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Coding Best Practices:
 
 ::: Info Author: Lachlan Harrison, 03/05/2025 :::
