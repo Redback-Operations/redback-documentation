@@ -1,9 +1,9 @@
 # What does Code Reviewing do?
 
 Code reviewing is the process of looking at code that’s been created by other developers and examining it to ensure it meets company standards and requirements for secure code. This helps identity common problems that could lead to security issues such as:
-•	Vulnerabilities 
-•	Errors such as logic errors
-•	And inconsistencies in code
+- Vulnerabilities 
+- Errors such as logic errors
+- And inconsistencies in code
 
 The reason the SecDevOps team reviews code is to help address these issues early, so only secure, compliant code is pushed further up the development pipeline. 
 

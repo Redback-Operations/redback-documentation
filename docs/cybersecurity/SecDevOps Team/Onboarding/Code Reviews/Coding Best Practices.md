@@ -10,34 +10,144 @@ The following module will hopefully aim to inform the reader about a variety of 
 Throughout the module you will learn about Code Smells and what they are and how to refactor them to avoid the smells appearing in your programs. Coding best practices is also covered along with discussing what we can achieve when we put these into practice. 
 
 After this the module then showcases a video in which we go through 2 examples of coding and what we need to be aware and look out for when conducting code reviews. Finally, the last section of the module contains a quiz for individuals to compile the knowledge they have gained from the module into practical questions to test their understanding and finish the module feeling confident with what they have learnt.
+
+## Code Smells:
+
+Code smells? It can happen, not literally though we can detect these "smells" within a developers code. Code smells are often indications of problems/violations within a developer’s design of their code that are present even when the code is deemed functional. They are not bugs or errors but are observable violations of code design.
+
+This section of the module will aim to assist you in learning about these various code smells, how they arise and what we can do to mitigate them. There are three main Code smells in which we will be looking at, these include Bloaters, Change Preventers and Dispensables. (For the purposes of understanding, we will mostly be focusing on bloaters and dispensables)
+
+### Bloaters:
+The first of the code smells categories falls under Bloaters: These are often referred to as Code, functions and classes that are so large that they become harder to work with. These can often accumulate over time as programs evolve. 
+
+Within bloaters some causes of this smell arise from – Long methods, large classes, long parameter lists, Data clumps and Primitive obsession. (For our demonstration, we will focus on long methods, large classes and long parameter lists.)
+
+```
+//Example of what this can look like (Python)
+def large_function(data, parameter2, parameter3, parameter4, parameter5, parameter6)
+{
+    if(data == null)
+    {
+        return 0
+    }
+    calculate_average = sum(data)/2
+    print(calculate_average)
+    data_min = min(data)
+    data_max = max(data)
+    range = data_max - data_min
+    print(range)
+    data_sum = sum(data)
+    print(f"Sum of data: {data_sum}")
+}
+dataset = [0, 1, 2, 3, 4, 5]
+large_function(dataset)
+```
+
+```
+//How we can minimise bloaters (Python)
+def small_function(data)
+{
+    if(data == null)
+    {
+        return 0
+    }
+    average = sum(data)/2
+    print(average)
+}
+def range_function(data)
+{
+    range = max(data)-min(data)
+    print(range)
+}
+dataset = [0, 1, 2, 3, 4, 5]
+small_function(dataset)
+range_function(dataset)
+```
+
+### Change Preventers:
+This relates to changing something in one place but then we must make various changes across the code. This can further complicate our code and make it less readable and less consistent. 
+
+Some causes of these Change Preventers include Divergent Change, Shotgun Surgery and Parallel Inheritance Hierarchy. (This code smell is not a main focus for this module although the provided resource will allow for further investigation into this particular smell)
+More can be explored via this link: https://refactoring.guru/refactoring/smells/change-preventers
+
+
+### Dispensables:
+This can occur at any point throughout coding and this code smell relates to something that is unneeded in which when we refactor these, we can make the code become cleaner, efficient and easier to read. 
+
+This smell can arise from many different factors in which we will go through in our examples. Dispensables is a very common code smell to occur in development. These involve Comments, duplicate code, data classes, dead code, lazy classes and speculative generality. (For our demonstration, we will focus on comments, duplicate code and dead code.)
+
+```
+//Some examples of dispensables (HTML)
+<html>
+<body>
+<h1 id="title"> Hello World! </h1>
+<script>
+function unused() //Dead code
+{
+    console.log("Unused function");
+}
+function calculate(value) //Unneeded comments + Dead Code
+{
+    if(value < 0) //Checks if our value is less than 0
+    {
+        return value * 6; //Multiplies value by 6
+    }
+    else return value + 4; //Adds 4 to our value for everything else
+}
+function change('title') //Duplicate code
+{
+    change.style.font = 'bold';
+    change.style.font = 'bold';
+}
+const alignment = //Lazy element
+{
+    Nothing:() => {}
+}
+</script>
+</body>
+</html>
+```
+
+```
+//How we can minimise dispensables (HTML)
+<html>
+<body>
+<h1 id="title"> Hello World! </h1>
+<script>
+function update-title('title')
+{
+    change.style.font = 'bold';
+}
+</script>
+</body>
+</html>
+```
  
 ## Coding Best Practices:
 
-:: Info Author: Lachlan Harrison, 03/05/2025 :::
-
 On top of mitigating the code smells, we also need to ensure that we are also implementing some coding best practices to avoid security vulnerabilities and ensure that our code is appropriately utilized. Having these standards matter as it achieves numerous accomplishments including:
-•	Consistency: We can ensure uniformity across codebases which makes it easier for developers to read, understand and maintain our code. Applying the same concepts throughout our code effectively being concise.
-•	Readability: Having well-defined standards can reduce errors raised and improves collaboration within the team as everyone is able to easily read the code.
-•	Error Prevention: With consistent practices, we can catch some common mistakes early reducing the risk of bugs being existent and improving our coding quality.
-•	Scalability: Adhering to our best standards ensures our code can scale without becoming unmanageable. In other words, we can keep our performance in mind while coding and deliver a solution with good performance throughout the coding process.
-•	Cross-Team Collaboration: We can facilitate collaboration among developers especially in large teams. For example, Redback Operations being a large team and collaborating on various coding projects. Any member can look at your code, understand what is occurring and even contribute to the solution.
-•	Code Reviewing: An important aspect of this module, code reviews provide a clear criterion which can lead to effective feedback and refactoring of code in which we can then simplify our code. (This will be a dedicated section further in the module)
-•	Efficient Maintenance: Following our standards will simplify the debugging process within our coding alongside refactoring and maintenance tasks for our projects.
+- Consistency: We can ensure uniformity across codebases which makes it easier for developers to read, understand and maintain our code. Applying the same concepts throughout our code effectively being concise.
+- Readability: Having well-defined standards can reduce errors raised and improves collaboration within the team as everyone is able to easily read the code.
+- Error Prevention: With consistent practices, we can catch some common mistakes early reducing the risk of bugs being existent and improving our coding quality.
+- Scalability: Adhering to our best standards ensures our code can scale without becoming unmanageable. In other words, we can keep our performance in mind while coding and deliver a solution with good performance throughout the coding process.
+- Cross-Team Collaboration: We can facilitate collaboration among developers especially in large teams. For example, Redback Operations being a large team and collaborating on various coding projects. Any member can look at your code, understand what is occurring and even contribute to the solution.
+- Code Reviewing: An important aspect of this module, code reviews provide a clear criterion which can lead to effective feedback and refactoring of code in which we can then simplify our code. (This will be a dedicated section further in the module)
+- Efficient Maintenance: Following our standards will simplify the debugging process within our coding alongside refactoring and maintenance tasks for our projects.
 
 Within this section of the module, we will briefly go through some various methods in which we can implement to our own coding to achieve the above accomplishments.
 
 ### 1. Have security and privacy considerations:
 
 With constant threats emerging, we want to mitigate any risk of any potential compromise. In saying this, having security considerations is of extreme importance and needs to always be implemented within our code. Some things we should not be doing at all, and this also comes with our code reviewing is:
-•	NO Hardcoded passwords
-•	NO Hardcoded usernames
-•	NO Sensitive data coded or listed
+- NO Hardcoded passwords
+- NO Hardcoded usernames
+- NO Sensitive data coded or listed
 
 These three main points are a definite ‘no-go’ within coding as these can be easily leveraged against us and can often lead to attacks against our systems and unauthorised access. After all, most cyber security incidents are often caused by human error, so mitigating this risk can drastically reduce the likelihood of a compromise leading to an incident. 
 
 These also come from secure coding practices including studying and analysing the OWASP Top 10, MITRE ATT&CK Framework, Cryptography Measures (Encryption/Decryption) and Security by design. Some resources will be provided for further information:
-•	OWASP Top 10: https://owasp.org/www-project-top-ten/
-•	MITRE: https://attack.mitre.org/
+- OWASP Top 10: https://owasp.org/www-project-top-ten/
+- MITRE: https://attack.mitre.org/
 
 The main priority with this coding standard is that we should always be thinking about security considerations while completing our work, not have it as an afterthought. Always keep a tight security posture and always question to yourself, “Am I giving away any sensitive information in this file?”
 
@@ -47,6 +157,7 @@ With code readability, there are various elements in which we can incorporate wi
 
 These tactics involve: Writing as few lines as possible within our code, utilizing appropriate naming conventions, segment our blocks of code in the same section into paragraphs, utilizing indentation to mark the beginning and end of our control structures, not using lengthy functions as a single function should carry out a single task (this falls into the bloater code smell), using the DRY principle (Don’t Repeat Yourself), automate repetitive tasks whenever possible and avoiding long lines of code. Some examples of this include:
 
+```
 //Hard to read code: (C#)
 public void hardToReadCode(num, start, end)
 {
@@ -69,23 +180,29 @@ public void easierToReadCode(num, start, end)
         return result;
     }
 }
+```
 
-•	With indentations in this example we are able to easier identify elements within a function. Readability is the key focus for this outcome!
+- With indentations in this example we are able to easier identify elements within a function. Readability is the key focus for this outcome!
 
 ### 3. Having meaningful names:
 
 We can utilize lots of different naming conventions within our coding and keep it consistent throughout a file. (As every file is different, some users may prefer one method to another.) 
 
 We typically always stick to these naming conventions as it can achieve a variety of our outcomes listed above in particular readability and consistency. These naming conventions can be further elaborated into four main conventions:
-•	Camel Case: We start the name with a lowercase letter, if the name has multiple words, these words start with capital letters. This convention is typically utilized in JavaScript and even C# environments.
+- Camel Case: We start the name with a lowercase letter, if the name has multiple words, these words start with capital letters. This convention is typically utilized in JavaScript and even C# environments.
+```
 public void findMaxValue();
-•	Snake Case: We start the name with a lowercase letter, if the name has multiple words, these words start with a lowercase also and are separated with a ‘_’. This convention is typically utilized in Python environments.
+```
+- Snake Case: We start the name with a lowercase letter, if the name has multiple words, these words start with a lowercase also and are separated with a ‘_’. This convention is typically utilized in Python environments.
+```
 Int student_member_number = 42;
-•	Kebab Case: This is similar to the snake case except instead of using ‘_’ we utilise ‘-‘. This convention is typically utilized within HTML and CSS environments.
+```
+- Kebab Case: This is similar to the snake case except instead of using ‘_’ we utilise ‘-‘. This convention is typically utilized within HTML and CSS environments.
 get-user-input();
-•	Pascal Case: Also known as Upper Camel Case, we start with a capital letter, if the name has multiple words, these all start with capital letters. This convention is typically utilized in C#, Python and JavaScript environments.
+- Pascal Case: Also known as Upper Camel Case, we start with a capital letter, if the name has multiple words, these all start with capital letters. This convention is typically utilized in C#, Python and JavaScript environments.
+```
 int StudentMemberNumber = 42;
-
+```
 To summarise, when selecting a naming convention, use it throughout the entirety of developing your code and try to minimise switching throughout the project. Consistency and Readability are key here!
 
 ### 4. Avoid the use of a single identifier for numerous purposes:
@@ -94,6 +211,7 @@ Throughout our projects, we should always assign unique variable names to avoid 
 
 Especially minimise the use of global identifiers unless required as these can lead to confusion, unintended behaviour when running our programs and potential bugs within the project itself. This falls under efficient maintenance and error prevention especially if we can detect these issues early!
 
+```
 //An example of a single identifier (C#) We want global to stay as 10:
 int global = 10;
 public void LocalIdentifier()
@@ -111,6 +229,7 @@ public void LocalIdentifier()
     Console.WriteLine(global)
 }
 Console.WriteLine(LocalIdentifier()) //Prints 10 and not Local
+```
 
 As we can observe in our example, the LocalIdentifier() function in our second example keeps the global variable within the function and won't change. 
 
@@ -125,16 +244,17 @@ Here are some valid placements of when we should be adding comments versus when 
 Keeping in mind also that incorrect comments can mislead developers so we should always also be ensuring that we are accurate when writing a comment so that other developers can easily understand but also ourselves.
 
 WHEN TO ADD COMMENTS:
-•	When explaining intricate/non-obvious coding segments
-•	Explaining business rules, regulatory requirements
-•	Clarifying how the code handles edge cases/exceptions
-•	Documenting workarounds due to limitations or external dependencies
-•	Marking areas of improvement
+-• When explaining intricate/non-obvious coding segments
+-• Explaining business rules, regulatory requirements
+-• Clarifying how the code handles edge cases/exceptions
+-• Documenting workarounds due to limitations or external dependencies
+-• Marking areas of improvement
 WHEN NOT TO ADD COMMENTS:
-•	Redundant comments that repeat what the code already expresses
-•	If the code’s purpose is evident
-•	We should remove temporary comments used for debugging once the issue has been resolved
+-• Redundant comments that repeat what the code already expresses
+-• If the code’s purpose is evident
+-• We should remove temporary comments used for debugging once the issue has been resolved
 
+```
 //An Example of comments in action: (REMOVE) will indicate to remove the line of comments:
 
 def function_work()
@@ -154,6 +274,7 @@ def complete_function() //Calculate the range of the dataset (REMOVE) - Codes pu
     return range
 }
 print(range) //Print the range of the dataset here once finished function (REMOVE) - Improvements have already been made so we can remove this
+```
 
 ### 6. Have efficient data processing:
 
@@ -175,6 +296,7 @@ This can ultimately terminate a program early or even pause it which we always a
 
 This can be achieved in several ways including ‘Try-Catch’ blocks for example in which is typically the most common way of exception handling as we can ‘Catch’ these exceptions and see what is going wrong with the code. Sometimes also when we need to consider what is going wrong with our code, this can also come down to slowness in which sometimes, patience is key although too much time consumed with nothing occurring can be a definite issue in which remediation is required to find issues and effectively have efficient maintenance.
 
+```
 //Utilizing 'Try-Catch' (C#)
 try{
     CallToFunction(element);
@@ -184,6 +306,7 @@ catch(ArgumentNullException)
 {
     Console.WriteLine("Exception caught");
 }
+```
 
 ### 9. Choose Industry-specific coding standards:
 
@@ -197,8 +320,10 @@ For example, the C++ and C languages don’t have any bound checks in which buff
 
 With readability, we can create easier understandings amongst developers when the headers of different files align with a singular format. An example of this includes: File name, Date of Creation, Name of creator of the file and a summary of what it does.
 
+```
 //Example File Name – 04/05/2025 - Student Name
 //Multiplies two numbers to give a new result.
+```
 
 We can achieve this by some simple comments at the top of the file describing these various characteristics. 
 
@@ -217,7 +342,7 @@ Autosave can be viable but don’t always rely on it also. Manual saving after a
 For this section, various pieces of coding will be presented with various points of interest that need to be reviewed to apply our best practices to: (This will be done in the Python coding standard for the purpose of this demonstration). 
 
 We will then point out what needed to be refactored and why for the coding example as well as a refactored version of the code to demonstrate these coding best practices in action and why it is needed.
-•	Here is a link to the video in which you can watch to see the code reviewing process in action: https://deakin.au.panopto.com/Panopto/Pages/Viewer.aspx?id=4eae4805-a2cc-40b2-8c23-b2e1007d515b
+-• Here is a link to the video in which you can watch to see the code reviewing process in action: https://deakin.au.panopto.com/Panopto/Pages/Viewer.aspx?id=4eae4805-a2cc-40b2-8c23-b2e1007d515b
 
 A few bonus points of addition in which we can also add from the video in which was not initially discussed includes the implementation of a Try-Catch exception handling. And also the header for the file to assist in indentifying the creator of the file along with its modifications.
 

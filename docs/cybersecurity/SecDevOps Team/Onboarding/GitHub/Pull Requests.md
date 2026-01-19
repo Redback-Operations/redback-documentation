@@ -3,10 +3,10 @@
 Pull requests or PRs are requests to merge the changes made in your fork into the original repository. In Redback Operations all changes to the repository must go through pull requests and be reviewed by a member of the SecDevOps team.
 
 In general, PRs allow you to:
-•	explain any changes
-•	justify why they are needed
-•	have any changed files, especially code, reviewed
-•	allow for a manual request to have your work merged into the main project.
+- explain any changes
+- justify why they are needed
+- have any changed files, especially code, reviewed
+- allow for a manual request to have your work merged into the main project.
 
 A pull request should only be created after your work has been forked to a local repository, cloned to your machine, and worked on in your local environment. This ensures any changes made are following the correct workflow for the organisation. A pull request should only be made when all changes and relevant commits are added to your forked repository.
 

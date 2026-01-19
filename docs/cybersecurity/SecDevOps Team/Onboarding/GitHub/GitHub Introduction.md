@@ -3,16 +3,16 @@
 GitHub is a cloud-based web platform used to host Git repositories. Through it, members of Redback Operations can store, manage and collaborate on their companies’ repositories. 
 
 GitHub provides users with an environment that supports: 
-•	Version control that tracks changes made to code. 
-•	Collaborative tools where multiple users can work on a project at the same time.
-•	Project management tools for detecting issues, pull requests, code reviews and merging changes. 
+- Version control that tracks changes made to code. 
+- Collaborative tools where multiple users can work on a project at the same time.
+- Project management tools for detecting issues, pull requests, code reviews and merging changes. 
 
 Additionally, GitHub also provides the following features which are used in the development pipeline:
-•	Repositories where code and relevant files are stored for projects. 
-•	Branching which allows for work to be carried out on different versions of a project
-•	Pull requests (PR) allows users to propose, review and approve code changes
-•	Issues which are used to track tasks, bugs and improvements. 
-•	Actions which allow for automating workflows, as well as testing and security checks.
+- Repositories where code and relevant files are stored for projects. 
+- Branching which allows for work to be carried out on different versions of a project
+- Pull requests (PR) allows users to propose, review and approve code changes
+- Issues which are used to track tasks, bugs and improvements. 
+- Actions which allow for automating workflows, as well as testing and security checks.
 
 Redback Operations makes use of these features, with repositories for each project and team, as well as actions that automate parts of the development process or allow for security scanning on specific files. 
 
