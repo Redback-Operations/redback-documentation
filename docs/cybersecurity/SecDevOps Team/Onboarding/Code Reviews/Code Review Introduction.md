@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-## What does Code Reviewing do?
+# What does Code Reviewing do?
 
 Code reviewing is the process of looking at code that’s been created by other developers and examining it to ensure it meets company standards and requirements for secure code. This helps identity common problems that could lead to security issues such as:
 - Vulnerabilities 
