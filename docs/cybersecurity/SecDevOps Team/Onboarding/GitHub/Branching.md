@@ -23,8 +23,12 @@ To this end, we can make use of branches to perform different changes to scanner
 ## How to Create a Branch:
 
 Branches can be created from the GitHub website. To do this, open the forked repository and click the branches drop down menu. 
+
+![Branch Dropdown](github-imgs/branching-imgs/branch-dropdown.png)
  
 From here, select view all branches, then new branch. 
+
+![Creating Branches](github-imgs/branching-imgs/creating-branches.png)
  
 Create a name for the branch, and choose what source repository and branch you want to branch off from. 
 
@@ -33,7 +37,13 @@ Once done, press the button to create a new branch.
 ## How to Change Branches:
 
 Changing branches can be done from the command line. First once a new branch has been created you may need to update the local repository with all new branches using the git fetch origin command
+
+![Fetch Command](github-imgs/branching-imgs/fetch-command.png)
  
 Once done, the created branches will show in the output so long as this command has been run after their creation. Changing branches can be done with the git checkout command as seen in the below example. 
+
+![Checkout Command](github-imgs/branching-imgs/checkout-command.png)
  
-To see what branch you are on, the git branch command is used. The branch with the asterisk is the current branch. 
+To see what branch you are on, the git branch command is used. The branch with the asterisk is the current branch.
+
+![Branch Command](github-imgs/branching-imgs/branch-command.png) 
