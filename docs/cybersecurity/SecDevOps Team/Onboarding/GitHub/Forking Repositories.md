@@ -15,6 +15,8 @@ To create a fork of an existing repository, simply navigate to the repo, click t
 As shown here, this gives you a fork on your own local account.
 
 ![Forked Repo](github-imgs/forks-imgs/forked-repo.png)
+
+## Cloning the Repository
  
 Before working on the forked repository, it’s good practice to clone it to your local machine. Cloning creates a local copy of the repository on your machine allowing you to edit files, create branches and commit changes using development tools such as the git command line interface or and IDE. 
 

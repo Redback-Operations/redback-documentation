@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Branching:
+# Branching
 
 In Git, branching refers to creating a separate working directory that allows members Redback to work on changes independently from the main codebase. This allows for users to create changes that won't directly affect the main branch of the repository. 
 
@@ -14,13 +14,13 @@ As described in the previous section, forks are used to create a local namespace
 
 A branch however, exists within the same repository and is used by team members who already have access to the repository. Branches allow these contributors to create separate working environments where they can test changes on a repository without affecting the main branch, or any other created branches.
 
-## How to use Branches:
+## How to use Branches
 
 While the SecDevOps team mostly performs code reviews as most of their work, it’s important to know how to branch repositories when creating changes or performing maintenance.
  
 To this end, we can make use of branches to perform different changes to scanners or files within different contexts. For instance, you could use one branch to delete a set of files, and another branch to add files to a different part of the repository. This ensures the work is not overlapping, and any changes are pushed separately. 
 
-## How to Create a Branch:
+## How to Create a Branch
 
 Branches can be created from the GitHub website. To do this, open the forked repository and click the branches drop down menu. 
 
@@ -30,11 +30,9 @@ From here, select view all branches, then new branch.
 
 ![Creating Branches](github-imgs/branching-imgs/creating-branches.png)
  
-Create a name for the branch, and choose what source repository and branch you want to branch off from. 
+Create a name for the branch, and choose what source repository and branch you want to branch off from. Once done, press the button to create a new branch. 
 
-Once done, press the button to create a new branch. 
-
-## How to Change Branches:
+## How to Change Branches
 
 Changing branches can be done from the command line. First once a new branch has been created you may need to update the local repository with all new branches using the git fetch origin command
 

@@ -23,11 +23,13 @@ When updating files or performing maintenance for SecDevOps tools, it’s import
 Creating a pull request can easily be done from the GitHub website. Navigating to your forked repository, simply click the contribute button on the header.
 
 ![Opening PRs](github-imgs/pull-requests-imgs/pr-dropdown.png)
- 
+
+
 Opening the pull request takes you to this screen which allows you to compare changes, see what work is being moved from the forked repository to the main one, and lets you add a title to your work as well as description of what you’ve done.
 
 ![Editing PRs](github-imgs/pull-requests-imgs/editing-pr.png)
  
+
 To finalise the changes here, simply add a title and describe what the work in your pull request is doing, then click the create pull request button.
 
 As shown here, the pull request is then opened and can be viewed by other members of the SecDevOps team. You should not perform the review on your own files, allow any reviews to be made by another member.
