@@ -5,10 +5,7 @@ sidebar_label: File Upload Service
 
 # How To Use The Data Warehouse - File Upload Service
 
-:::info
-**Document Creation:** 22 September, 2024. **Last Edited:** 22 September, 2024. **Authors:** kghdxx.
-<br></br> **Document Code:** ONB5. **Effective Date:** 22 September 2024. **Expiry Date:** 22 September, 2025.
-:::
+:::info **Document Creation:** 22 September, 2024. **Last Edited:** 25 September, 2025. **Authors:** kghdxx, shimrxn. <br></br> **Document Code:** ONB5. **Effective Date:** 25 September 2025. **Expiry Date:** 25 September, 2026. :::
 
 ## Part 1. Accessing the File Upload Service
 
@@ -32,19 +29,36 @@ Once the VPN is successfully set-up and if properly authenticated you can access
 ![FileUploadService](./pictures/FileUploadService.png)
 
 
-## Using the File Upload Service 
+## Part 2 - Using the File Upload Service
 
 ### Upload Options 
-There are a number of options to modify the way you can store data in the FUS 
+The File Upload Service (FUS) supports multiple file types, simultaneous uploads, provenance tracking, and improved governance features.
 
-#### Project Selection
-chose the appropriate redback operations project 
+#### Choose Files
+- Upload **single or multiple files** using drag-and-drop or the file picker.  
+- Supported formats:  
+  - **Documents:** CSV, JSON, Excel  
+  - **Images:** PNG, JPG  
+  - **Video files:** MP4, AVI  
+  - **Compressed archives:** ZIP   
 
-#### Choose a File
-Use the drag and drop function or browse files to select the relevant file.
-Only .csv files will be accepted for pre-processing options.
+When uploading a ZIP archive, the service automatically inspects its contents:  
+- A list of all files inside the ZIP is displayed.  
+- If the ZIP contains any **CSV files**, a **preview of the CSV data** is shown directly in the app before upload.  
+- This helps you verify the file contents (e.g., column names, sample rows) without extracting the archive manually.  
+- Other file types (such as MP4, JPG) are listed and stored as-is without preview.  
 
-#### Preprocessing 
+![zipcsvpreview](./pictures/zipcsvpreview.png)
+
+#### Provenance Logging 
+All uploads now include provenance information to ensure data governance and traceability.
+
+- **Provenance Source (required):** e.g., Kaggle, Wikipedia, Internal Project. 
+- **Source URL (optional):** must be a valid web link if provided. Captured metadata includes: - Filename - Project - Uploader identity - Provenance source and URL - Preprocessing method - Timestamp These details are written to a provenance.json log file and displayed in the new **Provenance Logs tab** in the app. 
+
+![provenancelogs](./pictures/provenancelogs.png)
+
+## Preprocessing 
 Choose a pre-processing option if desired. Explained further below.
 
 #### Add Prefix and Suffix to Filename
@@ -57,7 +71,7 @@ Enter the name of the file it will only accept alphanumeric values.
 
 Clicking the 'Upload to Data Warehouse' button will produce a summary and confirm or reject the file.
 
-## pre-processing 
+## Preprocessing Explained 
 what is each preprocessing actually doing
 
 **Data Clean Up Preprocessing**
@@ -69,21 +83,26 @@ The Data Clean Up option performs basic formatting and data cleansing for data t
 
 The Machine Learning option intends to prepare data in a way that will optomise it for machine learning tasks downstream by transforming numeric data for ML algorithms by handling missing values and scaling features as well as ensuring that numeric features are on a comparable scale, which is a common pre-processing step in data science and analysis tasks.
 
+#### Add Prefix and Suffix to Filename 
+The checkbox, if ticked, adds a project prefix and timestamp. Unticking allows overwriting of files by re-uploading with the same name. 
 
-## Step 3 - Uploading a file
+#### Entering the Filename 
+Filenames must be **alphanumeric**.
 
-Using the drop-down box select the project of which the data is related to.
+## Step 3 - Uploading a File
 
-(This decides the directory in the VM and the MinIO bucket that the data will be stored in and how it will be able to be accessed once it is stored.)
+1. Select the relevant project.  
+2. Choose one or more files (documents, images, video, or zip archives).  
+3. Enter provenance details.  
+4. Select preprocessing if required.  
+5. Click **Upload to Data Warehouse**.  
 
-The FUS will ask for a file name and enforce some naming conventions.
-Please make the name descriptive but brief.
-
-If successful, the website will show 'Uploaded Successfully'.
+A progress bar will appear during the upload showing the status of the file(s) being uploaded.  
+If successful, the interface will show **"Uploaded Successfully"**.    
 
 ![fussuccess](./pictures/fussuccess.png)
 
-## Part 2 - Retrieving a File
+## Part 3 - Retrieving a File
 
 There are a few options to retrieve/download a file from the VM using the file upload service.
 
@@ -131,3 +150,39 @@ Original files are stored in Bronze and Pre-processed in silver
 ![origdl](./pictures/origdl.png)
 
 ![viewsilv](./pictures/viewsilv.png)
+
+## Part 4 - Provenance Log Search
+
+The **Provenance Logs tab** includes a **Search by Tag** function.  
+- Users can enter a tag (exact match) into the search bar.  
+- The system will filter and display only provenance records that match the tag.  
+- This helps quickly locate files based on project names, file types, or parts of a filename.  
+
+Example: entering the tag **“test”** will display all provenance entries and filenames containing the word *test*.  
+
+![searchfiles](./pictures/searchfiles.png)
+
+## Part 5 - Managing Provenance Logs
+
+The File Upload Service provides governance features for tracking the history of every uploaded file.  
+In addition to viewing provenance details, users can also **delete provenance entries** when required.
+
+### Viewing Provenance Logs
+- Go to the **Provenance Logs** tab in the Streamlit app.  
+- All uploads are listed with metadata such as filename, project, provenance source, URL, preprocessing method, and timestamp.  
+- Multiple entries may exist for the same file (updates are tracked over time).  
+
+![provenancelogs](./pictures/provenancelogs.png)
+
+### Deleting a Provenance Entry
+- Each log entry includes a **delete option**.  
+- Selecting delete will remove the provenance record from `provenance.json`.  
+- This action **does not delete the actual file** from storage (Bronze/Silver buckets).  
+- Use this feature to clean up duplicate or incorrect provenance entries while keeping the uploaded data intact.  
+
+![deleteprovenance](./pictures/deleteprovenance.png)
+
+:::note
+Deleting provenance entries should be done carefully, as this reduces traceability.  
+For compliance, avoid deleting provenance logs unless they were created in error or for test data.
+:::
