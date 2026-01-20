@@ -2,12 +2,12 @@
 sidebar_position: 2
 ---
 
-# Coding Best Practices:
+# Coding Best Practices
 
 ::: Info Author: Lachlan Harrison, 03/05/2025 :::
 ::: Editing Author: Caleb Ervine 14/01/2026 :::
 
-## Introduction:
+## Introduction
 
 The following module will hopefully aim to inform the reader about a variety of concepts in the coding world ranging from code smells, best practice methods to reviewing our own code. All of these concepts will be supplied by coding examples in different coding languages and also opportunities to learn from the information supplied to then apply to future programs.
 
@@ -15,13 +15,13 @@ Throughout the module you will learn about Code Smells and what they are and how
 
 After this the module then showcases a video in which we go through 2 examples of coding and what we need to be aware and look out for when conducting code reviews. Finally, the last section of the module contains a quiz for individuals to compile the knowledge they have gained from the module into practical questions to test their understanding and finish the module feeling confident with what they have learnt.
 
-## Code Smells:
+## Code Smells
 
 Code smells? It can happen, not literally though we can detect these "smells" within a developers code. Code smells are often indications of problems/violations within a developer’s design of their code that are present even when the code is deemed functional. They are not bugs or errors but are observable violations of code design.
 
 This section of the module will aim to assist you in learning about these various code smells, how they arise and what we can do to mitigate them. There are three main Code smells in which we will be looking at, these include Bloaters, Change Preventers and Dispensables. (For the purposes of understanding, we will mostly be focusing on bloaters and dispensables)
 
-### Bloaters:
+### Bloaters
 The first of the code smells categories falls under Bloaters: These are often referred to as Code, functions and classes that are so large that they become harder to work with. These can often accumulate over time as programs evolve. 
 
 Within bloaters some causes of this smell arise from – Long methods, large classes, long parameter lists, Data clumps and Primitive obsession. (For our demonstration, we will focus on long methods, large classes and long parameter lists.)
@@ -68,14 +68,14 @@ small_function(dataset)
 range_function(dataset)
 ```
 
-### Change Preventers:
+### Change Preventers
 This relates to changing something in one place but then we must make various changes across the code. This can further complicate our code and make it less readable and less consistent. 
 
 Some causes of these Change Preventers include Divergent Change, Shotgun Surgery and Parallel Inheritance Hierarchy. (This code smell is not a main focus for this module although the provided resource will allow for further investigation into this particular smell)
 More can be explored via this link: https://refactoring.guru/refactoring/smells/change-preventers
 
 
-### Dispensables:
+### Dispensables
 This can occur at any point throughout coding and this code smell relates to something that is unneeded in which when we refactor these, we can make the code become cleaner, efficient and easier to read. 
 
 This smell can arise from many different factors in which we will go through in our examples. Dispensables is a very common code smell to occur in development. These involve Comments, duplicate code, data classes, dead code, lazy classes and speculative generality. (For our demonstration, we will focus on comments, duplicate code and dead code.)
@@ -127,7 +127,7 @@ function update-title('title')
 </html>
 ```
  
-## Coding Best Practices:
+## Coding Best Practices
 
 On top of mitigating the code smells, we also need to ensure that we are also implementing some coding best practices to avoid security vulnerabilities and ensure that our code is appropriately utilized. Having these standards matter as it achieves numerous accomplishments including:
 - Consistency: We can ensure uniformity across codebases which makes it easier for developers to read, understand and maintain our code. Applying the same concepts throughout our code effectively being concise.
@@ -140,7 +140,7 @@ On top of mitigating the code smells, we also need to ensure that we are also im
 
 Within this section of the module, we will briefly go through some various methods in which we can implement to our own coding to achieve the above accomplishments.
 
-### 1. Have security and privacy considerations:
+### 1. Have security and privacy considerations
 
 With constant threats emerging, we want to mitigate any risk of any potential compromise. In saying this, having security considerations is of extreme importance and needs to always be implemented within our code. Some things we should not be doing at all, and this also comes with our code reviewing is:
 - NO Hardcoded passwords
@@ -155,7 +155,7 @@ These also come from secure coding practices including studying and analysing th
 
 The main priority with this coding standard is that we should always be thinking about security considerations while completing our work, not have it as an afterthought. Always keep a tight security posture and always question to yourself, “Am I giving away any sensitive information in this file?”
 
-### 2. Focus on Code readability:
+### 2. Focus on Code readability
 
 With code readability, there are various elements in which we can incorporate with our coding to improve the readability of the code in which can be very useful and simple to implement. 
 
@@ -188,7 +188,7 @@ public void easierToReadCode(num, start, end)
 
 - With indentations in this example we are able to easier identify elements within a function. Readability is the key focus for this outcome!
 
-### 3. Having meaningful names:
+### 3. Having meaningful names
 
 We can utilize lots of different naming conventions within our coding and keep it consistent throughout a file. (As every file is different, some users may prefer one method to another.) 
 
@@ -209,7 +209,7 @@ int StudentMemberNumber = 42;
 ```
 To summarise, when selecting a naming convention, use it throughout the entirety of developing your code and try to minimise switching throughout the project. Consistency and Readability are key here!
 
-### 4. Avoid the use of a single identifier for numerous purposes:
+### 4. Avoid the use of a single identifier for numerous purposes
 
 Throughout our projects, we should always assign unique variable names to avoid any overlap!
 
@@ -239,7 +239,7 @@ As we can observe in our example, the LocalIdentifier() function in our second e
 
 Whereas in our first example, our global variable is a global variable in which can always be easily changed despite us wanting to keep it as one consistent variable. Consistency is the key outcome for this practice!
 
-### 5. Add comments and prioritize documentation:
+### 5. Add comments and prioritize documentation
 
 It’s always wise to add comments to our code when writing it, there’s many benefits to doing so, but too much can make code messy and often relates back to our code smells in regards to dispensables but also our main accomplishments including readability, consistency and cross-team collaboration as comments can serve as documentation purposes also to inform other developers what is occurring, what needs to be done, etc. 
 
@@ -280,19 +280,19 @@ def complete_function() //Calculate the range of the dataset (REMOVE) - Codes pu
 print(range) //Print the range of the dataset here once finished function (REMOVE) - Improvements have already been made so we can remove this
 ```
 
-### 6. Have efficient data processing:
+### 6. Have efficient data processing
 
 When we code, we want to process data efficiently to achieve a result faster than something that may take longer due to incorrect coding/larger functions. 
 
 This best practice method involves looking at dividing our code into smaller functions for reusability and maintainability which also achieves efficient maintenance should it be required. What this also means is that we need to be identifying any inefficient algorithms/data structures when conducting our code reviews and refactor them to create a more efficient solution.
 
-### 7. Have effective code review and refactoring:
+### 7. Have effective code review and refactoring
 
 We will explore this more in depth in a future section and after the remaining points of this section. Essentially, we are trying to follow consistent coding techniques, catching various points of improvement/error and refactoring to achieve these standards. 
 
 We should always be double checking our work and attempting to discover any potential points of improvement or elements we may need to tweak to achieve these coding standards. After all, we all want our code to achieve an objective. Have we reviewed our code numerous times to make sure we achieve the various goals?
 
-### 8. Try to formalise exception handling:
+### 8. Try to formalise exception handling
 
 The term ‘exception’ refers to any problem, issue or events that can occur when the code is running and may disrupt the flow of execution. 
 
@@ -312,7 +312,7 @@ catch(ArgumentNullException)
 }
 ```
 
-### 9. Choose Industry-specific coding standards:
+### 9. Choose Industry-specific coding standards
 
 When utilizing coding standards, we can suit the needs of what we are developing. In other words, developing a video game may typically utilize C++ for example whereas HTML, CSS and JavaScript are typically utilized for Web Development. 
 
@@ -320,7 +320,7 @@ Understanding the requirements of our objectives assists us in determining what 
 
 For example, the C++ and C languages don’t have any bound checks in which buffer overflows may occur. Always make sure that the coding language and standards you are utilising are appropriate for the solution you are developing but always consider these security considerations as well.
 
-### 10. Standardise headers for different files:
+### 10. Standardise headers for different files
 
 With readability, we can create easier understandings amongst developers when the headers of different files align with a singular format. An example of this includes: File name, Date of Creation, Name of creator of the file and a summary of what it does.
 
@@ -333,7 +333,7 @@ We can achieve this by some simple comments at the top of the file describing th
 
 By doing this, we also achieve cross-team collaboration as someone can open this file, read the top, and understand what is happening in the file rather than trying to decipher what the entirety of the file does. While yes, the developer may have left some comments throughout the file, having this header at the top of the file, makes it so much easier for users to quickly read and then decide if this is the file they are looking for or if they need to continue their search for something else.
 
-### 11. Ensure there is daily backups/manual saving:
+### 11. Ensure there is daily backups/manual saving
 
 This is a simple measure that we can implement although it still can sometimes slip through. Although we always wish that our systems can never crash, sometimes this can still happen, they can crash, data loss can occur, glitches, hardware damage. All of which can affect the progress of our work.
 
@@ -341,7 +341,7 @@ We should save our code daily for large projects but even for smaller files, som
 
 Autosave can be viable but don’t always rely on it also. Manual saving after all is the key to achieving this best practice method. Always remember to keep saving your work throughout the duration of modification, don't leave it until the end of your session to save and exit!!
  
-## Code Review Examples:
+## Code Review Examples
 
 For this section, various pieces of coding will be presented with various points of interest that need to be reviewed to apply our best practices to: (This will be done in the Python coding standard for the purpose of this demonstration). 
 
@@ -353,7 +353,7 @@ A few bonus points of addition in which we can also add from the video in which 
 
 The ability to review your own work saves a lot of time for everyone as it is essentially like the first line of defence. You are trying to catch anything that you can see before it is then processed for another individual to also review. You may not always be able to find everything although, finding something is better than nothing. (Sometimes there may also just be genuinely nothing to find!)
 
-## Quiz and Final Words:
+## Quiz and Final Words
 
 To access the quiz for this module, a link will be provided. Test what you have learnt throughout the module and see how you go with the knowledge gathered from the module! 
 
