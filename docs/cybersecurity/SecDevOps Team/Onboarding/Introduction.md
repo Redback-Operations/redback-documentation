@@ -8,7 +8,7 @@ In the Cyber Security Team, SecDevOps is responsible for ensuring the security o
 
 The team’s focus is on reviewing code before it’s pushed further up the production pipeline, and maintaining the scanning systems used to help secure produced code. 
 
-## Key Tools: 
+## Key Tools
 
 This section provides an overview of the tools and services the SecDevOps team makes use of as part of their operations. 
 
