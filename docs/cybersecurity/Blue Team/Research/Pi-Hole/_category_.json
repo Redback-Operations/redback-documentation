@@ -1,0 +1,8 @@
+{
+  "label": "Pi-Hole",
+  "position": 13,
+  "link": {
+    "type": "generated-index",
+    "description": "Pi-Hole documentation"
+  }
+}

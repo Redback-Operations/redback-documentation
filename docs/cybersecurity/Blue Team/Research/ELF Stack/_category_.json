@@ -1,0 +1,8 @@
+{
+  "label": "ELF Stack",
+  "position": 105,
+  "link": {
+    "type": "generated-index",
+    "description": "ELF Stack setup documentation"
+  }
+}

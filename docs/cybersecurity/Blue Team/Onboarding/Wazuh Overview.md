@@ -1,11 +1,11 @@
 ---
-id: wazuh-background
-title: Wazuh Background
+id: wazuh-overview
+title: Wazuh Overview
 sidebar_position: 1
 tags: [blue team, wazuh, onboarding]
 ---
 
-# Wazuh Background
+# Wazuh Overview
 
 ## What is Wazuh?
 Wazuh is an open-source SIEM tool (Security Information and Event Management).  
@@ -84,3 +84,10 @@ For example:
 
 
 This is not required for Wazuh access but may be needed for backend tasks.
+
+## Understanding Wazuh 
+If you are interested in learning more about Wazuh, please head over to the Wazuh background section, where we cover more on why we chose Wazuh, how to install Wazuh, and guides on how to use Wazuh. 
+
+
+
+
