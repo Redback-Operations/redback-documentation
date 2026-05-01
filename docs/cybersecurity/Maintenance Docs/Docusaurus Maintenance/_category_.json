@@ -1,0 +1,9 @@
+{
+    "label": "Docusaurus Maintenance",
+    "position": 1,
+    "link": {
+      "type": "generated-index",
+      "description": "Documents relating to maintenance for the documentation hub/Docusaurus."
+    }
+  }
+  
