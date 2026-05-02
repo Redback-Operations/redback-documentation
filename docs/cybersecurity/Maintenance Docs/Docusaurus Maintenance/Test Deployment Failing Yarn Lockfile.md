@@ -6,7 +6,7 @@ sidebar_position: 1
 
 In some cases, the CI/CD workflow for the documentation hub may fail, preventing new documentation being added to the hub. This happens when the test deployment step fails, which is required for the Docusaurus site to update with newly added content.
 
-!\[Failed Deployment](maintenance-imgs/test-deployment-imgs/failed-deployment.png)
+![Failed Deployment](maintenance-imgs/test-deployment-imgs/failed-deployment.png)
 
 The most common cause found for this is when the test deployment attempts to run the yarn install --frozen-lockfile command and exits prematurely due to an error related to the yarn lock file.
 
@@ -47,11 +47,11 @@ Step 2: Make sure yarn is installed on your system using version 1.22.22
 
 Step 3: Run ‘yarn install --frozen-lockfile’, the same command the CI/CD workflow uses, this should reproduce the error.
 
-!\[Yarn Lockfile Command](maintenance-imgs/test-deployment-imgs/yarn-lockfile.png)
+![Yarn Lockfile Command](maintenance-imgs/test-deployment-imgs/yarn-lockfile.png)
 
 Step 4: Regenerate the yarn file using the ‘yarn install’ command (do not run this using --frozen-lockfile).
 
-!\[Yarn Install Command](maintenance-imgs/test-deployment-imgs/yarn-install.png)
+![Yarn Install Command](maintenance-imgs/test-deployment-imgs/yarn-install.png)
 
 Step 5: Run the 'yarn install --frozen-lockfile' command to ensure the command now runs properly.
 
@@ -59,11 +59,11 @@ Step 6: Run the command 'yarn build' and confirm the project builds successfully
 
 Step 7 (Optional): Test the CI/CD workflow using the act tool created by Nektos. As stated in the prerequisites, this will fail towards the end.
 
-!\[Act Command](maintenance-imgs/test-deployment-imgs/act-command.png)
+![Act Command](maintenance-imgs/test-deployment-imgs/act-command.png)
 
 It should generate output similar to this.
 
-!\[Act Output](maintenance-imgs/test-deployment-imgs/act-output.png)
+![Act Output](maintenance-imgs/test-deployment-imgs/act-output.png)
 
 Step 8: Commit and push only the updated yarn.lock file to the repository.
 
