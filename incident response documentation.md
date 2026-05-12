@@ -1,3 +1,7 @@
+**Internal Use Only – Redback Operations Team**
+
+This document contains internal incident response procedures, monitoring strategies, and operational security information intended solely for authorised Redback Operations personnel. Distribution outside the organisation or sharing with unauthorised individuals is prohibited.
+
 **1.Introduction**
 
 Redback Operations operates a modern, containerised application environment hosted on an Ubuntu 22.04.5 LTS virtual machine, supporting a range of interconnected services including Wazuh SIEM for security monitoring, Nginx reverse proxy integrated with ModSecurity (OWASP Core Rule Set) for web application protection, and multiple backend services deployed via Docker. This architecture enables scalability and flexibility; however, it also introduces a complex threat surface due to exposed services, inter-container communication, and continuous interaction with external networks. As a result, the organisation faces persistent cybersecurity risks such as automated scanning, vulnerability exploitation, and unauthorised access attempts.
@@ -324,6 +328,8 @@ docker logs nginx.modsecurity | tail -100
 
 sudo iptables -A INPUT -s <IP> -j DROP
 
+**Note:** This iptables rule is temporary and will not persist after a system reboot unless the firewall configuration is explicitly saved or managed using persistent firewall tools such as iptables-persistent or UFW.
+
 **Eradication**
 
 *   Tune ModSecurity rules to reduce false positives
@@ -550,7 +556,7 @@ To maintain clarity and accountability, all incident-related communication follo
 
 Accurate and structured documentation is a fundamental component of incident response within Redback Operations, ensuring accountability, traceability, and continuous improvement. Every security incident regardless of severity is documented to maintain a clear record of events, actions taken, and outcomes achieved. Given the dynamic nature of the environment, which includes frequent ModSecurity alerts, Wazuh vulnerability findings, and system-level events, proper documentation enables the team to distinguish between recurring patterns and unique incidents, thereby improving future response efficiency.
 
-Incident documentation within Redback Operations follows a **standardised reporting structure** to ensure consistency and completeness. Each incident record captures key details including the **incident identifier, date and time of detection, affected systems or services, severity classification, and a detailed description of the event**. Technical evidence is a critical component of this process and includes log extracts from ModSecurity (e.g., rule triggers such as 949110 and 932170), Wazuh vulnerability alerts (CVE identifiers and affected packages), and system logs such as SSH authentication attempts. This evidence-based approach ensures that all conclusions and response actions are supported by verifiable data.
+Incident documentation within Redback Operations follows a **standardised reporting structure** to ensure consistency and completeness. Each incident record captures key details including the **incident identifier, date and time of detection, affected systems or services, severity classification, and a detailed description of the event**. Technical evidence is a critical component of this process and includes log extracts from ModSecurity (e.g., rule triggers such as 949110 and 932170), Wazuh vulnerability alerts (CVE identifiers and affected packages), and system logs such as SSH authentication attempts. This evidence-based approach ensures that all conclusions and response actions are supported by verifiable data. To maintain privacy and operational security, all log examples, IP addresses, usernames, and system identifiers included in documentation or reports should be anonymised or sanitised where appropriate before being shared beyond the immediate incident response context.
 
 In addition to recording the incident itself, the documentation process includes a detailed account of the **response lifecycle**, covering detection, analysis, containment, eradication, and recovery actions. This ensures that every step taken during incident handling is traceable and can be reviewed or audited if required. Furthermore, the documentation captures the **root cause analysis and lessons learned**, which are essential for improving detection rules, refining playbooks, and strengthening system configurations. For example, repeated /cgi-bin scanning activity may be documented as a source of alert noise, leading to future rule tuning and filtering strategies.
 
