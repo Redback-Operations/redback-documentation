@@ -10,9 +10,7 @@ This VM Port Security Guideline provides a straightforward guide on how to ensur
 
 ## Port Security Guideline Access
 
-To access the Port Security Guideline from the VM, use the following command on your host machine:
+To access the Port Security Guideline from the VM, use the below command on your host machine. The guideline will then be downloaded to the user’s own host machine for easy access:
 
 ```bash
 scp username@vm-ip:/usr/local/share/doc/Port_Security_Guideline.pdf .
-
-The guideline will then be downloaded to the user’s own host machine for easy access. 
