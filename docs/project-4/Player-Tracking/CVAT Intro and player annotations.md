@@ -1,3 +1,9 @@
+**Last updated by:** Mouse933, **Last updated on:** 01/04/2026
+
+**Last updated by:** Basil Behanan, **Last updated on:** 27/09/2025
+
+**Last updated by:** Basil Behanan, **Last updated on:** 27/09/2025
+
 **CVAT Intro and player annotations**
 
 Player annotations will include drawing bounding boxes and tracking each
@@ -9,8 +15,7 @@ interface and how to do player annotations properly.
 1.  Click on the bounding box tool on the left side menu.
 
 ![A screenshot of a video AI-generated content may be
-incorrect.](./images/media/image1.png){width="6.268055555555556in"
-height="4.307638888888889in"}
+incorrect.](./images/media/image1.png)
 
 2.  Make sure to select the "track" tool. The difference between shape
     and track is that shape doesn't assign an ID to a box and won't
@@ -19,8 +24,7 @@ height="4.307638888888889in"}
     player, but to track and re-identify the players.
 
 ![A screenshot of a video AI-generated content may be
-incorrect.](./images/media/image2.png){width="6.268055555555556in"
-height="3.5548611111111112in"}
+incorrect.](./images/media/image2.png)
 
 3.  Once you click on track, draw a bounding box around a person. Try
     keep a bounding box as tight as possible to the person. You are
@@ -29,14 +33,12 @@ height="3.5548611111111112in"}
     the field. (If the camera captures players on the bench, you do not
     include them. The model learns to pick up only players active on the
     field)![A screenshot of a video AI-generated content may be
-    incorrect.](./images/media/image3.png){width="6.268055555555556in"
-    height="3.5819444444444444in"}
+    incorrect.](./images/media/image3.png)
 
 Object properties (Right side menu)
 
 ![A screenshot of a video AI-generated content may be
-incorrect.](./images/media/image4.png){width="6.268055555555556in"
-height="3.5819444444444444in"}
+incorrect.](./images/media/image4.png)
 
 1.  **Out of frame**: If a person is no longer in frame or is
     **completely occluded**, mark the player as "out of frame". If the
