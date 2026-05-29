@@ -1,0 +1,453 @@
+```
+---
+sidebar_position: x
+---
+```
+
+# Redback Operations - Comprehensive Threat Model Report
+ 
+**Status:** In Progress - Phase 3 (Security Controls Validation)  
+**Classification:** Internal Use
+
+---
+
+## Executive Summary
+
+This document presents a comprehensive threat modeling analysis of Redback Operations, a multi-project organization spanning IoT health monitoring, crowd analytics, VR gaming, security operations, and CI/CD infrastructure. Using the OWASP Threat Modeling Process and STRIDE methodology, this analysis identifies, prioritizes, and plans mitigation for 30 distinct security threats across the organization's systems.
+
+### Key Findings
+
+- **Total Threats Identified:** 30 across 5 project domains
+- **Extreme Risk Threats:** 5 (requiring immediate mitigation)
+- **High Risk Threats:** 13 (requiring scheduled mitigation)
+- **Moderate Risk Threats:** 4 (requiring planned mitigation)
+- **Low Risk Threats:** 1 (risk acceptable with monitoring)
+
+### Highest Priority Threats (Top 5)
+
+1. **Exposed API Keys in GitHub** - HIGH - High Likelihood, Critical Impact
+2. **Unauthorized Access to Elderly Health Records** - EXTREME - High Likelihood, Critical Impact
+3. **Student Developer Access to Production Branch** - EXTREME - High Likelihood, Critical Impact
+4. **API Gateway Denial of Service** - HIGH - Medium Likelihood, Critical Impact
+5. **Security Log Tampering** - EXTREME - Medium Likelihood, Critical Impact
+
+---
+
+## Table of Contents
+
+1. [Methodology](#methodology)
+2. [Phase 1: Application Decomposition](#phase-1-application-decomposition)
+3. [Phase 2: STRIDE Threat Identification](#phase-2-stride-threat-identification)
+4. [Phase 3: Risk Prioritization](#phase-3-risk-prioritization)
+5. [Phase 4: Mitigation Strategy Mapping](#phase-4-mitigation-strategy-mapping)
+6. [Detailed Threat Analysis](#detailed-threat-analysis)
+7. [Risk Matrix and Heat Map](#risk-matrix-and-heat-map)
+8. [Compliance & Standards](#compliance--standards)
+9. [Next Steps](#next-steps)
+
+---
+
+## Methodology
+
+### OWASP Threat Modeling Process
+
+This analysis follows the OWASP Threat Modeling Process, which provides a structured framework for identifying and evaluating threats to systems:
+
+1. **Define the Scope** - Understand what you're building
+2. **Decompose the Application** - Break down system architecture
+3. **Identify the Threats** - Find potential security issues
+4. **Document the Threats** - Create records of each threat
+5. **Rate the Threats** - Evaluate severity and likelihood
+6. **Address the Threats** - Develop mitigation strategies
+
+### STRIDE Threat Categories
+
+STRIDE is a systematic threat classification methodology developed by Microsoft:
+
+| Category | Question | Examples |
+|----------|----------|----------|
+| **Spoofing** | Can someone pretend to be someone/something they are not? | Identity impersonation, fake devices, credential hijacking |
+| **Tampering** | Can someone modify data or code without authorization? | Data modification, code injection, log tampering |
+| **Repudiation** | Can someone deny they performed an action? | Missing audit trails, no accountability logs |
+| **Information Disclosure** | Can someone access data they should not see? | Data leakage, unauthorized access, privacy violations |
+| **Denial of Service** | Can someone disrupt availability of the system? | System overload, resource exhaustion, service disruption |
+| **Elevation of Privilege** | Can someone gain more access than they should have? | Unauthorized privilege escalation, bypass controls |
+
+---
+
+## Phase 1: Application Decomposition
+
+### System Architecture Overview
+
+Redback Operations comprises five interconnected project domains with shared infrastructure:
+
+```
+External Users (Athletes, Elderly Users, Operators)
+            ↓
+    Web/Mobile Frontends
+    (React, Mobile Apps, VR Interfaces)
+            ↓
+    API Gateway & Backend Services
+    (REST APIs, Authentication, Business Logic)
+            ↓
+    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
+    ↓         ↓         ↓         ↓         ↓         ↓
+   IoT      Database   ML Analytics   SOC    Admin    CI/CD
+  Devices              Pipeline      Tools   Tools    Pipeline
+```
+
+### External Entities Identified (9 Total)
+
+1. **Athletes** - Users of wearable performance monitoring systems
+2. **Elderly Users** - Users of health monitoring systems
+3. **Crowd Operators** - Staff monitoring crowd density and safety
+4. **Internal Administrators** - IT staff managing systems
+5. **Developers** - Software engineers contributing code
+6. **External API Consumers** - Third-party integrations
+7. **Monitoring Systems** - External security and health monitoring tools
+8. **Cloud Providers** - Infrastructure and service providers
+9. **Regulatory Authorities** - Compliance and oversight bodies
+
+### Data Stores Identified (6 Total)
+
+1. **Health Records Database** - Elderly health monitoring data
+2. **Athlete Performance Database** - Sports metrics and biometrics
+3. **Crowd Analytics Database** - Movement patterns and density data
+4. **VR Session Database** - Gaming activity and user progression
+5. **Security Logs & Audit Trail** - System events and access records
+6. **Code Repository** - Source code and credentials storage
+
+### Trust Boundaries Identified (4 Total)
+
+| Boundary | Description | Sensitive Data |
+|----------|-------------|-----------------|
+| **TB-1** | Internet ↔ Web Application | User credentials, API keys |
+| **TB-2** | Web App ↔ Backend API | Health data, biometrics, PII |
+| **TB-3** | Backend ↔ Database | All sensitive data at rest |
+| **TB-4** | Internal ↔ External Systems | System credentials, API keys |
+
+### Data Flows Identified (15+ Total)
+
+- User authentication flows (login, token refresh)
+- Health data collection from wearable devices
+- Crowd monitoring data ingestion from sensors
+- VR session data updates and synchronization
+- ML analytics pipeline data movement
+- Audit log recording and retrieval
+- CI/CD pipeline credential management
+- Third-party API integrations
+
+---
+
+## Phase 2: STRIDE Threat Identification
+
+### Project 1: Wearable/IoT Health Monitoring (Elderly & Athletes)
+
+| ID | Category | Threat | Component | Likelihood | Impact | Severity |
+|----|----------|--------|-----------|------------|--------|----------|
+| T-01 | Spoofing | Fake IoT device spoofs identity and injects false health data | IoT Device → API Gateway | High | Critical | EXTREME |
+| T-02 | Tampering | Attacker tampers with biometric data in transit | Data Flow: IoT → Backend | High | Critical | EXTREME |
+| T-03 | Repudiation | No audit trail when health data is accessed or modified | Health DB | Medium | High | HIGH |
+| T-04 | Information Disclosure | Elderly health records exposed due to weak API authentication | Health DB + API | High | Critical | EXTREME |
+| T-05 | Denial of Service | IoT devices flooded with requests causing sensor failure | IoT Devices | Medium | High | HIGH |
+| T-06 | Elevation of Privilege | Athlete accesses another athlete's performance data | Athlete DB | Medium | High | HIGH |
+
+### Project 2: Crowd Monitoring & Analytics
+
+| ID | Category | Threat | Component | Likelihood | Impact | Severity |
+|----|----------|--------|-----------|------------|--------|----------|
+| T-07 | Spoofing | Unauthorized operator spoofs credentials to access crowd analytics | Operator Interface | Medium | High | HIGH |
+| T-08 | Tampering | Crowd density data manipulated to hide dangerous overcrowding | Crowd Analytics DB | Low | Critical | HIGH |
+| T-09 | Repudiation | Operator denies issuing false crowd alerts | Audit Logs | Medium | High | HIGH |
+| T-10 | Information Disclosure | Crowd movement data leaked exposing individual tracking information | Crowd Analytics DB | Medium | High | HIGH |
+| T-11 | Denial of Service | Camera/sensor feeds overwhelmed disrupting real-time monitoring | IoT Sensors | Medium | Critical | HIGH |
+| T-12 | Elevation of Privilege | Standard user gains access to crowd control admin functions | Admin Interface | Low | High | MODERATE |
+
+### Project 3: VR Game Development
+
+| ID | Category | Threat | Component | Likelihood | Impact | Severity |
+|----|----------|--------|-----------|------------|--------|----------|
+| T-13 | Spoofing | Attacker impersonates VR user to access session data | VR User Authentication | Medium | Medium | MODERATE |
+| T-14 | Tampering | VR session scores or progress data tampered with | VR Data Store | Low | Medium | LOW |
+| T-15 | Repudiation | No logging of VR session activity for accountability | VR Session Logs | High | Medium | HIGH |
+| T-16 | Information Disclosure | VR movement/behavioral data exposed to unauthorized parties | VR DB | Medium | Medium | MODERATE |
+| T-17 | Denial of Service | VR server overloaded causing session crashes | VR Backend | Medium | Low | MODERATE |
+| T-18 | Elevation of Privilege | VR user accesses backend configuration or other user data | VR Backend | Low | High | MODERATE |
+
+### Project 4: SOC (Security Operations Center)
+
+| ID | Category | Threat | Component | Likelihood | Impact | Severity |
+|----|----------|--------|-----------|------------|--------|----------|
+| T-19 | Spoofing | Attacker spoofs SOC analyst credentials to access security tools | SOC Interface | Low | Critical | HIGH |
+| T-20 | Tampering | Security logs tampered with to hide malicious activity | Audit Logs | Medium | Critical | EXTREME |
+| T-21 | Repudiation | SOC analyst denies accessing or modifying security configurations | SOC Audit Trail | Medium | High | HIGH |
+| T-22 | Information Disclosure | Security incident data exposed to unauthorized internal users | SOC Data | Low | Critical | HIGH |
+| T-23 | Denial of Service | SOC monitoring tools taken offline during an active attack | SOC Infrastructure | Low | Critical | HIGH |
+| T-24 | Elevation of Privilege | Junior SOC member gains access to senior analyst tools | SOC Role Management | Medium | High | HIGH |
+
+### Project 5: CI/CD Pipeline & GitHub
+
+| ID | Category | Threat | Component | Likelihood | Impact | Severity |
+|----|----------|--------|-----------|------------|--------|----------|
+| T-25 | Spoofing | Attacker spoofs developer identity to push malicious code | GitHub Repository | Medium | Critical | EXTREME |
+| T-26 | Tampering | Malicious code injected into pipeline without detection | CI/CD Pipeline | Medium | Critical | EXTREME |
+| T-27 | Repudiation | Developer denies pushing breaking or malicious changes | GitHub Commit Logs | Low | High | MODERATE |
+| T-28 | Information Disclosure | API keys or credentials exposed in public GitHub repository | GitHub Repo | High | Critical | EXTREME |
+| T-29 | Denial of Service | Pipeline flooded with build requests causing deployment failure | CI/CD Pipeline | Low | Medium | MODERATE |
+| T-30 | Elevation of Privilege | Student contributor gains write access to production branch | GitHub Branch Protection | High | Critical | EXTREME |
+
+---
+
+## Phase 3: Risk Prioritization
+
+### Risk Severity Matrix
+
+**Severity Calculation:** Likelihood × Impact
+
+- **EXTREME:** Likelihood × Critical Impact OR High Likelihood × High Impact
+- **HIGH:** Likelihood × High Impact OR Medium Likelihood × Critical Impact OR Low Likelihood × Critical Impact + Special Circumstances
+- **MODERATE:** Medium/Low × Medium/High
+- **LOW:** Low Likelihood × Low Impact
+
+### Threat Distribution
+
+```
+EXTREME (5):     T-01, T-02, T-04, T-20, T-25, T-26, T-28, T-30
+HIGH (13):       T-03, T-05, T-06, T-07, T-08, T-09, T-10, T-11, T-15, T-19, T-21, T-22, T-23, T-24
+MODERATE (4):    T-12, T-13, T-16, T-17, T-18, T-27, T-29
+LOW (1):         T-14
+```
+
+### Risk Heatmap (Likelihood vs Impact)
+
+```
+CRITICAL  │ T-04      │ T-01,T-02 │ T-20      │ T-25,T-26 │ T-28,T-30
+          │           │           │ T-08      │           │
+HIGH      │ T-07      │ T-03,T-05 │ T-09      │ T-19,T-21 │
+          │ T-12      │ T-06,T-15 │ T-10,T-11 │ T-22,T-23 │
+          │           │ T-24      │           │           │
+MEDIUM    │ T-13,T-17 │ T-16,T-18 │ T-27      │ T-29      │
+          │           │           │           │           │
+LOW       │ T-14      │           │           │           │
+          └───────────┴───────────┴───────────┴───────────┴──────────
+            LOW        MEDIUM      MEDIUM-HIGH HIGH        CRITICAL
+                              IMPACT
+```
+
+---
+
+## Phase 4: Mitigation Strategy Mapping
+
+### Top 5 Extreme Threats - Immediate Mitigation Required
+
+#### T-28: Exposed API Keys in GitHub
+- **Threat:** API keys or credentials exposed in public GitHub repository
+- **Current State:** Code repository access controls insufficient
+- **Control:** Implement secrets scanning with automated detection and remediation
+- **Owner:** DevSecOps Team
+- **Timeline:** Week 6-7
+- **Validation:** Scan all historical commits, implement pre-commit hooks
+
+#### T-04: Unauthorized Access to Elderly Health Records
+- **Threat:** Elderly health records exposed due to weak API authentication
+- **Current State:** Basic authentication insufficient for sensitive data
+- **Control:** Implement OAuth 2.0 with MFA; role-based access control
+- **Owner:** Backend Security Team
+- **Timeline:** Week 7-9
+- **Validation:** Penetration testing of health data endpoints
+
+#### T-30: Student Developer Access to Production Branch
+- **Threat:** Student contributor gains write access to production branch
+- **Current State:** Branch protection rules insufficient
+- **Control:** Enforce mandatory code review, restrict production merge permissions
+- **Owner:** DevOps Lead
+- **Timeline:** Week 6
+- **Validation:** Audit GitHub permissions and branch protection settings
+
+#### T-25: Attacker Spoofs Developer Identity
+- **Threat:** Attacker spoofs developer identity to push malicious code
+- **Current State:** Relying on basic Git commit signing
+- **Control:** Enforce GPG signed commits, mandatory code review, security scanning
+- **Owner:** DevSecOps Team
+- **Timeline:** Week 6-8
+- **Validation:** Attempt unsigned commits; verify rejection
+
+#### T-26: Malicious Code Injection into Pipeline
+- **Threat:** Malicious code injected into pipeline without detection
+- **Current State:** Limited SAST/DAST in CI/CD
+- **Control:** Implement SAST scanning, dependency checking, container scanning
+- **Owner:** DevSecOps Team
+- **Timeline:** Week 8-10
+- **Validation:** Inject test vulnerabilities; verify detection
+
+### High Priority Threats - Scheduled Mitigation (Weeks 8-12)
+
+| Threat | Control Strategy | Owner | Timeline |
+|--------|------------------|-------|----------|
+| T-01 | Device authentication, sensor validation | IoT Team | Week 8-9 |
+| T-02 | TLS encryption in transit, data signing | Backend/IoT | Week 7-8 |
+| T-20 | Tamper detection on logs, write-once storage | SOC/Security | Week 9-10 |
+| T-03 | Comprehensive audit logging | Backend Team | Week 8-9 |
+| T-05 | Rate limiting, DDoS protection | DevOps | Week 9-10 |
+| T-06 | Row-level security, attribute-based access | Database Team | Week 10-11 |
+| T-07 | MFA enforcement, credential rotation | Identity Team | Week 8-9 |
+| T-08 | Data integrity checks, anomaly detection | Analytics Team | Week 10-11 |
+| T-09 | Comprehensive activity logging | Compliance | Week 8-9 |
+| T-10 | Data anonymization, PII redaction | Privacy Team | Week 11-12 |
+| T-11 | Failover mechanisms, load balancing | DevOps | Week 9-10 |
+| T-15 | Session activity logging | VR Team | Week 8-9 |
+| T-19 | MFA, adaptive authentication | Identity Team | Week 8-9 |
+| T-21 | SOC audit trails, activity logging | SOC Lead | Week 8-9 |
+| T-22 | Access control enforcement | SOC Lead | Week 9-10 |
+| T-23 | Monitoring redundancy, failover | SOC/DevOps | Week 10-11 |
+| T-24 | Role-based access control enforcement | Identity Team | Week 9-10 |
+
+---
+
+## Detailed Threat Analysis
+
+### Threat T-28: Exposed API Keys in GitHub (EXTREME)
+
+**Description:** API keys or credentials exposed in public GitHub repository
+
+**Attack Scenario:**
+1. Developer commits `.env` file or hardcodes API keys in code
+2. Repository is public or accessible to unauthorized users
+3. Attacker discovers credentials through repository scanning
+4. Attacker uses keys to access production systems and data
+
+**Assets at Risk:**
+- API credentials with full production access
+- Database connection strings
+- Third-party service credentials
+- Encryption keys
+
+**Recommended Controls:**
+- **Preventive:** Secrets scanning with pre-commit hooks (detect before commit)
+- **Detective:** Continuous repository scanning for exposed secrets
+- **Responsive:** Automated credential rotation upon discovery
+- **Systemic:** Centralized secrets management (HashiCorp Vault, AWS Secrets Manager)
+
+**Implementation Plan:**
+1. Scan all historical commits for exposed secrets (Week 6)
+2. Rotate all exposed credentials (Week 6)
+3. Implement pre-commit hooks blocking secret commits (Week 6-7)
+4. Implement continuous scanning in CI/CD (Week 7)
+5. Establish secrets management process (Week 8-9)
+
+**Success Metrics:**
+- Zero credentials in repository
+- 100% of commits scanned by secrets detection
+- All secrets rotated on discovery within 1 hour
+- Developers trained on secrets management
+
+---
+
+### Threat T-04: Unauthorized Access to Elderly Health Records (EXTREME)
+
+**Description:** Elderly health records exposed due to weak API authentication
+
+**Attack Scenario:**
+1. Attacker discovers health data API endpoint
+2. Basic authentication is insufficient (no MFA, weak tokens)
+3. Attacker brute-forces or hijacks credentials
+4. Attacker accesses sensitive health information including:
+   - Heart rate, blood pressure, medication records
+   - GPS location data
+   - Biometric patterns
+
+**Assets at Risk:**
+- Personal health information (PHI)
+- Biometric data
+- Location information
+- Medical history
+
+**Compliance Impact:**
+- Australian Health Records Act 2001 violation
+- GDPR non-compliance (if EU users)
+- Privacy Act 1988 violation
+
+**Recommended Controls:**
+- **Authentication:** OAuth 2.0 with PKCE flow, not basic auth
+- **MFA:** Mandatory MFA for all health data access
+- **Authorization:** Role-based access control (RBAC)
+- **Detection:** Anomaly detection on data access patterns
+- **Encryption:** End-to-end encryption for health data
+
+**Implementation Plan:**
+1. Implement OAuth 2.0 backend (Week 7)
+2. Enable MFA on all accounts (Week 7-8)
+3. Implement row-level security (Week 8-9)
+4. Deploy anomaly detection (Week 9-10)
+5. Encrypt sensitive health data fields (Week 10-11)
+
+**Success Metrics:**
+- All health data endpoints require OAuth + MFA
+- 100% of sensitive fields encrypted at rest
+- Access logs show no unauthorized data access
+- Anomaly detection deployed and operational
+
+---
+
+## Compliance & Standards
+
+This threat model aligns with:
+
+### Australian Standards
+- **Privacy Act 1988** - Personal information handling
+- **Health Records Act 2001** - Healthcare privacy requirements
+- **Notifiable Data Breach Scheme** - Breach notification obligations
+
+### International Standards
+- **GDPR (General Data Protection Regulation)** - European user data protection
+- **ISO 27001** - Information security management
+- **NIST Cybersecurity Framework** - Risk-based security approach
+
+### Industry Standards
+- **OWASP Top 10** - Web application security vulnerabilities
+- **CWE/SANS Top 25** - Software weaknesses
+- **CVSS** - Vulnerability severity scoring
+
+---
+
+## Next Steps
+
+### Phase 5: Security Controls Validation (Weeks 6-12)
+- Schedule meetings with system owners and technical leads
+- Validate current control implementations
+- Identify control gaps and improvement opportunities
+- Obtain stakeholder agreement on mitigation timelines
+
+### Phase 6: Implementation & Verification (Weeks 12-16)
+- Execute mitigation strategies according to timeline
+- Validate control effectiveness through testing
+- Document control implementations
+- Update threat model based on changes
+
+### Phase 7: Ongoing Monitoring (Continuous)
+- Monitor threat intelligence for new attack patterns
+- Track control implementation status
+- Update threat model with new threats as systems evolve
+- Conduct quarterly threat model reviews
+
+### Project Review Schedule
+- **Week 6 Checkpoint:** CI/CD Pipeline & GitHub controls
+- **Week 8 Checkpoint:** API authentication & IoT device validation
+- **Week 10 Checkpoint:** Data protection & logging implementation
+- **Week 12 Final Review:** All mitigation strategies implemented and validated
+
+---
+
+## Contact & Questions
+
+**Security Team Lead:**  
+For questions about this threat model or mitigation strategies, contact the Security Team through the #security-team Slack channel or attend weekly security review meetings.
+
+**Version History:**
+- **v1.0** - Week 5: Initial threat identification and prioritization
+- **v1.1** - Week 8: Mitigation strategies and control mapping
+- **v1.2** - Week 12: Control validation and implementation status
+
+---
+
+*This document is confidential and intended for internal use by Redback Operations only. Unauthorized distribution is prohibited.*
