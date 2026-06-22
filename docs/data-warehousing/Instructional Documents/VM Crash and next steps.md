@@ -2,7 +2,7 @@
 sidebar_position: 50
 ---
 
-#  After-Action Report: Data Warehouse Crash and Recovery (April 2025)
+#  After-Action Report: Data Warehouse Crash and Recovery (November 2025)
 
 ##  Summary
 
@@ -51,6 +51,7 @@ This report serves both as documentation of leadership and technical response, a
   ```
 * VM disk usage was at 100%, preventing any container restarts.
 * Ben later found the root cause: **Suricata service had created 379GB of logs**, overwhelming the system.
+
 
 ###  Phase 4: Mentor Resolution
 
@@ -121,6 +122,22 @@ To proactively warn all users about the shared nature of the environment, a syst
   ```bash
   DO NOT run `docker rm -f` on shared containers unless confirmed with mentor or DW lead.
   ```
+* Added natural log rotations from the docker-compose.yml file to prevent disk failure in future from the wazuh-manger service:
+
+ ```bash
+ logging:
+  driver: "json-file"
+  options:
+    max-size: "50m"
+    max-file: "5"
+ ```
+The parameters above specify that the max file size of the logs created by the service can only reach 50mb. Once exceeding this threshold it will be added into an archived file where the most recent 5 files are kept and the others are deleted to preserve space. 
+Note that the parameters can be changed and this can be done for any docker service using a compose.yml type file. To commit the changes made to the docker-compose.yml file you must remove the changed container and then recompose it using the below commands.
+
+ ```bash
+ docker rm single-node-wazuh.manager-1
+ docker compose up -d 
+ ```
 
 ---
 
