@@ -40,11 +40,13 @@ The Blue Team also manages an email infrastructure based on Microsoft 365 Exchan
 
 Before you start working on anything, read through the Onboarding section. This explains some more concepts about Wazuh and how you can access it, along with Docker fundamentals. Understanding Docker is particularly important, as most services are setup in Docker containers. 
 
-Afterwards, have a look at the Production section. This includes guides for all the services mentioned above and how you can maintain them. 
+Afterwards, have a look at the Production and Wazuh background section. They include guides, maintanance and information for all the services mentioned above. 
 
 Finally, the Research section includes things that some team members have worked on in the past. This includes pure research and how-to installation guides for things tested on local VMs (not implemented).
 
-After you've read through these sections, have a think about what you'd like to work on, and discuss this with the team. 
+After you've read through these sections, have a think about what you'd like to work on, and discuss this with the team.
+
+Additionally, please review the Cyber Training module. The training will provide you with the knowledge and skills necessary to keep yourself safe in the Redback Operations environment. Navigate to https://d2l.deakin.edu.au/d2l/home and search for Redback to find the Cloud Deakin Redback page. If you don't have permission, contact one of your leaders. The module consists of information on cyber security practices paired with a quiz at the end of each module. You will need to go through them all and complete the final quiz at the end.
 
 
 
