@@ -1,7 +1,8 @@
 name: OWASP PR Scanner
 
 on:
-  pull_request_target:
+  pull_request:
+    branches: [main]
     types: [opened, synchronize, reopened]
 
 permissions:
@@ -109,6 +110,8 @@ jobs:
           fi
 
       - name: Comment PR
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        continue-on-error: true
         uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.pull_request.number }}
