@@ -1,0 +1,8 @@
+{
+  "label": "Guidelines",
+  "position": 99,
+  "link": {
+    "type": "generated-index",
+    "description": "Standardisation and development guidelines for Redback projects"
+  }
+}
